@@ -10932,7 +10932,35 @@
       "dutch": "een vraag stellen/doen",
       "headwords": [
         {
-          "word": "een vraag stellen"
+          "word": "een vraag stellen",
+          "pos": "verb",
+          "lemma": "stellen",
+          "verb": {
+            "infinitive": "stellen",
+            "past_singular": "stelde",
+            "past_plural": "stelden",
+            "past_participle": "gesteld",
+            "auxiliary": "hebben",
+            "particle": "een vraag"
+          },
+          "forms": [
+            "een vraag gesteld",
+            "een vraag stel",
+            "een vraag stelde",
+            "een vraag stelden",
+            "een vraag stelle",
+            "een vraag stellen",
+            "een vraag stellend",
+            "een vraag stelt",
+            "gesteld een vraag",
+            "stel een vraag",
+            "stelde een vraag",
+            "stelden een vraag",
+            "stelle een vraag",
+            "stellen een vraag",
+            "stellend een vraag",
+            "stelt een vraag"
+          ]
         },
         {
           "word": "doen",
@@ -20348,7 +20376,48 @@
       "dutch": "waard zijn",
       "headwords": [
         {
-          "word": "waard zijn"
+          "word": "waard zijn",
+          "pos": "verb",
+          "lemma": "zijn",
+          "verb": {
+            "infinitive": "zijn",
+            "past_singular": "was",
+            "past_plural": "waren",
+            "past_participle": "geweest",
+            "particle": "waard"
+          },
+          "forms": [
+            "ben waard",
+            "bent waard",
+            "geweest waard",
+            "is waard",
+            "waard ben",
+            "waard bent",
+            "waard geweest",
+            "waard is",
+            "waard waart",
+            "waard ware",
+            "waard waren",
+            "waard was",
+            "waard wees",
+            "waard weest",
+            "waard zij",
+            "waard zijn",
+            "waard zijnd",
+            "waard zijt",
+            "waard zyn",
+            "waart waard",
+            "ware waard",
+            "waren waard",
+            "was waard",
+            "wees waard",
+            "weest waard",
+            "zij waard",
+            "zijn waard",
+            "zijnd waard",
+            "zijt waard",
+            "zyn waard"
+          ]
         }
       ]
     },
@@ -21954,7 +22023,37 @@
       "dutch": "een misdaad plegen",
       "headwords": [
         {
-          "word": "een misdaad plegen"
+          "word": "een misdaad plegen",
+          "pos": "verb",
+          "lemma": "plegen",
+          "verb": {
+            "infinitive": "plegen",
+            "past_singular": "placht",
+            "past_plural": "plachten",
+            "past_participle": "geplacht",
+            "auxiliary": "hebben",
+            "particle": "een misdaad"
+          },
+          "forms": [
+            "een misdaad geplacht",
+            "een misdaad placht",
+            "een misdaad plachte",
+            "een misdaad plachten",
+            "een misdaad pleeg",
+            "een misdaad pleegt",
+            "een misdaad plege",
+            "een misdaad plegen",
+            "een misdaad plegend",
+            "geplacht een misdaad",
+            "placht een misdaad",
+            "plachte een misdaad",
+            "plachten een misdaad",
+            "pleeg een misdaad",
+            "pleegt een misdaad",
+            "plege een misdaad",
+            "plegen een misdaad",
+            "plegend een misdaad"
+          ]
         }
       ]
     },
@@ -44357,7 +44456,35 @@
       "dutch": "reclame maken",
       "headwords": [
         {
-          "word": "reclame maken"
+          "word": "reclame maken",
+          "pos": "verb",
+          "lemma": "maken",
+          "verb": {
+            "infinitive": "maken",
+            "past_singular": "maakte",
+            "past_plural": "maakten",
+            "past_participle": "gemaakt",
+            "auxiliary": "hebben",
+            "particle": "reclame"
+          },
+          "forms": [
+            "gemaakt reclame",
+            "maak reclame",
+            "maakt reclame",
+            "maakte reclame",
+            "maakten reclame",
+            "make reclame",
+            "maken reclame",
+            "makend reclame",
+            "reclame gemaakt",
+            "reclame maak",
+            "reclame maakt",
+            "reclame maakte",
+            "reclame maakten",
+            "reclame make",
+            "reclame maken",
+            "reclame makend"
+          ]
         }
       ]
     },
@@ -48380,7 +48507,48 @@
       "dutch": "het eens zijn",
       "headwords": [
         {
-          "word": "het eens zijn"
+          "word": "het eens zijn",
+          "pos": "verb",
+          "lemma": "zijn",
+          "verb": {
+            "infinitive": "zijn",
+            "past_singular": "was",
+            "past_plural": "waren",
+            "past_participle": "geweest",
+            "particle": "het eens"
+          },
+          "forms": [
+            "ben het eens",
+            "bent het eens",
+            "geweest het eens",
+            "het eens ben",
+            "het eens bent",
+            "het eens geweest",
+            "het eens is",
+            "het eens waart",
+            "het eens ware",
+            "het eens waren",
+            "het eens was",
+            "het eens wees",
+            "het eens weest",
+            "het eens zij",
+            "het eens zijn",
+            "het eens zijnd",
+            "het eens zijt",
+            "het eens zyn",
+            "is het eens",
+            "waart het eens",
+            "ware het eens",
+            "waren het eens",
+            "was het eens",
+            "wees het eens",
+            "weest het eens",
+            "zij het eens",
+            "zijn het eens",
+            "zijnd het eens",
+            "zijt het eens",
+            "zyn het eens"
+          ]
         }
       ]
     },
@@ -50170,7 +50338,48 @@
       "dutch": "verkouden zijn",
       "headwords": [
         {
-          "word": "verkouden zijn"
+          "word": "verkouden zijn",
+          "pos": "verb",
+          "lemma": "zijn",
+          "verb": {
+            "infinitive": "zijn",
+            "past_singular": "was",
+            "past_plural": "waren",
+            "past_participle": "geweest",
+            "particle": "verkouden"
+          },
+          "forms": [
+            "ben verkouden",
+            "bent verkouden",
+            "geweest verkouden",
+            "is verkouden",
+            "verkouden ben",
+            "verkouden bent",
+            "verkouden geweest",
+            "verkouden is",
+            "verkouden waart",
+            "verkouden ware",
+            "verkouden waren",
+            "verkouden was",
+            "verkouden wees",
+            "verkouden weest",
+            "verkouden zij",
+            "verkouden zijn",
+            "verkouden zijnd",
+            "verkouden zijt",
+            "verkouden zyn",
+            "waart verkouden",
+            "ware verkouden",
+            "waren verkouden",
+            "was verkouden",
+            "wees verkouden",
+            "weest verkouden",
+            "zij verkouden",
+            "zijn verkouden",
+            "zijnd verkouden",
+            "zijt verkouden",
+            "zyn verkouden"
+          ]
         }
       ]
     },
@@ -50731,7 +50940,39 @@
       "dutch": "ongesteld worden",
       "headwords": [
         {
-          "word": "ongesteld worden"
+          "word": "ongesteld worden",
+          "pos": "verb",
+          "lemma": "worden",
+          "verb": {
+            "infinitive": "worden",
+            "past_singular": "werd",
+            "past_plural": "werden",
+            "past_participle": "geworden",
+            "auxiliary": "zijn",
+            "particle": "ongesteld"
+          },
+          "forms": [
+            "geworden ongesteld",
+            "ongesteld geworden",
+            "ongesteld werd",
+            "ongesteld werde",
+            "ongesteld werden",
+            "ongesteld werdt",
+            "ongesteld word",
+            "ongesteld worde",
+            "ongesteld worden",
+            "ongesteld wordend",
+            "ongesteld wordt",
+            "werd ongesteld",
+            "werde ongesteld",
+            "werden ongesteld",
+            "werdt ongesteld",
+            "word ongesteld",
+            "worde ongesteld",
+            "worden ongesteld",
+            "wordend ongesteld",
+            "wordt ongesteld"
+          ]
         }
       ]
     },
@@ -51535,7 +51776,35 @@
       "dutch": "onderzoek uitvoeren",
       "headwords": [
         {
-          "word": "onderzoek uitvoeren"
+          "word": "onderzoek uitvoeren",
+          "pos": "verb",
+          "lemma": "uitvoeren",
+          "verb": {
+            "infinitive": "uitvoeren",
+            "past_singular": "voerde uit",
+            "past_plural": "voerden uit",
+            "past_participle": "uitgevoerd",
+            "auxiliary": "hebben",
+            "particle": "onderzoek"
+          },
+          "forms": [
+            "onderzoek uitgevoerd",
+            "onderzoek uitvoer",
+            "onderzoek uitvoerde",
+            "onderzoek uitvoerden",
+            "onderzoek uitvoere",
+            "onderzoek uitvoeren",
+            "onderzoek uitvoerend",
+            "onderzoek uitvoert",
+            "uitgevoerd onderzoek",
+            "uitvoer onderzoek",
+            "uitvoerde onderzoek",
+            "uitvoerden onderzoek",
+            "uitvoere onderzoek",
+            "uitvoeren onderzoek",
+            "uitvoerend onderzoek",
+            "uitvoert onderzoek"
+          ]
         }
       ]
     },
@@ -52009,7 +52278,35 @@
       "dutch": "vooruitgang boeken",
       "headwords": [
         {
-          "word": "vooruitgang boeken"
+          "word": "vooruitgang boeken",
+          "pos": "verb",
+          "lemma": "boeken",
+          "verb": {
+            "infinitive": "boeken",
+            "past_singular": "boekte",
+            "past_plural": "boekten",
+            "past_participle": "geboekt",
+            "auxiliary": "hebben",
+            "particle": "vooruitgang"
+          },
+          "forms": [
+            "boek vooruitgang",
+            "boeke vooruitgang",
+            "boeken vooruitgang",
+            "boekend vooruitgang",
+            "boekt vooruitgang",
+            "boekte vooruitgang",
+            "boekten vooruitgang",
+            "geboekt vooruitgang",
+            "vooruitgang boek",
+            "vooruitgang boeke",
+            "vooruitgang boeken",
+            "vooruitgang boekend",
+            "vooruitgang boekt",
+            "vooruitgang boekte",
+            "vooruitgang boekten",
+            "vooruitgang geboekt"
+          ]
         }
       ]
     },
@@ -52727,7 +53024,35 @@
       "dutch": "promotie maken",
       "headwords": [
         {
-          "word": "promotie maken"
+          "word": "promotie maken",
+          "pos": "verb",
+          "lemma": "maken",
+          "verb": {
+            "infinitive": "maken",
+            "past_singular": "maakte",
+            "past_plural": "maakten",
+            "past_participle": "gemaakt",
+            "auxiliary": "hebben",
+            "particle": "promotie"
+          },
+          "forms": [
+            "gemaakt promotie",
+            "maak promotie",
+            "maakt promotie",
+            "maakte promotie",
+            "maakten promotie",
+            "make promotie",
+            "maken promotie",
+            "makend promotie",
+            "promotie gemaakt",
+            "promotie maak",
+            "promotie maakt",
+            "promotie maakte",
+            "promotie maakten",
+            "promotie make",
+            "promotie maken",
+            "promotie makend"
+          ]
         }
       ]
     },
@@ -53374,7 +53699,40 @@
       "dutch": "verkering hebben",
       "headwords": [
         {
-          "word": "verkering hebben"
+          "word": "verkering hebben",
+          "pos": "verb",
+          "lemma": "hebben",
+          "verb": {
+            "infinitive": "hebben",
+            "past_singular": "had",
+            "past_plural": "hadden",
+            "past_participle": "gehad",
+            "particle": "verkering"
+          },
+          "forms": [
+            "gehad verkering",
+            "had verkering",
+            "hadde verkering",
+            "hadden verkering",
+            "hadt verkering",
+            "heb verkering",
+            "hebbe verkering",
+            "hebben verkering",
+            "hebbend verkering",
+            "hebt verkering",
+            "heeft verkering",
+            "verkering gehad",
+            "verkering had",
+            "verkering hadde",
+            "verkering hadden",
+            "verkering hadt",
+            "verkering heb",
+            "verkering hebbe",
+            "verkering hebben",
+            "verkering hebbend",
+            "verkering hebt",
+            "verkering heeft"
+          ]
         }
       ]
     },
@@ -56416,7 +56774,37 @@
       "dutch": "failliet gaan",
       "headwords": [
         {
-          "word": "failliet gaan"
+          "word": "failliet gaan",
+          "pos": "verb",
+          "lemma": "gaan",
+          "verb": {
+            "infinitive": "gaan",
+            "past_singular": "ging",
+            "past_plural": "gingen",
+            "past_participle": "gegaan",
+            "auxiliary": "zijn",
+            "particle": "failliet"
+          },
+          "forms": [
+            "failliet ga",
+            "failliet gaan",
+            "failliet gaand",
+            "failliet gaat",
+            "failliet gegaan",
+            "failliet ging",
+            "failliet ginge",
+            "failliet gingen",
+            "failliet gingt",
+            "ga failliet",
+            "gaan failliet",
+            "gaand failliet",
+            "gaat failliet",
+            "gegaan failliet",
+            "ging failliet",
+            "ginge failliet",
+            "gingen failliet",
+            "gingt failliet"
+          ]
         }
       ]
     },
@@ -57019,7 +57407,39 @@
       "dutch": "de schuld geven",
       "headwords": [
         {
-          "word": "de schuld geven"
+          "word": "de schuld geven",
+          "pos": "verb",
+          "lemma": "geven",
+          "verb": {
+            "infinitive": "geven",
+            "past_singular": "gaf",
+            "past_plural": "gaven",
+            "past_participle": "gegeven",
+            "auxiliary": "hebben",
+            "particle": "de schuld"
+          },
+          "forms": [
+            "de schuld gaaft",
+            "de schuld gaf",
+            "de schuld gave",
+            "de schuld gaven",
+            "de schuld geef",
+            "de schuld geeft",
+            "de schuld gegeven",
+            "de schuld geve",
+            "de schuld geven",
+            "de schuld gevend",
+            "gaaft de schuld",
+            "gaf de schuld",
+            "gave de schuld",
+            "gaven de schuld",
+            "geef de schuld",
+            "geeft de schuld",
+            "gegeven de schuld",
+            "geve de schuld",
+            "geven de schuld",
+            "gevend de schuld"
+          ]
         }
       ]
     },
@@ -57153,7 +57573,35 @@
       "dutch": "campagne voeren",
       "headwords": [
         {
-          "word": "campagne voeren"
+          "word": "campagne voeren",
+          "pos": "verb",
+          "lemma": "voeren",
+          "verb": {
+            "infinitive": "voeren",
+            "past_singular": "voerde",
+            "past_plural": "voerden",
+            "past_participle": "gevoerd",
+            "auxiliary": "hebben",
+            "particle": "campagne"
+          },
+          "forms": [
+            "campagne gevoerd",
+            "campagne voer",
+            "campagne voerde",
+            "campagne voerden",
+            "campagne voere",
+            "campagne voeren",
+            "campagne voerend",
+            "campagne voert",
+            "gevoerd campagne",
+            "voer campagne",
+            "voerde campagne",
+            "voerden campagne",
+            "voere campagne",
+            "voeren campagne",
+            "voerend campagne",
+            "voert campagne"
+          ]
         }
       ]
     },
@@ -57161,7 +57609,35 @@
       "dutch": "oorlog voeren",
       "headwords": [
         {
-          "word": "oorlog voeren"
+          "word": "oorlog voeren",
+          "pos": "verb",
+          "lemma": "voeren",
+          "verb": {
+            "infinitive": "voeren",
+            "past_singular": "voerde",
+            "past_plural": "voerden",
+            "past_participle": "gevoerd",
+            "auxiliary": "hebben",
+            "particle": "oorlog"
+          },
+          "forms": [
+            "gevoerd oorlog",
+            "oorlog gevoerd",
+            "oorlog voer",
+            "oorlog voerde",
+            "oorlog voerden",
+            "oorlog voere",
+            "oorlog voeren",
+            "oorlog voerend",
+            "oorlog voert",
+            "voer oorlog",
+            "voerde oorlog",
+            "voerden oorlog",
+            "voere oorlog",
+            "voeren oorlog",
+            "voerend oorlog",
+            "voert oorlog"
+          ]
         }
       ]
     },
@@ -58317,7 +58793,41 @@
       "dutch": "in opstand komen",
       "headwords": [
         {
-          "word": "in opstand komen"
+          "word": "in opstand komen",
+          "pos": "verb",
+          "lemma": "komen",
+          "verb": {
+            "infinitive": "komen",
+            "past_singular": "kwam",
+            "past_plural": "kwamen",
+            "past_participle": "gekomen",
+            "auxiliary": "zijn",
+            "particle": "in opstand"
+          },
+          "forms": [
+            "gekomen in opstand",
+            "in opstand gekomen",
+            "in opstand kom",
+            "in opstand kome",
+            "in opstand komen",
+            "in opstand komend",
+            "in opstand kommen",
+            "in opstand komt",
+            "in opstand kwaamt",
+            "in opstand kwam",
+            "in opstand kwame",
+            "in opstand kwamen",
+            "kom in opstand",
+            "kome in opstand",
+            "komen in opstand",
+            "komend in opstand",
+            "kommen in opstand",
+            "komt in opstand",
+            "kwaamt in opstand",
+            "kwam in opstand",
+            "kwame in opstand",
+            "kwamen in opstand"
+          ]
         }
       ]
     },
