@@ -1,3 +1,3 @@
-from duolingo_anki.scraper import main
+from duolingo_anki.cli import main
 
 __all__ = ["main"]
