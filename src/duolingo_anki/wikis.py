@@ -1,4 +1,5 @@
 import re
+import time
 from dataclasses import dataclass
 from urllib.parse import quote
 
@@ -15,6 +16,8 @@ LINK = re.compile(r"\[\[(?:[^|\]]*\|)?([^\]]*)\]\]")
 FORMATTING = re.compile(r"'{2,}")
 TEMPLATE = re.compile(r"\{\{[^{}]*\}\}")
 SEARCH_RESULTS = 5
+RETRIES = 6
+RETRY_STATUSES = {429, 503}
 
 
 @dataclass(frozen=True)
@@ -62,7 +65,11 @@ class Wikis:
         self.client = httpx.Client(headers={"User-Agent": USER_AGENT}, timeout=30, follow_redirects=True)
 
     def query(self, api: str, **params) -> dict:
-        response = self.client.get(api, params={"format": "json", "formatversion": 2, **params})
+        for attempt in range(RETRIES):
+            response = self.client.get(api, params={"format": "json", "formatversion": 2, **params})
+            if response.status_code not in RETRY_STATUSES or attempt == RETRIES - 1:
+                break
+            time.sleep(float(response.headers.get("retry-after", 2 ** attempt)))
         response.raise_for_status()
         return response.json()
 
