@@ -5,17 +5,12 @@ from collections import defaultdict
 from dataclasses import asdict, is_dataclass
 from pathlib import Path
 
-from duolingo_anki.english import content_words
+from duolingo_anki.english import meaning_words
 from duolingo_anki.lexicon import WIKTIONARY_URL, build_lexicon
 from duolingo_anki.scraper import Word, scrape
-from duolingo_anki.sentences import (
-    ALL_LINKS_URL,
-    DUTCH_ENGLISH_LINKS_URL,
-    DUTCH_URL,
-    ENGLISH_URL,
-    Sources,
-    find_examples,
-)
+from duolingo_anki.sentences import find_examples
+from duolingo_anki.tatoeba import URLS as TATOEBA_URLS
+from duolingo_anki.tatoeba import Files, Tatoeba
 from duolingo_anki.sources import download
 
 
@@ -63,9 +58,9 @@ def run_sentences(args: argparse.Namespace) -> None:
     lexicon = json.loads(args.lexicon.read_text(encoding="utf-8"))["entries"]
     meanings = defaultdict(set)
     for word in read_words(args.words):
-        meanings[word.dutch] |= content_words(word.translation)
-    downloads = [download(url, args.cache_dir) for url in (DUTCH_URL, ENGLISH_URL, DUTCH_ENGLISH_LINKS_URL, ALL_LINKS_URL)]
-    examples = find_examples(lexicon, meanings, Sources(*(item.path for item in downloads)))
+        meanings[word.dutch] |= meaning_words(word.translation)
+    downloads = [download(url, args.cache_dir) for url in TATOEBA_URLS]
+    examples = find_examples(lexicon, meanings, Tatoeba(Files(*(item.path for item in downloads))))
     write_json(args.output, {
         "sources": {"tatoeba": [{"url": item.url, "last_modified": item.last_modified} for item in downloads]},
         "entries": [{"dutch": entry["dutch"], "example": examples.get(entry["dutch"])} for entry in lexicon],

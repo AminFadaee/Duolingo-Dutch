@@ -5,6 +5,10 @@ STOPWORDS = {
     "the", "an", "to", "of", "or", "and", "for", "with", "from", "that", "this", "one", "someone", "something",
     "person", "singular", "plural", "form", "used", "especially",
 }
+FUNCTION_WORDS = {
+    "in", "on", "at", "by", "as", "is", "it", "its", "my", "me", "we", "he", "she", "his", "her", "you", "your",
+    "they", "them", "our",
+}
 
 
 def variants(token: str) -> set[str]:
@@ -17,6 +21,10 @@ def variants(token: str) -> set[str]:
 
 def content_words(text: str) -> set[str]:
     return {token for token in re.findall(r"[a-z]+", text.lower()) if len(token) >= 2 and token not in STOPWORDS}
+
+
+def meaning_words(text: str) -> set[str]:
+    return content_words(text) - FUNCTION_WORDS
 
 
 def shared_words(words: set[str], text: str) -> int:
