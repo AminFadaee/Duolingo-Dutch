@@ -1,5 +1,6 @@
+import json
 import sys
-from dataclasses import dataclass
+from dataclasses import asdict, dataclass
 from urllib.parse import unquote
 
 import httpx
@@ -68,5 +69,5 @@ def main() -> None:
     headers = {"User-Agent": USER_AGENT}
     with httpx.Client(headers=headers, follow_redirects=True, timeout=10) as client:
         words = [word for tag in skill_tags(client) for word in skill_words(client, tag)]
-    for word in words:
-        print(f"{word.dutch}$$${word.translation}$$${word.tag}")
+    json.dump([asdict(word) for word in words], sys.stdout, ensure_ascii=False, indent=2)
+    print()
