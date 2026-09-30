@@ -18,6 +18,7 @@ CORPORA = {
 CLEAN = re.compile(r"^[A-Z\"'‘“].*[.!?\"'’”]$")
 UNWANTED = re.compile(r"==|[()\[\]0-9]")
 LENGTH = range(4, 21)
+RELAXED_LENGTH = range(3, 31)
 LENGTH_RATIO = (0.5, 2.0)
 
 
@@ -35,10 +36,16 @@ def latest_url(corpus: str) -> str:
     return response.json()["corpora"][0]["url"]
 
 
+def clean_sentence(text: str, text_tokens: list[str], relaxed: bool = False) -> bool:
+    if relaxed:
+        return len(text_tokens) in RELAXED_LENGTH and CLEAN.match(text) is not None
+    return len(text_tokens) in LENGTH and CLEAN.match(text) is not None and not UNWANTED.search(text)
+
+
 def clean_pair(dutch: str, english: str, dutch_tokens: list[str]) -> bool:
-    if len(dutch_tokens) not in LENGTH or not CLEAN.match(dutch) or not CLEAN.match(english):
+    if not clean_sentence(dutch, dutch_tokens) or not clean_sentence(english, tokens(english)):
         return False
-    if UNWANTED.search(dutch) or UNWANTED.search(english) or not looks_english(english):
+    if not looks_english(english):
         return False
     ratio = len(dutch_tokens) / max(1, len(tokens(english)))
     return LENGTH_RATIO[0] <= ratio <= LENGTH_RATIO[1]

@@ -1,16 +1,19 @@
 import re
-from dataclasses import dataclass, field
+from dataclasses import dataclass, field, replace
 
 from duolingo_anki.english import Meaning
 from pathlib import Path
 
-from duolingo_anki.matching import FormMatch, Rule, build_rules, tokens
-from duolingo_anki.opus import find_pairs
+from duolingo_anki.matching import ARTICLE_BEFORE_PHRASE, FormMatch, Rule, build_rules, tokens
+from duolingo_anki.opus import clean_sentence, find_pairs
 from duolingo_anki.tatoeba import Tatoeba
+from duolingo_anki.translation import Translator
+from duolingo_anki.wikis import DutchSentence, Wikis
 
 SENTENCE_END = re.compile(r"[.!?]+(?=\s|$)")
 PREFERRED_LENGTH = range(4, 13)
 MAX_LENGTH = 20
+TRANSLATED_PER_ENTRY = 3
 
 
 @dataclass(frozen=True)
@@ -137,11 +140,92 @@ def from_opus(
                 examples[text] = chosen.example
 
 
+def matching_candidates(
+    sentences: list[DutchSentence], rules: list[Rule], source: str, relaxed: bool
+) -> list[Candidate]:
+    candidates = []
+    for position, sentence in enumerate(sentences):
+        sentence_tokens = tokens(sentence.text)
+        if not clean_sentence(sentence.text, sentence_tokens, relaxed):
+            continue
+        if rule := min((rule for rule in rules if rule.matches(sentence_tokens)), key=lambda r: r.form, default=None):
+            candidates.append(Candidate(Example(sentence.text, "", rule.label, source, url=sentence.url), rule, (position,)))
+    return candidates
+
+
+def untranslated_tatoeba(tatoeba: Tatoeba, rules: list[Rule], relaxed: bool) -> list[Candidate]:
+    candidates = []
+    for id_, rule in tatoeba.matches(rules).items():
+        sentence = tatoeba.index.sentences[id_]
+        if id_ not in tatoeba.translations and clean_sentence(sentence.text, tatoeba.index.tokens[id_], relaxed):
+            example = Example(sentence.text, "", rule.label, "tatoeba", url=sentence.url, authors=[sentence.author] if sentence.author else [])
+            candidates.append(Candidate(example, rule, (id_,)))
+    return candidates
+
+
+def wiki_pages(headwords: list[dict]) -> list[str]:
+    return list(dict.fromkeys(page for headword in headwords for page in (headword["word"], headword.get("lemma")) if page))
+
+
+def dutch_candidates(
+    tatoeba: Tatoeba, wikis: Wikis, rules: list[Rule], headwords: list[dict], relaxed: bool
+) -> list[Candidate]:
+    if candidates := untranslated_tatoeba(tatoeba, rules, relaxed):
+        return candidates
+    if not headwords:
+        return []
+    examples = [sentence for page in wiki_pages(headwords) for sentence in wikis.wiktionary_examples(page)]
+    if candidates := matching_candidates(examples, rules, "nl.wiktionary", relaxed):
+        return candidates
+    phrase = ARTICLE_BEFORE_PHRASE.sub("", headwords[0]["word"])
+    return matching_candidates(wikis.wikipedia_sentences(phrase), rules, "nl.wikipedia", relaxed)
+
+
+def from_dutch_sources(
+    tatoeba: Tatoeba,
+    wikis: Wikis,
+    translator: Translator,
+    rules: dict[str, list[Rule]],
+    headwords: dict[str, list[dict]],
+    meanings: dict[str, Meaning],
+    known: set[str],
+    examples: dict[str, Example],
+    relaxed: bool = False,
+) -> None:
+    shortlists = {}
+    for text, text_rules in rules.items():
+        if needs_example(examples.get(text)):
+            found = dutch_candidates(tatoeba, wikis, text_rules, headwords[text], relaxed)
+            shortlists[text] = sorted(found, key=lambda candidate: rank(candidate, Meaning(), known))[:TRANSLATED_PER_ENTRY]
+    originals = [candidate.example.text for shortlist in shortlists.values() for candidate in shortlist]
+    translations = iter(translator.translate(originals))
+    for text, shortlist in shortlists.items():
+        translated = [
+            Candidate(
+                replace(candidate.example, translation=next(translations), translated_by=translator.name),
+                candidate.rule,
+                candidate.order,
+            )
+            for candidate in shortlist
+        ]
+        chosen = choose(translated, meanings.get(text, Meaning()), known)
+        if chosen and improves(examples.get(text), chosen.example):
+            examples[text] = chosen.example
+
+
 def find_examples(
-    lexicon: list[dict], meanings: dict[str, Meaning], tatoeba: Tatoeba, corpora: dict[str, Path]
+    lexicon: list[dict],
+    meanings: dict[str, Meaning],
+    tatoeba: Tatoeba,
+    corpora: dict[str, Path],
+    wikis: Wikis,
+    translator: Translator,
 ) -> dict[str, Example]:
     rules = {entry["dutch"]: build_rules(entry["dutch"], entry.get("headwords", [])) for entry in lexicon}
+    headwords = {entry["dutch"]: entry.get("headwords", []) for entry in lexicon}
     known = vocabulary(lexicon)
     examples = from_tatoeba(tatoeba, rules, meanings, known)
     from_opus(corpora, rules, meanings, known, examples)
+    for relaxed in (False, True):
+        from_dutch_sources(tatoeba, wikis, translator, rules, headwords, meanings, known, examples, relaxed)
     return examples
