@@ -9,6 +9,8 @@ API_URL = "https://duolingo.fandom.com/api.php"
 COURSE_PAGE = "Dutch_(Netherlands)"
 SKILL_PAGE = "Dutch_(NL)_Skill:{}"
 USER_AGENT = "duolingo-anki (+https://github.com/AminFadaee/Duolingo-Dutch)"
+LESSON_ITEMS = '//ul/li[preceding::h2[1]/span[@class="mw-headline"][starts-with(normalize-space(), "Lesson")]]'
+NESTED_LISTS = {"ul", "ol"}
 
 
 @dataclass(frozen=True)
@@ -19,7 +21,7 @@ class Word:
 
 
 def fetch(client: httpx.Client, page: str) -> html.HtmlElement | None:
-    params = {"action": "parse", "page": unquote(page), "prop": "text", "format": "json", "formatversion": 2}
+    params = {"action": "parse", "page": page, "prop": "text", "format": "json", "formatversion": 2}
     try:
         response = client.get(API_URL, params=params)
         response.raise_for_status()
@@ -37,7 +39,16 @@ def skill_tags(client: httpx.Client) -> list[str]:
     page = fetch(client, COURSE_PAGE)
     if page is None:
         return []
-    return [href.split(":", 1)[1] for href in page.xpath('//div[@class="hlist"]/a/@href')]
+    return [unquote(href.split(":", 1)[1]) for href in page.xpath('//div[@class="hlist"]/a/@href')]
+
+
+def own_text(item: html.HtmlElement) -> str:
+    parts = [item.text or ""]
+    for child in item:
+        if isinstance(child.tag, str) and child.tag not in NESTED_LISTS:
+            parts.append(child.text_content())
+        parts.append(child.tail or "")
+    return " ".join("".join(parts).split())
 
 
 def skill_words(client: httpx.Client, tag: str) -> list[Word]:
@@ -45,8 +56,8 @@ def skill_words(client: httpx.Client, tag: str) -> list[Word]:
     if page is None:
         return []
     words = []
-    for item in page.xpath("//ul/li"):
-        text = item.text_content()
+    for item in page.xpath(LESSON_ITEMS):
+        text = own_text(item)
         if "=" in text:
             dutch, translation = text.split("=", 1)
             words.append(Word(dutch.strip(), translation.strip(), tag))
