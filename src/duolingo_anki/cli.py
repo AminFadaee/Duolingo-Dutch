@@ -1,11 +1,21 @@
 import argparse
 import json
 import sys
+from collections import defaultdict
 from dataclasses import asdict, is_dataclass
 from pathlib import Path
 
+from duolingo_anki.english import content_words
 from duolingo_anki.lexicon import WIKTIONARY_URL, build_lexicon
 from duolingo_anki.scraper import Word, scrape
+from duolingo_anki.sentences import (
+    ALL_LINKS_URL,
+    DUTCH_ENGLISH_LINKS_URL,
+    DUTCH_URL,
+    ENGLISH_URL,
+    Sources,
+    find_examples,
+)
 from duolingo_anki.sources import download
 
 
@@ -49,6 +59,20 @@ def run_lexicon(args: argparse.Namespace) -> None:
     report("Article differs from Wiktionary", [f"{dutch} (Wiktionary: {article})" for dutch, article in lexicon.article_conflicts])
 
 
+def run_sentences(args: argparse.Namespace) -> None:
+    lexicon = json.loads(args.lexicon.read_text(encoding="utf-8"))["entries"]
+    meanings = defaultdict(set)
+    for word in read_words(args.words):
+        meanings[word.dutch] |= content_words(word.translation)
+    downloads = [download(url, args.cache_dir) for url in (DUTCH_URL, ENGLISH_URL, DUTCH_ENGLISH_LINKS_URL, ALL_LINKS_URL)]
+    examples = find_examples(lexicon, meanings, Sources(*(item.path for item in downloads)))
+    write_json(args.output, {
+        "sources": {"tatoeba": [{"url": item.url, "last_modified": item.last_modified} for item in downloads]},
+        "entries": [{"dutch": entry["dutch"], "example": examples.get(entry["dutch"])} for entry in lexicon],
+    })
+    report("Without an example sentence", [entry["dutch"] for entry in lexicon if entry["dutch"] not in examples])
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(prog="duolingo-anki")
     commands = parser.add_subparsers(required=True)
@@ -62,6 +86,13 @@ def main() -> None:
     lexicon_parser.add_argument("--output", type=Path, default=Path("lexicon.json"))
     lexicon_parser.add_argument("--cache-dir", type=Path, default=Path(".cache"))
     lexicon_parser.set_defaults(run=run_lexicon)
+
+    sentences_parser = commands.add_parser("sentences", help="pick example sentences from Tatoeba")
+    sentences_parser.add_argument("--words", type=Path, default=Path("words.json"))
+    sentences_parser.add_argument("--lexicon", type=Path, default=Path("lexicon.json"))
+    sentences_parser.add_argument("--output", type=Path, default=Path("sentences.json"))
+    sentences_parser.add_argument("--cache-dir", type=Path, default=Path(".cache"))
+    sentences_parser.set_defaults(run=run_sentences)
 
     args = parser.parse_args()
     args.run(args)
