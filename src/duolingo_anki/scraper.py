@@ -5,10 +5,11 @@ from urllib.parse import unquote
 import httpx
 from lxml import html
 
+from duolingo_anki.sources import USER_AGENT
+
 API_URL = "https://duolingo.fandom.com/api.php"
 COURSE_PAGE = "Dutch_(Netherlands)"
 SKILL_PAGE = "Dutch_(NL)_Skill:{}"
-USER_AGENT = "duolingo-anki (+https://github.com/AminFadaee/Duolingo-Dutch)"
 LESSON_ITEMS = '//ul/li[preceding::h2[1]/span[@class="mw-headline"][starts-with(normalize-space(), "Lesson")]]'
 NESTED_LISTS = {"ul", "ol"}
 
