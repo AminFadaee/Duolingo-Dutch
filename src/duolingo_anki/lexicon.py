@@ -263,6 +263,8 @@ def build_lexicon(words: list[Word], wiktionary: Path) -> Lexicon:
                 continue
             entry, lemma = chosen
             headword = describe(part, entry, lemma)
+            if headword.pos == "verb" and " " in part.word and len(headword.forms) <= 1 and dutch in verb_glossed:
+                headword = verb_phrase(part, entries) or headword
             if gloss_overlap(lemma, translations[dutch]) == 0:
                 lexicon.unmatched_meaning.append(f"{dutch} -> {lemma['word']} ({entry['pos']})")
             is_base_form = entry is lemma
