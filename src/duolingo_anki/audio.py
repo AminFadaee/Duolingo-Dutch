@@ -51,6 +51,13 @@ class Speaker:
         return TTS(model=MODEL)
 
     @cached_property
+    def supported(self) -> set[str]:
+        return self.engine.model.text_processor.supported_character_set
+
+    def speakable(self, text: str) -> str:
+        return "".join(character for character in text if character in self.supported or character.isspace())
+
+    @cached_property
     def styles(self) -> dict:
         return {voice: self.engine.get_voice_style(voice_name=voice) for voice in VOICES}
 
@@ -59,7 +66,7 @@ class Speaker:
         path = directory / clip.file
         if not path.exists():
             np.random.seed(int.from_bytes(digest(text)[:4]))
-            samples, _ = self.engine.synthesize(text, voice_style=self.styles[voice], lang=LANGUAGE)
+            samples, _ = self.engine.synthesize(self.speakable(text), voice_style=self.styles[voice], lang=LANGUAGE)
             sf.write(path, np.asarray(samples).reshape(-1), self.engine.sample_rate, format="MP3")
         return clip
 
