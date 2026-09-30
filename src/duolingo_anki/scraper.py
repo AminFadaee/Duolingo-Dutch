@@ -1,0 +1,61 @@
+import sys
+from dataclasses import dataclass
+from urllib.parse import unquote
+
+import httpx
+from lxml import html
+
+API_URL = "https://duolingo.fandom.com/api.php"
+COURSE_PAGE = "Dutch_(Netherlands)"
+SKILL_PAGE = "Dutch_(NL)_Skill:{}"
+USER_AGENT = "duolingo-anki (+https://github.com/AminFadaee/Duolingo-Dutch)"
+
+
+@dataclass(frozen=True)
+class Word:
+    dutch: str
+    translation: str
+    tag: str
+
+
+def fetch(client: httpx.Client, page: str) -> html.HtmlElement | None:
+    params = {"action": "parse", "page": unquote(page), "prop": "text", "format": "json", "formatversion": 2}
+    try:
+        response = client.get(API_URL, params=params)
+        response.raise_for_status()
+        data = response.json()
+    except (httpx.HTTPError, ValueError) as error:
+        print(f"Fetching {page} failed: {error}", file=sys.stderr)
+        return None
+    if "error" in data:
+        print(f"Fetching {page} failed: {data['error']['info']}", file=sys.stderr)
+        return None
+    return html.fromstring(data["parse"]["text"])
+
+
+def skill_tags(client: httpx.Client) -> list[str]:
+    page = fetch(client, COURSE_PAGE)
+    if page is None:
+        return []
+    return [href.split(":", 1)[1] for href in page.xpath('//div[@class="hlist"]/a/@href')]
+
+
+def skill_words(client: httpx.Client, tag: str) -> list[Word]:
+    page = fetch(client, SKILL_PAGE.format(tag))
+    if page is None:
+        return []
+    words = []
+    for item in page.xpath("//ul/li"):
+        text = item.text_content()
+        if "=" in text:
+            dutch, translation = text.split("=", 1)
+            words.append(Word(dutch.strip(), translation.strip(), tag))
+    return words
+
+
+def main() -> None:
+    headers = {"User-Agent": USER_AGENT}
+    with httpx.Client(headers=headers, follow_redirects=True, timeout=10) as client:
+        words = [word for tag in skill_tags(client) for word in skill_words(client, tag)]
+    for word in words:
+        print(f"{word.dutch}$$${word.translation}$$${word.tag}")

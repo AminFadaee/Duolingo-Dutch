@@ -1,2 +1,4 @@
 .idea/
 scratch/
+.venv/
+__pycache__/
