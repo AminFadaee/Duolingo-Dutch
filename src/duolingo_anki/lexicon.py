@@ -4,6 +4,7 @@ from collections import defaultdict
 from dataclasses import dataclass, field
 from pathlib import Path
 
+from duolingo_anki.english import content_words, shared_words
 from duolingo_anki.scraper import Word
 
 WIKTIONARY_URL = "https://kaikki.org/dictionary/Dutch/kaikki.org-dictionary-Dutch.jsonl"
@@ -11,17 +12,12 @@ SHARED_ARTICLE = re.compile(r"^(de|het)/(de|het)\s+", re.IGNORECASE)
 ARTICLE = re.compile(r"^(de|het|'t)\s+(?=\S+$)", re.IGNORECASE)
 NOTE = re.compile(r"\([^)]*\)")
 REFLEXIVE = "zich "
-ENGLISH_SUFFIXES = ("ing", "ed", "es", "s", "d")
 PATTERN_MARKERS = ("+", "...", "…")
 GENDER_ARTICLES = {"m": "de", "f": "de", "c": "de", "p": "de", "mf": "de", "mfbysense": "de", "n": "het"}
 META_FORM_TAGS = {"table-tags", "inflection-template", "class"}
 RARE_FORM_TAGS = {"archaic", "subjunctive", "imperative"}
 NOUN_POS = {"noun", "name"}
 HEBBEN_DEFAULT_TEMPLATES = {"nl-conj-wk", "nl-conj-wk-cht", "nl-conj-st"}
-STOPWORDS = {
-    "the", "an", "to", "of", "or", "and", "for", "with", "from", "that", "this", "one", "someone", "something",
-    "person", "singular", "plural", "form", "used", "especially",
-}
 
 
 @dataclass(frozen=True)
@@ -122,22 +118,8 @@ def resolve_lemma(entry: dict, entries: dict[str, list[dict]]) -> dict:
     return entry
 
 
-def variants(token: str) -> set[str]:
-    return {token} | {
-        token.removesuffix(suffix)
-        for suffix in ENGLISH_SUFFIXES
-        if token.endswith(suffix) and len(token) - len(suffix) >= 2
-    }
-
-
-def content_words(text: str) -> set[str]:
-    return {token for token in re.findall(r"[a-z]+", text.lower()) if len(token) >= 2 and token not in STOPWORDS}
-
-
 def gloss_overlap(entry: dict, translation: set[str]) -> int:
-    glosses = " ".join(gloss for sense in entry.get("senses", []) for gloss in sense.get("glosses", []))
-    gloss_variants = {variant for token in content_words(glosses) for variant in variants(token)}
-    return sum(1 for token in translation if variants(token) & gloss_variants)
+    return shared_words(translation, " ".join(gloss for sense in entry.get("senses", []) for gloss in sense.get("glosses", [])))
 
 
 def choose_entry(part: Part, translation: set[str], entries: dict[str, list[dict]]) -> tuple[dict, dict] | None:
