@@ -3,3 +3,4 @@ scratch/
 .venv/
 __pycache__/
 .cache/
+audio/

@@ -5,6 +5,8 @@ from collections import defaultdict
 from dataclasses import asdict, is_dataclass
 from pathlib import Path
 
+from duolingo_anki.audio import MODEL as TTS_MODEL
+from duolingo_anki.audio import VOICES, Speaker, build_audio
 from duolingo_anki.english import Meaning
 from duolingo_anki.lexicon import WIKTIONARY_URL, build_lexicon
 from duolingo_anki.scraper import Word, scrape
@@ -88,6 +90,15 @@ def run_sentences(args: argparse.Namespace) -> None:
     report("Dropped for lack of an example sentence", [entry["dutch"] for entry in lexicon if entry["dutch"] not in examples])
 
 
+def run_audio(args: argparse.Namespace) -> None:
+    entries = json.loads(args.sentences.read_text(encoding="utf-8"))["entries"]
+    speaker = Speaker()
+    write_json(args.output, {
+        "sources": {"tts": {"engine": speaker.name, "model": TTS_MODEL, "voices": list(VOICES), "license": "OpenRAIL-M"}},
+        "entries": build_audio(entries, args.audio_dir, speaker),
+    })
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(prog="duolingo-anki")
     commands = parser.add_subparsers(required=True)
@@ -108,6 +119,12 @@ def main() -> None:
     sentences_parser.add_argument("--output", type=Path, default=Path("sentences.json"))
     sentences_parser.add_argument("--cache-dir", type=Path, default=Path(".cache"))
     sentences_parser.set_defaults(run=run_sentences)
+
+    audio_parser = commands.add_parser("audio", help="speak each word and its example sentence with Supertonic")
+    audio_parser.add_argument("--sentences", type=Path, default=Path("sentences.json"))
+    audio_parser.add_argument("--output", type=Path, default=Path("audio.json"))
+    audio_parser.add_argument("--audio-dir", type=Path, default=Path("audio"))
+    audio_parser.set_defaults(run=run_audio)
 
     args = parser.parse_args()
     args.run(args)
