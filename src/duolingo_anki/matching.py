@@ -7,7 +7,7 @@ ARTICLE_BEFORE_PHRASE = re.compile(r"^(?:de|het) (?=\S+ \S)", re.IGNORECASE)
 AFFIX_ALTERNATIVES = re.compile(r"^(\w+)-\(([^)]*)\)$")
 PATTERN_PARTS = re.compile(r"(\.\.\.|\+)")
 GAP = r"(?: \S+)+?"
-PARTICIPLE = r" ge\S+(?:d|t|en)"
+PRESENT_PARTICIPLE = r" \S+ende?"
 MIN_AFFIX_REST = 3
 
 
@@ -85,7 +85,7 @@ def pattern_rule(dutch: str) -> Pattern:
         elif previous == "...":
             regex += GAP
         if chunk.strip() == "P.P.":
-            regex += PARTICIPLE
+            regex += PRESENT_PARTICIPLE
         else:
             words = tokens(chunk)
             anchors += words

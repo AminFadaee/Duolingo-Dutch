@@ -13,7 +13,7 @@ def matching_rules(dutch: str, sentence: str, headwords: list[dict] | None = Non
         ("noch...noch", "Hij drinkt noch rookt noch vloekt."),
         ("hoe...hoe...", "Hoe meer, hoe beter."),
         ("iets ...s", "Ik zag iets moois."),
-        ("al + P.P.", "Heb je al gegeten?"),
+        ("al + P.P.", "Hij liep al zingend naar huis."),
         ("net zo...als", "Hij is net zo groot als ik."),
     ],
 )
