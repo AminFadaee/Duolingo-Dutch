@@ -1,7 +1,7 @@
 import json
 import re
 from collections import defaultdict
-from dataclasses import dataclass, field
+from dataclasses import dataclass, field, replace
 from pathlib import Path
 
 from duolingo_anki.english import content_words, shared_words
@@ -207,6 +207,23 @@ def describe(part: Part, entry: dict, lemma: dict) -> Headword:
     )
 
 
+def verb_phrase(part: Part, entries: dict[str, list[dict]]) -> Headword | None:
+    *fixed_words, last = part.word.split()
+    lemma = next((e for e in entries.get(last, []) if e["pos"] == "verb" and not form_of_targets(e)), None)
+    if not fixed_words or lemma is None:
+        return None
+    fixed = " ".join(fixed_words)
+    verb_forms = {form for form in all_forms(last, lemma) if " " not in form}
+    forms = {part.word} | {f"{fixed} {form}" for form in verb_forms} | {f"{form} {fixed}" for form in verb_forms}
+    return Headword(
+        word=part.word,
+        pos="verb",
+        lemma=last,
+        verb=replace(verb_parts(lemma), particle=fixed),
+        forms=sorted(forms),
+    )
+
+
 def articles_conflict(ours: str | None, theirs: str | None) -> bool:
     return bool(ours and theirs) and not set(ours.split("/")) & set(theirs.split("/"))
 
@@ -221,10 +238,14 @@ class Lexicon:
 
 def build_lexicon(words: list[Word], wiktionary: Path) -> Lexicon:
     translations = defaultdict(set)
+    verb_glossed = set()
     for word in words:
         translations[word.dutch] |= content_words(word.translation)
+        if word.translation.lower().startswith("to "):
+            verb_glossed.add(word.dutch)
     parts = {dutch: split_headwords(dutch) for dutch in translations}
     wanted = {key for ps in parts.values() for part in ps for key in part.lookups}
+    wanted |= {part.word.split()[-1] for ps in parts.values() for part in ps if " " in part.word}
     entries = load_entries(wiktionary, wanted)
     lemmas = {target for es in entries.values() for entry in es for target in form_of_targets(entry)}
     entries.update(load_entries(wiktionary, lemmas - entries.keys()))
@@ -235,8 +256,10 @@ def build_lexicon(words: list[Word], wiktionary: Path) -> Lexicon:
         for part in dutch_parts:
             chosen = choose_entry(part, translations[dutch], entries)
             if chosen is None:
-                lexicon.missing.append(part.word)
-                headwords.append(Headword(part.word))
+                phrase = verb_phrase(part, entries) if dutch in verb_glossed else None
+                if phrase is None:
+                    lexicon.missing.append(part.word)
+                headwords.append(phrase or Headword(part.word))
                 continue
             entry, lemma = chosen
             headword = describe(part, entry, lemma)

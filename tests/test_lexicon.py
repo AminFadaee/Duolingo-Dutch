@@ -8,6 +8,7 @@ from duolingo_anki.lexicon import (
     noun_article,
     split_headwords,
     verb_parts,
+    verb_phrase,
 )
 
 
@@ -105,3 +106,16 @@ def test_choose_entry_prefers_matching_article():
     }
     entry, _ = choose_entry(Part("punt", "de", ("punt",)), set(), entries)
     assert noun_article(entry) == "de"
+
+
+def test_verb_phrase_uses_forms_of_its_last_word():
+    entries = {
+        "komen": [{
+            "word": "komen", "pos": "verb", "senses": [{"glosses": ["to come"]}],
+            "inflection_templates": [{"name": "nl-conj-st", "args": {"aux": "zijn"}}],
+            "forms": [{"form": "kwamen", "tags": ["past", "plural"]}, {"form": "gekomen", "tags": ["participle", "past"]}],
+        }],
+    }
+    phrase = verb_phrase(Part("in opstand komen", None, ("in opstand komen",)), entries)
+    assert phrase.verb.particle == "in opstand"
+    assert {"kwamen in opstand", "in opstand gekomen"} <= set(phrase.forms)
