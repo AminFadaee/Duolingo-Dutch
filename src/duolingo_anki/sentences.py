@@ -1,8 +1,11 @@
 import re
 from dataclasses import dataclass, field
 
-from duolingo_anki.english import shared_words
+from duolingo_anki.english import Meaning
+from pathlib import Path
+
 from duolingo_anki.matching import FormMatch, Rule, build_rules, tokens
+from duolingo_anki.opus import find_pairs
 from duolingo_anki.tatoeba import Tatoeba
 
 SENTENCE_END = re.compile(r"[.!?]+(?=\s|$)")
@@ -29,10 +32,6 @@ class Candidate:
     order: tuple
 
 
-def carries_meaning(translation: str, meaning: set[str]) -> bool:
-    return not meaning or bool(shared_words(meaning, translation))
-
-
 def single_sentence(text: str) -> bool:
     return len(SENTENCE_END.findall(text)) <= 1
 
@@ -45,11 +44,11 @@ def too_long(text: str) -> bool:
     return len(tokens(text)) > MAX_LENGTH or not single_sentence(text)
 
 
-def rank(candidate: Candidate, meaning: set[str], vocabulary: set[str]) -> tuple:
+def rank(candidate: Candidate, meaning: Meaning, vocabulary: set[str]) -> tuple:
     sentence_tokens = tokens(candidate.example.text)
     known = sum(token in vocabulary for token in sentence_tokens) / len(sentence_tokens)
     return (
-        not carries_meaning(candidate.example.translation, meaning),
+        not meaning.carried_by(candidate.example.translation),
         too_long(candidate.example.text),
         candidate.rule.form,
         not well_shaped(candidate.example.text),
@@ -59,10 +58,10 @@ def rank(candidate: Candidate, meaning: set[str], vocabulary: set[str]) -> tuple
     )
 
 
-def choose(candidates: list[Candidate], meaning: set[str], vocabulary: set[str], strict: bool = False) -> Candidate | None:
+def choose(candidates: list[Candidate], meaning: Meaning, vocabulary: set[str], strict: bool = False) -> Candidate | None:
     allowed = [
         candidate for candidate in candidates
-        if carries_meaning(candidate.example.translation, meaning)
+        if meaning.carried_by(candidate.example.translation, strict)
         or not (strict or candidate.rule.form == FormMatch.LOOSE)
     ]
     return min(allowed, key=lambda candidate: rank(candidate, meaning, vocabulary), default=None)
@@ -79,7 +78,7 @@ def vocabulary(entries: list[dict]) -> set[str]:
 
 
 def from_tatoeba(
-    tatoeba: Tatoeba, rules: dict[str, list[Rule]], meanings: dict[str, set[str]], known: set[str]
+    tatoeba: Tatoeba, rules: dict[str, list[Rule]], meanings: dict[str, Meaning], known: set[str]
 ) -> dict[str, Example]:
     matches = {text: tatoeba.matches(text_rules) for text, text_rules in rules.items()}
     tatoeba.add_indirect_translations({
@@ -106,11 +105,43 @@ def from_tatoeba(
                 authors=list(dict.fromkeys(author for author in (dutch.author, translation.author) if author)),
             )
             candidates.append(Candidate(example, rule, (id_,)))
-        if chosen := choose(candidates, meanings.get(text, set()), known):
+        if chosen := choose(candidates, meanings.get(text, Meaning()), known):
             examples[text] = chosen.example
     return examples
 
 
-def find_examples(lexicon: list[dict], meanings: dict[str, set[str]], tatoeba: Tatoeba) -> dict[str, Example]:
+def needs_example(example: Example | None) -> bool:
+    return example is None or too_long(example.text)
+
+
+def improves(current: Example | None, new: Example) -> bool:
+    return current is None or (too_long(current.text) and not too_long(new.text))
+
+
+def from_opus(
+    corpora: dict[str, Path],
+    rules: dict[str, list[Rule]],
+    meanings: dict[str, Meaning],
+    known: set[str],
+    examples: dict[str, Example],
+) -> None:
+    for name, path in corpora.items():
+        pending = {text: text_rules for text, text_rules in rules.items() if needs_example(examples.get(text))}
+        for text, pairs in find_pairs(path, pending).items():
+            candidates = [
+                Candidate(Example(pair.dutch, pair.english, rule.label, f"opus/{name}"), rule, (pair.line,))
+                for pair, rule in pairs
+            ]
+            chosen = choose(candidates, meanings.get(text, Meaning()), known, strict=True)
+            if chosen and improves(examples.get(text), chosen.example):
+                examples[text] = chosen.example
+
+
+def find_examples(
+    lexicon: list[dict], meanings: dict[str, Meaning], tatoeba: Tatoeba, corpora: dict[str, Path]
+) -> dict[str, Example]:
     rules = {entry["dutch"]: build_rules(entry["dutch"], entry.get("headwords", [])) for entry in lexicon}
-    return from_tatoeba(tatoeba, rules, meanings, vocabulary(lexicon))
+    known = vocabulary(lexicon)
+    examples = from_tatoeba(tatoeba, rules, meanings, known)
+    from_opus(corpora, rules, meanings, known, examples)
+    return examples

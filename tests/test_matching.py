@@ -59,3 +59,9 @@ def test_verb_phrase_with_fixed_part_after_verb():
 def test_article_is_optional_before_phrases():
     headword = {"word": "de vrije tijd"}
     assert matching_rules("de vrije tijd", "Wat doe je in je vrije tijd?", [headword]) == {"vrije tijd"}
+
+
+def test_dutch_is_not_mistaken_for_english():
+    from duolingo_anki.english import looks_english
+    assert not looks_english("Het geheim van Gouda.")
+    assert looks_english("Just like Manneken Pis in Brussels.")

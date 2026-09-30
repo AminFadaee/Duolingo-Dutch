@@ -15,9 +15,9 @@ class Download:
     last_modified: str | None
 
 
-def download(url: str, cache_dir: Path) -> Download:
+def download(url: str, cache_dir: Path, name: str | None = None) -> Download:
     cache_dir.mkdir(parents=True, exist_ok=True)
-    path = cache_dir / url.rsplit("/", 1)[1]
+    path = cache_dir / (name or url.rsplit("/", 1)[1])
     meta_path = path.with_name(f"{path.name}.meta.json")
     meta = json.loads(meta_path.read_text()) if path.exists() and meta_path.exists() else {}
     headers = {"User-Agent": USER_AGENT}

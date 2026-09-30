@@ -5,9 +5,10 @@ from collections import defaultdict
 from dataclasses import asdict, is_dataclass
 from pathlib import Path
 
-from duolingo_anki.english import meaning_words
+from duolingo_anki.english import Meaning
 from duolingo_anki.lexicon import WIKTIONARY_URL, build_lexicon
 from duolingo_anki.scraper import Word, scrape
+from duolingo_anki.opus import CORPORA, latest_url
 from duolingo_anki.sentences import find_examples
 from duolingo_anki.tatoeba import URLS as TATOEBA_URLS
 from duolingo_anki.tatoeba import Files, Tatoeba
@@ -56,13 +57,23 @@ def run_lexicon(args: argparse.Namespace) -> None:
 
 def run_sentences(args: argparse.Namespace) -> None:
     lexicon = json.loads(args.lexicon.read_text(encoding="utf-8"))["entries"]
-    meanings = defaultdict(set)
+    translations = defaultdict(list)
     for word in read_words(args.words):
-        meanings[word.dutch] |= meaning_words(word.translation)
+        translations[word.dutch].append(word.translation)
+    meanings = {dutch: Meaning.of(texts) for dutch, texts in translations.items()}
     downloads = [download(url, args.cache_dir) for url in TATOEBA_URLS]
-    examples = find_examples(lexicon, meanings, Tatoeba(Files(*(item.path for item in downloads))))
+    corpora = {name: download(latest_url(name), args.cache_dir, f"opus-{name}-en-nl.zip") for name in CORPORA}
+    examples = find_examples(
+        lexicon, meanings, Tatoeba(Files(*(item.path for item in downloads))), {name: item.path for name, item in corpora.items()}
+    )
     write_json(args.output, {
-        "sources": {"tatoeba": [{"url": item.url, "last_modified": item.last_modified} for item in downloads]},
+        "sources": {
+            "tatoeba": [{"url": item.url, "last_modified": item.last_modified} for item in downloads],
+            "opus": [
+                {"corpus": name, "url": item.url, "license": CORPORA[name], "last_modified": item.last_modified}
+                for name, item in corpora.items()
+            ],
+        },
         "entries": [{"dutch": entry["dutch"], "example": examples.get(entry["dutch"])} for entry in lexicon],
     })
     report("Without an example sentence", [entry["dutch"] for entry in lexicon if entry["dutch"] not in examples])
@@ -82,7 +93,7 @@ def main() -> None:
     lexicon_parser.add_argument("--cache-dir", type=Path, default=Path(".cache"))
     lexicon_parser.set_defaults(run=run_lexicon)
 
-    sentences_parser = commands.add_parser("sentences", help="pick example sentences from Tatoeba")
+    sentences_parser = commands.add_parser("sentences", help="pick example sentences from Tatoeba and OPUS")
     sentences_parser.add_argument("--words", type=Path, default=Path("words.json"))
     sentences_parser.add_argument("--lexicon", type=Path, default=Path("lexicon.json"))
     sentences_parser.add_argument("--output", type=Path, default=Path("sentences.json"))
