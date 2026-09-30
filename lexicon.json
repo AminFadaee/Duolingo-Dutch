@@ -26694,12 +26694,33 @@
         {
           "word": "pijn doen",
           "pos": "verb",
-          "lemma": "pijn doen",
+          "lemma": "doen",
           "verb": {
-            "infinitive": "pijn doen"
+            "infinitive": "doen",
+            "past_singular": "deed",
+            "past_plural": "deden",
+            "past_participle": "gedaan",
+            "particle": "pijn"
           },
           "forms": [
-            "pijn doen"
+            "dede pijn",
+            "deden pijn",
+            "deed pijn",
+            "deedt pijn",
+            "doe pijn",
+            "doen pijn",
+            "doend pijn",
+            "doet pijn",
+            "gedaan pijn",
+            "pijn dede",
+            "pijn deden",
+            "pijn deed",
+            "pijn deedt",
+            "pijn doe",
+            "pijn doen",
+            "pijn doend",
+            "pijn doet",
+            "pijn gedaan"
           ]
         }
       ]
@@ -41679,12 +41700,26 @@
         {
           "word": "in elkaar zetten",
           "pos": "verb",
-          "lemma": "in elkaar zetten",
+          "lemma": "zetten",
           "verb": {
-            "infinitive": "in elkaar zetten"
+            "infinitive": "zetten",
+            "past_singular": "zette",
+            "past_plural": "zetten",
+            "past_participle": "gezet",
+            "auxiliary": "hebben",
+            "particle": "in elkaar"
           },
           "forms": [
-            "in elkaar zetten"
+            "gezet in elkaar",
+            "in elkaar gezet",
+            "in elkaar zet",
+            "in elkaar zette",
+            "in elkaar zetten",
+            "in elkaar zettend",
+            "zet in elkaar",
+            "zette in elkaar",
+            "zetten in elkaar",
+            "zettend in elkaar"
           ]
         }
       ]
@@ -48598,12 +48633,37 @@
         {
           "word": "gelijk hebben",
           "pos": "verb",
-          "lemma": "gelijk hebben",
+          "lemma": "hebben",
           "verb": {
-            "infinitive": "gelijk hebben"
+            "infinitive": "hebben",
+            "past_singular": "had",
+            "past_plural": "hadden",
+            "past_participle": "gehad",
+            "particle": "gelijk"
           },
           "forms": [
-            "gelijk hebben"
+            "gehad gelijk",
+            "gelijk gehad",
+            "gelijk had",
+            "gelijk hadde",
+            "gelijk hadden",
+            "gelijk hadt",
+            "gelijk heb",
+            "gelijk hebbe",
+            "gelijk hebben",
+            "gelijk hebbend",
+            "gelijk hebt",
+            "gelijk heeft",
+            "had gelijk",
+            "hadde gelijk",
+            "hadden gelijk",
+            "hadt gelijk",
+            "heb gelijk",
+            "hebbe gelijk",
+            "hebben gelijk",
+            "hebbend gelijk",
+            "hebt gelijk",
+            "heeft gelijk"
           ]
         }
       ]
