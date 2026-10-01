@@ -4,7 +4,8 @@ An Anki deck of the vocabulary of Duolingo's Dutch (Netherlands) course, and the
 words and phrases from all 117 skills, each with its grammatical forms, a real example sentence with an English
 translation, and Dutch audio for both.
 
-**Get the deck:** [on AnkiWeb](https://ankiweb.net/shared/info/400760191).
+**Get the deck:** [on AnkiWeb](https://ankiweb.net/shared/info/400760191), or download `duolingo_dutch.apkg` from the
+[latest release](https://github.com/AminFadaee/Duolingo-Dutch/releases/latest).
 
 Everything is produced by a reproducible pipeline from public sources. Running it at the same moment gives the
 same data; running it later picks up upstream edits. Not affiliated with Duolingo.
@@ -104,6 +105,25 @@ Downloads are cached in `.cache/` (about 550 MB) and fetched again only when the
 go to the usual Hugging Face and Supertonic caches (about 700 MB together). On a 6-core laptop CPU the lexicon
 takes seconds, the sentences about 5 minutes, the audio a little over an hour and the deck under a minute. No GPU
 is needed.
+
+## Releasing
+
+Releases are built by GitHub Actions from the committed data, so no pipeline step runs in CI.
+
+```sh
+uv run duolingo-anki scrape
+uv run duolingo-anki lexicon
+uv run duolingo-anki sentences
+uv run duolingo-anki audio
+git add data
+git commit -m "Update data"
+git push
+git tag v$(date +%Y.%m.%d)
+git push origin v$(date +%Y.%m.%d)
+```
+
+Versions are dates, so the version says how fresh the data is. Pushing the tag builds `duolingo_dutch.apkg` and
+publishes it as a release under that tag. The AnkiWeb copy is updated separately by sharing the deck again from Anki.
 
 ## Development
 

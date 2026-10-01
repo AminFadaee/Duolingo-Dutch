@@ -1,0 +1,31 @@
+name: Release
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v6
+
+      - name: Install dependencies
+        run: uv sync --frozen --no-default-groups
+
+      - name: Build deck
+        run: uv run --frozen --no-default-groups duolingo-anki deck
+
+      - name: Publish release
+        run: |
+          gh release create "$GITHUB_REF_NAME" build/duolingo_dutch.apkg \
+            --title "Duolingo Dutch ${GITHUB_REF_NAME#v}" \
+            --notes "Anki deck built from the data in this commit: duolingo_dutch.apkg. Importing a newer version keeps your progress." \
+            --verify-tag
