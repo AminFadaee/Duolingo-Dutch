@@ -2,6 +2,7 @@ import html
 import re
 
 LEADING_ARTICLE = re.compile(r"^(de|het) (?=\S+$)")
+ARTICLE = re.compile(r"^(?:de|het) ")
 NOTE = re.compile(r"\([^)]*\)")
 ALTERNATIVES = re.compile(r"\s*/\s*")
 AFFIX = re.compile(r"^-|\w-(\(|$)")
@@ -46,6 +47,22 @@ def is_separable(headword: dict) -> bool:
 
 def is_verb_phrase(headword: dict) -> bool:
     return bool(headword.get("verb", {}).get("particle")) and not is_separable(headword)
+
+
+def article_twins(translations: dict[str, list[str]]) -> dict[str, str]:
+    twins = {}
+    for dutch, glosses in translations.items():
+        if match := ARTICLE.match(dutch):
+            bare = dutch[match.end():]
+            if {f"the {gloss.lower()}" for gloss in translations.get(bare, [])} & {gloss.lower() for gloss in glosses}:
+                twins[bare] = dutch
+    return twins
+
+
+def merged_translations(glosses: list[str], twin_glosses: list[str]) -> list[str]:
+    known = {gloss.lower() for gloss in glosses}
+    extra = [gloss for gloss in twin_glosses if f"the {gloss.lower()}" not in known]
+    return list(dict.fromkeys(glosses + extra))
 
 
 def spoken_text(dutch: str) -> str | None:

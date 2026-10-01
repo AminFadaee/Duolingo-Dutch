@@ -58,6 +58,7 @@ def run_lexicon(args: argparse.Namespace) -> None:
 
 
 def run_sentences(args: argparse.Namespace) -> None:
+    from duolingo_anki.cards import article_twins
     from duolingo_anki.english import Meaning
     from duolingo_anki.opus import CORPORA, latest_url
     from duolingo_anki.sentences import find_examples
@@ -67,10 +68,11 @@ def run_sentences(args: argparse.Namespace) -> None:
     from duolingo_anki.translation import MODEL, REVISION, Translator
     from duolingo_anki.wikis import Wikis
 
-    lexicon = json.loads(args.lexicon.read_text(encoding="utf-8"))["entries"]
     translations = defaultdict(list)
     for word in read_words(args.words):
         translations[word.dutch].append(word.translation)
+    twins = article_twins(translations)
+    lexicon = [entry for entry in json.loads(args.lexicon.read_text(encoding="utf-8"))["entries"] if entry["dutch"] not in twins]
     meanings = {dutch: Meaning.of(texts) for dutch, texts in translations.items()}
     downloads = [download(url, args.cache_dir) for url in TATOEBA_URLS]
     corpora = {name: download(latest_url(name), args.cache_dir, f"opus-{name}-en-nl.zip") for name in CORPORA}
@@ -94,6 +96,7 @@ def run_sentences(args: argparse.Namespace) -> None:
         },
         "entries": [{"dutch": entry["dutch"], "example": examples[entry["dutch"]]} for entry in lexicon if entry["dutch"] in examples],
     })
+    report("Merged into their article form", [f"{bare} -> {dutch}" for bare, dutch in twins.items()])
     report("Dropped for lack of an example sentence", [entry["dutch"] for entry in lexicon if entry["dutch"] not in examples])
 
 

@@ -8,7 +8,15 @@ from pathlib import Path
 
 import genanki
 
-from duolingo_anki.cards import display_text, forms_html, highlight, spoken_text, word_tags
+from duolingo_anki.cards import (
+    article_twins,
+    display_text,
+    forms_html,
+    highlight,
+    merged_translations,
+    spoken_text,
+    word_tags,
+)
 
 DECK_NAME = "Duolingo Dutch"
 MODEL_ID = 1_759_241_381
@@ -183,10 +191,21 @@ def entries(words: list[dict]) -> dict[str, Entry]:
         positions.setdefault(word["dutch"], len(positions))
         translations[word["dutch"]].append(word["translation"])
         skills[word["dutch"]].append(word["tag"])
-    return {
-        dutch: Entry(dutch, list(dict.fromkeys(translations[dutch])), list(dict.fromkeys(skills[dutch])), position)
-        for dutch, position in positions.items()
-    }
+    twins = article_twins(translations)
+    folded = defaultdict(list)
+    for bare, dutch in twins.items():
+        folded[dutch].append(bare)
+    result = {}
+    for dutch, position in positions.items():
+        if dutch in twins:
+            continue
+        glosses, tags, first = list(dict.fromkeys(translations[dutch])), skills[dutch], position
+        for bare in folded[dutch]:
+            glosses = merged_translations(glosses, translations[bare])
+            tags = tags + skills[bare]
+            first = min(first, positions[bare])
+        result[dutch] = Entry(dutch, glosses, list(dict.fromkeys(tags)), first)
+    return result
 
 
 def build_deck(data_dir: Path, build_dir: Path, output: Path) -> int:

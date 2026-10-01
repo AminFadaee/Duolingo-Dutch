@@ -1,4 +1,4 @@
-from duolingo_anki.cards import display_text, forms, highlight, word_tags
+from duolingo_anki.cards import article_twins, display_text, forms, highlight, merged_translations, word_tags
 
 NOUN = {"word": "handboek", "lemma": "handboek", "pos": "noun", "noun": {"article": "het", "plural": "handboeken"}}
 SEPARABLE = {
@@ -31,3 +31,17 @@ def test_tags():
         "DD::Machine_translated", "DD::Separable_verb", "DD::Verb", "DD::Verbs_Present",
     ]
     assert "DD::Separable_verb" not in word_tags([], [PHRASE], False)
+
+
+def test_article_twins_need_a_the_gloss():
+    translations = {
+        "man": ["man"], "de man": ["the man"],
+        "eten": ["eat (plural)"], "het eten": ["the food, meal"],
+        "geheim": ["secret"], "het geheim": ["secret"],
+    }
+    assert article_twins(translations) == {"man": "de man"}
+
+
+def test_merged_translations_drop_the_bare_duplicate():
+    assert merged_translations(["the man", "husband"], ["man"]) == ["the man", "husband"]
+    assert merged_translations(["the light"], ["lamp"]) == ["the light", "lamp"]
