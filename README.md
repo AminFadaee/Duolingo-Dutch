@@ -1,10 +1,38 @@
 # Duolingo Dutch
 
-Vocabulary from Duolingo's Dutch (Netherlands) course, turned into material for Anki flash cards: each word comes
-with its grammatical forms, a real example sentence with an English translation, and Dutch audio for both.
+An Anki deck of the vocabulary of Duolingo's Dutch (Netherlands) course, and the pipeline that builds it: 2,767
+words and phrases from all 117 skills, each with its grammatical forms, a real example sentence with an English
+translation, and Dutch audio for both.
+
+**Get the deck:** [on AnkiWeb](https://ankiweb.net/shared/info/400760191).
 
 Everything is produced by a reproducible pipeline from public sources. Running it at the same moment gives the
-same data; running it later picks up upstream edits.
+same data; running it later picks up upstream edits. Not affiliated with Duolingo.
+
+## The deck
+
+Every word has three cards:
+
+| Card | Front | Back |
+|---|---|---|
+| Dutch to English | the Dutch word, read aloud | the English meaning |
+| English to Dutch | the English meaning | the Dutch word, read aloud |
+| Listening | the Dutch word read aloud, with a button to hear the example sentence as a hint | the Dutch word and its meaning |
+
+Every back also shows the article and forms (*het huis · huizen · huisje*, *opstaan · stond op · opgestaan*) and the
+example sentence with its translation, the word highlighted, and a button that plays the sentence. The sentence never
+plays on its own.
+
+New cards follow the course, starting with Basics 1. Everything is in one deck with no subdecks; notes are tagged
+instead:
+
+- Duolingo skill: `DD::Basics_1`, `DD::Food_2`, …
+- word type: `DD::Noun`, `DD::Verb`, `DD::Adjective`, `DD::Separable_verb`, …
+- `DD::Machine_translated` for the 2% of sentences whose translation is machine-made
+
+To study one skill, create a filtered deck (Tools → Create Filtered Deck) and search for
+`deck:"Duolingo Dutch" tag:DD::Food_1`. To skip cards, suspend them rather than deleting them: deleted cards come
+back when you import an update. Updates keep your progress.
 
 ## Pipeline
 
@@ -13,9 +41,11 @@ same data; running it later picks up upstream edits.
 | Scrape | `scrape` | | `words.json` | [Duolingo wiki](https://duolingo.fandom.com/wiki/Dutch_(Netherlands)) skill pages |
 | Lexicon | `lexicon` | `words.json` | `lexicon.json` | English Wiktionary via [kaikki.org](https://kaikki.org/dictionary/Dutch/) |
 | Sentences | `sentences` | `words.json`, `lexicon.json` | `sentences.json` | Tatoeba, OPUS, Dutch Wiktionary and Wikipedia |
-| Audio | `audio` | `sentences.json` | `audio.json`, `audio/` | [Supertonic 3](https://huggingface.co/Supertone/supertonic-3) |
+| Audio | `audio` | `sentences.json`, `lexicon.json` | `audio.json`, `audio/` | [Supertonic 3](https://huggingface.co/Supertone/supertonic-3) |
+| Deck | `deck` | all of the above | `build/duolingo_dutch.apkg` | |
 
-All files live in `data/` and are committed, audio included, so a release only packages them.
+All data lives in `data/` and is committed, audio included, so building the deck only packages it. The built
+deck in `build/` is not committed.
 
 Duolingo only provides the word list, its English glosses and the skill tags. Grammar (article, plural, verb
 forms) comes from Wiktionary, which an official word list check showed to be the more accurate of the two.
@@ -65,13 +95,15 @@ uv run duolingo-anki scrape
 uv run duolingo-anki lexicon
 uv run duolingo-anki sentences
 uv run duolingo-anki audio
+uv run duolingo-anki deck
 ```
 
 Each step reads the previous step's file, so any step can be rerun on its own. Every command takes `--help`.
 
 Downloads are cached in `.cache/` (about 550 MB) and fetched again only when the upstream file changes. The models
 go to the usual Hugging Face and Supertonic caches (about 700 MB together). On a 6-core laptop CPU the lexicon
-takes seconds, the sentences about 5 minutes and the audio a little over an hour. No GPU is needed.
+takes seconds, the sentences about 5 minutes, the audio a little over an hour and the deck under a minute. No GPU
+is needed.
 
 ## Development
 
