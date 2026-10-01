@@ -1,6 +1,6 @@
 # Duolingo Dutch
 
-An Anki deck of the vocabulary of Duolingo's Dutch (Netherlands) course, and the pipeline that builds it: 2,767
+An Anki deck of the vocabulary of Duolingo's Dutch (Netherlands) course, and the pipeline that builds it: 2,747
 words and phrases from all 117 skills, each with its grammatical forms, a real example sentence with an English
 translation, and Dutch audio for both.
 
