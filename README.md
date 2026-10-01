@@ -16,7 +16,7 @@ Every word has three cards:
 
 | Card | Front | Back |
 |---|---|---|
-| Dutch to English | the Dutch word, read aloud | the English meaning |
+| Dutch to English | the Dutch word, read aloud, and the example sentence | the English meaning and the sentence's translation |
 | English to Dutch | the English meaning, and a box to type the Dutch | your spelling checked against the Dutch word, which is read aloud |
 | Listening | the Dutch word read aloud, a box to type what you hear, and a button to hear the example sentence as a hint | your spelling checked, the Dutch word and its meaning |
 

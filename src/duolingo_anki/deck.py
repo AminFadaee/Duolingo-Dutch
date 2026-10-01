@@ -46,11 +46,9 @@ SENTENCE_PLAYER = (
     '<button class="play" onclick="var a = this.nextElementSibling; a.currentTime = 0; a.play()">▶</button>'
     '<audio src="{{SentenceAudio}}" preload="none"></audio>'
 )
-SENTENCE = f"""
-<div class="sentence">{SENTENCE_PLAYER}<span>{{{{Sentence}}}}</span></div>
-<div class="translation">{{{{SentenceTranslation}}}}</div>
-<div class="source">{{{{Source}}}}</div>
-"""
+SENTENCE_LINE = f'<div class="sentence">{SENTENCE_PLAYER}<span>{{{{Sentence}}}}</span></div>'
+SENTENCE_DETAILS = '<div class="translation">{{SentenceTranslation}}</div><div class="source">{{Source}}</div>'
+SENTENCE = f"{SENTENCE_LINE}{SENTENCE_DETAILS}"
 DUTCH = '<div class="dutch">{{Dutch}}</div>'
 ENGLISH = '<div class="english">{{English}}</div>'
 FORMS = '{{#Forms}}<div class="forms">{{Forms}}</div>{{/Forms}}'
@@ -71,8 +69,8 @@ class Template:
 TEMPLATES = (
     Template(
         "Dutch to English",
-        f"{DUTCH}{{{{WordAudio}}}}",
-        f"{{{{FrontSide}}}}{DIVIDER}{ENGLISH}{FORMS}{SENTENCE}",
+        f"{DUTCH}{{{{WordAudio}}}}{SENTENCE_LINE}",
+        f"{{{{FrontSide}}}}{DIVIDER}{ENGLISH}{FORMS}{SENTENCE_DETAILS}",
     ),
     Template(
         "English to Dutch",
@@ -104,6 +102,7 @@ hr#answer { border: none; border-top: 1px solid var(--line); width: min(60%, 360
 .sentence { font-size: 20px; margin: 22px auto 4px; max-width: 32em; line-height: 1.45; }
 .sentence b { color: var(--accent); }
 .translation { font-size: 16px; color: var(--soft); max-width: 32em; margin: 0 auto; }
+.english + .translation, .forms + .translation { margin-top: 22px; }
 .source { font-size: 12px; color: var(--muted); margin-top: 14px; }
 .source a { color: var(--muted); }
 .hint { font-size: 14px; color: var(--muted); margin-top: 18px; }
