@@ -36,3 +36,11 @@ def test_strict_meaning_needs_every_word_of_one_alternative():
     assert not meaning.carried_by("This conflict is known as the Eleven Years War.", strict=True)
     assert meaning.carried_by("This conflict is known as the Eighty Years' War.", strict=True)
     assert Meaning.of(["commemoration, remembrance"]).carried_by("A day of remembrance.", strict=True)
+
+
+def test_translation_closest_to_the_machine_one_wins():
+    from duolingo_anki.sentences import closest_to_machine
+    from duolingo_anki.tatoeba import Sentence
+
+    options = [Sentence(1, "Search me.", ""), Sentence(2, "I don't know.", "")]
+    assert closest_to_machine(options, "I don't know.", Meaning()).id == 2

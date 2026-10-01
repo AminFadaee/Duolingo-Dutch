@@ -1,5 +1,6 @@
 import re
 from dataclasses import dataclass, field, replace
+from difflib import SequenceMatcher
 
 from duolingo_anki.english import Meaning
 from pathlib import Path
@@ -80,8 +81,20 @@ def vocabulary(entries: list[dict]) -> set[str]:
     return words
 
 
+def similarity(first: str, second: str) -> float:
+    return SequenceMatcher(None, first.lower(), second.lower()).ratio()
+
+
+def closest_to_machine(options: list, machine: str, meaning: Meaning):
+    return min(options, key=lambda option: (not meaning.carried_by(option.text), -similarity(option.text, machine), option.id))
+
+
 def from_tatoeba(
-    tatoeba: Tatoeba, rules: dict[str, list[Rule]], meanings: dict[str, Meaning], known: set[str]
+    tatoeba: Tatoeba,
+    rules: dict[str, list[Rule]],
+    meanings: dict[str, Meaning],
+    known: set[str],
+    translator: Translator,
 ) -> dict[str, Example]:
     matches = {text: tatoeba.matches(text_rules) for text, text_rules in rules.items()}
     tatoeba.add_indirect_translations({
@@ -91,13 +104,13 @@ def from_tatoeba(
         for id_ in found
     })
     english = tatoeba.english({id_ for found in matches.values() for id_ in found})
-    examples = {}
+    examples, chosen_ids = {}, {}
     for text, found in matches.items():
         candidates = []
         for id_, rule in found.items():
             if id_ not in english:
                 continue
-            dutch, translation = tatoeba.index.sentences[id_], english[id_]
+            dutch, translation = tatoeba.index.sentences[id_], english[id_][0]
             example = Example(
                 text=dutch.text,
                 translation=translation.text,
@@ -110,6 +123,14 @@ def from_tatoeba(
             candidates.append(Candidate(example, rule, (id_,)))
         if chosen := choose(candidates, meanings.get(text, Meaning()), known):
             examples[text] = chosen.example
+            chosen_ids[text] = chosen.order[0]
+    ambiguous = [text for text, id_ in chosen_ids.items() if len(english[id_]) > 1]
+    machine = translator.translate([examples[text].text for text in ambiguous])
+    for text, machine_translation in zip(ambiguous, machine):
+        best = closest_to_machine(english[chosen_ids[text]], machine_translation, meanings.get(text, Meaning()))
+        examples[text] = replace(examples[text], translation=best.text, translation_url=best.url, authors=list(dict.fromkeys(
+            author for author in (tatoeba.index.sentences[chosen_ids[text]].author, best.author) if author
+        )))
     return examples
 
 
@@ -224,7 +245,7 @@ def find_examples(
     rules = {entry["dutch"]: build_rules(entry["dutch"], entry.get("headwords", [])) for entry in lexicon}
     headwords = {entry["dutch"]: entry.get("headwords", []) for entry in lexicon}
     known = vocabulary(lexicon)
-    examples = from_tatoeba(tatoeba, rules, meanings, known)
+    examples = from_tatoeba(tatoeba, rules, meanings, known, translator)
     from_opus(corpora, rules, meanings, known, examples)
     for relaxed in (False, True):
         from_dutch_sources(tatoeba, wikis, translator, rules, headwords, meanings, known, examples, relaxed)

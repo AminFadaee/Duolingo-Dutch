@@ -83,25 +83,24 @@ class SentenceIndex:
         return {id_ for id_ in pool if rule.matches(self.tokens[id_])}
 
 
-def direct_translations(path: Path, dutch_ids: set[int], english_ids: set[int]) -> dict[int, int]:
+def direct_translations(path: Path, dutch_ids: set[int], english_ids: set[int]) -> dict[int, list[int]]:
     with bz2.open(path, "rt") as file:
         links = read_pairs(file, dutch_ids)
     return {
-        dutch_id: min(targets)
+        dutch_id: targets
         for dutch_id, all_targets in links.items()
-        if (targets := [target for target in all_targets if target in english_ids])
+        if (targets := sorted({target for target in all_targets if target in english_ids}))
     }
 
 
-def indirect_translations(path: Path, dutch_ids: set[int], english_ids: set[int]) -> dict[int, int]:
+def indirect_translations(path: Path, dutch_ids: set[int], english_ids: set[int]) -> dict[int, list[int]]:
     pivots = read_all_links(path, dutch_ids)
     pivot_targets = read_all_links(path, {pivot for ids in pivots.values() for pivot in ids})
     translations = {}
     for dutch_id, pivot_ids in pivots.items():
-        for pivot_id in sorted(pivot_ids):
-            if targets := [target for target in pivot_targets.get(pivot_id, []) if target in english_ids]:
-                translations[dutch_id] = min(targets)
-                break
+        targets = {target for pivot_id in pivot_ids for target in pivot_targets.get(pivot_id, []) if target in english_ids}
+        if targets:
+            translations[dutch_id] = sorted(targets)
     return translations
 
 
@@ -124,7 +123,7 @@ class Tatoeba:
         missing = dutch_ids - self.translations.keys()
         self.translations |= indirect_translations(self.files.all_links, missing, self.english_ids)
 
-    def english(self, dutch_ids: set[int]) -> dict[int, Sentence]:
-        wanted = {self.translations[id_] for id_ in dutch_ids if id_ in self.translations}
+    def english(self, dutch_ids: set[int]) -> dict[int, list[Sentence]]:
+        wanted = {target for id_ in dutch_ids for target in self.translations.get(id_, [])}
         english = read_sentences(self.files.english, wanted)
-        return {id_: english[self.translations[id_]] for id_ in dutch_ids if id_ in self.translations}
+        return {id_: [english[target] for target in self.translations[id_]] for id_ in dutch_ids if id_ in self.translations}
