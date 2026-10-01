@@ -5,18 +5,8 @@ from collections import defaultdict
 from dataclasses import asdict, is_dataclass
 from pathlib import Path
 
-from duolingo_anki.audio import MODEL as TTS_MODEL
-from duolingo_anki.audio import VOICES, Speaker, build_audio
-from duolingo_anki.english import Meaning
-from duolingo_anki.lexicon import WIKTIONARY_URL, build_lexicon
-from duolingo_anki.scraper import Word, scrape
-from duolingo_anki.opus import CORPORA, latest_url
-from duolingo_anki.sentences import find_examples
-from duolingo_anki.tatoeba import URLS as TATOEBA_URLS
-from duolingo_anki.tatoeba import Files, Tatoeba
-from duolingo_anki.translation import MODEL, REVISION, Translator
-from duolingo_anki.wikis import Wikis
-from duolingo_anki.sources import download
+DATA = Path("data")
+CACHE = Path(".cache")
 
 
 def compact(value: object) -> object:
@@ -33,7 +23,9 @@ def write_json(path: Path, data: object) -> None:
     path.write_text(json.dumps(compact(data), ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
-def read_words(path: Path) -> list[Word]:
+def read_words(path: Path) -> list:
+    from duolingo_anki.scraper import Word
+
     return [Word(**word) for word in json.loads(path.read_text(encoding="utf-8"))]
 
 
@@ -44,10 +36,15 @@ def report(title: str, items: list) -> None:
 
 
 def run_scrape(args: argparse.Namespace) -> None:
+    from duolingo_anki.scraper import scrape
+
     write_json(args.output, scrape())
 
 
 def run_lexicon(args: argparse.Namespace) -> None:
+    from duolingo_anki.lexicon import WIKTIONARY_URL, build_lexicon
+    from duolingo_anki.sources import download
+
     source = download(WIKTIONARY_URL, args.cache_dir)
     lexicon = build_lexicon(read_words(args.words), source.path)
     write_json(args.output, {
@@ -60,6 +57,15 @@ def run_lexicon(args: argparse.Namespace) -> None:
 
 
 def run_sentences(args: argparse.Namespace) -> None:
+    from duolingo_anki.english import Meaning
+    from duolingo_anki.opus import CORPORA, latest_url
+    from duolingo_anki.sentences import find_examples
+    from duolingo_anki.sources import download
+    from duolingo_anki.tatoeba import URLS as TATOEBA_URLS
+    from duolingo_anki.tatoeba import Files, Tatoeba
+    from duolingo_anki.translation import MODEL, REVISION, Translator
+    from duolingo_anki.wikis import Wikis
+
     lexicon = json.loads(args.lexicon.read_text(encoding="utf-8"))["entries"]
     translations = defaultdict(list)
     for word in read_words(args.words):
@@ -91,6 +97,9 @@ def run_sentences(args: argparse.Namespace) -> None:
 
 
 def run_audio(args: argparse.Namespace) -> None:
+    from duolingo_anki.audio import MODEL as TTS_MODEL
+    from duolingo_anki.audio import VOICES, Speaker, build_audio
+
     entries = json.loads(args.sentences.read_text(encoding="utf-8"))["entries"]
     speaker = Speaker()
     write_json(args.output, {
@@ -104,26 +113,26 @@ def main() -> None:
     commands = parser.add_subparsers(required=True)
 
     scrape_parser = commands.add_parser("scrape", help="scrape vocabulary from the Duolingo wiki")
-    scrape_parser.add_argument("--output", type=Path, default=Path("words.json"))
+    scrape_parser.add_argument("--output", type=Path, default=DATA / "words.json")
     scrape_parser.set_defaults(run=run_scrape)
 
     lexicon_parser = commands.add_parser("lexicon", help="look up forms and base words in Wiktionary")
-    lexicon_parser.add_argument("--words", type=Path, default=Path("words.json"))
-    lexicon_parser.add_argument("--output", type=Path, default=Path("lexicon.json"))
-    lexicon_parser.add_argument("--cache-dir", type=Path, default=Path(".cache"))
+    lexicon_parser.add_argument("--words", type=Path, default=DATA / "words.json")
+    lexicon_parser.add_argument("--output", type=Path, default=DATA / "lexicon.json")
+    lexicon_parser.add_argument("--cache-dir", type=Path, default=CACHE)
     lexicon_parser.set_defaults(run=run_lexicon)
 
     sentences_parser = commands.add_parser("sentences", help="pick example sentences from Tatoeba, OPUS and Dutch wikis")
-    sentences_parser.add_argument("--words", type=Path, default=Path("words.json"))
-    sentences_parser.add_argument("--lexicon", type=Path, default=Path("lexicon.json"))
-    sentences_parser.add_argument("--output", type=Path, default=Path("sentences.json"))
-    sentences_parser.add_argument("--cache-dir", type=Path, default=Path(".cache"))
+    sentences_parser.add_argument("--words", type=Path, default=DATA / "words.json")
+    sentences_parser.add_argument("--lexicon", type=Path, default=DATA / "lexicon.json")
+    sentences_parser.add_argument("--output", type=Path, default=DATA / "sentences.json")
+    sentences_parser.add_argument("--cache-dir", type=Path, default=CACHE)
     sentences_parser.set_defaults(run=run_sentences)
 
     audio_parser = commands.add_parser("audio", help="speak each word and its example sentence with Supertonic")
-    audio_parser.add_argument("--sentences", type=Path, default=Path("sentences.json"))
-    audio_parser.add_argument("--output", type=Path, default=Path("audio.json"))
-    audio_parser.add_argument("--audio-dir", type=Path, default=Path("audio"))
+    audio_parser.add_argument("--sentences", type=Path, default=DATA / "sentences.json")
+    audio_parser.add_argument("--output", type=Path, default=DATA / "audio.json")
+    audio_parser.add_argument("--audio-dir", type=Path, default=DATA / "audio")
     audio_parser.set_defaults(run=run_audio)
 
     args = parser.parse_args()

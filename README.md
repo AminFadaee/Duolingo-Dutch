@@ -15,6 +15,8 @@ same data; running it later picks up upstream edits.
 | Sentences | `sentences` | `words.json`, `lexicon.json` | `sentences.json` | Tatoeba, OPUS, Dutch Wiktionary and Wikipedia |
 | Audio | `audio` | `sentences.json` | `audio.json`, `audio/` | [Supertonic 3](https://huggingface.co/Supertone/supertonic-3) |
 
+All files live in `data/` and are committed, audio included, so a release only packages them.
+
 Duolingo only provides the word list, its English glosses and the skill tags. Grammar (article, plural, verb
 forms) comes from Wiktionary, which an official word list check showed to be the more accurate of the two.
 
@@ -49,12 +51,14 @@ words that are also in the deck. Words without any example sentence are dropped.
 ### Audio
 
 Speaks every word and its example sentence. Each card gets voice F1 or M1, chosen from a hash of the word, and
-synthesis is seeded from a hash of the text, so the same input produces the same MP3 byte for byte. The clips are
-not committed; `audio.json` lists them.
+synthesis is seeded from a hash of the text, so the same input produces the same MP3 byte for byte. Clips are named
+after a hash of their voice and text, so an update only adds the clips whose text changed. `audio.json` lists them.
 
 ## Usage
 
-Requires [uv](https://docs.astral.sh/uv/). It installs Python 3.13 and the dependencies on first run.
+Requires [uv](https://docs.astral.sh/uv/). It installs Python 3.13 and the dependencies on first run. The heavy
+pipeline packages (PyTorch, transformers, Supertonic) sit in the `pipeline` dependency group, which is installed by
+default; `uv sync --no-default-groups` skips them when only packaging the committed data.
 
 ```sh
 uv run duolingo-anki scrape
