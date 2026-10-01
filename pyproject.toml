@@ -9,7 +9,9 @@ authors = [
     { name = "Amin", email = "amenfd@gmail.com" }
 ]
 requires-python = ">=3.13"
-dependencies = []
+dependencies = [
+    "genanki>=0.13.1",
+]
 
 [project.scripts]
 duolingo-anki = "duolingo_anki:main"

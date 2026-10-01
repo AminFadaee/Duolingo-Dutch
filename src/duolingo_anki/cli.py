@@ -7,6 +7,7 @@ from pathlib import Path
 
 DATA = Path("data")
 CACHE = Path(".cache")
+BUILD = Path("build")
 
 
 def compact(value: object) -> object:
@@ -99,13 +100,23 @@ def run_sentences(args: argparse.Namespace) -> None:
 def run_audio(args: argparse.Namespace) -> None:
     from duolingo_anki.audio import MODEL as TTS_MODEL
     from duolingo_anki.audio import VOICES, Speaker, build_audio
+    from duolingo_anki.cards import display_text
 
     entries = json.loads(args.sentences.read_text(encoding="utf-8"))["entries"]
+    lexicon = {entry["dutch"]: entry.get("headwords", []) for entry in json.loads(args.lexicon.read_text(encoding="utf-8"))["entries"]}
+    displayed = {entry["dutch"]: display_text(entry["dutch"], lexicon[entry["dutch"]]) for entry in entries}
     speaker = Speaker()
     write_json(args.output, {
         "sources": {"tts": {"engine": speaker.name, "model": TTS_MODEL, "voices": list(VOICES), "license": "OpenRAIL-M"}},
-        "entries": build_audio(entries, args.audio_dir, speaker),
+        "entries": build_audio(entries, displayed, args.audio_dir, speaker),
     })
+
+
+def run_deck(args: argparse.Namespace) -> None:
+    from duolingo_anki.deck import build_deck
+
+    notes = build_deck(args.data_dir, args.build_dir, args.output)
+    print(f"Wrote {notes} notes to {args.output}", file=sys.stderr)
 
 
 def main() -> None:
@@ -131,9 +142,16 @@ def main() -> None:
 
     audio_parser = commands.add_parser("audio", help="speak each word and its example sentence with Supertonic")
     audio_parser.add_argument("--sentences", type=Path, default=DATA / "sentences.json")
+    audio_parser.add_argument("--lexicon", type=Path, default=DATA / "lexicon.json")
     audio_parser.add_argument("--output", type=Path, default=DATA / "audio.json")
     audio_parser.add_argument("--audio-dir", type=Path, default=DATA / "audio")
     audio_parser.set_defaults(run=run_audio)
+
+    deck_parser = commands.add_parser("deck", help="build the Anki package from the committed data")
+    deck_parser.add_argument("--data-dir", type=Path, default=DATA)
+    deck_parser.add_argument("--build-dir", type=Path, default=BUILD)
+    deck_parser.add_argument("--output", type=Path, default=BUILD / "duolingo_dutch.apkg")
+    deck_parser.set_defaults(run=run_deck)
 
     args = parser.parse_args()
     args.run(args)

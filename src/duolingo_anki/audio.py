@@ -71,16 +71,20 @@ class Speaker:
         return clip
 
 
-def build_audio(entries: list[dict], directory: Path, speaker: Speaker) -> list[dict]:
+def build_audio(entries: list[dict], displayed: dict[str, str], directory: Path, speaker: Speaker) -> list[dict]:
     directory.mkdir(parents=True, exist_ok=True)
     manifest = []
     for entry in entries:
         voice = voice_for(entry["dutch"])
-        word = spoken_word(entry["dutch"])
+        word = spoken_word(displayed[entry["dutch"]])
         manifest.append({
             "dutch": entry["dutch"],
             "voice": voice,
             "word": speaker.speak(word, voice, directory) if word else None,
             "sentence": speaker.speak(entry["example"]["text"], voice, directory),
         })
+    used = {clip.file for item in manifest for clip in (item["word"], item["sentence"]) if clip}
+    for path in directory.glob("*.mp3"):
+        if path.name not in used:
+            path.unlink()
     return manifest
