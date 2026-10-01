@@ -17,8 +17,11 @@ Every word has three cards:
 | Card | Front | Back |
 |---|---|---|
 | Dutch to English | the Dutch word, read aloud | the English meaning |
-| English to Dutch | the English meaning | the Dutch word, read aloud |
-| Listening | the Dutch word read aloud, with a button to hear the example sentence as a hint | the Dutch word and its meaning |
+| English to Dutch | the English meaning, and a box to type the Dutch | your spelling checked against the Dutch word, which is read aloud |
+| Listening | the Dutch word read aloud, a box to type what you hear, and a button to hear the example sentence as a hint | your spelling checked, the Dutch word and its meaning |
+
+The typed answer is the word as spoken: *opstaan* for *op\|staan*, *de bon, het bonnetje* for *de bon / het
+bonnetje*. Grammar patterns and affixes such as *noch…noch* and *schoon-* have no typed answer and no listening card.
 
 Every back also shows the article and forms (*het huis · huizen · huisje*, *opstaan · stond op · opgestaan*) and the
 example sentence with its translation, the word highlighted, and a button that plays the sentence. The sentence never

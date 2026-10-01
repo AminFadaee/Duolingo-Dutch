@@ -8,7 +8,7 @@ from pathlib import Path
 
 import genanki
 
-from duolingo_anki.cards import display_text, forms_html, highlight, word_tags
+from duolingo_anki.cards import display_text, forms_html, highlight, spoken_text, word_tags
 
 DECK_NAME = "Duolingo Dutch"
 MODEL_ID = 1_759_241_381
@@ -24,6 +24,7 @@ FIELDS = (
     "SentenceTranslation",
     "SentenceAudio",
     "Source",
+    "TypeAnswer",
 )
 SOURCE_NAMES = {
     "tatoeba": "Tatoeba",
@@ -46,6 +47,7 @@ DUTCH = '<div class="dutch">{{Dutch}}</div>'
 ENGLISH = '<div class="english">{{English}}</div>'
 FORMS = '{{#Forms}}<div class="forms">{{Forms}}</div>{{/Forms}}'
 DIVIDER = '<hr id="answer">'
+TYPE_ANSWER = '{{#TypeAnswer}}<div class="typed">{{type:TypeAnswer}}</div>{{/TypeAnswer}}'
 
 
 @dataclass(frozen=True)
@@ -66,12 +68,12 @@ TEMPLATES = (
     ),
     Template(
         "English to Dutch",
-        ENGLISH,
+        f"{ENGLISH}{TYPE_ANSWER}",
         f"{{{{FrontSide}}}}{DIVIDER}{DUTCH}{{{{WordAudio}}}}{FORMS}{SENTENCE}",
     ),
     Template(
         "Listening",
-        f'{{{{#WordAudio}}}}<div class="prompt">Listen</div>{{{{WordAudio}}}}'
+        f'{{{{#WordAudio}}}}<div class="prompt">Listen</div>{{{{WordAudio}}}}{TYPE_ANSWER}'
         f'<div class="hint">{SENTENCE_PLAYER} sentence</div>{{{{/WordAudio}}}}',
         f"{{{{FrontSide}}}}{DIVIDER}{DUTCH}{ENGLISH}{FORMS}{SENTENCE}",
     ),
@@ -97,6 +99,12 @@ hr#answer { border: none; border-top: 1px solid var(--line); width: min(60%, 360
 .source { font-size: 12px; color: var(--muted); margin-top: 14px; }
 .source a { color: var(--muted); }
 .hint { font-size: 14px; color: var(--muted); margin-top: 18px; }
+.typed { margin-top: 16px; }
+input#typeans {
+  width: min(90%, 420px); font-size: 22px; padding: 6px 10px; text-align: center;
+  border: 1px solid var(--line); border-radius: 8px; background: transparent; color: var(--text);
+}
+code#typeans { font-family: inherit; font-size: 22px; }
 button.play {
   font-size: 14px; line-height: 1; padding: 6px 9px; margin-right: 8px; border-radius: 50%;
   border: 1px solid var(--line); background: transparent; color: var(--accent); cursor: pointer; vertical-align: 2px;
@@ -209,6 +217,7 @@ def build_deck(data_dir: Path, build_dir: Path, output: Path) -> int:
             "SentenceTranslation": html.escape(example["translation"]),
             "SentenceAudio": media.button_source(clips["sentence"]),
             "Source": source_html(example),
+            "TypeAnswer": html.escape(spoken_text(display_text(entry.dutch, headwords)) or ""),
         }
         tags = word_tags(entry.skills, headwords, bool(example.get("translated_by")))
         deck.add_note(genanki.Note(
