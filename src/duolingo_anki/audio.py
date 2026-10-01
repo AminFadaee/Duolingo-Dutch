@@ -1,5 +1,4 @@
 import hashlib
-import re
 from dataclasses import dataclass
 from functools import cached_property
 from importlib.metadata import version
@@ -8,12 +7,11 @@ from pathlib import Path
 import numpy as np
 import soundfile as sf
 
+from duolingo_anki.cards import spoken_text
+
 MODEL = "supertonic-3"
 LANGUAGE = "nl"
 VOICES = ("F1", "M1")
-NOTE = re.compile(r"\([^)]*\)")
-ALTERNATIVES = re.compile(r"\s*/\s*")
-PATTERN_MARKERS = ("...", "…", "+")
 
 
 def digest(text: str) -> bytes:
@@ -22,13 +20,6 @@ def digest(text: str) -> bytes:
 
 def voice_for(dutch: str) -> str:
     return VOICES[digest(dutch)[0] % len(VOICES)]
-
-
-def spoken_word(dutch: str) -> str | None:
-    if any(marker in dutch for marker in PATTERN_MARKERS) or dutch.startswith("-") or re.search(r"\w-(\(|$)", dutch):
-        return None
-    text = NOTE.sub("", dutch).replace("|", "")
-    return ", ".join(part for part in ALTERNATIVES.split(" ".join(text.split())) if part) or None
 
 
 def file_name(text: str, voice: str) -> str:
@@ -76,7 +67,7 @@ def build_audio(entries: list[dict], displayed: dict[str, str], directory: Path,
     manifest = []
     for entry in entries:
         voice = voice_for(entry["dutch"])
-        word = spoken_word(displayed[entry["dutch"]])
+        word = spoken_text(displayed[entry["dutch"]])
         manifest.append({
             "dutch": entry["dutch"],
             "voice": voice,

@@ -2,6 +2,10 @@ import html
 import re
 
 LEADING_ARTICLE = re.compile(r"^(de|het) (?=\S+$)")
+NOTE = re.compile(r"\([^)]*\)")
+ALTERNATIVES = re.compile(r"\s*/\s*")
+AFFIX = re.compile(r"^-|\w-(\(|$)")
+PATTERN_MARKERS = ("...", "…", "+")
 WORD = re.compile(r"[\w'-]+")
 TAG_UNSAFE = re.compile(r"[^\w-]+")
 TAG_PREFIX = "DD"
@@ -42,6 +46,13 @@ def is_separable(headword: dict) -> bool:
 
 def is_verb_phrase(headword: dict) -> bool:
     return bool(headword.get("verb", {}).get("particle")) and not is_separable(headword)
+
+
+def spoken_text(dutch: str) -> str | None:
+    if any(marker in dutch for marker in PATTERN_MARKERS) or AFFIX.search(dutch):
+        return None
+    text = " ".join(NOTE.sub("", dutch).replace("|", "").split())
+    return ", ".join(part for part in ALTERNATIVES.split(text) if part) or None
 
 
 def forms(headword: dict) -> str:

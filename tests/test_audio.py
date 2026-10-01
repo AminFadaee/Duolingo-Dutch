@@ -1,6 +1,7 @@
 import pytest
 
-from duolingo_anki.audio import VOICES, file_name, spoken_word, voice_for
+from duolingo_anki.audio import VOICES, file_name, voice_for
+from duolingo_anki.cards import spoken_text
 
 
 @pytest.mark.parametrize(
@@ -18,8 +19,8 @@ from duolingo_anki.audio import VOICES, file_name, spoken_word, voice_for
         ("half-(zus/broer)", None),
     ],
 )
-def test_spoken_word(dutch, spoken):
-    assert spoken_word(dutch) == spoken
+def test_spoken_text(dutch, spoken):
+    assert spoken_text(dutch) == spoken
 
 
 def test_voice_depends_only_on_the_text():
