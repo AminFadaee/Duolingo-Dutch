@@ -73,21 +73,6 @@
       }
     },
     {
-      "dutch": "man",
-      "example": {
-        "text": "Kleren maken de man.",
-        "translation": "Clothes make the man.",
-        "match": "man",
-        "source": "tatoeba",
-        "url": "https://tatoeba.org/en/sentences/show/375962",
-        "translation_url": "https://tatoeba.org/en/sentences/show/269812",
-        "authors": [
-          "megamanenm",
-          "CK"
-        ]
-      }
-    },
-    {
       "dutch": "de vrouw",
       "example": {
         "text": "Mijn vrouw is arts.",
@@ -103,37 +88,7 @@
       }
     },
     {
-      "dutch": "vrouw",
-      "example": {
-        "text": "De vrouw is dik.",
-        "translation": "The woman is fat.",
-        "match": "vrouw",
-        "source": "tatoeba",
-        "url": "https://tatoeba.org/en/sentences/show/659375",
-        "translation_url": "https://tatoeba.org/en/sentences/show/1487012",
-        "authors": [
-          "martinod",
-          "rkqb"
-        ]
-      }
-    },
-    {
       "dutch": "de jongen",
-      "example": {
-        "text": "De jongen liep weg.",
-        "translation": "The boy ran away.",
-        "match": "jongen",
-        "source": "tatoeba",
-        "url": "https://tatoeba.org/en/sentences/show/375854",
-        "translation_url": "https://tatoeba.org/en/sentences/show/46301",
-        "authors": [
-          "megamanenm",
-          "CK"
-        ]
-      }
-    },
-    {
-      "dutch": "jongen",
       "example": {
         "text": "De jongen liep weg.",
         "translation": "The boy ran away.",
@@ -238,21 +193,6 @@
       }
     },
     {
-      "dutch": "meisje",
-      "example": {
-        "text": "Wie is dat meisje?",
-        "translation": "Who is this girl?",
-        "match": "meisje",
-        "source": "tatoeba",
-        "url": "https://tatoeba.org/en/sentences/show/699641",
-        "translation_url": "https://tatoeba.org/en/sentences/show/58453",
-        "authors": [
-          "martinod",
-          "CK"
-        ]
-      }
-    },
-    {
       "dutch": "of",
       "example": {
         "text": "Weet je of ze Engels kan spreken?",
@@ -269,21 +209,6 @@
     },
     {
       "dutch": "het kind",
-      "example": {
-        "text": "Ik ben enig kind.",
-        "translation": "I am an only child.",
-        "match": "kind",
-        "source": "tatoeba",
-        "url": "https://tatoeba.org/en/sentences/show/753672",
-        "translation_url": "https://tatoeba.org/en/sentences/show/256056",
-        "authors": [
-          "Citrine",
-          "CK"
-        ]
-      }
-    },
-    {
-      "dutch": "kind",
       "example": {
         "text": "Ik ben enig kind.",
         "translation": "I am an only child.",
@@ -387,37 +312,7 @@
       }
     },
     {
-      "dutch": "appel",
-      "example": {
-        "text": "Hij eet een appel.",
-        "translation": "He's eating an apple.",
-        "match": "appel",
-        "source": "tatoeba",
-        "url": "https://tatoeba.org/en/sentences/show/406602",
-        "translation_url": "https://tatoeba.org/en/sentences/show/405764",
-        "authors": [
-          "Dorenda",
-          "CK"
-        ]
-      }
-    },
-    {
       "dutch": "de melk",
-      "example": {
-        "text": "Melk maakt ons sterk.",
-        "translation": "Milk makes us strong.",
-        "match": "melk",
-        "source": "tatoeba",
-        "url": "https://tatoeba.org/en/sentences/show/734614",
-        "translation_url": "https://tatoeba.org/en/sentences/show/19465",
-        "authors": [
-          "martinod",
-          "CK"
-        ]
-      }
-    },
-    {
-      "dutch": "melk",
       "example": {
         "text": "Melk maakt ons sterk.",
         "translation": "Milk makes us strong.",
@@ -506,21 +401,6 @@
       }
     },
     {
-      "dutch": "water",
-      "example": {
-        "text": "Het water is goed.",
-        "translation": "The water is good.",
-        "match": "water",
-        "source": "tatoeba",
-        "url": "https://tatoeba.org/en/sentences/show/403165",
-        "translation_url": "https://tatoeba.org/en/sentences/show/403150",
-        "authors": [
-          "Dorenda",
-          "Ramses"
-        ]
-      }
-    },
-    {
       "dutch": "het brood",
       "example": {
         "text": "Hij heeft minder brood.",
@@ -536,37 +416,7 @@
       }
     },
     {
-      "dutch": "brood",
-      "example": {
-        "text": "Hij heeft minder brood.",
-        "translation": "He has less bread.",
-        "match": "brood",
-        "source": "tatoeba",
-        "url": "https://tatoeba.org/en/sentences/show/651464",
-        "translation_url": "https://tatoeba.org/en/sentences/show/434902",
-        "authors": [
-          "martinod",
-          "lukaszpp"
-        ]
-      }
-    },
-    {
       "dutch": "het sap",
-      "example": {
-        "text": "Hou je van sap?",
-        "translation": "Do you like juice?",
-        "match": "sap",
-        "source": "tatoeba",
-        "url": "https://tatoeba.org/en/sentences/show/7998581",
-        "translation_url": "https://tatoeba.org/en/sentences/show/1643242",
-        "authors": [
-          "MarijnKp",
-          "Dark"
-        ]
-      }
-    },
-    {
-      "dutch": "sap",
       "example": {
         "text": "Hou je van sap?",
         "translation": "Do you like juice?",
@@ -640,37 +490,7 @@
       }
     },
     {
-      "dutch": "boterham",
-      "example": {
-        "text": "Zij eten een boterham.",
-        "translation": "They are eating a sandwich.",
-        "match": "boterham",
-        "source": "tatoeba",
-        "url": "https://tatoeba.org/en/sentences/show/1531650",
-        "translation_url": "https://tatoeba.org/en/sentences/show/463148",
-        "authors": [
-          "Globetrotter",
-          "lukaszpp"
-        ]
-      }
-    },
-    {
       "dutch": "de rijst",
-      "example": {
-        "text": "Ze eten veel rijst.",
-        "translation": "They eat a lot of rice.",
-        "match": "rijst",
-        "source": "tatoeba",
-        "url": "https://tatoeba.org/en/sentences/show/628611",
-        "translation_url": "https://tatoeba.org/en/sentences/show/307117",
-        "authors": [
-          "Citrine",
-          "CK"
-        ]
-      }
-    },
-    {
-      "dutch": "rijst",
       "example": {
         "text": "Ze eten veel rijst.",
         "translation": "They eat a lot of rice.",
@@ -760,37 +580,7 @@
       }
     },
     {
-      "dutch": "krant",
-      "example": {
-        "text": "Waar is de krant?",
-        "translation": "Where's the newspaper?",
-        "match": "krant",
-        "source": "tatoeba",
-        "url": "https://tatoeba.org/en/sentences/show/387854",
-        "translation_url": "https://tatoeba.org/en/sentences/show/269383",
-        "authors": [
-          "Dorenda",
-          "CK"
-        ]
-      }
-    },
-    {
       "dutch": "de meisjes",
-      "example": {
-        "text": "Waar zijn de meisjes?",
-        "translation": "Where are the girls?",
-        "match": "meisjes",
-        "source": "tatoeba",
-        "url": "https://tatoeba.org/en/sentences/show/760071",
-        "translation_url": "https://tatoeba.org/en/sentences/show/267239",
-        "authors": [
-          "martinod",
-          "CK"
-        ]
-      }
-    },
-    {
-      "dutch": "meisjes",
       "example": {
         "text": "Waar zijn de meisjes?",
         "translation": "Where are the girls?",
@@ -820,37 +610,7 @@
       }
     },
     {
-      "dutch": "vrouwen",
-      "example": {
-        "text": "Vrouwen veranderen de wereld.",
-        "translation": "Women change the world.",
-        "match": "vrouwen",
-        "source": "tatoeba",
-        "url": "https://tatoeba.org/en/sentences/show/3851459",
-        "translation_url": "https://tatoeba.org/en/sentences/show/3805464",
-        "authors": [
-          "PaulP",
-          "muriloricci"
-        ]
-      }
-    },
-    {
       "dutch": "de mannen",
-      "example": {
-        "text": "Ik zag vijf mannen.",
-        "translation": "I saw five men.",
-        "match": "mannen",
-        "source": "tatoeba",
-        "url": "https://tatoeba.org/en/sentences/show/555994",
-        "translation_url": "https://tatoeba.org/en/sentences/show/370730",
-        "authors": [
-          "anders",
-          "saeb"
-        ]
-      }
-    },
-    {
-      "dutch": "mannen",
       "example": {
         "text": "Ik zag vijf mannen.",
         "translation": "I saw five men.",
@@ -895,37 +655,7 @@
       }
     },
     {
-      "dutch": "jongens",
-      "example": {
-        "text": "Waar zijn de jongens?",
-        "translation": "Where are the boys?",
-        "match": "jongens",
-        "source": "tatoeba",
-        "url": "https://tatoeba.org/en/sentences/show/760072",
-        "translation_url": "https://tatoeba.org/en/sentences/show/671434",
-        "authors": [
-          "martinod",
-          "Aleksej"
-        ]
-      }
-    },
-    {
       "dutch": "het menu",
-      "example": {
-        "text": "Heeft u een Engels menu?",
-        "translation": "Do you have a menu in English?",
-        "match": "menu",
-        "source": "tatoeba",
-        "url": "https://tatoeba.org/en/sentences/show/3552764",
-        "translation_url": "https://tatoeba.org/en/sentences/show/3550079",
-        "authors": [
-          "Citrine",
-          "CK"
-        ]
-      }
-    },
-    {
-      "dutch": "menu",
       "example": {
         "text": "Heeft u een Engels menu?",
         "translation": "Do you have a menu in English?",
@@ -971,21 +701,6 @@
     },
     {
       "dutch": "het boek",
-      "example": {
-        "text": "Geef mij het boek.",
-        "translation": "Give me the book.",
-        "match": "boek",
-        "source": "tatoeba",
-        "url": "https://tatoeba.org/en/sentences/show/439375",
-        "translation_url": "https://tatoeba.org/en/sentences/show/43899",
-        "authors": [
-          "koosscharroo",
-          "CK"
-        ]
-      }
-    },
-    {
-      "dutch": "boek",
       "example": {
         "text": "Geef mij het boek.",
         "translation": "Give me the book.",
@@ -1061,21 +776,6 @@
     },
     {
       "dutch": "de kinderen",
-      "example": {
-        "text": "Neem uw kinderen mee.",
-        "translation": "Bring your children along.",
-        "match": "kinderen",
-        "source": "tatoeba",
-        "url": "https://tatoeba.org/en/sentences/show/377893",
-        "translation_url": "https://tatoeba.org/en/sentences/show/245682",
-        "authors": [
-          "Dorenda",
-          "CK"
-        ]
-      }
-    },
-    {
-      "dutch": "kinderen",
       "example": {
         "text": "Neem uw kinderen mee.",
         "translation": "Bring your children along.",
@@ -2119,15 +1819,15 @@
     {
       "dutch": "de koe",
       "example": {
-        "text": "Wij molken de koe.",
-        "translation": "We milked the cow.",
+        "text": "Ik heb een koe.",
+        "translation": "I have a cow.",
         "match": "koe",
         "source": "tatoeba",
-        "url": "https://tatoeba.org/en/sentences/show/3860235",
-        "translation_url": "https://tatoeba.org/en/sentences/show/2719530",
+        "url": "https://tatoeba.org/en/sentences/show/6813038",
+        "translation_url": "https://tatoeba.org/en/sentences/show/2777841",
         "authors": [
-          "PaulP",
-          "Amastan"
+          "Micsmithel",
+          "CM"
         ]
       }
     },
@@ -36786,11 +36486,11 @@
     {
       "dutch": "de constitutionele monarchie",
       "example": {
-        "text": "Een constitutionele monarchie is aan de grondwet gebonden, maar niet per definitie democratisch.",
-        "translation": "A constitutional monarchy is bound by the constitution, but not by definition democratic.",
+        "text": "In een parlementaire republiek zijn, net als in een constitutionele monarchie, de ministers verantwoording schuldig aan de volksvertegenwoordiging.",
+        "translation": "In a parliamentary republic, as in a constitutional monarchy, ministers are accountable to the parliament.",
         "match": "constitutionele monarchie",
         "source": "nl.wikipedia",
-        "url": "https://nl.wikipedia.org/wiki/Monarchie",
+        "url": "https://nl.wikipedia.org/wiki/Parlementaire_republiek",
         "translated_by": "Helsinki-NLP/opus-mt-nl-en@48af999f2c59"
       }
     },

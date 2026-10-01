@@ -36,18 +36,6 @@
       }
     },
     {
-      "dutch": "man",
-      "voice": "F1",
-      "word": {
-        "text": "man",
-        "file": "nl-ad8ba7f738d2acaf.mp3"
-      },
-      "sentence": {
-        "text": "Kleren maken de man.",
-        "file": "nl-e05975a929d5eda7.mp3"
-      }
-    },
-    {
       "dutch": "de vrouw",
       "voice": "M1",
       "word": {
@@ -60,35 +48,11 @@
       }
     },
     {
-      "dutch": "vrouw",
-      "voice": "F1",
-      "word": {
-        "text": "vrouw",
-        "file": "nl-459b268575e77923.mp3"
-      },
-      "sentence": {
-        "text": "De vrouw is dik.",
-        "file": "nl-f5bbe7aefd753bc3.mp3"
-      }
-    },
-    {
       "dutch": "de jongen",
       "voice": "F1",
       "word": {
         "text": "de jongen",
         "file": "nl-06627f26111ea421.mp3"
-      },
-      "sentence": {
-        "text": "De jongen liep weg.",
-        "file": "nl-f98011e33d0cde0d.mp3"
-      }
-    },
-    {
-      "dutch": "jongen",
-      "voice": "F1",
-      "word": {
-        "text": "jongen",
-        "file": "nl-ade65b7b1c9aac81.mp3"
       },
       "sentence": {
         "text": "De jongen liep weg.",
@@ -168,18 +132,6 @@
       }
     },
     {
-      "dutch": "meisje",
-      "voice": "F1",
-      "word": {
-        "text": "meisje",
-        "file": "nl-8fdb0d72146ea9be.mp3"
-      },
-      "sentence": {
-        "text": "Wie is dat meisje?",
-        "file": "nl-4c3ba348822de863.mp3"
-      }
-    },
-    {
       "dutch": "of",
       "voice": "F1",
       "word": {
@@ -201,18 +153,6 @@
       "sentence": {
         "text": "Ik ben enig kind.",
         "file": "nl-1efba64504e9f82b.mp3"
-      }
-    },
-    {
-      "dutch": "kind",
-      "voice": "M1",
-      "word": {
-        "text": "kind",
-        "file": "nl-a5e0207ea448bf20.mp3"
-      },
-      "sentence": {
-        "text": "Ik ben enig kind.",
-        "file": "nl-6363495c162ebb64.mp3"
       }
     },
     {
@@ -288,18 +228,6 @@
       }
     },
     {
-      "dutch": "appel",
-      "voice": "F1",
-      "word": {
-        "text": "appel",
-        "file": "nl-5c24bbcb65722aed.mp3"
-      },
-      "sentence": {
-        "text": "Hij eet een appel.",
-        "file": "nl-6e7844b42418bb7f.mp3"
-      }
-    },
-    {
       "dutch": "de melk",
       "voice": "M1",
       "word": {
@@ -309,18 +237,6 @@
       "sentence": {
         "text": "Melk maakt ons sterk.",
         "file": "nl-e48909237f05ed77.mp3"
-      }
-    },
-    {
-      "dutch": "melk",
-      "voice": "F1",
-      "word": {
-        "text": "melk",
-        "file": "nl-116a1674c5e188ba.mp3"
-      },
-      "sentence": {
-        "text": "Melk maakt ons sterk.",
-        "file": "nl-e5449996fe117bd4.mp3"
       }
     },
     {
@@ -384,18 +300,6 @@
       }
     },
     {
-      "dutch": "water",
-      "voice": "M1",
-      "word": {
-        "text": "water",
-        "file": "nl-6a4366fcbc108bbc.mp3"
-      },
-      "sentence": {
-        "text": "Het water is goed.",
-        "file": "nl-bc64ccf6de595929.mp3"
-      }
-    },
-    {
       "dutch": "het brood",
       "voice": "M1",
       "word": {
@@ -408,35 +312,11 @@
       }
     },
     {
-      "dutch": "brood",
-      "voice": "F1",
-      "word": {
-        "text": "brood",
-        "file": "nl-3f46288a8cbc7a6e.mp3"
-      },
-      "sentence": {
-        "text": "Hij heeft minder brood.",
-        "file": "nl-3de28b0588617c2a.mp3"
-      }
-    },
-    {
       "dutch": "het sap",
       "voice": "F1",
       "word": {
         "text": "het sap",
         "file": "nl-c6bbd66ea2b97c4b.mp3"
-      },
-      "sentence": {
-        "text": "Hou je van sap?",
-        "file": "nl-02a2d5c59a16f6e9.mp3"
-      }
-    },
-    {
-      "dutch": "sap",
-      "voice": "F1",
-      "word": {
-        "text": "sap",
-        "file": "nl-5931c61234efb56b.mp3"
       },
       "sentence": {
         "text": "Hou je van sap?",
@@ -492,18 +372,6 @@
       }
     },
     {
-      "dutch": "boterham",
-      "voice": "M1",
-      "word": {
-        "text": "boterham",
-        "file": "nl-b50db51ec9168632.mp3"
-      },
-      "sentence": {
-        "text": "Zij eten een boterham.",
-        "file": "nl-a456a98344592324.mp3"
-      }
-    },
-    {
       "dutch": "de rijst",
       "voice": "M1",
       "word": {
@@ -513,18 +381,6 @@
       "sentence": {
         "text": "Ze eten veel rijst.",
         "file": "nl-ac7e674da8c17aa2.mp3"
-      }
-    },
-    {
-      "dutch": "rijst",
-      "voice": "F1",
-      "word": {
-        "text": "rijst",
-        "file": "nl-75e68f34086c3664.mp3"
-      },
-      "sentence": {
-        "text": "Ze eten veel rijst.",
-        "file": "nl-800023487e0c4868.mp3"
       }
     },
     {
@@ -588,35 +444,11 @@
       }
     },
     {
-      "dutch": "krant",
-      "voice": "F1",
-      "word": {
-        "text": "krant",
-        "file": "nl-1648084259ab0fdd.mp3"
-      },
-      "sentence": {
-        "text": "Waar is de krant?",
-        "file": "nl-d91af9d1d0f6ed86.mp3"
-      }
-    },
-    {
       "dutch": "de meisjes",
       "voice": "M1",
       "word": {
         "text": "de meisjes",
         "file": "nl-59893c129d672ded.mp3"
-      },
-      "sentence": {
-        "text": "Waar zijn de meisjes?",
-        "file": "nl-9e70e368b2063e97.mp3"
-      }
-    },
-    {
-      "dutch": "meisjes",
-      "voice": "M1",
-      "word": {
-        "text": "meisjes",
-        "file": "nl-587e16b04406de35.mp3"
       },
       "sentence": {
         "text": "Waar zijn de meisjes?",
@@ -636,35 +468,11 @@
       }
     },
     {
-      "dutch": "vrouwen",
-      "voice": "F1",
-      "word": {
-        "text": "vrouwen",
-        "file": "nl-28cefea652c13db0.mp3"
-      },
-      "sentence": {
-        "text": "Vrouwen veranderen de wereld.",
-        "file": "nl-90f95dfa23e7a3da.mp3"
-      }
-    },
-    {
       "dutch": "de mannen",
       "voice": "M1",
       "word": {
         "text": "de mannen",
         "file": "nl-fedb8d00d3d274c2.mp3"
-      },
-      "sentence": {
-        "text": "Ik zag vijf mannen.",
-        "file": "nl-a23c9564c96ae849.mp3"
-      }
-    },
-    {
-      "dutch": "mannen",
-      "voice": "M1",
-      "word": {
-        "text": "mannen",
-        "file": "nl-102cf381a802b9e2.mp3"
       },
       "sentence": {
         "text": "Ik zag vijf mannen.",
@@ -696,35 +504,11 @@
       }
     },
     {
-      "dutch": "jongens",
-      "voice": "M1",
-      "word": {
-        "text": "jongens",
-        "file": "nl-19d07b1a423310db.mp3"
-      },
-      "sentence": {
-        "text": "Waar zijn de jongens?",
-        "file": "nl-df3a0da66a1fac1d.mp3"
-      }
-    },
-    {
       "dutch": "het menu",
       "voice": "M1",
       "word": {
         "text": "het menu",
         "file": "nl-46ee378cc698b6ad.mp3"
-      },
-      "sentence": {
-        "text": "Heeft u een Engels menu?",
-        "file": "nl-f0bce38311140f2c.mp3"
-      }
-    },
-    {
-      "dutch": "menu",
-      "voice": "M1",
-      "word": {
-        "text": "menu",
-        "file": "nl-c8bfab4facd351a7.mp3"
       },
       "sentence": {
         "text": "Heeft u een Engels menu?",
@@ -765,18 +549,6 @@
       "sentence": {
         "text": "Geef mij het boek.",
         "file": "nl-a9082018389716ef.mp3"
-      }
-    },
-    {
-      "dutch": "boek",
-      "voice": "F1",
-      "word": {
-        "text": "boek",
-        "file": "nl-8809b5a9258fbedc.mp3"
-      },
-      "sentence": {
-        "text": "Geef mij het boek.",
-        "file": "nl-cc225ae8a2a8abe2.mp3"
       }
     },
     {
@@ -837,18 +609,6 @@
       "sentence": {
         "text": "Neem uw kinderen mee.",
         "file": "nl-6f8b74a65e6b9366.mp3"
-      }
-    },
-    {
-      "dutch": "kinderen",
-      "voice": "F1",
-      "word": {
-        "text": "kinderen",
-        "file": "nl-40223044b602432b.mp3"
-      },
-      "sentence": {
-        "text": "Neem uw kinderen mee.",
-        "file": "nl-6ec70c16a220980e.mp3"
       }
     },
     {
@@ -1687,8 +1447,8 @@
         "file": "nl-aa8a3363892e7587.mp3"
       },
       "sentence": {
-        "text": "Wij molken de koe.",
-        "file": "nl-ea97bda8c471a0ff.mp3"
+        "text": "Ik heb een koe.",
+        "file": "nl-acfdbe8b8fe1a1df.mp3"
       }
     },
     {
@@ -29635,8 +29395,8 @@
         "file": "nl-93183a550b4b1aad.mp3"
       },
       "sentence": {
-        "text": "Een constitutionele monarchie is aan de grondwet gebonden, maar niet per definitie democratisch.",
-        "file": "nl-86b24587c9c6e400.mp3"
+        "text": "In een parlementaire republiek zijn, net als in een constitutionele monarchie, de ministers verantwoording schuldig aan de volksvertegenwoordiging.",
+        "file": "nl-13189997b5b7aea4.mp3"
       }
     },
     {
