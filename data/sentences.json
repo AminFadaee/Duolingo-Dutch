@@ -106,14 +106,14 @@
       "dutch": "ik",
       "example": {
         "text": "Ik weet het niet.",
-        "translation": "Search me.",
+        "translation": "I don't know.",
         "match": "ik",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/5963",
-        "translation_url": "https://tatoeba.org/en/sentences/show/328870",
+        "translation_url": "https://tatoeba.org/en/sentences/show/349064",
         "authors": [
           "Dorenda",
-          "fcbond"
+          "fatih"
         ]
       }
     },
@@ -181,11 +181,11 @@
       "dutch": "het meisje",
       "example": {
         "text": "Wie is dat meisje?",
-        "translation": "Who is this girl?",
+        "translation": "Who's that girl?",
         "match": "meisje",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/699641",
-        "translation_url": "https://tatoeba.org/en/sentences/show/58453",
+        "translation_url": "https://tatoeba.org/en/sentences/show/68220",
         "authors": [
           "martinod",
           "CK"
@@ -271,13 +271,14 @@
       "dutch": "ze",
       "example": {
         "text": "Ze houdt van ijs.",
-        "translation": "She has liking for ice cream.",
+        "translation": "She likes ice cream.",
         "match": "ze",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/379710",
-        "translation_url": "https://tatoeba.org/en/sentences/show/310233",
+        "translation_url": "https://tatoeba.org/en/sentences/show/650986",
         "authors": [
-          "Dorenda"
+          "Dorenda",
+          "CK"
         ]
       }
     },
@@ -330,14 +331,14 @@
       "dutch": "ik eet",
       "example": {
         "text": "Ik eet een appel.",
-        "translation": "I am eating an apple.",
+        "translation": "I'm eating an apple.",
         "match": "ik eet",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/448630",
-        "translation_url": "https://tatoeba.org/en/sentences/show/29612",
+        "translation_url": "https://tatoeba.org/en/sentences/show/2445198",
         "authors": [
           "koosscharroo",
-          "CK"
+          "AlanF_US"
         ]
       }
     },
@@ -360,14 +361,14 @@
       "dutch": "ik drink",
       "example": {
         "text": "Ik drink geen koffie.",
-        "translation": "I do not drink coffee.",
+        "translation": "I don't drink coffee.",
         "match": "ik drink",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/769581",
-        "translation_url": "https://tatoeba.org/en/sentences/show/436515",
+        "translation_url": "https://tatoeba.org/en/sentences/show/997880",
         "authors": [
           "martinod",
-          "lukaszpp"
+          "NickC"
         ]
       }
     },
@@ -434,13 +435,14 @@
       "dutch": "je",
       "example": {
         "text": "Maak je geen zorgen.",
-        "translation": "No bones broken.",
+        "translation": "Don't worry.",
         "match": "je",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/375856",
-        "translation_url": "https://tatoeba.org/en/sentences/show/275544",
+        "translation_url": "https://tatoeba.org/en/sentences/show/506446",
         "authors": [
-          "megamanenm"
+          "megamanenm",
+          "rtomharper"
         ]
       }
     },
@@ -658,11 +660,11 @@
       "dutch": "het menu",
       "example": {
         "text": "Heeft u een Engels menu?",
-        "translation": "Do you have a menu in English?",
+        "translation": "Do you have an English menu?",
         "match": "menu",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/3552764",
-        "translation_url": "https://tatoeba.org/en/sentences/show/3550079",
+        "translation_url": "https://tatoeba.org/en/sentences/show/3550080",
         "authors": [
           "Citrine",
           "CK"
@@ -924,14 +926,14 @@
       "dutch": "bedankt",
       "example": {
         "text": "Bedankt voor de uitleg.",
-        "translation": "Thanks for your explanation.",
+        "translation": "Thanks for the explanation.",
         "match": "bedankt",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/377769",
-        "translation_url": "https://tatoeba.org/en/sentences/show/1403",
+        "translation_url": "https://tatoeba.org/en/sentences/show/895939",
         "authors": [
           "Dorenda",
-          "CK"
+          "pauldhunt"
         ]
       }
     },
@@ -1179,14 +1181,14 @@
       "dutch": "hoe gaat het?",
       "example": {
         "text": "Hoi, hoe gaat het?",
-        "translation": "Hello, how are you?",
+        "translation": "Hi, how's it going?",
         "match": "hoe gaat het",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/481239",
-        "translation_url": "https://tatoeba.org/en/sentences/show/138868",
+        "translation_url": "https://tatoeba.org/en/sentences/show/428407",
         "authors": [
           "Dorenda",
-          "CK"
+          "witbrock"
         ]
       }
     },
@@ -1224,13 +1226,14 @@
       "dutch": "Nederlands",
       "example": {
         "text": "Ik wil Nederlands leren.",
-        "translation": "I want to study Dutch.",
+        "translation": "I want to learn Dutch.",
         "match": "Nederlands",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/4720486",
-        "translation_url": "https://tatoeba.org/en/sentences/show/4720492",
+        "translation_url": "https://tatoeba.org/en/sentences/show/9151557",
         "authors": [
-          "kawaii"
+          "kawaii",
+          "megamanenm"
         ]
       }
     },
@@ -1238,11 +1241,11 @@
       "dutch": "niet",
       "example": {
         "text": "Dat is niet belangrijk.",
-        "translation": "This is not important.",
+        "translation": "That's not important.",
         "match": "niet",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/377476",
-        "translation_url": "https://tatoeba.org/en/sentences/show/1385",
+        "translation_url": "https://tatoeba.org/en/sentences/show/2251157",
         "authors": [
           "Dorenda",
           "CK"
@@ -1253,14 +1256,14 @@
       "dutch": "geen",
       "example": {
         "text": "Ik ben geen leraar.",
-        "translation": "I am not a teacher.",
+        "translation": "I'm not a teacher.",
         "match": "geen",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/554404",
-        "translation_url": "https://tatoeba.org/en/sentences/show/259070",
+        "translation_url": "https://tatoeba.org/en/sentences/show/2332108",
         "authors": [
           "Citrine",
-          "CK"
+          "oldfashioned"
         ]
       }
     },
@@ -1268,14 +1271,14 @@
       "dutch": "de koffie",
       "example": {
         "text": "De koffie is koud.",
-        "translation": "The coffee is cold.",
+        "translation": "The coffee's cold.",
         "match": "koffie",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/702018",
-        "translation_url": "https://tatoeba.org/en/sentences/show/462654",
+        "translation_url": "https://tatoeba.org/en/sentences/show/8634789",
         "authors": [
           "martinod",
-          "lukaszpp"
+          "Eccles17"
         ]
       }
     },
@@ -1358,14 +1361,14 @@
       "dutch": "de kaas",
       "example": {
         "text": "Ik hou van kaas.",
-        "translation": "I love cheese.",
+        "translation": "I like cheese.",
         "match": "kaas",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/3873419",
-        "translation_url": "https://tatoeba.org/en/sentences/show/2151983",
+        "translation_url": "https://tatoeba.org/en/sentences/show/5840439",
         "authors": [
           "PaulP",
-          "balkanbalkan"
+          "CK"
         ]
       }
     },
@@ -1388,11 +1391,11 @@
       "dutch": "de suiker",
       "example": {
         "text": "We hebben geen suiker.",
-        "translation": "We have no sugar.",
+        "translation": "We don't have any sugar.",
         "match": "suiker",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/449426",
-        "translation_url": "https://tatoeba.org/en/sentences/show/243584",
+        "translation_url": "https://tatoeba.org/en/sentences/show/544006",
         "authors": [
           "koosscharroo",
           "CK"
@@ -1506,14 +1509,14 @@
       "dutch": "het bier",
       "example": {
         "text": "Ik bestel liever bier.",
-        "translation": "I would rather order beer.",
+        "translation": "I'd rather order beer.",
         "match": "bier",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/418248",
-        "translation_url": "https://tatoeba.org/en/sentences/show/508843",
+        "translation_url": "https://tatoeba.org/en/sentences/show/8240897",
         "authors": [
           "phiz",
-          "kebukebu"
+          "CK"
         ]
       }
     },
@@ -1521,14 +1524,14 @@
       "dutch": "lekker",
       "example": {
         "text": "Deze bes is lekker.",
-        "translation": "This berry's tasty.",
+        "translation": "This berry is tasty.",
         "match": "lekker",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/1083998",
-        "translation_url": "https://tatoeba.org/en/sentences/show/8553770",
+        "translation_url": "https://tatoeba.org/en/sentences/show/9345790",
         "authors": [
           "martinod",
-          "sundown"
+          "DJ_Saidez"
         ]
       }
     },
@@ -1580,11 +1583,11 @@
       "dutch": "het avondeten",
       "example": {
         "text": "Het avondeten is klaar.",
-        "translation": "Dinner is ready.",
+        "translation": "Dinner's ready.",
         "match": "avondeten",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/450297",
-        "translation_url": "https://tatoeba.org/en/sentences/show/39682",
+        "translation_url": "https://tatoeba.org/en/sentences/show/268698",
         "authors": [
           "Akradna",
           "CK"
@@ -1745,14 +1748,14 @@
       "dutch": "de vogel",
       "example": {
         "text": "Hoe heet deze vogel?",
-        "translation": "What's the name of this bird?",
+        "translation": "What's this bird called?",
         "match": "vogel",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/652856",
-        "translation_url": "https://tatoeba.org/en/sentences/show/555279",
+        "translation_url": "https://tatoeba.org/en/sentences/show/6037175",
         "authors": [
           "martinod",
-          "CM"
+          "Adelpa"
         ]
       }
     },
@@ -1775,14 +1778,14 @@
       "dutch": "de mens",
       "example": {
         "text": "Ik ben een mens.",
-        "translation": "I'm a human.",
+        "translation": "I'm human.",
         "match": "mens",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/4581965",
-        "translation_url": "https://tatoeba.org/en/sentences/show/433600",
+        "translation_url": "https://tatoeba.org/en/sentences/show/11987699",
         "authors": [
           "Raizin",
-          "Alkrasnov"
+          "shekitten"
         ]
       }
     },
@@ -1805,14 +1808,14 @@
       "dutch": "de olifant",
       "example": {
         "text": "De olifant is grijs.",
-        "translation": "The elephant is grey.",
+        "translation": "The elephant is gray.",
         "match": "olifant",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/1474939",
-        "translation_url": "https://tatoeba.org/en/sentences/show/819042",
+        "translation_url": "https://tatoeba.org/en/sentences/show/11150931",
         "authors": [
           "pimmhogeling",
-          "sundown"
+          "carlosalberto"
         ]
       }
     },
@@ -1923,11 +1926,11 @@
       "dutch": "de uil",
       "example": {
         "text": "Ik ben geen uil!",
-        "translation": "I am not an owl!",
+        "translation": "I'm not an owl!",
         "match": "uil",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/9233967",
-        "translation_url": "https://tatoeba.org/en/sentences/show/3138583",
+        "translation_url": "https://tatoeba.org/en/sentences/show/3138584",
         "authors": [
           "MarijnKp",
           "Clic"
@@ -2065,14 +2068,14 @@
       "dutch": "heeft hij/ze",
       "example": {
         "text": "Ze heeft geen rijbewijs.",
-        "translation": "She doesn't have a driving licence.",
+        "translation": "She doesn't have a driver's license.",
         "match": "ze",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/582522",
-        "translation_url": "https://tatoeba.org/en/sentences/show/582521",
+        "translation_url": "https://tatoeba.org/en/sentences/show/582934",
         "authors": [
           "WarmFoothills",
-          "BE"
+          "CK"
         ]
       }
     },
@@ -2230,14 +2233,14 @@
       "dutch": "heb je",
       "example": {
         "text": "Heb je een potlood?",
-        "translation": "Have you got a pencil?",
+        "translation": "Do you have a pencil?",
         "match": "heb je",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/395249",
-        "translation_url": "https://tatoeba.org/en/sentences/show/25768",
+        "translation_url": "https://tatoeba.org/en/sentences/show/69635",
         "authors": [
           "Dorenda",
-          "sundown"
+          "CK"
         ]
       }
     },
@@ -2468,14 +2471,14 @@
       "dutch": "tomaten",
       "example": {
         "text": "Ik hou van tomaten.",
-        "translation": "I love tomatoes.",
+        "translation": "I like tomatoes.",
         "match": "tomaten",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/7916025",
-        "translation_url": "https://tatoeba.org/en/sentences/show/5948280",
+        "translation_url": "https://tatoeba.org/en/sentences/show/6925195",
         "authors": [
           "MarijnKp",
-          "mailohilohi"
+          "CK"
         ]
       }
     },
@@ -2617,11 +2620,11 @@
       "dutch": "menu's",
       "example": {
         "text": "Heeft u een Engels menu?",
-        "translation": "Do you have a menu in English?",
+        "translation": "Do you have an English menu?",
         "match": "menu",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/3552764",
-        "translation_url": "https://tatoeba.org/en/sentences/show/3550079",
+        "translation_url": "https://tatoeba.org/en/sentences/show/3550080",
         "authors": [
           "Citrine",
           "CK"
@@ -2676,11 +2679,11 @@
       "dutch": "ook",
       "example": {
         "text": "Hij spreekt ook Russisch.",
-        "translation": "He can speak Russian as well.",
+        "translation": "He can also speak Russian.",
         "match": "ook",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/378805",
-        "translation_url": "https://tatoeba.org/en/sentences/show/293371",
+        "translation_url": "https://tatoeba.org/en/sentences/show/435647",
         "authors": [
           "Dorenda",
           "CK"
@@ -2705,11 +2708,11 @@
       "dutch": "jij",
       "example": {
         "text": "Jij zingt een stuk beter dan ik.",
-        "translation": "You sing a lot better than I do.",
+        "translation": "You sing a lot better than me.",
         "match": "jij",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/10633588",
-        "translation_url": "https://tatoeba.org/en/sentences/show/5849453",
+        "translation_url": "https://tatoeba.org/en/sentences/show/5850108",
         "authors": [
           "rose_d",
           "CK"
@@ -2985,14 +2988,14 @@
       "dutch": "de hoed",
       "example": {
         "text": "Hij draagt een hoed.",
-        "translation": "He has a hat on.",
+        "translation": "He's wearing a hat.",
         "match": "hoed",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/450319",
-        "translation_url": "https://tatoeba.org/en/sentences/show/303673",
+        "translation_url": "https://tatoeba.org/en/sentences/show/2067536",
         "authors": [
           "Citrine",
-          "CK"
+          "Eldad"
         ]
       }
     },
@@ -3479,14 +3482,14 @@
       "dutch": "slapen",
       "example": {
         "text": "Ik moet gaan slapen.",
-        "translation": "I have to go to sleep.",
+        "translation": "I need to go to sleep.",
         "match": "slapen",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/5966",
-        "translation_url": "https://tatoeba.org/en/sentences/show/1277",
+        "translation_url": "https://tatoeba.org/en/sentences/show/2047094",
         "authors": [
           "Dorenda",
-          "vinhan"
+          "MarlonX19"
         ]
       }
     },
@@ -3704,14 +3707,14 @@
       "dutch": "gaan",
       "example": {
         "text": "Ik moet gaan slapen.",
-        "translation": "I have to go to sleep.",
+        "translation": "I need to go to sleep.",
         "match": "gaan",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/5966",
-        "translation_url": "https://tatoeba.org/en/sentences/show/1277",
+        "translation_url": "https://tatoeba.org/en/sentences/show/2047094",
         "authors": [
           "Dorenda",
-          "vinhan"
+          "MarlonX19"
         ]
       }
     },
@@ -4465,11 +4468,11 @@
       "dutch": "belangrijk",
       "example": {
         "text": "Dat is niet belangrijk.",
-        "translation": "This is not important.",
+        "translation": "That's not important.",
         "match": "belangrijk",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/377476",
-        "translation_url": "https://tatoeba.org/en/sentences/show/1385",
+        "translation_url": "https://tatoeba.org/en/sentences/show/2251157",
         "authors": [
           "Dorenda",
           "CK"
@@ -4540,14 +4543,14 @@
       "dutch": "koud",
       "example": {
         "text": "Ik heb het koud.",
-        "translation": "I feel cold.",
+        "translation": "I'm cold.",
         "match": "koud",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/413344",
-        "translation_url": "https://tatoeba.org/en/sentences/show/21124",
+        "translation_url": "https://tatoeba.org/en/sentences/show/455947",
         "authors": [
           "phiz",
-          "CK"
+          "lukaszpp"
         ]
       }
     },
@@ -4762,14 +4765,14 @@
       "dutch": "ons",
       "example": {
         "text": "God zij met ons.",
-        "translation": "May God be with us.",
+        "translation": "God be with us.",
         "match": "ons",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/437513",
-        "translation_url": "https://tatoeba.org/en/sentences/show/448978",
+        "translation_url": "https://tatoeba.org/en/sentences/show/464147",
         "authors": [
           "jerom",
-          "sacredceltic"
+          "maolek"
         ]
       }
     },
@@ -4806,11 +4809,11 @@
       "dutch": "jouw",
       "example": {
         "text": "Is dit jouw fiets?",
-        "translation": "Is this your bicycle?",
+        "translation": "Is this your bike?",
         "match": "jouw",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/400903",
-        "translation_url": "https://tatoeba.org/en/sentences/show/55749",
+        "translation_url": "https://tatoeba.org/en/sentences/show/55938",
         "authors": [
           "Dorenda",
           "CK"
@@ -4986,14 +4989,14 @@
       "dutch": "iemand",
       "example": {
         "text": "Kan iemand me helpen?",
-        "translation": "Can anyone help me?",
+        "translation": "Somebody help me.",
         "match": "iemand",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/462169",
-        "translation_url": "https://tatoeba.org/en/sentences/show/461178",
+        "translation_url": "https://tatoeba.org/en/sentences/show/2249973",
         "authors": [
           "javyoze",
-          "jeanne"
+          "CK"
         ]
       }
     },
@@ -5194,11 +5197,11 @@
       "dutch": "enkele",
       "example": {
         "text": "Ik heb enkele ideeën.",
-        "translation": "I've got some ideas.",
+        "translation": "I have some ideas.",
         "match": "enkele",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/11529466",
-        "translation_url": "https://tatoeba.org/en/sentences/show/2359697",
+        "translation_url": "https://tatoeba.org/en/sentences/show/2360326",
         "authors": [
           "megamanenm",
           "CK"
@@ -5252,14 +5255,14 @@
       "dutch": "alstublieft",
       "example": {
         "text": "Spreekt u alstublieft langzamer.",
-        "translation": "Could you please speak a little bit more slowly?",
+        "translation": "Please speak more slowly.",
         "match": "alstublieft",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/481102",
-        "translation_url": "https://tatoeba.org/en/sentences/show/31566",
+        "translation_url": "https://tatoeba.org/en/sentences/show/456627",
         "authors": [
           "Dorenda",
-          "CK"
+          "lukaszpp"
         ]
       }
     },
@@ -5416,14 +5419,14 @@
       "dutch": "de broer",
       "example": {
         "text": "Ik heb geen broer.",
-        "translation": "I don't have any brothers.",
+        "translation": "I don't have a brother.",
         "match": "broer",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/449663",
-        "translation_url": "https://tatoeba.org/en/sentences/show/249896",
+        "translation_url": "https://tatoeba.org/en/sentences/show/773514",
         "authors": [
           "marcelostockle",
-          "CK"
+          "marloncori"
         ]
       }
     },
@@ -5490,14 +5493,14 @@
       "dutch": "de vriend",
       "example": {
         "text": "Hij is mijn vriend.",
-        "translation": "He is my friend.",
+        "translation": "He's my friend.",
         "match": "vriend",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/453992",
-        "translation_url": "https://tatoeba.org/en/sentences/show/298009",
+        "translation_url": "https://tatoeba.org/en/sentences/show/555114",
         "authors": [
           "Citrine",
-          "CH"
+          "FeuDRenais"
         ]
       }
     },
@@ -5714,14 +5717,14 @@
       "dutch": "zwart",
       "example": {
         "text": "Zwart staat je goed.",
-        "translation": "Black becomes you.",
+        "translation": "Black suits you.",
         "match": "zwart",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/379856",
-        "translation_url": "https://tatoeba.org/en/sentences/show/241488",
+        "translation_url": "https://tatoeba.org/en/sentences/show/3140021",
         "authors": [
           "Dorenda",
-          "shekitten"
+          "Marissa"
         ]
       }
     },
@@ -5864,14 +5867,14 @@
       "dutch": "Nederland",
       "example": {
         "text": "Ik kom uit Nederland.",
-        "translation": "I am from the Netherlands.",
+        "translation": "I'm from the Netherlands.",
         "match": "Nederland",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/1346675",
-        "translation_url": "https://tatoeba.org/en/sentences/show/773439",
+        "translation_url": "https://tatoeba.org/en/sentences/show/3617392",
         "authors": [
           "wieland",
-          "marloncori"
+          "Ricardo14"
         ]
       }
     },
@@ -5909,14 +5912,14 @@
       "dutch": "voor",
       "example": {
         "text": "Bedankt voor de uitleg.",
-        "translation": "Thanks for your explanation.",
+        "translation": "Thanks for the explanation.",
         "match": "voor",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/377769",
-        "translation_url": "https://tatoeba.org/en/sentences/show/1403",
+        "translation_url": "https://tatoeba.org/en/sentences/show/895939",
         "authors": [
           "Dorenda",
-          "CK"
+          "pauldhunt"
         ]
       }
     },
@@ -5954,14 +5957,14 @@
       "dutch": "met",
       "example": {
         "text": "Gefeliciteerd met je verjaardag!",
-        "translation": "Happy birthday to you!",
+        "translation": "Happy birthday!",
         "match": "met",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/379392",
-        "translation_url": "https://tatoeba.org/en/sentences/show/64233",
+        "translation_url": "https://tatoeba.org/en/sentences/show/453219",
         "authors": [
           "Dorenda",
-          "shekitten"
+          "CM"
         ]
       }
     },
@@ -6163,14 +6166,14 @@
       "dutch": "tegen",
       "example": {
         "text": "Ik ben tegen oorlog.",
-        "translation": "I'm against the war.",
+        "translation": "I am against war.",
         "match": "tegen",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/3452863",
-        "translation_url": "https://tatoeba.org/en/sentences/show/762691",
+        "translation_url": "https://tatoeba.org/en/sentences/show/1215940",
         "authors": [
           "Ealdwimor",
-          "CM"
+          "Kristinka"
         ]
       }
     },
@@ -6193,14 +6196,14 @@
       "dutch": "waar",
       "example": {
         "text": "Helaas is het waar.",
-        "translation": "It is unfortunately true.",
+        "translation": "Unfortunately, it's true.",
         "match": "waar",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/378391",
-        "translation_url": "https://tatoeba.org/en/sentences/show/1320",
+        "translation_url": "https://tatoeba.org/en/sentences/show/350134",
         "authors": [
           "Dorenda",
-          "Zifre"
+          "human600"
         ]
       }
     },
@@ -6433,14 +6436,13 @@
       "dutch": "helpen",
       "example": {
         "text": "Moet ik je helpen?",
-        "translation": "Shall I help you?",
+        "translation": "Do you wish me to help?",
         "match": "helpen",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/383994",
-        "translation_url": "https://tatoeba.org/en/sentences/show/64391",
+        "translation_url": "https://tatoeba.org/en/sentences/show/250128",
         "authors": [
-          "Dorenda",
-          "CM"
+          "Dorenda"
         ]
       }
     },
@@ -6493,14 +6495,14 @@
       "dutch": "nemen",
       "example": {
         "text": "Geen foto's nemen alsjeblieft.",
-        "translation": "Please do not take photos here.",
+        "translation": "Please don't take pictures here.",
         "match": "nemen",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/1401201",
-        "translation_url": "https://tatoeba.org/en/sentences/show/6002",
+        "translation_url": "https://tatoeba.org/en/sentences/show/1191068",
         "authors": [
           "DjWLaan",
-          "fcbond"
+          "CK"
         ]
       }
     },
@@ -6791,11 +6793,11 @@
       "dutch": "eerste",
       "example": {
         "text": "Jij bent de eerste.",
-        "translation": "You're first.",
+        "translation": "You're the first.",
         "match": "eerste",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/5776474",
-        "translation_url": "https://tatoeba.org/en/sentences/show/2202861",
+        "translation_url": "https://tatoeba.org/en/sentences/show/2218427",
         "authors": [
           "simonbr",
           "CK"
@@ -6896,14 +6898,14 @@
       "dutch": "dertien",
       "example": {
         "text": "Ik heb dertien katten.",
-        "translation": "I keep thirteen cats.",
+        "translation": "I have thirteen cats.",
         "match": "dertien",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/603679",
-        "translation_url": "https://tatoeba.org/en/sentences/show/259881",
+        "translation_url": "https://tatoeba.org/en/sentences/show/1213425",
         "authors": [
           "PaulP",
-          "CK"
+          "alec"
         ]
       }
     },
@@ -7346,14 +7348,14 @@
       "dutch": "Amsterdam",
       "example": {
         "text": "Amsterdam is de hoofdstad van Nederland.",
-        "translation": "The capital city of the Netherlands is Amsterdam.",
+        "translation": "Amsterdam is the capital of the Netherlands.",
         "match": "Amsterdam",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/526609",
-        "translation_url": "https://tatoeba.org/en/sentences/show/522273",
+        "translation_url": "https://tatoeba.org/en/sentences/show/5179967",
         "authors": [
           "rabbel",
-          "CK"
+          "RobinvanderVliet"
         ]
       }
     },
@@ -7615,14 +7617,14 @@
       "dutch": "de straat",
       "example": {
         "text": "Hoe heet deze straat?",
-        "translation": "What's the name of this street, please?",
+        "translation": "What's the name of this street?",
         "match": "straat",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/377775",
-        "translation_url": "https://tatoeba.org/en/sentences/show/61662",
+        "translation_url": "https://tatoeba.org/en/sentences/show/2494131",
         "authors": [
           "Dorenda",
-          "autuno"
+          "Opiejay888"
         ]
       }
     },
@@ -7780,14 +7782,14 @@
       "dutch": "de bank",
       "example": {
         "text": "Waar is de bank?",
-        "translation": "Where is the bank?",
+        "translation": "Where's the bank?",
         "match": "bank",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/1046394",
-        "translation_url": "https://tatoeba.org/en/sentences/show/48623",
+        "translation_url": "https://tatoeba.org/en/sentences/show/508288",
         "authors": [
           "Citrine",
-          "CK"
+          "CM"
         ]
       }
     },
@@ -7825,11 +7827,11 @@
       "dutch": "de bibliotheek",
       "example": {
         "text": "Waar is de bibliotheek?",
-        "translation": "Where is the library?",
+        "translation": "Where's the library?",
         "match": "bibliotheek",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/861625",
-        "translation_url": "https://tatoeba.org/en/sentences/show/270700",
+        "translation_url": "https://tatoeba.org/en/sentences/show/6024955",
         "authors": [
           "Vulgaris",
           "CK"
@@ -8004,14 +8006,14 @@
       "dutch": "buiten",
       "example": {
         "text": "Het is koud buiten.",
-        "translation": "It is cold outside.",
+        "translation": "It's cold outside.",
         "match": "buiten",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/623659",
-        "translation_url": "https://tatoeba.org/en/sentences/show/2085301",
+        "translation_url": "https://tatoeba.org/en/sentences/show/2713743",
         "authors": [
           "Dorenda",
-          "freddy1"
+          "CK"
         ]
       }
     },
@@ -8437,14 +8439,14 @@
       "dutch": "vanavond",
       "example": {
         "text": "Wat eten we vanavond?",
-        "translation": "What shall we eat tonight?",
+        "translation": "What's for dinner tonight?",
         "match": "vanavond",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/402548",
-        "translation_url": "https://tatoeba.org/en/sentences/show/243355",
+        "translation_url": "https://tatoeba.org/en/sentences/show/4704216",
         "authors": [
           "Dorenda",
-          "CM"
+          "CK"
         ]
       }
     },
@@ -8482,14 +8484,14 @@
       "dutch": "vanmiddag",
       "example": {
         "text": "Misschien regent het vanmiddag.",
-        "translation": "Perhaps it will rain in the afternoon.",
+        "translation": "Perhaps it'll rain in the afternoon.",
         "match": "vanmiddag",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/1479082",
-        "translation_url": "https://tatoeba.org/en/sentences/show/40585",
+        "translation_url": "https://tatoeba.org/en/sentences/show/10276617",
         "authors": [
           "Citrine",
-          "CC"
+          "CK"
         ]
       }
     },
@@ -8632,14 +8634,14 @@
       "dutch": "duren",
       "example": {
         "text": "Het kan niet lang duren.",
-        "translation": "It cannot last long.",
+        "translation": "It can't last long.",
         "match": "duren",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/7151366",
-        "translation_url": "https://tatoeba.org/en/sentences/show/914036",
+        "translation_url": "https://tatoeba.org/en/sentences/show/6873475",
         "authors": [
           "Micsmithel",
-          "Jane_Austen"
+          "CK"
         ]
       }
     },
@@ -8707,14 +8709,14 @@
       "dutch": "niemand",
       "example": {
         "text": "Ik wilde niemand beledigen.",
-        "translation": "No offense was meant.",
+        "translation": "I meant no offence.",
         "match": "niemand",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/379293",
-        "translation_url": "https://tatoeba.org/en/sentences/show/28587",
+        "translation_url": "https://tatoeba.org/en/sentences/show/1890743",
         "authors": [
           "Dorenda",
-          "handsomelyian"
+          "Spamster"
         ]
       }
     },
@@ -8962,14 +8964,14 @@
       "dutch": "de muziek",
       "example": {
         "text": "Hou je van muziek?",
-        "translation": "Do you love music?",
+        "translation": "Do you like music?",
         "match": "muziek",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/417311",
-        "translation_url": "https://tatoeba.org/en/sentences/show/16279",
+        "translation_url": "https://tatoeba.org/en/sentences/show/386729",
         "authors": [
           "Dorenda",
-          "shekitten"
+          "Mouseneb"
         ]
       }
     },
@@ -9097,14 +9099,14 @@
       "dutch": "de mond",
       "example": {
         "text": "Doe je mond open.",
-        "translation": "Open your mouth!",
+        "translation": "Open your mouth.",
         "match": "mond",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/394627",
-        "translation_url": "https://tatoeba.org/en/sentences/show/1664",
+        "translation_url": "https://tatoeba.org/en/sentences/show/240551",
         "authors": [
           "Dorenda",
-          "CE"
+          "CK"
         ]
       }
     },
@@ -9292,14 +9294,14 @@
       "dutch": "het geld",
       "example": {
         "text": "We hebben geld nodig.",
-        "translation": "We need some money.",
+        "translation": "We need money.",
         "match": "geld",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/406435",
-        "translation_url": "https://tatoeba.org/en/sentences/show/247911",
+        "translation_url": "https://tatoeba.org/en/sentences/show/493908",
         "authors": [
           "Dorenda",
-          "CK"
+          "adjusting"
         ]
       }
     },
@@ -9322,14 +9324,14 @@
       "dutch": "er",
       "example": {
         "text": "Laten we zien wat er gebeurt.",
-        "translation": "Let's see what will happen.",
+        "translation": "Let's see what happens.",
         "match": "er",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/821310",
-        "translation_url": "https://tatoeba.org/en/sentences/show/411903",
+        "translation_url": "https://tatoeba.org/en/sentences/show/1690519",
         "authors": [
           "simonbr",
-          "Dorenda"
+          "Spamster"
         ]
       }
     },
@@ -9397,14 +9399,14 @@
       "dutch": "het potlood",
       "example": {
         "text": "Heb je een potlood?",
-        "translation": "Have you got a pencil?",
+        "translation": "Do you have a pencil?",
         "match": "potlood",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/395249",
-        "translation_url": "https://tatoeba.org/en/sentences/show/25768",
+        "translation_url": "https://tatoeba.org/en/sentences/show/69635",
         "authors": [
           "Dorenda",
-          "sundown"
+          "CK"
         ]
       }
     },
@@ -9858,14 +9860,14 @@
       "dutch": "de dierenarts",
       "example": {
         "text": "Ik ben een erkende dierenarts.",
-        "translation": "I am a licensed veterinarian.",
+        "translation": "I'm a licensed veterinarian.",
         "match": "dierenarts",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/6875456",
-        "translation_url": "https://tatoeba.org/en/sentences/show/877925",
+        "translation_url": "https://tatoeba.org/en/sentences/show/6873122",
         "authors": [
           "Micsmithel",
-          "papabear"
+          "CK"
         ]
       }
     },
@@ -10007,14 +10009,14 @@
       "dutch": "de deur",
       "example": {
         "text": "Doe de deur dicht.",
-        "translation": "Shut the door.",
+        "translation": "Close the door.",
         "match": "deur",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/659458",
-        "translation_url": "https://tatoeba.org/en/sentences/show/38992",
+        "translation_url": "https://tatoeba.org/en/sentences/show/405379",
         "authors": [
           "martinod",
-          "CK"
+          "brauliobezerra"
         ]
       }
     },
@@ -10066,14 +10068,14 @@
       "dutch": "de badkamer",
       "example": {
         "text": "Waar is de badkamer?",
-        "translation": "Where is the bathroom?",
+        "translation": "Where's the bathroom?",
         "match": "badkamer",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/1556880",
-        "translation_url": "https://tatoeba.org/en/sentences/show/2136",
+        "translation_url": "https://tatoeba.org/en/sentences/show/634087",
         "authors": [
           "kerbear407",
-          "brauliobezerra"
+          "Eldad"
         ]
       }
     },
@@ -10573,14 +10575,14 @@
       "dutch": "het been",
       "example": {
         "text": "Mijn been doet pijn.",
-        "translation": "My leg is aching.",
+        "translation": "My leg hurts.",
         "match": "been",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/8078891",
-        "translation_url": "https://tatoeba.org/en/sentences/show/642492",
+        "translation_url": "https://tatoeba.org/en/sentences/show/3717736",
         "authors": [
           "Elsofie",
-          "minshirui"
+          "CK"
         ]
       }
     },
@@ -11174,14 +11176,14 @@
       "dutch": "vierentwintig",
       "example": {
         "text": "Hij is vierentwintig jaar oud.",
-        "translation": "He is twenty-four years old.",
+        "translation": "He's twenty-four years old.",
         "match": "vierentwintig",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/7913801",
-        "translation_url": "https://tatoeba.org/en/sentences/show/4714746",
+        "translation_url": "https://tatoeba.org/en/sentences/show/4733249",
         "authors": [
           "MarijnKp",
-          "sicerabibax"
+          "tazi"
         ]
       }
     },
@@ -11218,14 +11220,14 @@
       "dutch": "zevenentwintig",
       "example": {
         "text": "Het is vandaag zevenentwintig maart.",
-        "translation": "Today's March 27th.",
+        "translation": "Today is the twenty-seventh of March.",
         "match": "zevenentwintig",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/9233990",
-        "translation_url": "https://tatoeba.org/en/sentences/show/2909209",
+        "translation_url": "https://tatoeba.org/en/sentences/show/7925306",
         "authors": [
           "MarijnKp",
-          "mervert1"
+          "adiante19"
         ]
       }
     },
@@ -11308,14 +11310,14 @@
       "dutch": "zestig",
       "example": {
         "text": "Ze is bijna zestig.",
-        "translation": "She is close to sixty.",
+        "translation": "She's almost sixty.",
         "match": "zestig",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/1057004",
-        "translation_url": "https://tatoeba.org/en/sentences/show/579774",
+        "translation_url": "https://tatoeba.org/en/sentences/show/9195477",
         "authors": [
           "ReneeMona",
-          "CC"
+          "sundown"
         ]
       }
     },
@@ -11518,11 +11520,11 @@
       "dutch": "maandag",
       "example": {
         "text": "Vandaag is het maandag.",
-        "translation": "It is Monday today.",
+        "translation": "Today is Monday.",
         "match": "maandag",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/721715",
-        "translation_url": "https://tatoeba.org/en/sentences/show/242836",
+        "translation_url": "https://tatoeba.org/en/sentences/show/516321",
         "authors": [
           "martinod",
           "CK"
@@ -11533,14 +11535,14 @@
       "dutch": "dinsdag",
       "example": {
         "text": "Heb je dinsdag tijd?",
-        "translation": "Are you free on Tuesday?",
+        "translation": "Do you have time on Tuesday?",
         "match": "dinsdag",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/394673",
-        "translation_url": "https://tatoeba.org/en/sentences/show/23779",
+        "translation_url": "https://tatoeba.org/en/sentences/show/580449",
         "authors": [
           "Dorenda",
-          "CK"
+          "FeuDRenais2"
         ]
       }
     },
@@ -11593,14 +11595,14 @@
       "dutch": "zaterdag",
       "example": {
         "text": "Vandaag is het zaterdag.",
-        "translation": "It's Saturday today.",
+        "translation": "Today is Saturday.",
         "match": "zaterdag",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/665047",
-        "translation_url": "https://tatoeba.org/en/sentences/show/242943",
+        "translation_url": "https://tatoeba.org/en/sentences/show/661572",
         "authors": [
           "martinod",
-          "CK"
+          "mervegorus"
         ]
       }
     },
@@ -11608,14 +11610,14 @@
       "dutch": "zondag",
       "example": {
         "text": "Morgen is het zondag.",
-        "translation": "It is Sunday tomorrow.",
+        "translation": "Tomorrow is Sunday.",
         "match": "zondag",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/409422",
-        "translation_url": "https://tatoeba.org/en/sentences/show/323310",
+        "translation_url": "https://tatoeba.org/en/sentences/show/506460",
         "authors": [
           "Dorenda",
-          "CK"
+          "rtomharper"
         ]
       }
     },
@@ -11698,14 +11700,14 @@
       "dutch": "de datum",
       "example": {
         "text": "Wat is de datum?",
-        "translation": "What is the date?",
+        "translation": "What's the date?",
         "match": "datum",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/7811633",
-        "translation_url": "https://tatoeba.org/en/sentences/show/1164110",
+        "translation_url": "https://tatoeba.org/en/sentences/show/2234104",
         "authors": [
           "MarijnKp",
-          "etoile"
+          "CK"
         ]
       }
     },
@@ -11802,14 +11804,14 @@
       "dutch": "de zomer",
       "example": {
         "text": "De zomer is voorbij.",
-        "translation": "Summer is gone.",
+        "translation": "Summer is over.",
         "match": "zomer",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/394920",
-        "translation_url": "https://tatoeba.org/en/sentences/show/24338",
+        "translation_url": "https://tatoeba.org/en/sentences/show/394438",
         "authors": [
           "Dorenda",
-          "sundown"
+          "doviende"
         ]
       }
     },
@@ -11817,14 +11819,14 @@
       "dutch": "de lente",
       "example": {
         "text": "Het is bijna lente.",
-        "translation": "Spring is just around the corner.",
+        "translation": "It will be spring soon.",
         "match": "lente",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/377774",
-        "translation_url": "https://tatoeba.org/en/sentences/show/266950",
+        "translation_url": "https://tatoeba.org/en/sentences/show/694426",
         "authors": [
           "Dorenda",
-          "CK"
+          "AmberShadow"
         ]
       }
     },
@@ -11920,14 +11922,14 @@
       "dutch": "september",
       "example": {
         "text": "Vandaag is het één september.",
-        "translation": "Today is September 1st.",
+        "translation": "Today is 1 September.",
         "match": "september",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/693230",
-        "translation_url": "https://tatoeba.org/en/sentences/show/464258",
+        "translation_url": "https://tatoeba.org/en/sentences/show/12042997",
         "authors": [
           "martinod",
-          "lukaszpp"
+          "sundown"
         ]
       }
     },
@@ -11965,11 +11967,11 @@
       "dutch": "december",
       "example": {
         "text": "Kerstmis is op vijfentwintig december.",
-        "translation": "Christmas Day is December 25th.",
+        "translation": "Christmas is December 25th.",
         "match": "december",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/4627879",
-        "translation_url": "https://tatoeba.org/en/sentences/show/62804",
+        "translation_url": "https://tatoeba.org/en/sentences/show/387470",
         "authors": [
           "PaulP",
           "CK"
@@ -12010,14 +12012,14 @@
       "dutch": "de verjaardag",
       "example": {
         "text": "Gefeliciteerd met je verjaardag!",
-        "translation": "Happy birthday to you!",
+        "translation": "Happy birthday!",
         "match": "verjaardag",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/379392",
-        "translation_url": "https://tatoeba.org/en/sentences/show/64233",
+        "translation_url": "https://tatoeba.org/en/sentences/show/453219",
         "authors": [
           "Dorenda",
-          "shekitten"
+          "CM"
         ]
       }
     },
@@ -12040,14 +12042,14 @@
       "dutch": "de toekomst",
       "example": {
         "text": "Niemand kent de toekomst.",
-        "translation": "Nobody knows the future.",
+        "translation": "No one knows the future.",
         "match": "toekomst",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/1593579",
-        "translation_url": "https://tatoeba.org/en/sentences/show/1588344",
+        "translation_url": "https://tatoeba.org/en/sentences/show/2545865",
         "authors": [
           "Citrine",
-          "CM"
+          "CK"
         ]
       }
     },
@@ -12070,14 +12072,14 @@
       "dutch": "volgens",
       "example": {
         "text": "Alles gaat volgens plan.",
-        "translation": "Everything is going according to plan.",
+        "translation": "Everything's going according to plan.",
         "match": "volgens",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/713002",
-        "translation_url": "https://tatoeba.org/en/sentences/show/3821481",
+        "translation_url": "https://tatoeba.org/en/sentences/show/9131536",
         "authors": [
           "martinod",
-          "CK"
+          "megamanenm"
         ]
       }
     },
@@ -12823,14 +12825,14 @@
       "dutch": "geluisterd",
       "example": {
         "text": "Zij heeft niet geluisterd.",
-        "translation": "She did not listen.",
+        "translation": "She didn't listen.",
         "match": "geluisterd",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/2801185",
-        "translation_url": "https://tatoeba.org/en/sentences/show/1635829",
+        "translation_url": "https://tatoeba.org/en/sentences/show/11875875",
         "authors": [
           "Ealdwimor",
-          "Spamster"
+          "sundown"
         ]
       }
     },
@@ -13106,11 +13108,11 @@
       "dutch": "kosten",
       "example": {
         "text": "Wat gaat het kosten?",
-        "translation": "How much will it cost?",
+        "translation": "What'll it cost?",
         "match": "kosten",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/4936077",
-        "translation_url": "https://tatoeba.org/en/sentences/show/37619",
+        "translation_url": "https://tatoeba.org/en/sentences/show/3825556",
         "authors": [
           "Raizin",
           "CK"
@@ -13225,14 +13227,14 @@
       "dutch": "de markt",
       "example": {
         "text": "Waar is de markt?",
-        "translation": "Where is the market?",
+        "translation": "Where's the market?",
         "match": "markt",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/4757545",
-        "translation_url": "https://tatoeba.org/en/sentences/show/2299209",
+        "translation_url": "https://tatoeba.org/en/sentences/show/8555850",
         "authors": [
           "PaulP",
-          "Adelpa"
+          "CK"
         ]
       }
     },
@@ -13579,11 +13581,11 @@
       "dutch": "de rekening",
       "example": {
         "text": "Hier is de rekening.",
-        "translation": "Here is the bill.",
+        "translation": "Here's the bill.",
         "match": "rekening",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/1496340",
-        "translation_url": "https://tatoeba.org/en/sentences/show/1495898",
+        "translation_url": "https://tatoeba.org/en/sentences/show/2245561",
         "authors": [
           "Citrine",
           "CK"
@@ -14086,14 +14088,14 @@
       "dutch": "besluiten",
       "example": {
         "text": "Wij zullen later besluiten.",
-        "translation": "We'll decide later.",
+        "translation": "We will decide later.",
         "match": "besluiten",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/3560002",
-        "translation_url": "https://tatoeba.org/en/sentences/show/3481068",
+        "translation_url": "https://tatoeba.org/en/sentences/show/3553533",
         "authors": [
           "Lebensfreude",
-          "Ooneykcall"
+          "vvv123"
         ]
       }
     },
@@ -14590,14 +14592,14 @@
       "dutch": "huilen",
       "example": {
         "text": "Hij begon te huilen.",
-        "translation": "He began to cry.",
+        "translation": "He started to cry.",
         "match": "huilen",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/1033131",
-        "translation_url": "https://tatoeba.org/en/sentences/show/295240",
+        "translation_url": "https://tatoeba.org/en/sentences/show/2261077",
         "authors": [
           "Vulgaris",
-          "CK"
+          "Hybrid"
         ]
       }
     },
@@ -14785,14 +14787,14 @@
       "dutch": "verrast",
       "example": {
         "text": "Ze heeft me verrast.",
-        "translation": "She caught me by surprise.",
+        "translation": "She surprised me.",
         "match": "verrast",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/8323200",
-        "translation_url": "https://tatoeba.org/en/sentences/show/2029939",
+        "translation_url": "https://tatoeba.org/en/sentences/show/2156257",
         "authors": [
           "Elsofie",
-          "Spamster"
+          "Hybrid"
         ]
       }
     },
@@ -14815,14 +14817,14 @@
       "dutch": "veilig",
       "example": {
         "text": "Dat is niet veilig.",
-        "translation": "That is not safe.",
+        "translation": "That's not safe.",
         "match": "veilig",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/1928052",
-        "translation_url": "https://tatoeba.org/en/sentences/show/619604",
+        "translation_url": "https://tatoeba.org/en/sentences/show/2713769",
         "authors": [
           "marcelostockle",
-          "ulyssemc1"
+          "CK"
         ]
       }
     },
@@ -14845,14 +14847,14 @@
       "dutch": "koppig",
       "example": {
         "text": "Hij is zo koppig als een ezel.",
-        "translation": "He is stubborn as a mule.",
+        "translation": "He's as stubborn as a mule.",
         "match": "koppig",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/8109593",
-        "translation_url": "https://tatoeba.org/en/sentences/show/1079523",
+        "translation_url": "https://tatoeba.org/en/sentences/show/5154815",
         "authors": [
           "Raizin",
-          "keira_n"
+          "kemushi69"
         ]
       }
     },
@@ -15040,14 +15042,14 @@
       "dutch": "schattig",
       "example": {
         "text": "Is dat niet schattig?",
-        "translation": "Ain't that cute?",
+        "translation": "Isn't that cute?",
         "match": "schattig",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/2251350",
-        "translation_url": "https://tatoeba.org/en/sentences/show/1520795",
+        "translation_url": "https://tatoeba.org/en/sentences/show/6980520",
         "authors": [
           "wezy",
-          "Spamster"
+          "Hybrid"
         ]
       }
     },
@@ -15174,14 +15176,14 @@
       "dutch": "slim",
       "example": {
         "text": "Ze is heel slim.",
-        "translation": "She is very clever.",
+        "translation": "She's very clever.",
         "match": "slim",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/4581853",
-        "translation_url": "https://tatoeba.org/en/sentences/show/497123",
+        "translation_url": "https://tatoeba.org/en/sentences/show/8920157",
         "authors": [
           "Raizin",
-          "CK"
+          "sundown"
         ]
       }
     },
@@ -15234,14 +15236,14 @@
       "dutch": "open",
       "example": {
         "text": "Doe je mond open.",
-        "translation": "Open your mouth!",
+        "translation": "Open your mouth.",
         "match": "open",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/394627",
-        "translation_url": "https://tatoeba.org/en/sentences/show/1664",
+        "translation_url": "https://tatoeba.org/en/sentences/show/240551",
         "authors": [
           "Dorenda",
-          "CE"
+          "CK"
         ]
       }
     },
@@ -15663,14 +15665,14 @@
       "dutch": "de zitplaats",
       "example": {
         "text": "Is deze zitplaats vrij?",
-        "translation": "Is this seat taken?",
+        "translation": "Is this seat free?",
         "match": "zitplaats",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/662039",
-        "translation_url": "https://tatoeba.org/en/sentences/show/58210",
+        "translation_url": "https://tatoeba.org/en/sentences/show/1600443",
         "authors": [
           "slavneui",
-          "CK"
+          "jathonjet"
         ]
       }
     },
@@ -15704,14 +15706,14 @@
       "dutch": "wees",
       "example": {
         "text": "Wees aardig voor anderen.",
-        "translation": "Be kind to others!",
+        "translation": "Be nice to others.",
         "match": "wees",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/844772",
-        "translation_url": "https://tatoeba.org/en/sentences/show/274677",
+        "translation_url": "https://tatoeba.org/en/sentences/show/1125627",
         "authors": [
           "Vulgaris",
-          "sacredceltic"
+          "Scott"
         ]
       }
     },
@@ -15764,11 +15766,11 @@
       "dutch": "laten we gaan",
       "example": {
         "text": "Laten we gaan skiën.",
-        "translation": "Let's ski.",
+        "translation": "Let's go skiing.",
         "match": "laten we gaan",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/7487163",
-        "translation_url": "https://tatoeba.org/en/sentences/show/6358748",
+        "translation_url": "https://tatoeba.org/en/sentences/show/6667128",
         "authors": [
           "MarijnKp",
           "CK"
@@ -16018,14 +16020,14 @@
       "dutch": "anderen",
       "example": {
         "text": "Wees aardig voor anderen.",
-        "translation": "Be kind to others!",
+        "translation": "Be nice to others.",
         "match": "anderen",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/844772",
-        "translation_url": "https://tatoeba.org/en/sentences/show/274677",
+        "translation_url": "https://tatoeba.org/en/sentences/show/1125627",
         "authors": [
           "Vulgaris",
-          "sacredceltic"
+          "Scott"
         ]
       }
     },
@@ -16481,14 +16483,14 @@
       "dutch": "Engeland",
       "example": {
         "text": "Ik kom uit Engeland.",
-        "translation": "I come from England.",
+        "translation": "I'm from England.",
         "match": "Engeland",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/450305",
-        "translation_url": "https://tatoeba.org/en/sentences/show/66622",
+        "translation_url": "https://tatoeba.org/en/sentences/show/1388580",
         "authors": [
           "marcelostockle",
-          "CN"
+          "enteka"
         ]
       }
     },
@@ -16600,14 +16602,14 @@
       "dutch": "rechtsaf",
       "example": {
         "text": "Sla rechtsaf aan het kruispunt.",
-        "translation": "Turn right at the crossroad.",
+        "translation": "Turn right at the intersection.",
         "match": "rechtsaf",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/847418",
-        "translation_url": "https://tatoeba.org/en/sentences/show/6047",
+        "translation_url": "https://tatoeba.org/en/sentences/show/722540",
         "authors": [
           "Vulgaris",
-          "shortiiboy"
+          "kebukebu"
         ]
       }
     },
@@ -16960,14 +16962,14 @@
       "dutch": "veel succes",
       "example": {
         "text": "Veel succes op je examen!",
-        "translation": "Good luck on your test.",
+        "translation": "Good luck in your exam.",
         "match": "veel succes",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/6074765",
-        "translation_url": "https://tatoeba.org/en/sentences/show/3616228",
+        "translation_url": "https://tatoeba.org/en/sentences/show/10891023",
         "authors": [
           "Ag12x",
-          "CK"
+          "sundown"
         ]
       }
     },
@@ -16990,14 +16992,14 @@
       "dutch": "vaarwel",
       "example": {
         "text": "Vaarwel.",
-        "translation": "Farewell!",
+        "translation": "Farewell.",
         "match": "vaarwel",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/439436",
-        "translation_url": "https://tatoeba.org/en/sentences/show/1130100",
+        "translation_url": "https://tatoeba.org/en/sentences/show/7869885",
         "authors": [
           "koosscharroo",
-          "cntrational"
+          "shekitten"
         ]
       }
     },
@@ -17106,14 +17108,14 @@
       "dutch": "met vriendelijke groeten",
       "example": {
         "text": "Met vriendelijke groeten.",
-        "translation": "Kindest regards.",
+        "translation": "Kind regards.",
         "match": "met vriendelijke groeten",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/8615225",
-        "translation_url": "https://tatoeba.org/en/sentences/show/4263059",
+        "translation_url": "https://tatoeba.org/en/sentences/show/11939578",
         "authors": [
           "Micsmithel",
-          "JFMorais"
+          "Fenrir"
         ]
       }
     },
@@ -17357,14 +17359,14 @@
       "dutch": "gewoon",
       "example": {
         "text": "Geloof me maar gewoon.",
-        "translation": "Just take my word for it.",
+        "translation": "Just believe me.",
         "match": "gewoon",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/1473038",
-        "translation_url": "https://tatoeba.org/en/sentences/show/40560",
+        "translation_url": "https://tatoeba.org/en/sentences/show/2249396",
         "authors": [
           "Citrine",
-          "CM"
+          "CK"
         ]
       }
     },
@@ -17402,13 +17404,14 @@
       "dutch": "gemakkelijk",
       "example": {
         "text": "Hij wordt gemakkelijk verkouden.",
-        "translation": "He easily catches cold.",
+        "translation": "He catches colds easily.",
         "match": "gemakkelijk",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/706662",
-        "translation_url": "https://tatoeba.org/en/sentences/show/290236",
+        "translation_url": "https://tatoeba.org/en/sentences/show/473603",
         "authors": [
-          "martinod"
+          "martinod",
+          "CK"
         ]
       }
     },
@@ -17521,14 +17524,14 @@
       "dutch": "helaas",
       "example": {
         "text": "Helaas is het waar.",
-        "translation": "It is unfortunately true.",
+        "translation": "Unfortunately, it's true.",
         "match": "helaas",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/378391",
-        "translation_url": "https://tatoeba.org/en/sentences/show/1320",
+        "translation_url": "https://tatoeba.org/en/sentences/show/350134",
         "authors": [
           "Dorenda",
-          "Zifre"
+          "human600"
         ]
       }
     },
@@ -17579,14 +17582,14 @@
       "dutch": "het ongeluk",
       "example": {
         "text": "Hij had een ongeluk.",
-        "translation": "He met with an accident.",
+        "translation": "He had an accident.",
         "match": "ongeluk",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/8202360",
-        "translation_url": "https://tatoeba.org/en/sentences/show/298325",
+        "translation_url": "https://tatoeba.org/en/sentences/show/947875",
         "authors": [
           "Elsofie",
-          "CM"
+          "Swift"
         ]
       }
     },
@@ -17697,14 +17700,14 @@
       "dutch": "koorts",
       "example": {
         "text": "Je hebt geen koorts.",
-        "translation": "You have no fever.",
+        "translation": "You don't have a fever.",
         "match": "koorts",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/402484",
-        "translation_url": "https://tatoeba.org/en/sentences/show/393938",
+        "translation_url": "https://tatoeba.org/en/sentences/show/402491",
         "authors": [
           "Dorenda",
-          "blay_paul"
+          "CK"
         ]
       }
     },
@@ -17952,14 +17955,14 @@
       "dutch": "net",
       "example": {
         "text": "Hij is net weggegaan.",
-        "translation": "He left just now.",
+        "translation": "He just left.",
         "match": "net",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/708588",
-        "translation_url": "https://tatoeba.org/en/sentences/show/291658",
+        "translation_url": "https://tatoeba.org/en/sentences/show/2182826",
         "authors": [
           "Citrine",
-          "CK"
+          "Hybrid"
         ]
       }
     },
@@ -17997,14 +18000,14 @@
       "dutch": "gelezen",
       "example": {
         "text": "Hebt u alles gelezen?",
-        "translation": "Did you read everything?",
+        "translation": "Have you read everything?",
         "match": "gelezen",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/3127400",
-        "translation_url": "https://tatoeba.org/en/sentences/show/4869847",
+        "translation_url": "https://tatoeba.org/en/sentences/show/10739547",
         "authors": [
           "PaulP",
-          "zvzuibqx"
+          "sundown"
         ]
       }
     },
@@ -18548,11 +18551,11 @@
       "dutch": "de taart",
       "example": {
         "text": "Ik eet graag taart.",
-        "translation": "I like cake.",
+        "translation": "I like eating cake.",
         "match": "taart",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/659485",
-        "translation_url": "https://tatoeba.org/en/sentences/show/253417",
+        "translation_url": "https://tatoeba.org/en/sentences/show/1195679",
         "authors": [
           "martinod",
           "CK"
@@ -18593,14 +18596,14 @@
       "dutch": "hartig",
       "example": {
         "text": "\"Spreek je Frans?\" - \"Nee.\"",
-        "translation": "\"Do you speak French?\" \"No, I don't.\"",
+        "translation": "\"Do you speak French?\" \"No.\"",
         "match": "-",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/6852630",
-        "translation_url": "https://tatoeba.org/en/sentences/show/4664066",
+        "translation_url": "https://tatoeba.org/en/sentences/show/4695005",
         "authors": [
           "Micsmithel",
-          "CK"
+          "PvtMarc"
         ]
       }
     },
@@ -18653,14 +18656,14 @@
       "dutch": "de bes",
       "example": {
         "text": "Deze bes is lekker.",
-        "translation": "This berry's tasty.",
+        "translation": "This berry is tasty.",
         "match": "bes",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/1083998",
-        "translation_url": "https://tatoeba.org/en/sentences/show/8553770",
+        "translation_url": "https://tatoeba.org/en/sentences/show/9345790",
         "authors": [
           "martinod",
-          "sundown"
+          "DJ_Saidez"
         ]
       }
     },
@@ -18890,14 +18893,14 @@
       "dutch": "de knoflook",
       "example": {
         "text": "Ik hou van knoflook.",
-        "translation": "I love garlic.",
+        "translation": "I like garlic.",
         "match": "knoflook",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/7800969",
-        "translation_url": "https://tatoeba.org/en/sentences/show/2790097",
+        "translation_url": "https://tatoeba.org/en/sentences/show/6890571",
         "authors": [
           "MarijnKp",
-          "mervert1"
+          "CK"
         ]
       }
     },
@@ -19483,14 +19486,14 @@
       "dutch": "bezoeken",
       "example": {
         "text": "Wij zullen je bezoeken.",
-        "translation": "We will visit you.",
+        "translation": "We'll visit you.",
         "match": "bezoeken",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/1678382",
-        "translation_url": "https://tatoeba.org/en/sentences/show/2803361",
+        "translation_url": "https://tatoeba.org/en/sentences/show/4493318",
         "authors": [
           "Akradna",
-          "Deerhound"
+          "AlanF_US"
         ]
       }
     },
@@ -19660,14 +19663,14 @@
       "dutch": "de boot",
       "example": {
         "text": "Dat is een boot.",
-        "translation": "That is a boat.",
+        "translation": "That's a boat.",
         "match": "boot",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/7717631",
-        "translation_url": "https://tatoeba.org/en/sentences/show/1097995",
+        "translation_url": "https://tatoeba.org/en/sentences/show/6547245",
         "authors": [
           "MarijnKp",
-          "cntrational"
+          "CK"
         ]
       }
     },
@@ -20034,14 +20037,14 @@
       "dutch": "openden",
       "example": {
         "text": "Doe je mond open.",
-        "translation": "Open your mouth!",
+        "translation": "Open your mouth.",
         "match": "open",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/394627",
-        "translation_url": "https://tatoeba.org/en/sentences/show/1664",
+        "translation_url": "https://tatoeba.org/en/sentences/show/240551",
         "authors": [
           "Dorenda",
-          "CE"
+          "CK"
         ]
       }
     },
@@ -20108,14 +20111,14 @@
       "dutch": "regende",
       "example": {
         "text": "Het regende zonder ophouden.",
-        "translation": "It rained nonstop.",
+        "translation": "It rained without stopping.",
         "match": "regende",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/753159",
-        "translation_url": "https://tatoeba.org/en/sentences/show/26694",
+        "translation_url": "https://tatoeba.org/en/sentences/show/11870692",
         "authors": [
           "martinod",
-          "CK"
+          "sundown"
         ]
       }
     },
@@ -20437,14 +20440,14 @@
       "dutch": "zich vergissen",
       "example": {
         "text": "Ik geloof dat je je vergist.",
-        "translation": "I think you are mistaken.",
+        "translation": "I think you're mistaken.",
         "match": "vergist",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/5045519",
-        "translation_url": "https://tatoeba.org/en/sentences/show/1552352",
+        "translation_url": "https://tatoeba.org/en/sentences/show/2458589",
         "authors": [
           "LinguisticFusion",
-          "Spamster"
+          "CK"
         ]
       }
     },
@@ -20526,14 +20529,14 @@
       "dutch": "de persoon",
       "example": {
         "text": "Wie is deze persoon?",
-        "translation": "Who is that person?",
+        "translation": "Who is this person?",
         "match": "persoon",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/529863",
-        "translation_url": "https://tatoeba.org/en/sentences/show/450137",
+        "translation_url": "https://tatoeba.org/en/sentences/show/488778",
         "authors": [
           "rabbel",
-          "CK"
+          "CM"
         ]
       }
     },
@@ -20616,11 +20619,11 @@
       "dutch": "de heer",
       "example": {
         "text": "Hij is een heer.",
-        "translation": "He is a gentleman.",
+        "translation": "He's a gentleman.",
         "match": "heer",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/661803",
-        "translation_url": "https://tatoeba.org/en/sentences/show/300002",
+        "translation_url": "https://tatoeba.org/en/sentences/show/758898",
         "authors": [
           "Citrine",
           "CH"
@@ -21244,14 +21247,14 @@
       "dutch": "de gootsteen",
       "example": {
         "text": "Zij zette de vuile borden in de gootsteen.",
-        "translation": "She put the dirty dishes in the sink.",
+        "translation": "She put the dirty plates into the sink.",
         "match": "gootsteen",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/703994",
-        "translation_url": "https://tatoeba.org/en/sentences/show/312724",
+        "translation_url": "https://tatoeba.org/en/sentences/show/10867233",
         "authors": [
           "martinod",
-          "CK"
+          "sundown"
         ]
       }
     },
@@ -21409,11 +21412,11 @@
       "dutch": "schoon|maken",
       "example": {
         "text": "We moeten de keuken schoonmaken.",
-        "translation": "We must clean up the kitchen.",
+        "translation": "We need to clean the kitchen.",
         "match": "schoonmaken",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/2799887",
-        "translation_url": "https://tatoeba.org/en/sentences/show/263141",
+        "translation_url": "https://tatoeba.org/en/sentences/show/6262016",
         "authors": [
           "anders",
           "CK"
@@ -22187,13 +22190,14 @@
       "dutch": "het ijs",
       "example": {
         "text": "Ze houdt van ijs.",
-        "translation": "She has liking for ice cream.",
+        "translation": "She likes ice cream.",
         "match": "ijs",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/379710",
-        "translation_url": "https://tatoeba.org/en/sentences/show/310233",
+        "translation_url": "https://tatoeba.org/en/sentences/show/650986",
         "authors": [
-          "Dorenda"
+          "Dorenda",
+          "CK"
         ]
       }
     },
@@ -22335,11 +22339,11 @@
       "dutch": "het vuur",
       "example": {
         "text": "Het vuur is uitgegaan.",
-        "translation": "The fire is out.",
+        "translation": "The fire has gone out.",
         "match": "vuur",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/662532",
-        "translation_url": "https://tatoeba.org/en/sentences/show/23896",
+        "translation_url": "https://tatoeba.org/en/sentences/show/3736821",
         "authors": [
           "martinod",
           "CK"
@@ -22470,13 +22474,14 @@
       "dutch": "het verkeer",
       "example": {
         "text": "Er is veel verkeer vandaag.",
-        "translation": "There is a lot of traffic today.",
+        "translation": "There's a lot of traffic today.",
         "match": "verkeer",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/2685830",
-        "translation_url": "https://tatoeba.org/en/sentences/show/2685827",
+        "translation_url": "https://tatoeba.org/en/sentences/show/2713032",
         "authors": [
-          "fekundulo"
+          "fekundulo",
+          "CK"
         ]
       }
     },
@@ -22587,13 +22592,14 @@
       "dutch": "het openbaar vervoer",
       "example": {
         "text": "Wij maken gebruik van het openbaar vervoer.",
-        "translation": "We use public transportation.",
+        "translation": "We use public transport.",
         "match": "het openbaar vervoer",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/2685984",
-        "translation_url": "https://tatoeba.org/en/sentences/show/2685979",
+        "translation_url": "https://tatoeba.org/en/sentences/show/6472238",
         "authors": [
-          "fekundulo"
+          "fekundulo",
+          "mojeanin"
         ]
       }
     },
@@ -23134,14 +23140,14 @@
       "dutch": "de postzegel",
       "example": {
         "text": "Ik heb een postzegel nodig.",
-        "translation": "I need to get a stamp.",
+        "translation": "I need a stamp.",
         "match": "postzegel",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/800008",
-        "translation_url": "https://tatoeba.org/en/sentences/show/259028",
+        "translation_url": "https://tatoeba.org/en/sentences/show/735080",
         "authors": [
           "Citrine",
-          "CK"
+          "Darkmaster"
         ]
       }
     },
@@ -23268,14 +23274,14 @@
       "dutch": "de ingang",
       "example": {
         "text": "Waar is de ingang?",
-        "translation": "Where is the entrance?",
+        "translation": "Where's the entrance?",
         "match": "ingang",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/702081",
-        "translation_url": "https://tatoeba.org/en/sentences/show/687646",
+        "translation_url": "https://tatoeba.org/en/sentences/show/1458160",
         "authors": [
           "martinod",
-          "lukaszpp"
+          "CK"
         ]
       }
     },
@@ -23463,14 +23469,14 @@
       "dutch": "ooit",
       "example": {
         "text": "Ben je ooit getrouwd?",
-        "translation": "Did you ever get married?",
+        "translation": "Were you ever married?",
         "match": "ooit",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/5046135",
-        "translation_url": "https://tatoeba.org/en/sentences/show/4813092",
+        "translation_url": "https://tatoeba.org/en/sentences/show/5042889",
         "authors": [
           "LinguisticFusion",
-          "khaledp16"
+          "AlanF_US"
         ]
       }
     },
@@ -23508,14 +23514,14 @@
       "dutch": "de bioscoop",
       "example": {
         "text": "Ga je naar de bioscoop?",
-        "translation": "You're going to a movie?",
+        "translation": "Are you going to the movies?",
         "match": "bioscoop",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/653449",
-        "translation_url": "https://tatoeba.org/en/sentences/show/26480",
+        "translation_url": "https://tatoeba.org/en/sentences/show/2890949",
         "authors": [
           "Citrine",
-          "timmartin"
+          "CK"
         ]
       }
     },
@@ -23628,11 +23634,11 @@
       "dutch": "het museum",
       "example": {
         "text": "Waar is het museum?",
-        "translation": "Where is the museum?",
+        "translation": "Where's the museum?",
         "match": "museum",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/1016409",
-        "translation_url": "https://tatoeba.org/en/sentences/show/282553",
+        "translation_url": "https://tatoeba.org/en/sentences/show/318167",
         "authors": [
           "martinod",
           "CK"
@@ -23643,11 +23649,11 @@
       "dutch": "het pretpark",
       "example": {
         "text": "Suikerspinnen worden gewoonlijk verkocht en gemaakt in pretparken.",
-        "translation": "Cotton candy is usually sold and made at funfairs.",
+        "translation": "Candy floss is usually sold and made at funfairs.",
         "match": "pretparken",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/12493936",
-        "translation_url": "https://tatoeba.org/en/sentences/show/12493932",
+        "translation_url": "https://tatoeba.org/en/sentences/show/12493933",
         "authors": [
           "Tom9358"
         ]
@@ -23702,11 +23708,11 @@
       "dutch": "het zwembad",
       "example": {
         "text": "We hebben geen zwembad.",
-        "translation": "We don't have a swimming pool.",
+        "translation": "We don't have a pool.",
         "match": "zwembad",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/2658016",
-        "translation_url": "https://tatoeba.org/en/sentences/show/2542150",
+        "translation_url": "https://tatoeba.org/en/sentences/show/5205857",
         "authors": [
           "PaulP",
           "CK"
@@ -23792,14 +23798,14 @@
       "dutch": "de sport",
       "example": {
         "text": "Ik hou van sport.",
-        "translation": "I like sport.",
+        "translation": "I like sports.",
         "match": "sport",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/755038",
-        "translation_url": "https://tatoeba.org/en/sentences/show/51618",
+        "translation_url": "https://tatoeba.org/en/sentences/show/435162",
         "authors": [
           "martinod",
-          "adamtrousers"
+          "CK"
         ]
       }
     },
@@ -24059,14 +24065,14 @@
       "dutch": "lekkerder",
       "example": {
         "text": "Deze bes is lekker.",
-        "translation": "This berry's tasty.",
+        "translation": "This berry is tasty.",
         "match": "lekker",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/1083998",
-        "translation_url": "https://tatoeba.org/en/sentences/show/8553770",
+        "translation_url": "https://tatoeba.org/en/sentences/show/9345790",
         "authors": [
           "martinod",
-          "sundown"
+          "DJ_Saidez"
         ]
       }
     },
@@ -24179,11 +24185,11 @@
       "dutch": "belangrijkst",
       "example": {
         "text": "Dat is niet belangrijk.",
-        "translation": "This is not important.",
+        "translation": "That's not important.",
         "match": "belangrijk",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/377476",
-        "translation_url": "https://tatoeba.org/en/sentences/show/1385",
+        "translation_url": "https://tatoeba.org/en/sentences/show/2251157",
         "authors": [
           "Dorenda",
           "CK"
@@ -24813,14 +24819,14 @@
       "dutch": "het mes",
       "example": {
         "text": "Het mes is bot.",
-        "translation": "The knife is dull.",
+        "translation": "The knife is blunt.",
         "match": "mes",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/7897965",
-        "translation_url": "https://tatoeba.org/en/sentences/show/1487659",
+        "translation_url": "https://tatoeba.org/en/sentences/show/11879145",
         "authors": [
           "MarijnKp",
-          "marshmallowcat"
+          "sundown"
         ]
       }
     },
@@ -25470,14 +25476,14 @@
       "dutch": "het examen",
       "example": {
         "text": "Succes met je examen!",
-        "translation": "Good luck on the exam!",
+        "translation": "Good luck in your exam.",
         "match": "examen",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/409573",
-        "translation_url": "https://tatoeba.org/en/sentences/show/409429",
+        "translation_url": "https://tatoeba.org/en/sentences/show/10891023",
         "authors": [
           "Dorenda",
-          "FeuDRenais"
+          "sundown"
         ]
       }
     },
@@ -25515,14 +25521,14 @@
       "dutch": "de uitleg",
       "example": {
         "text": "Bedankt voor de uitleg.",
-        "translation": "Thanks for your explanation.",
+        "translation": "Thanks for the explanation.",
         "match": "uitleg",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/377769",
-        "translation_url": "https://tatoeba.org/en/sentences/show/1403",
+        "translation_url": "https://tatoeba.org/en/sentences/show/895939",
         "authors": [
           "Dorenda",
-          "CK"
+          "pauldhunt"
         ]
       }
     },
@@ -25990,14 +25996,14 @@
       "dutch": "sneeuwen",
       "example": {
         "text": "Misschien gaat het sneeuwen.",
-        "translation": "It may snow.",
+        "translation": "Maybe it'll snow.",
         "match": "sneeuwen",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/377246",
-        "translation_url": "https://tatoeba.org/en/sentences/show/272548",
+        "translation_url": "https://tatoeba.org/en/sentences/show/453672",
         "authors": [
           "Dorenda",
-          "CK"
+          "CM"
         ]
       }
     },
@@ -26228,11 +26234,11 @@
       "dutch": "Frans",
       "example": {
         "text": "Hij spreekt ook Frans.",
-        "translation": "He can also speak French.",
+        "translation": "He also speaks French.",
         "match": "Frans",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/608575",
-        "translation_url": "https://tatoeba.org/en/sentences/show/292619",
+        "translation_url": "https://tatoeba.org/en/sentences/show/1446280",
         "authors": [
           "martinod",
           "CK"
@@ -26288,14 +26294,14 @@
       "dutch": "Chinees",
       "example": {
         "text": "Hij studeert ook Chinees.",
-        "translation": "He studies Chinese as well.",
+        "translation": "He is also studying Chinese.",
         "match": "Chinees",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/713272",
-        "translation_url": "https://tatoeba.org/en/sentences/show/713205",
+        "translation_url": "https://tatoeba.org/en/sentences/show/724101",
         "authors": [
           "martinod",
-          "CM"
+          "mindy"
         ]
       }
     },
@@ -26513,14 +26519,14 @@
       "dutch": "uit|spreken",
       "example": {
         "text": "Hoe spreek je dat uit?",
-        "translation": "How do you pronounce it?",
+        "translation": "How do you pronounce that?",
         "match": "spreek uit",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/9331396",
-        "translation_url": "https://tatoeba.org/en/sentences/show/2703788",
+        "translation_url": "https://tatoeba.org/en/sentences/show/3251372",
         "authors": [
           "megamanenm",
-          "CK"
+          "Vincinho"
         ]
       }
     },
@@ -26886,11 +26892,11 @@
       "dutch": "moest",
       "example": {
         "text": "Ik moest het proberen.",
-        "translation": "I had to give it a try.",
+        "translation": "I had to try.",
         "match": "moest",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/3577810",
-        "translation_url": "https://tatoeba.org/en/sentences/show/2331806",
+        "translation_url": "https://tatoeba.org/en/sentences/show/2331882",
         "authors": [
           "martinod",
           "CK"
@@ -27171,14 +27177,14 @@
       "dutch": "de batterij",
       "example": {
         "text": "De batterij is leeg!",
-        "translation": "The battery died.",
+        "translation": "The battery's dead.",
         "match": "batterij",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/397067",
-        "translation_url": "https://tatoeba.org/en/sentences/show/279224",
+        "translation_url": "https://tatoeba.org/en/sentences/show/5927337",
         "authors": [
           "Dorenda",
-          "CK"
+          "mailohilohi"
         ]
       }
     },
@@ -27378,11 +27384,11 @@
       "dutch": "de luidspreker",
       "example": {
         "text": "De luidsprekers van mijn computer doen het niet.",
-        "translation": "My computer's speaker doesn't work.",
+        "translation": "My computer speaker isn't working.",
         "match": "luidsprekers",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/13662698",
-        "translation_url": "https://tatoeba.org/en/sentences/show/13659497",
+        "translation_url": "https://tatoeba.org/en/sentences/show/13659502",
         "authors": [
           "doemaar14",
           "araneo"
@@ -27438,14 +27444,14 @@
       "dutch": "de wasmachine",
       "example": {
         "text": "De wasmachine is kapot.",
-        "translation": "The washing machine has broken down.",
+        "translation": "The washing machine is broken.",
         "match": "wasmachine",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/1593591",
-        "translation_url": "https://tatoeba.org/en/sentences/show/1588697",
+        "translation_url": "https://tatoeba.org/en/sentences/show/3826016",
         "authors": [
           "Citrine",
-          "Grim_fandango"
+          "CK"
         ]
       }
     },
@@ -28095,14 +28101,14 @@
       "dutch": "beschikbaar",
       "example": {
         "text": "Hij is niet beschikbaar.",
-        "translation": "He is not available.",
+        "translation": "He's not available.",
         "match": "beschikbaar",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/3448239",
-        "translation_url": "https://tatoeba.org/en/sentences/show/296578",
+        "translation_url": "https://tatoeba.org/en/sentences/show/1911948",
         "authors": [
           "PaulP",
-          "CK"
+          "Spamster"
         ]
       }
     },
@@ -28155,14 +28161,14 @@
       "dutch": "recent",
       "example": {
         "text": "Is dit een recente foto?",
-        "translation": "Is it a recent picture?",
+        "translation": "Is this a recent photo?",
         "match": "recente",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/5990",
-        "translation_url": "https://tatoeba.org/en/sentences/show/1291",
+        "translation_url": "https://tatoeba.org/en/sentences/show/385134",
         "authors": [
           "Dorenda",
-          "Swift"
+          "saeb"
         ]
       }
     },
@@ -28425,14 +28431,14 @@
       "dutch": "de dood",
       "example": {
         "text": "Ik verveel me dood.",
-        "translation": "I am bored to death.",
+        "translation": "I'm bored to death.",
         "match": "dood",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/6074290",
-        "translation_url": "https://tatoeba.org/en/sentences/show/275360",
+        "translation_url": "https://tatoeba.org/en/sentences/show/2210798",
         "authors": [
           "Raizin",
-          "CC"
+          "Hybrid"
         ]
       }
     },
@@ -28530,14 +28536,14 @@
       "dutch": "de gewoonte",
       "example": {
         "text": "Dat is een gewoonte geworden.",
-        "translation": "That became a habit.",
+        "translation": "It has become habit.",
         "match": "gewoonte",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/3550355",
-        "translation_url": "https://tatoeba.org/en/sentences/show/5141980",
+        "translation_url": "https://tatoeba.org/en/sentences/show/10666048",
         "authors": [
           "vvv123",
-          "Objectivesea"
+          "sundown"
         ]
       }
     },
@@ -28545,14 +28551,14 @@
       "dutch": "het gevaar",
       "example": {
         "text": "We zijn buiten gevaar.",
-        "translation": "We are free from danger.",
+        "translation": "We're out of danger.",
         "match": "gevaar",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/632897",
-        "translation_url": "https://tatoeba.org/en/sentences/show/23057",
+        "translation_url": "https://tatoeba.org/en/sentences/show/2713670",
         "authors": [
           "martinod",
-          "Swift"
+          "CK"
         ]
       }
     },
@@ -28650,14 +28656,14 @@
       "dutch": "het geluk",
       "example": {
         "text": "Ik wens u geluk.",
-        "translation": "I wish you good luck.",
+        "translation": "I wish you luck.",
         "match": "geluk",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/752832",
-        "translation_url": "https://tatoeba.org/en/sentences/show/54468",
+        "translation_url": "https://tatoeba.org/en/sentences/show/858589",
         "authors": [
           "martinod",
-          "CK"
+          "piksea"
         ]
       }
     },
@@ -29137,14 +29143,14 @@
       "dutch": "binnenstebuiten",
       "example": {
         "text": "Je draagt jouw sokken binnenstebuiten.",
-        "translation": "You are wearing your socks inside out.",
+        "translation": "You're wearing your socks inside out.",
         "match": "binnenstebuiten",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/7484221",
-        "translation_url": "https://tatoeba.org/en/sentences/show/16193",
+        "translation_url": "https://tatoeba.org/en/sentences/show/8983793",
         "authors": [
           "MarijnKp",
-          "CC"
+          "CK"
         ]
       }
     },
@@ -29152,14 +29158,14 @@
       "dutch": "het nieuws",
       "example": {
         "text": "Is er iets nieuws?",
-        "translation": "Anything new?",
+        "translation": "Is there anything new?",
         "match": "nieuws",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/3706468",
-        "translation_url": "https://tatoeba.org/en/sentences/show/25313",
+        "translation_url": "https://tatoeba.org/en/sentences/show/2077336",
         "authors": [
           "PaulP",
-          "CM"
+          "Eldad"
         ]
       }
     },
@@ -29182,11 +29188,11 @@
       "dutch": "het tijdschrift",
       "example": {
         "text": "Ik lees een tijdschrift.",
-        "translation": "I am reading a magazine.",
+        "translation": "I'm reading a magazine.",
         "match": "tijdschrift",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/8000695",
-        "translation_url": "https://tatoeba.org/en/sentences/show/257859",
+        "translation_url": "https://tatoeba.org/en/sentences/show/6873198",
         "authors": [
           "MarijnKp",
           "CK"
@@ -29490,14 +29496,14 @@
       "dutch": "het wachtwoord",
       "example": {
         "text": "Wat is je wachtwoord?",
-        "translation": "What is your password?",
+        "translation": "What's your password?",
         "match": "wachtwoord",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/8237068",
-        "translation_url": "https://tatoeba.org/en/sentences/show/3779219",
+        "translation_url": "https://tatoeba.org/en/sentences/show/3821577",
         "authors": [
           "meshbags",
-          "al_ex_an_der"
+          "CK"
         ]
       }
     },
@@ -30205,14 +30211,13 @@
       "dutch": "Brazilië",
       "example": {
         "text": "Ik kom uit Brazilië.",
-        "translation": "I come from Brazil.",
+        "translation": "I'm from Brazil.",
         "match": "Brazilië",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/822937",
-        "translation_url": "https://tatoeba.org/en/sentences/show/255520",
+        "translation_url": "https://tatoeba.org/en/sentences/show/1105933",
         "authors": [
-          "simonbr",
-          "CK"
+          "simonbr"
         ]
       }
     },
@@ -30220,13 +30225,14 @@
       "dutch": "Ierland",
       "example": {
         "text": "Ierland staat bekend om zijn kant.",
-        "translation": "Ireland is famous for lace.",
+        "translation": "Ireland is famous for its lace.",
         "match": "Ierland",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/377404",
-        "translation_url": "https://tatoeba.org/en/sentences/show/71923",
+        "translation_url": "https://tatoeba.org/en/sentences/show/4487317",
         "authors": [
-          "Dorenda"
+          "Dorenda",
+          "AlanF_US"
         ]
       }
     },
@@ -30234,14 +30240,14 @@
       "dutch": "Rusland",
       "example": {
         "text": "Ik kom uit Rusland.",
-        "translation": "I am from Russia.",
+        "translation": "I'm from Russia.",
         "match": "Rusland",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/2671132",
-        "translation_url": "https://tatoeba.org/en/sentences/show/436345",
+        "translation_url": "https://tatoeba.org/en/sentences/show/7751691",
         "authors": [
           "Balamax",
-          "lukaszpp"
+          "Ricardo14"
         ]
       }
     },
@@ -30249,13 +30255,14 @@
       "dutch": "Spanje",
       "example": {
         "text": "Ik kom uit Spanje.",
-        "translation": "I am from Spain.",
+        "translation": "I'm from Spain.",
         "match": "Spanje",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/1921122",
-        "translation_url": "https://tatoeba.org/en/sentences/show/1879772",
+        "translation_url": "https://tatoeba.org/en/sentences/show/4707873",
         "authors": [
-          "Asma"
+          "Asma",
+          "AlanF_US"
         ]
       }
     },
@@ -30337,14 +30344,14 @@
       "dutch": "China",
       "example": {
         "text": "Ik kom uit China.",
-        "translation": "I come from China.",
+        "translation": "I'm from China.",
         "match": "China",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/886111",
-        "translation_url": "https://tatoeba.org/en/sentences/show/717392",
+        "translation_url": "https://tatoeba.org/en/sentences/show/3845387",
         "authors": [
           "martinod",
-          "CN"
+          "senryakun"
         ]
       }
     },
@@ -30472,14 +30479,14 @@
       "dutch": "Berlijn",
       "example": {
         "text": "Ik ben in Berlijn.",
-        "translation": "I am in Berlin.",
+        "translation": "I'm in Berlin.",
         "match": "Berlijn",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/7701048",
-        "translation_url": "https://tatoeba.org/en/sentences/show/6149781",
+        "translation_url": "https://tatoeba.org/en/sentences/show/7665324",
         "authors": [
           "MarijnKp",
-          "robbieheslop"
+          "CN"
         ]
       }
     },
@@ -30787,14 +30794,14 @@
       "dutch": "blijkbaar",
       "example": {
         "text": "Blijkbaar heb je gelijk.",
-        "translation": "Apparently you are right.",
+        "translation": "Apparently you're right.",
         "match": "blijkbaar",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/5001306",
-        "translation_url": "https://tatoeba.org/en/sentences/show/4935940",
+        "translation_url": "https://tatoeba.org/en/sentences/show/4938160",
         "authors": [
           "PaulP",
-          "al_ex_an_der"
+          "CK"
         ]
       }
     },
@@ -30966,11 +30973,11 @@
       "dutch": "gevallen",
       "example": {
         "text": "Er is veel sneeuw gevallen.",
-        "translation": "Much snow has fallen.",
+        "translation": "A lot of snow has fallen.",
         "match": "gevallen",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/377383",
-        "translation_url": "https://tatoeba.org/en/sentences/show/272529",
+        "translation_url": "https://tatoeba.org/en/sentences/show/9195408",
         "authors": [
           "Dorenda",
           "sundown"
@@ -31399,11 +31406,11 @@
       "dutch": "de voorstelling",
       "example": {
         "text": "Wanneer begint de voorstelling?",
-        "translation": "When will the show begin?",
+        "translation": "When does the show start?",
         "match": "voorstelling",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/750878",
-        "translation_url": "https://tatoeba.org/en/sentences/show/52918",
+        "translation_url": "https://tatoeba.org/en/sentences/show/268292",
         "authors": [
           "martinod",
           "CK"
@@ -31502,14 +31509,14 @@
       "dutch": "het gedicht",
       "example": {
         "text": "Hij leerde een gedicht.",
-        "translation": "He was learning a poem.",
+        "translation": "He learned a poem.",
         "match": "gedicht",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/6059824",
-        "translation_url": "https://tatoeba.org/en/sentences/show/298214",
+        "translation_url": "https://tatoeba.org/en/sentences/show/12231206",
         "authors": [
           "Mandalay",
-          "CK"
+          "Miktsoanit"
         ]
       }
     },
@@ -32068,14 +32075,14 @@
       "dutch": "het geduld",
       "example": {
         "text": "Mijn geduld raakt op.",
-        "translation": "My patience has come to the breaking point.",
+        "translation": "My patience is running out.",
         "match": "geduld",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/392909",
-        "translation_url": "https://tatoeba.org/en/sentences/show/21095",
+        "translation_url": "https://tatoeba.org/en/sentences/show/3731422",
         "authors": [
           "Dorenda",
-          "fishda"
+          "CM"
         ]
       }
     },
@@ -32465,14 +32472,14 @@
       "dutch": "gelijk hebben",
       "example": {
         "text": "Je hebt helemaal gelijk.",
-        "translation": "You are absolutely right.",
+        "translation": "You're absolutely right.",
         "match": "hebt gelijk",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/414381",
-        "translation_url": "https://tatoeba.org/en/sentences/show/69761",
+        "translation_url": "https://tatoeba.org/en/sentences/show/737667",
         "authors": [
           "Dorenda",
-          "CK"
+          "Eldad"
         ]
       }
     },
@@ -32710,11 +32717,11 @@
       "dutch": "op|slaan",
       "example": {
         "text": "Dit slaat nergens op.",
-        "translation": "This makes no sense.",
+        "translation": "This doesn't make sense.",
         "match": "slaat op",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/392986",
-        "translation_url": "https://tatoeba.org/en/sentences/show/55794",
+        "translation_url": "https://tatoeba.org/en/sentences/show/1898118",
         "authors": [
           "Dorenda",
           "CK"
@@ -33563,14 +33570,14 @@
       "dutch": "technisch",
       "example": {
         "text": "Zij adviseert hem bij technische vraagstukken.",
-        "translation": "She advises him on technical matters.",
+        "translation": "She advises him on technical issues.",
         "match": "technische",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/9667698",
-        "translation_url": "https://tatoeba.org/en/sentences/show/886936",
+        "translation_url": "https://tatoeba.org/en/sentences/show/12258164",
         "authors": [
           "Nylez",
-          "CK"
+          "Miktsoanit"
         ]
       }
     },
@@ -33638,14 +33645,14 @@
       "dutch": "doof",
       "example": {
         "text": "Ik ben niet doof.",
-        "translation": "I am not deaf.",
+        "translation": "I'm not deaf.",
         "match": "doof",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/752068",
-        "translation_url": "https://tatoeba.org/en/sentences/show/758175",
+        "translation_url": "https://tatoeba.org/en/sentences/show/1460560",
         "authors": [
           "Citrine",
-          "ahmes"
+          "Eldad"
         ]
       }
     },
@@ -34174,14 +34181,14 @@
       "dutch": "de rits",
       "example": {
         "text": "De rits zit vast.",
-        "translation": "The zipper is stuck.",
+        "translation": "The zipper's stuck.",
         "match": "rits",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/4748147",
-        "translation_url": "https://tatoeba.org/en/sentences/show/1848936",
+        "translation_url": "https://tatoeba.org/en/sentences/show/5360465",
         "authors": [
           "davidvdb",
-          "Spamster"
+          "Hybrid"
         ]
       }
     },
@@ -34531,14 +34538,14 @@
       "dutch": "de wetenschap",
       "example": {
         "text": "Dit is geen wetenschap.",
-        "translation": "It's not rocket science.",
+        "translation": "It isn't rocket science.",
         "match": "wetenschap",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/1084761",
-        "translation_url": "https://tatoeba.org/en/sentences/show/479759",
+        "translation_url": "https://tatoeba.org/en/sentences/show/7197514",
         "authors": [
           "Citrine",
-          "sacredceltic"
+          "CK"
         ]
       }
     },
@@ -34679,14 +34686,14 @@
       "dutch": "de oplossing",
       "example": {
         "text": "Er is geen oplossing.",
-        "translation": "There isn't any solution.",
+        "translation": "There is no solution.",
         "match": "oplossing",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/844535",
-        "translation_url": "https://tatoeba.org/en/sentences/show/2362",
+        "translation_url": "https://tatoeba.org/en/sentences/show/1137679",
         "authors": [
           "simonbr",
-          "CK"
+          "jdonnarumma"
         ]
       }
     },
@@ -35181,11 +35188,11 @@
       "dutch": "openbaar",
       "example": {
         "text": "Spreken in het openbaar is moeilijk.",
-        "translation": "It is difficult to speak in public.",
+        "translation": "It is hard to speak in public.",
         "match": "openbaar",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/8125436",
-        "translation_url": "https://tatoeba.org/en/sentences/show/2139655",
+        "translation_url": "https://tatoeba.org/en/sentences/show/2139659",
         "authors": [
           "PaulP",
           "Balamax"
@@ -35558,14 +35565,14 @@
       "dutch": "de ondernemer",
       "example": {
         "text": "Ik ben ondernemer.",
-        "translation": "I am an entrepreneur.",
+        "translation": "I'm an entrepreneur.",
         "match": "ondernemer",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/445015",
-        "translation_url": "https://tatoeba.org/en/sentences/show/355791",
+        "translation_url": "https://tatoeba.org/en/sentences/show/8810208",
         "authors": [
           "Citrine",
-          "yorickvidal"
+          "CK"
         ]
       }
     },
@@ -35722,14 +35729,14 @@
       "dutch": "romantisch",
       "example": {
         "text": "Dat is heel romantisch!",
-        "translation": "It's very romantic!",
+        "translation": "That's very romantic!",
         "match": "romantisch",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/941675",
-        "translation_url": "https://tatoeba.org/en/sentences/show/359445",
+        "translation_url": "https://tatoeba.org/en/sentences/show/1336397",
         "authors": [
           "martinod",
-          "alberto"
+          "Scott"
         ]
       }
     },
@@ -35737,14 +35744,14 @@
       "dutch": "knuffelen",
       "example": {
         "text": "Mag ik je knuffelen?",
-        "translation": "Can I give you a hug?",
+        "translation": "Can I hug you?",
         "match": "knuffelen",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/8317461",
-        "translation_url": "https://tatoeba.org/en/sentences/show/2833353",
+        "translation_url": "https://tatoeba.org/en/sentences/show/3172312",
         "authors": [
           "magick1",
-          "Hybrid"
+          "CK"
         ]
       }
     },
@@ -36117,14 +36124,14 @@
       "dutch": "ongekookt",
       "example": {
         "text": "\"Spreek je Frans?\" - \"Nee.\"",
-        "translation": "\"Do you speak French?\" \"No, I don't.\"",
+        "translation": "\"Do you speak French?\" \"No.\"",
         "match": "-",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/6852630",
-        "translation_url": "https://tatoeba.org/en/sentences/show/4664066",
+        "translation_url": "https://tatoeba.org/en/sentences/show/4695005",
         "authors": [
           "Micsmithel",
-          "CK"
+          "PvtMarc"
         ]
       }
     },
@@ -36161,14 +36168,14 @@
       "dutch": "teleurgesteld",
       "example": {
         "text": "Je stelt me teleur.",
-        "translation": "I'm disappointed with you.",
+        "translation": "You disappoint me.",
         "match": "stelt teleur",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/393149",
-        "translation_url": "https://tatoeba.org/en/sentences/show/239324",
+        "translation_url": "https://tatoeba.org/en/sentences/show/1090380",
         "authors": [
           "Insania",
-          "CK"
+          "megamanenm"
         ]
       }
     },
@@ -36265,14 +36272,14 @@
       "dutch": "nieuwsgierig",
       "example": {
         "text": "Ik ben niet nieuwsgierig.",
-        "translation": "I am not curious.",
+        "translation": "I'm not curious.",
         "match": "nieuwsgierig",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/4687343",
-        "translation_url": "https://tatoeba.org/en/sentences/show/1109699",
+        "translation_url": "https://tatoeba.org/en/sentences/show/6873300",
         "authors": [
           "doemaar14",
-          "Leedihuzur"
+          "CK"
         ]
       }
     },
@@ -36486,11 +36493,11 @@
     {
       "dutch": "de constitutionele monarchie",
       "example": {
-        "text": "In een parlementaire republiek zijn, net als in een constitutionele monarchie, de ministers verantwoording schuldig aan de volksvertegenwoordiging.",
-        "translation": "In a parliamentary republic, as in a constitutional monarchy, ministers are accountable to the parliament.",
+        "text": "Een constitutionele monarchie is aan de grondwet gebonden, maar niet per definitie democratisch.",
+        "translation": "A constitutional monarchy is bound by the constitution, but not by definition democratic.",
         "match": "constitutionele monarchie",
         "source": "nl.wikipedia",
-        "url": "https://nl.wikipedia.org/wiki/Parlementaire_republiek",
+        "url": "https://nl.wikipedia.org/wiki/Monarchie",
         "translated_by": "Helsinki-NLP/opus-mt-nl-en@48af999f2c59"
       }
     },
@@ -36787,11 +36794,11 @@
       "dutch": "de leider",
       "example": {
         "text": "Jij bent mijn leider.",
-        "translation": "You are my leader.",
+        "translation": "You're my leader.",
         "match": "leider",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/6117270",
-        "translation_url": "https://tatoeba.org/en/sentences/show/6116183",
+        "translation_url": "https://tatoeba.org/en/sentences/show/6116184",
         "authors": [
           "Raizin",
           "mailohilohi"
@@ -37359,14 +37366,14 @@
       "dutch": "het monster",
       "example": {
         "text": "Ik ben geen monster!",
-        "translation": "I am not a monster.",
+        "translation": "I'm not a monster.",
         "match": "monster",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/7833324",
-        "translation_url": "https://tatoeba.org/en/sentences/show/1820204",
+        "translation_url": "https://tatoeba.org/en/sentences/show/1839534",
         "authors": [
           "MarijnKp",
-          "Amastan"
+          "CK"
         ]
       }
     },
@@ -37463,14 +37470,14 @@
       "dutch": "de gelegenheid",
       "example": {
         "text": "De gelegenheid maakt de dief.",
-        "translation": "Opportunity makes a thief.",
+        "translation": "Opportunity makes the thief.",
         "match": "gelegenheid",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/381306",
-        "translation_url": "https://tatoeba.org/en/sentences/show/52289",
+        "translation_url": "https://tatoeba.org/en/sentences/show/712136",
         "authors": [
           "Dorenda",
-          "Miktsoanit"
+          "Ronaldonl"
         ]
       }
     },
@@ -37522,14 +37529,14 @@
       "dutch": "de gastvrijheid",
       "example": {
         "text": "Bedankt voor uw gastvrijheid.",
-        "translation": "Thanks for your hospitality.",
+        "translation": "Thank you for your hospitality.",
         "match": "gastvrijheid",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/3609978",
-        "translation_url": "https://tatoeba.org/en/sentences/show/462524",
+        "translation_url": "https://tatoeba.org/en/sentences/show/2642745",
         "authors": [
           "PaulP",
-          "lukaszpp"
+          "CK"
         ]
       }
     },
@@ -37552,14 +37559,14 @@
       "dutch": "de eer",
       "example": {
         "text": "Met wie heb ik de eer?",
-        "translation": "With whom do I have the honor of speaking?",
+        "translation": "With whom do I have the honor?",
         "match": "eer",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/1953342",
-        "translation_url": "https://tatoeba.org/en/sentences/show/3679063",
+        "translation_url": "https://tatoeba.org/en/sentences/show/3763360",
         "authors": [
           "marcelostockle",
-          "Theocracy"
+          "cromwellt"
         ]
       }
     },
@@ -38157,14 +38164,14 @@
       "dutch": "de uitzondering",
       "example": {
         "text": "Portugal is geen uitzondering.",
-        "translation": "Portugal is not an exception.",
+        "translation": "Portugal is no exception.",
         "match": "uitzondering",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/2333178",
-        "translation_url": "https://tatoeba.org/en/sentences/show/659276",
+        "translation_url": "https://tatoeba.org/en/sentences/show/2365016",
         "authors": [
           "PaulP",
-          "Vortarulo"
+          "niceguydave"
         ]
       }
     },
@@ -38172,14 +38179,14 @@
       "dutch": "de strategie",
       "example": {
         "text": "Hoop is geen strategie.",
-        "translation": "Hope is not a strategy.",
+        "translation": "Hope isn't a strategy.",
         "match": "strategie",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/9642591",
-        "translation_url": "https://tatoeba.org/en/sentences/show/2298",
+        "translation_url": "https://tatoeba.org/en/sentences/show/7492766",
         "authors": [
           "Nylez",
-          "CM"
+          "CK"
         ]
       }
     },
@@ -38349,14 +38356,14 @@
       "dutch": "de oorlog",
       "example": {
         "text": "Wie houdt van oorlog?",
-        "translation": "Who loves war?",
+        "translation": "Who likes war?",
         "match": "oorlog",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/660493",
-        "translation_url": "https://tatoeba.org/en/sentences/show/276350",
+        "translation_url": "https://tatoeba.org/en/sentences/show/4402062",
         "authors": [
           "Citrine",
-          "Alkrasnov"
+          "AlanF_US"
         ]
       }
     },
@@ -38478,14 +38485,14 @@
       "dutch": "de macht",
       "example": {
         "text": "Drie tot de derde macht is zevenentwintig.",
-        "translation": "3 to the third power is 27.",
+        "translation": "Three to the power of three is twenty-seven.",
         "match": "macht",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/408135",
-        "translation_url": "https://tatoeba.org/en/sentences/show/72720",
+        "translation_url": "https://tatoeba.org/en/sentences/show/11477553",
         "authors": [
           "Dorenda",
-          "CK"
+          "sundown"
         ]
       }
     },
@@ -39248,11 +39255,11 @@
     {
       "dutch": "de Tachtigjarige Oorlog",
       "example": {
-        "text": "De betekenis van de watergeuzen tijdens de eerste jaren van de Tachtigjarige Oorlog kan moeilijk worden overschat.",
-        "translation": "It is difficult to overestimate the significance of the water geuzen during the first years of the Eighty Years' War.",
+        "text": "De Staats-Spaanse Linies was een stelsel van verbindingslinies in Staats-Vlaanderen aangelegd tijdens de Tachtigjarige Oorlog.",
+        "translation": "The State-Spanish Linies were a system of connecting lines in the State-Flanders during the Eighty Years' War.",
         "match": "de Tachtigjarige Oorlog",
         "source": "nl.wikipedia",
-        "url": "https://nl.wikipedia.org/wiki/Geuzen_%28Tachtigjarige_Oorlog%29",
+        "url": "https://nl.wikipedia.org/wiki/Staatsen",
         "translated_by": "Helsinki-NLP/opus-mt-nl-en@48af999f2c59"
       }
     },
@@ -39610,14 +39617,14 @@
       "dutch": "het cadeau",
       "example": {
         "text": "Bedankt voor je cadeau.",
-        "translation": "Thank you for your present.",
+        "translation": "Thank you for your gift.",
         "match": "cadeau",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/439289",
-        "translation_url": "https://tatoeba.org/en/sentences/show/34097",
+        "translation_url": "https://tatoeba.org/en/sentences/show/750992",
         "authors": [
           "koosscharroo",
-          "CK"
+          "sano"
         ]
       }
     },
@@ -39666,14 +39673,14 @@
       "dutch": "Kerstmis",
       "example": {
         "text": "Morgen is het Kerstmis.",
-        "translation": "Tomorrow is Christmas Day.",
+        "translation": "Tomorrow it's Christmas.",
         "match": "Kerstmis",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/377936",
-        "translation_url": "https://tatoeba.org/en/sentences/show/323245",
+        "translation_url": "https://tatoeba.org/en/sentences/show/1555289",
         "authors": [
           "Dorenda",
-          "CK"
+          "impclaw"
         ]
       }
     },
