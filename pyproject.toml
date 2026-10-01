@@ -1,7 +1,10 @@
 [project]
 name = "duolingo-anki"
 version = "0.1.0"
-description = "Scrape Dutch vocabulary from the Duolingo wiki for Anki"
+description = "Dutch vocabulary from the Duolingo wiki with forms, example sentences and audio for Anki"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
 authors = [
     { name = "Amin", email = "amenfd@gmail.com" }
 ]
