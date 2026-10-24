@@ -79,8 +79,12 @@ Finds one example sentence per word, trying these sources in order and stopping 
 
 Sentences match any form of the word, including split separable verbs (*Ze staat vroeg op*), grammar patterns
 (*noch…noch*, *iets …s*) and prefixes or suffixes (*schoon-*, *-talig*). Among the matches, the pick prefers a
-translation that carries the word's meaning, then the form being taught, then a short single sentence made of
-words that are also in the deck. Words without any example sentence are dropped.
+translation that carries the word's meaning, then a sentence that fits the word (a reflexive pronoun for *zich …*
+verbs, no infinitive used as a noun for verbs), then the form being taught, then a short single sentence made of
+words taught up to that point in the course. When no Tatoeba sentence carries the meaning, the later sources are
+tried for a short one that does. Each word gets a sentence of its own unless all its best options are taken by
+words that match them better. Words without any example sentence are dropped. The step lists the words whose
+translation still misses the meaning and the sentences shared by several words.
 
 ### Audio
 

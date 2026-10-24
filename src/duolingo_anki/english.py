@@ -8,6 +8,8 @@ STOPWORDS = {
 }
 ALTERNATIVES = re.compile(r"[,/;]|\bor\b")
 NOTES = re.compile(r"\([^)]*\)")
+HYPHEN = re.compile(r"(?<=[a-z])-(?=[a-z])")
+HYPHENATED = re.compile(r"[a-z]+(?:-[a-z]+)+")
 DUTCH_FUNCTION_WORDS = {"het", "een", "van", "de", "niet", "zijn", "voor", "dat", "ook", "naar"}
 FUNCTION_WORDS = {
     "in", "on", "at", "by", "as", "is", "it", "its", "my", "me", "we", "he", "she", "his", "her", "you", "your",
@@ -24,7 +26,8 @@ def variants(token: str) -> set[str]:
 
 
 def content_words(text: str) -> set[str]:
-    return {token for token in re.findall(r"[a-z]+", text.lower()) if len(token) >= 2 and token not in STOPWORDS}
+    words = re.findall(r"[a-z]+", text.lower()) + [HYPHEN.sub("", word) for word in HYPHENATED.findall(text.lower())]
+    return {token for token in words if len(token) >= 2 and token not in STOPWORDS}
 
 
 def meaning_words(text: str) -> set[str]:
@@ -47,12 +50,10 @@ class Meaning:
 
     @classmethod
     def of(cls, translations: list[str]) -> "Meaning":
-        words = frozenset().union(*(meaning_words(translation) for translation in translations))
+        texts = [NOTES.sub(" ", translation) for translation in translations]
+        words = frozenset().union(*(meaning_words(text) for text in texts))
         alternatives = dict.fromkeys(
-            frozenset(found)
-            for translation in translations
-            for part in ALTERNATIVES.split(NOTES.sub(" ", translation))
-            if (found := meaning_words(part))
+            frozenset(found) for text in texts for part in ALTERNATIVES.split(text) if (found := meaning_words(part))
         )
         return cls(words, tuple(alternatives))
 

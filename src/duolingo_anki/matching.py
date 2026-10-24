@@ -9,6 +9,7 @@ PATTERN_PARTS = re.compile(r"(\.\.\.|\+)")
 GAP = r"(?: \S+)+?"
 PRESENT_PARTICIPLE = r" \S+ende?"
 MIN_AFFIX_REST = 3
+INFINITIVE_MARKER = "te"
 
 
 def tokens(text: str) -> list[str]:
@@ -41,7 +42,7 @@ class Phrase(Rule):
         size = len(self.head)
         for start in range(len(sentence) - size + 1):
             if tuple(sentence[start:start + size]) == self.head:
-                if not self.tail or contains(sentence[start + size:], self.tail):
+                if not self.tail or separated(sentence[start + size:], self.tail):
                     return True
         return False
 
@@ -67,8 +68,12 @@ class Affix(Rule):
         )
 
 
-def contains(sentence: list[str], phrase: tuple[str, ...]) -> bool:
-    return any(tuple(sentence[i:i + len(phrase)]) == phrase for i in range(len(sentence) - len(phrase) + 1))
+def separated(sentence: list[str], particle: tuple[str, ...]) -> bool:
+    size = len(particle)
+    return any(
+        tuple(sentence[i:i + size]) == particle and sentence[i + size:i + size + 1] != [INFINITIVE_MARKER]
+        for i in range(len(sentence) - size + 1)
+    )
 
 
 def pattern_rule(dutch: str) -> Pattern:

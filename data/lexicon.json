@@ -160,64 +160,7 @@
           "lemma": "ik",
           "forms": [
             "'k",
-            "'m",
-            "'r",
-            "'t",
-            "-",
-            "d'r",
-            "ge",
-            "gij",
-            "h'r",
-            "haar",
-            "haars",
-            "hare",
-            "harer",
-            "hem",
-            "hen",
-            "het",
-            "hij",
-            "hun",
-            "hunne",
-            "hunner",
-            "huns",
-            "ick",
-            "ie",
-            "ik",
-            "ikke",
-            "je",
-            "jij",
-            "jou",
-            "jouw",
-            "jouwe",
-            "jouwer",
-            "jouws",
-            "jullie",
-            "m'n",
-            "me",
-            "mij",
-            "mijn",
-            "mijne",
-            "mijner",
-            "mijns",
-            "ons",
-            "onze",
-            "onzer",
-            "onzes",
-            "u",
-            "uw",
-            "uwe",
-            "uwer",
-            "uws",
-            "we",
-            "wij",
-            "z'n",
-            "ze",
-            "zich",
-            "zij",
-            "zijn",
-            "zijne",
-            "zijner",
-            "zijns"
+            "ik"
           ]
         }
       ]
@@ -270,63 +213,8 @@
           "pos": "pron",
           "lemma": "het",
           "forms": [
-            "'k",
-            "'m",
-            "'r",
             "'t",
-            "-",
-            "d'r",
-            "ge",
-            "gij",
-            "h'r",
-            "haar",
-            "haars",
-            "hare",
-            "harer",
-            "hem",
-            "hen",
-            "het",
-            "hij",
-            "hun",
-            "hunne",
-            "hunner",
-            "huns",
-            "ie",
-            "ik",
-            "je",
-            "jij",
-            "jou",
-            "jouw",
-            "jouwe",
-            "jouwer",
-            "jouws",
-            "jullie",
-            "m'n",
-            "me",
-            "mij",
-            "mijn",
-            "mijne",
-            "mijner",
-            "mijns",
-            "ons",
-            "onze",
-            "onzer",
-            "onzes",
-            "u",
-            "uw",
-            "uwe",
-            "uwer",
-            "uws",
-            "we",
-            "wij",
-            "z'n",
-            "ze",
-            "zich",
-            "zij",
-            "zijn",
-            "zijne",
-            "zijner",
-            "zijns"
+            "het"
           ]
         }
       ]
@@ -443,63 +331,8 @@
           "pos": "pron",
           "lemma": "hij",
           "forms": [
-            "'k",
-            "'m",
-            "'r",
-            "'t",
-            "-",
-            "d'r",
-            "ge",
-            "gij",
-            "h'r",
-            "haar",
-            "haars",
-            "hare",
-            "harer",
-            "hem",
-            "hen",
-            "het",
             "hij",
-            "hun",
-            "hunne",
-            "hunner",
-            "huns",
-            "ie",
-            "ik",
-            "je",
-            "jij",
-            "jou",
-            "jouw",
-            "jouwe",
-            "jouwer",
-            "jouws",
-            "jullie",
-            "m'n",
-            "me",
-            "mij",
-            "mijn",
-            "mijne",
-            "mijner",
-            "mijns",
-            "ons",
-            "onze",
-            "onzer",
-            "onzes",
-            "u",
-            "uw",
-            "uwe",
-            "uwer",
-            "uws",
-            "we",
-            "wij",
-            "z'n",
-            "ze",
-            "zich",
-            "zij",
-            "zijn",
-            "zijne",
-            "zijner",
-            "zijns"
+            "ie"
           ]
         }
       ]
@@ -553,63 +386,10 @@
           "pos": "pron",
           "lemma": "zij",
           "forms": [
-            "'k",
-            "'m",
-            "'r",
-            "'t",
-            "-",
-            "d'r",
-            "ge",
-            "gij",
-            "h'r",
-            "haar",
-            "haars",
-            "hare",
-            "harer",
-            "hem",
             "hen",
-            "het",
-            "hij",
             "hun",
-            "hunne",
-            "hunner",
-            "huns",
-            "ie",
-            "ik",
-            "je",
-            "jij",
-            "jou",
-            "jouw",
-            "jouwe",
-            "jouwer",
-            "jouws",
-            "jullie",
-            "m'n",
-            "me",
-            "mij",
-            "mijn",
-            "mijne",
-            "mijner",
-            "mijns",
-            "ons",
-            "onze",
-            "onzer",
-            "onzes",
-            "u",
-            "uw",
-            "uwe",
-            "uwer",
-            "uws",
-            "we",
-            "wij",
-            "z'n",
             "ze",
-            "zich",
-            "zij",
-            "zijn",
-            "zijne",
-            "zijner",
-            "zijns"
+            "zij"
           ]
         }
       ]
@@ -882,63 +662,11 @@
           "pos": "pron",
           "lemma": "je",
           "forms": [
-            "'k",
-            "'m",
-            "'r",
-            "'t",
-            "-",
-            "d'r",
-            "ge",
-            "gij",
-            "h'r",
-            "haar",
-            "haars",
-            "hare",
-            "harer",
-            "hem",
-            "hen",
-            "het",
-            "hij",
-            "hun",
-            "hunne",
-            "hunner",
-            "huns",
-            "ie",
-            "ik",
             "je",
             "jij",
             "jou",
             "jouw",
-            "jouwe",
-            "jouwer",
-            "jouws",
-            "jullie",
-            "m'n",
-            "me",
-            "mij",
-            "mijn",
-            "mijne",
-            "mijner",
-            "mijns",
-            "ons",
-            "onze",
-            "onzer",
-            "onzes",
-            "u",
-            "uw",
-            "uwe",
-            "uwer",
-            "uws",
-            "we",
-            "wij",
-            "z'n",
-            "ze",
-            "zich",
-            "zij",
-            "zijn",
-            "zijne",
-            "zijner",
-            "zijns"
+            "jullie"
           ]
         }
       ]
@@ -1039,63 +767,8 @@
           "pos": "pron",
           "lemma": "wij",
           "forms": [
-            "'k",
-            "'m",
-            "'r",
-            "'t",
-            "-",
-            "d'r",
-            "ge",
-            "gij",
-            "h'r",
-            "haar",
-            "haars",
-            "hare",
-            "harer",
-            "hem",
-            "hen",
-            "het",
-            "hij",
-            "hun",
-            "hunne",
-            "hunner",
-            "huns",
-            "ie",
-            "ik",
-            "je",
-            "jij",
-            "jou",
-            "jouw",
-            "jouwe",
-            "jouwer",
-            "jouws",
-            "jullie",
-            "m'n",
-            "me",
-            "mij",
-            "mijn",
-            "mijne",
-            "mijner",
-            "mijns",
-            "ons",
-            "onze",
-            "onzer",
-            "onzes",
-            "u",
-            "uw",
-            "uwe",
-            "uwer",
-            "uws",
             "we",
-            "wij",
-            "z'n",
-            "ze",
-            "zich",
-            "zij",
-            "zijn",
-            "zijne",
-            "zijner",
-            "zijns"
+            "wij"
           ]
         }
       ]
@@ -1108,65 +781,8 @@
           "pos": "pron",
           "lemma": "jullie",
           "forms": [
-            "'k",
-            "'m",
-            "'r",
-            "'t",
-            "-",
-            "d'r",
-            "form je",
-            "form jullie",
-            "ge",
-            "gij",
-            "h'r",
-            "haar",
-            "haars",
-            "hare",
-            "harer",
-            "hem",
-            "hen",
-            "het",
-            "hij",
-            "hun",
-            "hunne",
-            "hunner",
-            "huns",
-            "ie",
-            "ik",
             "je",
-            "jij",
-            "jou",
-            "jouw",
-            "jouwe",
-            "jouwer",
-            "jouws",
-            "jullie",
-            "m'n",
-            "me",
-            "mij",
-            "mijn",
-            "mijne",
-            "mijner",
-            "mijns",
-            "ons",
-            "onze",
-            "onzer",
-            "onzes",
-            "u",
-            "uw",
-            "uwe",
-            "uwer",
-            "uws",
-            "we",
-            "wij",
-            "z'n",
-            "ze",
-            "zich",
-            "zij",
-            "zijn",
-            "zijne",
-            "zijner",
-            "zijns"
+            "jullie"
           ]
         }
       ]
@@ -2176,7 +1792,6 @@
             "superlative": "best"
           },
           "forms": [
-            "-",
             "best",
             "beste",
             "beter",
@@ -2245,7 +1860,6 @@
             "superlative": "meest Engels"
           },
           "forms": [
-            "-",
             "Engels",
             "Engelsch",
             "Engelse",
@@ -2273,7 +1887,6 @@
             "superlative": "meest Nederlands"
           },
           "forms": [
-            "-",
             "Nederlands",
             "Nederlandsch",
             "Nederlandse",
@@ -2670,7 +2283,6 @@
             "superlative": "lekkerst"
           },
           "forms": [
-            "-",
             "het lekkerst",
             "het lekkerste",
             "lekker",
@@ -3401,70 +3013,7 @@
           "word": "hebben ze"
         },
         {
-          "word": "jullie",
-          "pos": "pron",
-          "lemma": "jullie",
-          "forms": [
-            "'k",
-            "'m",
-            "'r",
-            "'t",
-            "-",
-            "d'r",
-            "form je",
-            "form jullie",
-            "ge",
-            "gij",
-            "h'r",
-            "haar",
-            "haars",
-            "hare",
-            "harer",
-            "hem",
-            "hen",
-            "het",
-            "hij",
-            "hun",
-            "hunne",
-            "hunner",
-            "huns",
-            "ie",
-            "ik",
-            "je",
-            "jij",
-            "jou",
-            "jouw",
-            "jouwe",
-            "jouwer",
-            "jouws",
-            "jullie",
-            "m'n",
-            "me",
-            "mij",
-            "mijn",
-            "mijne",
-            "mijner",
-            "mijns",
-            "ons",
-            "onze",
-            "onzer",
-            "onzes",
-            "u",
-            "uw",
-            "uwe",
-            "uwer",
-            "uws",
-            "we",
-            "wij",
-            "z'n",
-            "ze",
-            "zich",
-            "zij",
-            "zijn",
-            "zijne",
-            "zijner",
-            "zijns"
-          ]
+          "word": "hebben jullie"
         }
       ]
     },
@@ -3475,68 +3024,7 @@
           "word": "heeft hij"
         },
         {
-          "word": "ze",
-          "pos": "pron",
-          "lemma": "zij",
-          "forms": [
-            "'k",
-            "'m",
-            "'r",
-            "'t",
-            "-",
-            "d'r",
-            "ge",
-            "gij",
-            "h'r",
-            "haar",
-            "haars",
-            "hare",
-            "harer",
-            "hem",
-            "hen",
-            "het",
-            "hij",
-            "hun",
-            "hunne",
-            "hunner",
-            "huns",
-            "ie",
-            "ik",
-            "je",
-            "jij",
-            "jou",
-            "jouw",
-            "jouwe",
-            "jouwer",
-            "jouws",
-            "jullie",
-            "m'n",
-            "me",
-            "mij",
-            "mijn",
-            "mijne",
-            "mijner",
-            "mijns",
-            "ons",
-            "onze",
-            "onzer",
-            "onzes",
-            "u",
-            "uw",
-            "uwe",
-            "uwer",
-            "uws",
-            "we",
-            "wij",
-            "z'n",
-            "ze",
-            "zich",
-            "zij",
-            "zijn",
-            "zijne",
-            "zijner",
-            "zijns"
-          ]
+          "word": "heeft ze"
         }
       ]
     },
@@ -3547,68 +3035,7 @@
           "word": "is hij"
         },
         {
-          "word": "ze",
-          "pos": "pron",
-          "lemma": "zij",
-          "forms": [
-            "'k",
-            "'m",
-            "'r",
-            "'t",
-            "-",
-            "d'r",
-            "ge",
-            "gij",
-            "h'r",
-            "haar",
-            "haars",
-            "hare",
-            "harer",
-            "hem",
-            "hen",
-            "het",
-            "hij",
-            "hun",
-            "hunne",
-            "hunner",
-            "huns",
-            "ie",
-            "ik",
-            "je",
-            "jij",
-            "jou",
-            "jouw",
-            "jouwe",
-            "jouwer",
-            "jouws",
-            "jullie",
-            "m'n",
-            "me",
-            "mij",
-            "mijn",
-            "mijne",
-            "mijner",
-            "mijns",
-            "ons",
-            "onze",
-            "onzer",
-            "onzes",
-            "u",
-            "uw",
-            "uwe",
-            "uwer",
-            "uws",
-            "we",
-            "wij",
-            "z'n",
-            "ze",
-            "zich",
-            "zij",
-            "zijn",
-            "zijne",
-            "zijner",
-            "zijns"
-          ]
+          "word": "is ze"
         }
       ]
     },
@@ -3619,70 +3046,7 @@
           "word": "lezen ze"
         },
         {
-          "word": "jullie",
-          "pos": "pron",
-          "lemma": "jullie",
-          "forms": [
-            "'k",
-            "'m",
-            "'r",
-            "'t",
-            "-",
-            "d'r",
-            "form je",
-            "form jullie",
-            "ge",
-            "gij",
-            "h'r",
-            "haar",
-            "haars",
-            "hare",
-            "harer",
-            "hem",
-            "hen",
-            "het",
-            "hij",
-            "hun",
-            "hunne",
-            "hunner",
-            "huns",
-            "ie",
-            "ik",
-            "je",
-            "jij",
-            "jou",
-            "jouw",
-            "jouwe",
-            "jouwer",
-            "jouws",
-            "jullie",
-            "m'n",
-            "me",
-            "mij",
-            "mijn",
-            "mijne",
-            "mijner",
-            "mijns",
-            "ons",
-            "onze",
-            "onzer",
-            "onzes",
-            "u",
-            "uw",
-            "uwe",
-            "uwer",
-            "uws",
-            "we",
-            "wij",
-            "z'n",
-            "ze",
-            "zich",
-            "zij",
-            "zijn",
-            "zijne",
-            "zijner",
-            "zijns"
-          ]
+          "word": "lezen jullie"
         }
       ]
     },
@@ -3693,68 +3057,7 @@
           "word": "leest hij"
         },
         {
-          "word": "ze",
-          "pos": "pron",
-          "lemma": "zij",
-          "forms": [
-            "'k",
-            "'m",
-            "'r",
-            "'t",
-            "-",
-            "d'r",
-            "ge",
-            "gij",
-            "h'r",
-            "haar",
-            "haars",
-            "hare",
-            "harer",
-            "hem",
-            "hen",
-            "het",
-            "hij",
-            "hun",
-            "hunne",
-            "hunner",
-            "huns",
-            "ie",
-            "ik",
-            "je",
-            "jij",
-            "jou",
-            "jouw",
-            "jouwe",
-            "jouwer",
-            "jouws",
-            "jullie",
-            "m'n",
-            "me",
-            "mij",
-            "mijn",
-            "mijne",
-            "mijner",
-            "mijns",
-            "ons",
-            "onze",
-            "onzer",
-            "onzes",
-            "u",
-            "uw",
-            "uwe",
-            "uwer",
-            "uws",
-            "we",
-            "wij",
-            "z'n",
-            "ze",
-            "zich",
-            "zij",
-            "zijn",
-            "zijne",
-            "zijner",
-            "zijns"
-          ]
+          "word": "leest ze"
         }
       ]
     },
@@ -3765,70 +3068,7 @@
           "word": "drinken ze"
         },
         {
-          "word": "jullie",
-          "pos": "pron",
-          "lemma": "jullie",
-          "forms": [
-            "'k",
-            "'m",
-            "'r",
-            "'t",
-            "-",
-            "d'r",
-            "form je",
-            "form jullie",
-            "ge",
-            "gij",
-            "h'r",
-            "haar",
-            "haars",
-            "hare",
-            "harer",
-            "hem",
-            "hen",
-            "het",
-            "hij",
-            "hun",
-            "hunne",
-            "hunner",
-            "huns",
-            "ie",
-            "ik",
-            "je",
-            "jij",
-            "jou",
-            "jouw",
-            "jouwe",
-            "jouwer",
-            "jouws",
-            "jullie",
-            "m'n",
-            "me",
-            "mij",
-            "mijn",
-            "mijne",
-            "mijner",
-            "mijns",
-            "ons",
-            "onze",
-            "onzer",
-            "onzes",
-            "u",
-            "uw",
-            "uwe",
-            "uwer",
-            "uws",
-            "we",
-            "wij",
-            "z'n",
-            "ze",
-            "zich",
-            "zij",
-            "zijn",
-            "zijne",
-            "zijner",
-            "zijns"
-          ]
+          "word": "drinken jullie"
         }
       ]
     },
@@ -3839,68 +3079,7 @@
           "word": "drinkt hij"
         },
         {
-          "word": "ze",
-          "pos": "pron",
-          "lemma": "zij",
-          "forms": [
-            "'k",
-            "'m",
-            "'r",
-            "'t",
-            "-",
-            "d'r",
-            "ge",
-            "gij",
-            "h'r",
-            "haar",
-            "haars",
-            "hare",
-            "harer",
-            "hem",
-            "hen",
-            "het",
-            "hij",
-            "hun",
-            "hunne",
-            "hunner",
-            "huns",
-            "ie",
-            "ik",
-            "je",
-            "jij",
-            "jou",
-            "jouw",
-            "jouwe",
-            "jouwer",
-            "jouws",
-            "jullie",
-            "m'n",
-            "me",
-            "mij",
-            "mijn",
-            "mijne",
-            "mijner",
-            "mijns",
-            "ons",
-            "onze",
-            "onzer",
-            "onzes",
-            "u",
-            "uw",
-            "uwe",
-            "uwer",
-            "uws",
-            "we",
-            "wij",
-            "z'n",
-            "ze",
-            "zich",
-            "zij",
-            "zijn",
-            "zijne",
-            "zijner",
-            "zijns"
-          ]
+          "word": "drinkt ze"
         }
       ]
     },
@@ -3911,68 +3090,7 @@
           "word": "eet hij"
         },
         {
-          "word": "ze",
-          "pos": "pron",
-          "lemma": "zij",
-          "forms": [
-            "'k",
-            "'m",
-            "'r",
-            "'t",
-            "-",
-            "d'r",
-            "ge",
-            "gij",
-            "h'r",
-            "haar",
-            "haars",
-            "hare",
-            "harer",
-            "hem",
-            "hen",
-            "het",
-            "hij",
-            "hun",
-            "hunne",
-            "hunner",
-            "huns",
-            "ie",
-            "ik",
-            "je",
-            "jij",
-            "jou",
-            "jouw",
-            "jouwe",
-            "jouwer",
-            "jouws",
-            "jullie",
-            "m'n",
-            "me",
-            "mij",
-            "mijn",
-            "mijne",
-            "mijner",
-            "mijns",
-            "ons",
-            "onze",
-            "onzer",
-            "onzes",
-            "u",
-            "uw",
-            "uwe",
-            "uwer",
-            "uws",
-            "we",
-            "wij",
-            "z'n",
-            "ze",
-            "zich",
-            "zij",
-            "zijn",
-            "zijne",
-            "zijner",
-            "zijns"
-          ]
+          "word": "eet ze"
         }
       ]
     },
@@ -3983,70 +3101,7 @@
           "word": "eten ze"
         },
         {
-          "word": "jullie",
-          "pos": "pron",
-          "lemma": "jullie",
-          "forms": [
-            "'k",
-            "'m",
-            "'r",
-            "'t",
-            "-",
-            "d'r",
-            "form je",
-            "form jullie",
-            "ge",
-            "gij",
-            "h'r",
-            "haar",
-            "haars",
-            "hare",
-            "harer",
-            "hem",
-            "hen",
-            "het",
-            "hij",
-            "hun",
-            "hunne",
-            "hunner",
-            "huns",
-            "ie",
-            "ik",
-            "je",
-            "jij",
-            "jou",
-            "jouw",
-            "jouwe",
-            "jouwer",
-            "jouws",
-            "jullie",
-            "m'n",
-            "me",
-            "mij",
-            "mijn",
-            "mijne",
-            "mijner",
-            "mijns",
-            "ons",
-            "onze",
-            "onzer",
-            "onzes",
-            "u",
-            "uw",
-            "uwe",
-            "uwer",
-            "uws",
-            "we",
-            "wij",
-            "z'n",
-            "ze",
-            "zich",
-            "zij",
-            "zijn",
-            "zijne",
-            "zijner",
-            "zijns"
-          ]
+          "word": "eten jullie"
         }
       ]
     },
@@ -4057,70 +3112,7 @@
           "word": "spreken ze"
         },
         {
-          "word": "jullie",
-          "pos": "pron",
-          "lemma": "jullie",
-          "forms": [
-            "'k",
-            "'m",
-            "'r",
-            "'t",
-            "-",
-            "d'r",
-            "form je",
-            "form jullie",
-            "ge",
-            "gij",
-            "h'r",
-            "haar",
-            "haars",
-            "hare",
-            "harer",
-            "hem",
-            "hen",
-            "het",
-            "hij",
-            "hun",
-            "hunne",
-            "hunner",
-            "huns",
-            "ie",
-            "ik",
-            "je",
-            "jij",
-            "jou",
-            "jouw",
-            "jouwe",
-            "jouwer",
-            "jouws",
-            "jullie",
-            "m'n",
-            "me",
-            "mij",
-            "mijn",
-            "mijne",
-            "mijner",
-            "mijns",
-            "ons",
-            "onze",
-            "onzer",
-            "onzes",
-            "u",
-            "uw",
-            "uwe",
-            "uwer",
-            "uws",
-            "we",
-            "wij",
-            "z'n",
-            "ze",
-            "zich",
-            "zij",
-            "zijn",
-            "zijne",
-            "zijner",
-            "zijns"
-          ]
+          "word": "spreken jullie"
         }
       ]
     },
@@ -4202,19 +3194,24 @@
       "headwords": [
         {
           "word": "boeken",
-          "pos": "noun",
-          "lemma": "boek",
-          "noun": {
-            "article": "het",
-            "plural": "boeken",
-            "diminutive": "boekje"
+          "pos": "verb",
+          "lemma": "boeken",
+          "verb": {
+            "infinitive": "boeken",
+            "past_singular": "boekte",
+            "past_plural": "boekten",
+            "past_participle": "geboekt",
+            "auxiliary": "hebben"
           },
           "forms": [
             "boek",
+            "boeke",
             "boeken",
-            "boekje",
-            "boekske",
-            "m"
+            "boekend",
+            "boekt",
+            "boekte",
+            "boekten",
+            "geboekt"
           ]
         }
       ]
@@ -4729,63 +3726,8 @@
           "pos": "pron",
           "lemma": "wij",
           "forms": [
-            "'k",
-            "'m",
-            "'r",
-            "'t",
-            "-",
-            "d'r",
-            "ge",
-            "gij",
-            "h'r",
-            "haar",
-            "haars",
-            "hare",
-            "harer",
-            "hem",
-            "hen",
-            "het",
-            "hij",
-            "hun",
-            "hunne",
-            "hunner",
-            "huns",
-            "ie",
-            "ik",
-            "je",
-            "jij",
-            "jou",
-            "jouw",
-            "jouwe",
-            "jouwer",
-            "jouws",
-            "jullie",
-            "m'n",
-            "me",
-            "mij",
-            "mijn",
-            "mijne",
-            "mijner",
-            "mijns",
-            "ons",
-            "onze",
-            "onzer",
-            "onzes",
-            "u",
-            "uw",
-            "uwe",
-            "uwer",
-            "uws",
             "we",
-            "wij",
-            "z'n",
-            "ze",
-            "zich",
-            "zij",
-            "zijn",
-            "zijne",
-            "zijner",
-            "zijns"
+            "wij"
           ]
         }
       ]
@@ -4798,63 +3740,8 @@
           "pos": "pron",
           "lemma": "jij",
           "forms": [
-            "'k",
-            "'m",
-            "'r",
-            "'t",
-            "-",
-            "d'r",
-            "ge",
-            "gij",
-            "h'r",
-            "haar",
-            "haars",
-            "hare",
-            "harer",
-            "hem",
-            "hen",
-            "het",
-            "hij",
-            "hun",
-            "hunne",
-            "hunner",
-            "huns",
-            "ie",
-            "ik",
             "je",
-            "jij",
-            "jou",
-            "jouw",
-            "jouwe",
-            "jouwer",
-            "jouws",
-            "jullie",
-            "m'n",
-            "me",
-            "mij",
-            "mijn",
-            "mijne",
-            "mijner",
-            "mijns",
-            "ons",
-            "onze",
-            "onzer",
-            "onzes",
-            "u",
-            "uw",
-            "uwe",
-            "uwer",
-            "uws",
-            "we",
-            "wij",
-            "z'n",
-            "ze",
-            "zich",
-            "zij",
-            "zijn",
-            "zijne",
-            "zijner",
-            "zijns"
+            "jij"
           ]
         }
       ]
@@ -4867,63 +3754,8 @@
           "pos": "pron",
           "lemma": "zij",
           "forms": [
-            "'k",
-            "'m",
-            "'r",
-            "'t",
-            "-",
-            "d'r",
-            "ge",
-            "gij",
-            "h'r",
-            "haar",
-            "haars",
-            "hare",
-            "harer",
-            "hem",
-            "hen",
-            "het",
-            "hij",
-            "hun",
-            "hunne",
-            "hunner",
-            "huns",
-            "ie",
-            "ik",
-            "je",
-            "jij",
-            "jou",
-            "jouw",
-            "jouwe",
-            "jouwer",
-            "jouws",
-            "jullie",
-            "m'n",
-            "me",
-            "mij",
-            "mijn",
-            "mijne",
-            "mijner",
-            "mijns",
-            "ons",
-            "onze",
-            "onzer",
-            "onzes",
-            "u",
-            "uw",
-            "uwe",
-            "uwer",
-            "uws",
-            "we",
-            "wij",
-            "z'n",
             "ze",
-            "zich",
-            "zij",
-            "zijn",
-            "zijne",
-            "zijner",
-            "zijns"
+            "zij"
           ]
         }
       ]
@@ -6785,7 +5617,6 @@
             "superlative": "grootst"
           },
           "forms": [
-            "-",
             "groot",
             "groots",
             "grootst",
@@ -6812,7 +5643,6 @@
             "superlative": "grootst"
           },
           "forms": [
-            "-",
             "groot",
             "groots",
             "grootst",
@@ -6839,7 +5669,6 @@
             "superlative": "kleinst"
           },
           "forms": [
-            "-",
             "het kleinst",
             "het kleinste",
             "kleen",
@@ -6867,7 +5696,6 @@
             "superlative": "kleinst"
           },
           "forms": [
-            "-",
             "het kleinst",
             "het kleinste",
             "kleen",
@@ -6895,7 +5723,6 @@
             "superlative": "langst"
           },
           "forms": [
-            "-",
             "het langst",
             "het langste",
             "lang",
@@ -6922,7 +5749,6 @@
             "superlative": "langst"
           },
           "forms": [
-            "-",
             "het langst",
             "het langste",
             "lang",
@@ -6949,7 +5775,6 @@
             "superlative": "snelst"
           },
           "forms": [
-            "-",
             "het snelst",
             "het snelste",
             "snel",
@@ -6976,7 +5801,6 @@
             "superlative": "snelst"
           },
           "forms": [
-            "-",
             "het snelst",
             "het snelste",
             "snel",
@@ -7003,7 +5827,6 @@
             "superlative": "langzaamst"
           },
           "forms": [
-            "-",
             "het langzaamst",
             "het langzaamste",
             "langzaam",
@@ -7030,7 +5853,6 @@
             "superlative": "langzaamst"
           },
           "forms": [
-            "-",
             "het langzaamst",
             "het langzaamste",
             "langzaam",
@@ -7057,7 +5879,6 @@
             "superlative": "kortst"
           },
           "forms": [
-            "-",
             "het kortst",
             "het kortste",
             "kort",
@@ -7084,7 +5905,6 @@
             "superlative": "kortst"
           },
           "forms": [
-            "-",
             "het kortst",
             "het kortste",
             "kort",
@@ -7111,7 +5931,6 @@
             "superlative": "sterkst"
           },
           "forms": [
-            "-",
             "het sterkst",
             "het sterkste",
             "sterk",
@@ -7138,7 +5957,6 @@
             "superlative": "sterkst"
           },
           "forms": [
-            "-",
             "het sterkst",
             "het sterkste",
             "sterk",
@@ -7165,7 +5983,6 @@
             "superlative": "zwaarst"
           },
           "forms": [
-            "-",
             "het zwaarst",
             "het zwaarste",
             "zwaar",
@@ -7192,7 +6009,6 @@
             "superlative": "zwaarst"
           },
           "forms": [
-            "-",
             "het zwaarst",
             "het zwaarste",
             "zwaar",
@@ -7219,7 +6035,6 @@
             "superlative": "lichtst"
           },
           "forms": [
-            "-",
             "het lichtst",
             "het lichtste",
             "licht",
@@ -7246,7 +6061,6 @@
             "superlative": "lichtst"
           },
           "forms": [
-            "-",
             "het lichtst",
             "het lichtste",
             "licht",
@@ -7273,7 +6087,6 @@
             "superlative": "zwakst"
           },
           "forms": [
-            "-",
             "het zwakst",
             "het zwakste",
             "zwak",
@@ -7300,7 +6113,6 @@
             "superlative": "zwakst"
           },
           "forms": [
-            "-",
             "het zwakst",
             "het zwakste",
             "zwak",
@@ -7327,7 +6139,6 @@
             "superlative": "slechtst"
           },
           "forms": [
-            "-",
             "het slechtst",
             "het slechtste",
             "slecht",
@@ -7354,7 +6165,6 @@
             "superlative": "slechtst"
           },
           "forms": [
-            "-",
             "het slechtst",
             "het slechtste",
             "slecht",
@@ -7381,7 +6191,6 @@
             "superlative": "zachtst"
           },
           "forms": [
-            "-",
             "het zachtst",
             "het zachtste",
             "zacht",
@@ -7436,7 +6245,6 @@
             "superlative": "jongst"
           },
           "forms": [
-            "-",
             "het jongst",
             "het jongste",
             "jong",
@@ -7463,7 +6271,6 @@
             "superlative": "nieuwst"
           },
           "forms": [
-            "-",
             "het nieuwst",
             "het nieuwste",
             "nie",
@@ -7497,7 +6304,6 @@
             "superlative": "nieuwst"
           },
           "forms": [
-            "-",
             "het nieuwst",
             "het nieuwste",
             "nie",
@@ -7531,7 +6337,6 @@
             "superlative": "oudst"
           },
           "forms": [
-            "-",
             "het oudst",
             "het oudste",
             "oud",
@@ -7559,7 +6364,6 @@
             "superlative": "oudst"
           },
           "forms": [
-            "-",
             "het oudst",
             "het oudste",
             "oud",
@@ -7587,7 +6391,6 @@
             "superlative": "leukst"
           },
           "forms": [
-            "-",
             "het leukst",
             "het leukste",
             "leuk",
@@ -7614,7 +6417,6 @@
             "superlative": "leukst"
           },
           "forms": [
-            "-",
             "het leukst",
             "het leukste",
             "leuk",
@@ -7641,7 +6443,6 @@
             "superlative": "moeilijkst"
           },
           "forms": [
-            "-",
             "het moeilijkst",
             "het moeilijkste",
             "moeilijk",
@@ -7668,7 +6469,6 @@
             "superlative": "makkelijkst"
           },
           "forms": [
-            "-",
             "het makkelijkst",
             "het makkelijkste",
             "makkelijk",
@@ -7695,7 +6495,6 @@
             "superlative": "goedkoopst"
           },
           "forms": [
-            "-",
             "goedkoop",
             "goedkoops",
             "goedkoopst",
@@ -7722,7 +6521,6 @@
             "superlative": "goedkoopst"
           },
           "forms": [
-            "-",
             "goedkoop",
             "goedkoops",
             "goedkoopst",
@@ -7749,7 +6547,6 @@
             "superlative": "volst"
           },
           "forms": [
-            "-",
             "het volst",
             "het volste",
             "vol",
@@ -7776,7 +6573,6 @@
             "superlative": "volst"
           },
           "forms": [
-            "-",
             "het volst",
             "het volste",
             "vol",
@@ -7803,7 +6599,6 @@
             "superlative": "duurst"
           },
           "forms": [
-            "-",
             "dure",
             "duur",
             "duurder",
@@ -7830,7 +6625,6 @@
             "superlative": "duurst"
           },
           "forms": [
-            "-",
             "dure",
             "duur",
             "duurder",
@@ -7857,7 +6651,6 @@
             "superlative": "meest vers"
           },
           "forms": [
-            "-",
             "het verst",
             "het verste",
             "meest vers",
@@ -7885,7 +6678,6 @@
             "superlative": "meest vers"
           },
           "forms": [
-            "-",
             "het verst",
             "het verste",
             "meest vers",
@@ -7913,7 +6705,6 @@
             "superlative": "belangrijkst"
           },
           "forms": [
-            "-",
             "belangrijk",
             "belangrijke",
             "belangrijker",
@@ -7940,7 +6731,6 @@
             "superlative": "belangrijkst"
           },
           "forms": [
-            "-",
             "belangrijk",
             "belangrijke",
             "belangrijker",
@@ -7995,7 +6785,6 @@
             "superlative": "warmst"
           },
           "forms": [
-            "-",
             "het warmst",
             "het warmste",
             "warm",
@@ -8022,7 +6811,6 @@
             "superlative": "warmst"
           },
           "forms": [
-            "-",
             "het warmst",
             "het warmste",
             "warm",
@@ -8049,7 +6837,6 @@
             "superlative": "koudst"
           },
           "forms": [
-            "-",
             "het koudst",
             "het koudste",
             "koud",
@@ -8076,7 +6863,6 @@
             "superlative": "koudst"
           },
           "forms": [
-            "-",
             "het koudst",
             "het koudste",
             "koud",
@@ -8103,7 +6889,6 @@
             "superlative": "interessantst"
           },
           "forms": [
-            "-",
             "het interessantst",
             "het interessantste",
             "interessant",
@@ -8130,7 +6915,6 @@
             "superlative": "interessantst"
           },
           "forms": [
-            "-",
             "het interessantst",
             "het interessantste",
             "interessant",
@@ -8157,7 +6941,6 @@
             "superlative": "rustigst"
           },
           "forms": [
-            "-",
             "het rustigst",
             "het rustigste",
             "rustig",
@@ -8184,7 +6967,6 @@
             "superlative": "rustigst"
           },
           "forms": [
-            "-",
             "het rustigst",
             "het rustigste",
             "rustig",
@@ -8211,7 +6993,6 @@
             "superlative": "schoonst"
           },
           "forms": [
-            "-",
             "het schoonst",
             "het schoonste",
             "schone",
@@ -8238,7 +7019,6 @@
             "superlative": "schoonst"
           },
           "forms": [
-            "-",
             "het schoonst",
             "het schoonste",
             "schone",
@@ -8287,63 +7067,8 @@
           "pos": "pron",
           "lemma": "me",
           "forms": [
-            "'k",
-            "'m",
-            "'r",
-            "'t",
-            "-",
-            "d'r",
-            "ge",
-            "gij",
-            "h'r",
-            "haar",
-            "haars",
-            "hare",
-            "harer",
-            "hem",
-            "hen",
-            "het",
-            "hij",
-            "hun",
-            "hunne",
-            "hunner",
-            "huns",
-            "ie",
-            "ik",
-            "je",
-            "jij",
-            "jou",
-            "jouw",
-            "jouwe",
-            "jouwer",
-            "jouws",
-            "jullie",
-            "m'n",
             "me",
-            "mij",
-            "mijn",
-            "mijne",
-            "mijner",
-            "mijns",
-            "ons",
-            "onze",
-            "onzer",
-            "onzes",
-            "u",
-            "uw",
-            "uwe",
-            "uwer",
-            "uws",
-            "we",
-            "wij",
-            "z'n",
-            "ze",
-            "zich",
-            "zij",
-            "zijn",
-            "zijne",
-            "zijner",
-            "zijns"
+            "mij"
           ]
         }
       ]
@@ -8356,63 +7081,8 @@
           "pos": "pron",
           "lemma": "mij",
           "forms": [
-            "'k",
-            "'m",
-            "'r",
-            "'t",
-            "-",
-            "d'r",
-            "ge",
-            "gij",
-            "h'r",
-            "haar",
-            "haars",
-            "hare",
-            "harer",
-            "hem",
-            "hen",
-            "het",
-            "hij",
-            "hun",
-            "hunne",
-            "hunner",
-            "huns",
-            "ie",
-            "ik",
-            "je",
-            "jij",
-            "jou",
-            "jouw",
-            "jouwe",
-            "jouwer",
-            "jouws",
-            "jullie",
-            "m'n",
             "me",
-            "mij",
-            "mijn",
-            "mijne",
-            "mijner",
-            "mijns",
-            "ons",
-            "onze",
-            "onzer",
-            "onzes",
-            "u",
-            "uw",
-            "uwe",
-            "uwer",
-            "uws",
-            "we",
-            "wij",
-            "z'n",
-            "ze",
-            "zich",
-            "zij",
-            "zijn",
-            "zijne",
-            "zijner",
-            "zijns"
+            "mij"
           ]
         }
       ]
@@ -8425,64 +7095,8 @@
           "pos": "pron",
           "lemma": "jou",
           "forms": [
-            "'k",
-            "'m",
-            "'r",
-            "'t",
-            "-",
-            "a",
-            "d'r",
-            "ge",
-            "gij",
-            "h'r",
-            "haar",
-            "haars",
-            "hare",
-            "harer",
-            "hem",
-            "hen",
-            "het",
-            "hij",
-            "hun",
-            "hunne",
-            "hunner",
-            "huns",
-            "ie",
-            "ik",
             "je",
-            "jij",
-            "jou",
-            "jouw",
-            "jouwe",
-            "jouwer",
-            "jouws",
-            "jullie",
-            "m'n",
-            "me",
-            "mij",
-            "mijn",
-            "mijne",
-            "mijner",
-            "mijns",
-            "ons",
-            "onze",
-            "onzer",
-            "onzes",
-            "u",
-            "uw",
-            "uwe",
-            "uwer",
-            "uws",
-            "we",
-            "wij",
-            "z'n",
-            "ze",
-            "zich",
-            "zij",
-            "zijn",
-            "zijne",
-            "zijner",
-            "zijns"
+            "jou"
           ]
         }
       ]
@@ -8495,63 +7109,8 @@
           "pos": "pron",
           "lemma": "hem",
           "forms": [
-            "'k",
             "'m",
-            "'r",
-            "'t",
-            "-",
-            "d'r",
-            "ge",
-            "gij",
-            "h'r",
-            "haar",
-            "haars",
-            "hare",
-            "harer",
-            "hem",
-            "hen",
-            "het",
-            "hij",
-            "hun",
-            "hunne",
-            "hunner",
-            "huns",
-            "ie",
-            "ik",
-            "je",
-            "jij",
-            "jou",
-            "jouw",
-            "jouwe",
-            "jouwer",
-            "jouws",
-            "jullie",
-            "m'n",
-            "me",
-            "mij",
-            "mijn",
-            "mijne",
-            "mijner",
-            "mijns",
-            "ons",
-            "onze",
-            "onzer",
-            "onzes",
-            "u",
-            "uw",
-            "uwe",
-            "uwer",
-            "uws",
-            "we",
-            "wij",
-            "z'n",
-            "ze",
-            "zich",
-            "zij",
-            "zijn",
-            "zijne",
-            "zijner",
-            "zijns"
+            "hem"
           ]
         }
       ]
@@ -8564,63 +7123,10 @@
           "pos": "pron",
           "lemma": "haar",
           "forms": [
-            "'k",
-            "'m",
             "'r",
-            "'t",
-            "-",
             "d'r",
-            "ge",
-            "gij",
             "h'r",
-            "haar",
-            "haars",
-            "hare",
-            "harer",
-            "hem",
-            "hen",
-            "het",
-            "hij",
-            "hun",
-            "hunne",
-            "hunner",
-            "huns",
-            "ie",
-            "ik",
-            "je",
-            "jij",
-            "jou",
-            "jouw",
-            "jouwe",
-            "jouwer",
-            "jouws",
-            "jullie",
-            "m'n",
-            "me",
-            "mij",
-            "mijn",
-            "mijne",
-            "mijner",
-            "mijns",
-            "ons",
-            "onze",
-            "onzer",
-            "onzes",
-            "u",
-            "uw",
-            "uwe",
-            "uwer",
-            "uws",
-            "we",
-            "wij",
-            "z'n",
-            "ze",
-            "zich",
-            "zij",
-            "zijn",
-            "zijne",
-            "zijner",
-            "zijns"
+            "haar"
           ]
         }
       ]
@@ -8646,63 +7152,9 @@
           "pos": "pron",
           "lemma": "hen",
           "forms": [
-            "'k",
-            "'m",
-            "'r",
-            "'t",
-            "-",
-            "d'r",
-            "ge",
-            "gij",
-            "h'r",
-            "haar",
-            "haars",
-            "hare",
-            "harer",
-            "hem",
             "hen",
-            "het",
-            "hij",
             "hun",
-            "hunne",
-            "hunner",
-            "huns",
-            "ie",
-            "ik",
-            "je",
-            "jij",
-            "jou",
-            "jouw",
-            "jouwe",
-            "jouwer",
-            "jouws",
-            "jullie",
-            "m'n",
-            "me",
-            "mij",
-            "mijn",
-            "mijne",
-            "mijner",
-            "mijns",
-            "ons",
-            "onze",
-            "onzer",
-            "onzes",
-            "u",
-            "uw",
-            "uwe",
-            "uwer",
-            "uws",
-            "we",
-            "wij",
-            "z'n",
-            "ze",
-            "zich",
-            "zij",
-            "zijn",
-            "zijne",
-            "zijner",
-            "zijns"
+            "ze"
           ]
         }
       ]
@@ -8728,64 +7180,8 @@
           "pos": "det",
           "lemma": "jouw",
           "forms": [
-            "'k",
-            "'m",
-            "'r",
-            "'t",
-            "-",
-            "d'r",
-            "form je",
-            "ge",
-            "gij",
-            "h'r",
-            "haar",
-            "haars",
-            "hare",
-            "harer",
-            "hem",
-            "hen",
-            "het",
-            "hij",
-            "hun",
-            "hunne",
-            "hunner",
-            "huns",
-            "ie",
-            "ik",
             "je",
-            "jij",
-            "jou",
-            "jouw",
-            "jouwe",
-            "jouwer",
-            "jouws",
-            "jullie",
-            "m'n",
-            "me",
-            "mij",
-            "mijn",
-            "mijne",
-            "mijner",
-            "mijns",
-            "ons",
-            "onze",
-            "onzer",
-            "onzes",
-            "u",
-            "uw",
-            "uwe",
-            "uwer",
-            "uws",
-            "we",
-            "wij",
-            "z'n",
-            "ze",
-            "zich",
-            "zij",
-            "zijn",
-            "zijne",
-            "zijner",
-            "zijns"
+            "jouw"
           ]
         }
       ]
@@ -8798,64 +7194,8 @@
           "pos": "det",
           "lemma": "ons",
           "forms": [
-            "'k",
-            "'m",
-            "'r",
-            "'t",
-            "-",
-            "d'r",
-            "form onze",
-            "ge",
-            "gij",
-            "h'r",
-            "haar",
-            "haars",
-            "hare",
-            "harer",
-            "hem",
-            "hen",
-            "het",
-            "hij",
-            "hun",
-            "hunne",
-            "hunner",
-            "huns",
-            "ie",
-            "ik",
-            "je",
-            "jij",
-            "jou",
-            "jouw",
-            "jouwe",
-            "jouwer",
-            "jouws",
-            "jullie",
-            "m'n",
-            "me",
-            "mij",
-            "mijn",
-            "mijne",
-            "mijner",
-            "mijns",
             "ons",
-            "onze",
-            "onzer",
-            "onzes",
-            "u",
-            "uw",
-            "uwe",
-            "uwer",
-            "uws",
-            "we",
-            "wij",
-            "z'n",
-            "ze",
-            "zich",
-            "zij",
-            "zijn",
-            "zijne",
-            "zijner",
-            "zijns"
+            "onze"
           ]
         }
       ]
@@ -8868,64 +7208,8 @@
           "pos": "det",
           "lemma": "mijn",
           "forms": [
-            "'k",
-            "'m",
-            "'r",
-            "'t",
-            "-",
-            "d'r",
-            "form m'n",
-            "ge",
-            "gij",
-            "h'r",
-            "haar",
-            "haars",
-            "hare",
-            "harer",
-            "hem",
-            "hen",
-            "het",
-            "hij",
-            "hun",
-            "hunne",
-            "hunner",
-            "huns",
-            "ie",
-            "ik",
-            "je",
-            "jij",
-            "jou",
-            "jouw",
-            "jouwe",
-            "jouwer",
-            "jouws",
-            "jullie",
             "m'n",
-            "me",
-            "mij",
-            "mijn",
-            "mijne",
-            "mijner",
-            "mijns",
-            "ons",
-            "onze",
-            "onzer",
-            "onzes",
-            "u",
-            "uw",
-            "uwe",
-            "uwer",
-            "uws",
-            "we",
-            "wij",
-            "z'n",
-            "ze",
-            "zich",
-            "zij",
-            "zijn",
-            "zijne",
-            "zijner",
-            "zijns"
+            "mijn"
           ]
         }
       ]
@@ -9127,7 +7411,6 @@
           "pos": "det",
           "lemma": "veel",
           "forms": [
-            "-",
             "het meest",
             "het meeste",
             "meer",
@@ -9147,7 +7430,6 @@
           "pos": "det",
           "lemma": "weinig",
           "forms": [
-            "-",
             "het minst",
             "het minste",
             "minder",
@@ -9167,7 +7449,6 @@
           "pos": "det",
           "lemma": "al",
           "forms": [
-            "-",
             "al",
             "alle"
           ]
@@ -9182,7 +7463,6 @@
           "pos": "det",
           "lemma": "sommig",
           "forms": [
-            "-",
             "sommig",
             "sommige"
           ]
@@ -9259,7 +7539,6 @@
           "pos": "det",
           "lemma": "elk",
           "forms": [
-            "-",
             "elk",
             "elke"
           ]
@@ -9275,7 +7554,6 @@
           "lemma": "enig",
           "adjective": {},
           "forms": [
-            "-",
             "enig",
             "enige"
           ]
@@ -9306,7 +7584,6 @@
           "pos": "det",
           "lemma": "ieder",
           "forms": [
-            "-",
             "ieder",
             "iedere"
           ]
@@ -9321,65 +7598,7 @@
           "pos": "pron",
           "lemma": "u",
           "forms": [
-            "'k",
-            "'m",
-            "'r",
-            "'t",
-            "-",
-            "U",
-            "a",
-            "d'r",
-            "ge",
-            "gij",
-            "h'r",
-            "haar",
-            "haars",
-            "hare",
-            "harer",
-            "hem",
-            "hen",
-            "het",
-            "hij",
-            "hun",
-            "hunne",
-            "hunner",
-            "huns",
-            "ie",
-            "ik",
-            "je",
-            "jij",
-            "jou",
-            "jouw",
-            "jouwe",
-            "jouwer",
-            "jouws",
-            "jullie",
-            "m'n",
-            "me",
-            "mij",
-            "mijn",
-            "mijne",
-            "mijner",
-            "mijns",
-            "ons",
-            "onze",
-            "onzer",
-            "onzes",
-            "u",
-            "uw",
-            "uwe",
-            "uwer",
-            "uws",
-            "we",
-            "wij",
-            "z'n",
-            "ze",
-            "zich",
-            "zij",
-            "zijn",
-            "zijne",
-            "zijner",
-            "zijns"
+            "u"
           ]
         }
       ]
@@ -9392,65 +7611,7 @@
           "pos": "det",
           "lemma": "uw",
           "forms": [
-            "'k",
-            "'m",
-            "'r",
-            "'t",
-            "-",
-            "Uw",
-            "a",
-            "d'r",
-            "ge",
-            "gij",
-            "h'r",
-            "haar",
-            "haars",
-            "hare",
-            "harer",
-            "hem",
-            "hen",
-            "het",
-            "hij",
-            "hun",
-            "hunne",
-            "hunner",
-            "huns",
-            "ie",
-            "ik",
-            "je",
-            "jij",
-            "jou",
-            "jouw",
-            "jouwe",
-            "jouwer",
-            "jouws",
-            "jullie",
-            "m'n",
-            "me",
-            "mij",
-            "mijn",
-            "mijne",
-            "mijner",
-            "mijns",
-            "ons",
-            "onze",
-            "onzer",
-            "onzes",
-            "u",
-            "uw",
-            "uwe",
-            "uwer",
-            "uws",
-            "we",
-            "wij",
-            "z'n",
-            "ze",
-            "zich",
-            "zij",
-            "zijn",
-            "zijne",
-            "zijner",
-            "zijns"
+            "uw"
           ]
         }
       ]
@@ -9900,7 +8061,6 @@
             "superlative": "meest oranje"
           },
           "forms": [
-            "-",
             "het oranjest",
             "het oranjeste",
             "meest oranje",
@@ -9927,7 +8087,6 @@
             "superlative": "groenst"
           },
           "forms": [
-            "-",
             "groen",
             "groene",
             "groener",
@@ -9954,7 +8113,6 @@
             "superlative": "meest grijs"
           },
           "forms": [
-            "-",
             "grijs",
             "grijst",
             "grijste",
@@ -9981,7 +8139,6 @@
             "superlative": "meest roze"
           },
           "forms": [
-            "-",
             "het rozest",
             "het rozeste",
             "meest roze",
@@ -10009,7 +8166,6 @@
             "superlative": "witst"
           },
           "forms": [
-            "-",
             "het witst",
             "het witste",
             "wit",
@@ -10036,7 +8192,6 @@
             "superlative": "bruinst"
           },
           "forms": [
-            "-",
             "bruin",
             "bruine",
             "bruiner",
@@ -10063,7 +8218,6 @@
             "superlative": "blauwst"
           },
           "forms": [
-            "-",
             "blaauw",
             "blauw",
             "blauwe",
@@ -10092,7 +8246,6 @@
             "superlative": "geelst"
           },
           "forms": [
-            "-",
             "geel",
             "geels",
             "geelst",
@@ -10119,7 +8272,6 @@
             "superlative": "zwartst"
           },
           "forms": [
-            "-",
             "het zwartst",
             "het zwartste",
             "zwart",
@@ -10168,7 +8320,6 @@
             "superlative": "roodst"
           },
           "forms": [
-            "-",
             "het roodst",
             "het roodste",
             "rode",
@@ -10195,7 +8346,6 @@
             "superlative": "kleurrijkst"
           },
           "forms": [
-            "-",
             "het kleurrijkst",
             "het kleurrijkste",
             "kleurrijk",
@@ -10222,7 +8372,6 @@
             "superlative": "meest paars"
           },
           "forms": [
-            "-",
             "het paarst",
             "het paarste",
             "meest paars",
@@ -10269,7 +8418,6 @@
             "superlative": "donkerst"
           },
           "forms": [
-            "-",
             "donkel",
             "donker",
             "donkerder",
@@ -10856,7 +9004,6 @@
           "pos": "det",
           "lemma": "hoeveel",
           "forms": [
-            "-",
             "hoe veel",
             "hoeveel",
             "hoevele",
@@ -10963,25 +9110,35 @@
           ]
         },
         {
-          "word": "doen",
+          "word": "een vraag doen",
           "pos": "verb",
           "lemma": "doen",
           "verb": {
             "infinitive": "doen",
             "past_singular": "deed",
             "past_plural": "deden",
-            "past_participle": "gedaan"
+            "past_participle": "gedaan",
+            "particle": "een vraag"
           },
           "forms": [
-            "dede",
-            "deden",
-            "deed",
-            "deedt",
-            "doe",
-            "doen",
-            "doend",
-            "doet",
-            "gedaan"
+            "dede een vraag",
+            "deden een vraag",
+            "deed een vraag",
+            "deedt een vraag",
+            "doe een vraag",
+            "doen een vraag",
+            "doend een vraag",
+            "doet een vraag",
+            "een vraag dede",
+            "een vraag deden",
+            "een vraag deed",
+            "een vraag deedt",
+            "een vraag doe",
+            "een vraag doen",
+            "een vraag doend",
+            "een vraag doet",
+            "een vraag gedaan",
+            "gedaan een vraag"
           ]
         }
       ]
@@ -11079,17 +9236,28 @@
       "headwords": [
         {
           "word": "werken",
-          "pos": "noun",
-          "lemma": "werk",
-          "noun": {
-            "article": "het",
-            "plural": "werken",
-            "diminutive": "werkje"
+          "pos": "verb",
+          "lemma": "werken",
+          "verb": {
+            "infinitive": "werken",
+            "past_singular": "werkte",
+            "past_plural": "werkten",
+            "past_participle": "gewerkt",
+            "auxiliary": "hebben"
           },
           "forms": [
+            "gewerkt",
+            "gewrocht",
             "werk",
+            "werke",
             "werken",
-            "werkje"
+            "werkend",
+            "werkt",
+            "werkte",
+            "werkten",
+            "wrocht",
+            "wrochte",
+            "wrochten"
           ]
         }
       ]
@@ -11173,17 +9341,23 @@
       "headwords": [
         {
           "word": "gebruiken",
-          "pos": "noun",
-          "lemma": "gebruik",
-          "noun": {
-            "article": "het",
-            "plural": "gebruiken",
-            "diminutive": "gebruikje"
+          "pos": "verb",
+          "lemma": "gebruiken",
+          "verb": {
+            "infinitive": "gebruiken",
+            "past_singular": "gebruikte",
+            "past_plural": "gebruikten",
+            "past_participle": "gebruikt",
+            "auxiliary": "hebben"
           },
           "forms": [
             "gebruik",
+            "gebruike",
             "gebruiken",
-            "gebruikje"
+            "gebruikend",
+            "gebruikt",
+            "gebruikte",
+            "gebruikten"
           ]
         }
       ]
@@ -11612,7 +9786,6 @@
           "lemma": "eerste",
           "adjective": {},
           "forms": [
-            "-",
             "1e",
             "1ste",
             "eerste"
@@ -11629,7 +9802,6 @@
           "lemma": "tweede",
           "adjective": {},
           "forms": [
-            "-",
             "tweede"
           ]
         }
@@ -11644,7 +9816,6 @@
           "lemma": "derde",
           "adjective": {},
           "forms": [
-            "-",
             "derde"
           ]
         }
@@ -11659,7 +9830,6 @@
           "lemma": "vierde",
           "adjective": {},
           "forms": [
-            "-",
             "vierde"
           ]
         }
@@ -11837,7 +10007,6 @@
           "lemma": "zesde",
           "adjective": {},
           "forms": [
-            "-",
             "zesde"
           ]
         }
@@ -12340,17 +10509,21 @@
       "headwords": [
         {
           "word": "zetten",
-          "pos": "noun",
-          "lemma": "zet",
-          "noun": {
-            "article": "de",
-            "plural": "zetten",
-            "diminutive": "zetje"
+          "pos": "verb",
+          "lemma": "zetten",
+          "verb": {
+            "infinitive": "zetten",
+            "past_singular": "zette",
+            "past_plural": "zetten",
+            "past_participle": "gezet",
+            "auxiliary": "hebben"
           },
           "forms": [
+            "gezet",
             "zet",
-            "zetje",
-            "zetten"
+            "zette",
+            "zetten",
+            "zettend"
           ]
         }
       ]
@@ -13082,7 +11255,6 @@
           "pos": "det",
           "lemma": "al",
           "forms": [
-            "-",
             "al",
             "alle"
           ]
@@ -13140,7 +11312,6 @@
             "superlative": "heelst"
           },
           "forms": [
-            "-",
             "heel",
             "heels",
             "heelst",
@@ -14267,17 +12438,24 @@
       "headwords": [
         {
           "word": "smaken",
-          "pos": "noun",
-          "lemma": "smaak",
-          "noun": {
-            "article": "de",
-            "plural": "smaken",
-            "diminutive": "smaakje"
+          "pos": "verb",
+          "lemma": "smaken",
+          "verb": {
+            "infinitive": "smaken",
+            "past_singular": "smaakte",
+            "past_plural": "smaakten",
+            "past_participle": "gesmaakt",
+            "auxiliary": "hebben"
           },
           "forms": [
+            "gesmaakt",
             "smaak",
-            "smaakje",
-            "smaken"
+            "smaakt",
+            "smaakte",
+            "smaakten",
+            "smake",
+            "smaken",
+            "smakend"
           ]
         }
       ]
@@ -14356,7 +12534,6 @@
             "superlative": "meest vies"
           },
           "forms": [
-            "-",
             "het viest",
             "het vieste",
             "meest vies",
@@ -14502,7 +12679,6 @@
             "superlative": "mooist"
           },
           "forms": [
-            "-",
             "het mooist",
             "het mooiste",
             "mooi",
@@ -14529,7 +12705,6 @@
             "superlative": "lelijkst"
           },
           "forms": [
-            "-",
             "het lelijkst",
             "het lelijkste",
             "leelijk",
@@ -16838,17 +15013,26 @@
       "headwords": [
         {
           "word": "rennen",
-          "pos": "noun",
-          "lemma": "ren",
-          "noun": {
-            "article": "de",
-            "plural": "rennen",
-            "diminutive": "rennetje"
+          "pos": "verb",
+          "lemma": "rennen",
+          "verb": {
+            "infinitive": "rennen",
+            "past_singular": "rende",
+            "past_plural": "renden",
+            "past_participle": "gerend",
+            "auxiliary": "hebben"
           },
           "forms": [
+            "gerend",
             "ren",
+            "rende",
+            "renden",
+            "renne",
             "rennen",
-            "rennetje"
+            "rennend",
+            "rent",
+            "rinnen",
+            "runnen"
           ]
         }
       ]
@@ -17053,14 +15237,24 @@
       "headwords": [
         {
           "word": "hopen",
-          "pos": "noun",
-          "lemma": "hoop",
-          "noun": {
-            "article": "de"
+          "pos": "verb",
+          "lemma": "hopen",
+          "verb": {
+            "infinitive": "hopen",
+            "past_singular": "hoopte",
+            "past_plural": "hoopten",
+            "past_participle": "gehoopt",
+            "auxiliary": "hebben"
           },
           "forms": [
+            "gehoopt",
             "hoop",
-            "hopen"
+            "hoopt",
+            "hoopte",
+            "hoopten",
+            "hope",
+            "hopen",
+            "hopend"
           ]
         }
       ]
@@ -17698,17 +15892,24 @@
       "headwords": [
         {
           "word": "tellen",
-          "pos": "noun",
-          "lemma": "tel",
-          "noun": {
-            "article": "de",
-            "plural": "tellen",
-            "diminutive": "telletje"
+          "pos": "verb",
+          "lemma": "tellen",
+          "verb": {
+            "infinitive": "tellen",
+            "past_singular": "telde",
+            "past_plural": "telden",
+            "past_participle": "geteld",
+            "auxiliary": "hebben"
           },
           "forms": [
+            "geteld",
             "tel",
+            "telde",
+            "telden",
+            "telle",
             "tellen",
-            "telletje"
+            "tellend",
+            "telt"
           ]
         }
       ]
@@ -17741,7 +15942,6 @@
           "pos": "det",
           "lemma": "zoveel",
           "forms": [
-            "-",
             "zooveel",
             "zoveel",
             "zovele"
@@ -19933,17 +18133,23 @@
       "headwords": [
         {
           "word": "kosten",
-          "pos": "noun",
-          "lemma": "kost",
-          "noun": {
-            "article": "de",
-            "plural": "kosten",
-            "diminutive": "kostje"
+          "pos": "verb",
+          "lemma": "kosten",
+          "verb": {
+            "infinitive": "kosten",
+            "past_singular": "kostte",
+            "past_plural": "kostten",
+            "past_participle": "gekost",
+            "auxiliary": "hebben"
           },
           "forms": [
+            "gekost",
             "kost",
+            "koste",
             "kosten",
-            "kostje"
+            "kostend",
+            "kostte",
+            "kostten"
           ]
         }
       ]
@@ -20250,17 +18456,24 @@
       "headwords": [
         {
           "word": "bestellen",
-          "pos": "noun",
-          "lemma": "bestel",
-          "noun": {
-            "article": "het",
-            "plural": "bestellen",
-            "diminutive": "bestelletje"
+          "pos": "verb",
+          "lemma": "bestellen",
+          "verb": {
+            "infinitive": "bestellen",
+            "past_singular": "bestelde",
+            "past_plural": "bestelden",
+            "past_participle": "besteld",
+            "auxiliary": "hebben"
           },
           "forms": [
             "bestel",
+            "besteld",
+            "bestelde",
+            "bestelden",
+            "bestelle",
             "bestellen",
-            "bestelletje"
+            "bestellend",
+            "bestelt"
           ]
         }
       ]
@@ -20507,17 +18720,24 @@
       "headwords": [
         {
           "word": "passen",
-          "pos": "noun",
-          "lemma": "pas",
-          "noun": {
-            "article": "de",
-            "plural": "passen",
-            "diminutive": "pasje"
+          "pos": "verb",
+          "lemma": "passen",
+          "verb": {
+            "infinitive": "passen",
+            "past_singular": "paste",
+            "past_plural": "pasten",
+            "past_participle": "gepast",
+            "auxiliary": "hebben"
           },
           "forms": [
+            "gepast",
             "pas",
-            "pasje",
-            "passen"
+            "passe",
+            "passen",
+            "passend",
+            "past",
+            "paste",
+            "pasten"
           ]
         }
       ]
@@ -21664,17 +19884,26 @@
       "headwords": [
         {
           "word": "bevelen",
-          "pos": "noun",
-          "lemma": "bevel",
-          "noun": {
-            "article": "het",
-            "plural": "bevelen",
-            "diminutive": "bevelletje"
+          "pos": "verb",
+          "lemma": "bevelen",
+          "verb": {
+            "infinitive": "bevelen",
+            "past_singular": "beval",
+            "past_plural": "bevalen",
+            "past_participle": "bevolen",
+            "auxiliary": "hebben"
           },
           "forms": [
-            "bevel",
+            "bevaalt",
+            "beval",
+            "bevale",
+            "bevalen",
+            "beveel",
+            "beveelt",
+            "bevele",
             "bevelen",
-            "bevelletje"
+            "bevelend",
+            "bevolen"
           ]
         }
       ]
@@ -22450,7 +20679,6 @@
             "superlative": "meest boos"
           },
           "forms": [
-            "-",
             "boos",
             "boost",
             "booste",
@@ -22477,7 +20705,6 @@
             "superlative": "blijst"
           },
           "forms": [
-            "-",
             "blij",
             "blijde",
             "blije",
@@ -22505,7 +20732,6 @@
             "superlative": "bangst"
           },
           "forms": [
-            "-",
             "bang",
             "bange",
             "banger",
@@ -22586,7 +20812,6 @@
             "superlative": "bezorgdst"
           },
           "forms": [
-            "-",
             "bezorgd",
             "bezorgde",
             "bezorgder",
@@ -22613,7 +20838,6 @@
             "superlative": "verdrietigst"
           },
           "forms": [
-            "-",
             "het verdrietigst",
             "het verdrietigste",
             "verdrietig",
@@ -22659,7 +20883,6 @@
             "superlative": "meest trots"
           },
           "forms": [
-            "-",
             "het trotst",
             "het trotste",
             "meest trots",
@@ -22687,7 +20910,6 @@
             "superlative": "gelukkigst"
           },
           "forms": [
-            "-",
             "gelukkig",
             "gelukkige",
             "gelukkiger",
@@ -22734,7 +20956,6 @@
             "superlative": "onzekerst"
           },
           "forms": [
-            "-",
             "het onzekerst",
             "het onzekerste",
             "onzeker",
@@ -22761,7 +20982,6 @@
             "superlative": "verlegenst"
           },
           "forms": [
-            "-",
             "het verlegenst",
             "het verlegenste",
             "verleegen",
@@ -22787,7 +21007,6 @@
             "superlative": "vrolijkst"
           },
           "forms": [
-            "-",
             "het vrolijkst",
             "het vrolijkste",
             "vrolijk",
@@ -22815,7 +21034,6 @@
             "superlative": "meest jaloers"
           },
           "forms": [
-            "-",
             "het jaloerst",
             "het jaloerste",
             "jaloers",
@@ -22842,7 +21060,6 @@
             "superlative": "zekerst"
           },
           "forms": [
-            "-",
             "het zekerst",
             "het zekerste",
             "zeker",
@@ -22897,7 +21114,6 @@
             "superlative": "moest"
           },
           "forms": [
-            "-",
             "het moest",
             "het moeste",
             "moe",
@@ -22929,7 +21145,6 @@
             "superlative": "veiligst"
           },
           "forms": [
-            "-",
             "het veiligst",
             "het veiligste",
             "veilig",
@@ -22956,7 +21171,6 @@
             "superlative": "bedroefdst"
           },
           "forms": [
-            "-",
             "bedroefd",
             "bedroefde",
             "bedroefder",
@@ -22983,7 +21197,6 @@
             "superlative": "koppigst"
           },
           "forms": [
-            "-",
             "het koppigst",
             "het koppigste",
             "koppig",
@@ -23037,7 +21250,6 @@
             "superlative": "engst"
           },
           "forms": [
-            "-",
             "eng",
             "enge",
             "enger",
@@ -23064,7 +21276,6 @@
             "superlative": "echtst"
           },
           "forms": [
-            "-",
             "echt",
             "echte",
             "echter",
@@ -23091,7 +21302,6 @@
             "superlative": "saaist"
           },
           "forms": [
-            "-",
             "het saaist",
             "het saaiste",
             "saai",
@@ -23118,7 +21328,6 @@
             "superlative": "rijkst"
           },
           "forms": [
-            "-",
             "het rijkst",
             "het rijkste",
             "rijk",
@@ -23145,7 +21354,6 @@
             "superlative": "armst"
           },
           "forms": [
-            "-",
             "arm",
             "arme",
             "armer",
@@ -23172,7 +21380,6 @@
             "superlative": "verkeerdst"
           },
           "forms": [
-            "-",
             "het verkeerdst",
             "het verkeerdste",
             "verkeerd",
@@ -23199,7 +21406,6 @@
             "superlative": "voorzichtigst"
           },
           "forms": [
-            "-",
             "het voorzichtigst",
             "het voorzichtigste",
             "voorzichtig",
@@ -23226,7 +21432,6 @@
             "superlative": "gevaarlijkst"
           },
           "forms": [
-            "-",
             "gevaarlijk",
             "gevaarlijke",
             "gevaarlijker",
@@ -23269,7 +21474,6 @@
             "superlative": "raarst"
           },
           "forms": [
-            "-",
             "het raarst",
             "het raarste",
             "raar",
@@ -23312,7 +21516,6 @@
             "superlative": "schattigst"
           },
           "forms": [
-            "-",
             "het schattigst",
             "het schattigste",
             "schattig",
@@ -23339,7 +21542,6 @@
             "superlative": "gekst"
           },
           "forms": [
-            "-",
             "gek",
             "gekke",
             "gekker",
@@ -23366,7 +21568,6 @@
             "superlative": "klaarst"
           },
           "forms": [
-            "-",
             "het klaarst",
             "het klaarste",
             "klaar",
@@ -23393,7 +21594,6 @@
             "superlative": "meest Nederlands"
           },
           "forms": [
-            "-",
             "Nederlands",
             "Nederlandsch",
             "Nederlandse",
@@ -23423,7 +21623,6 @@
             "superlative": "stomst"
           },
           "forms": [
-            "-",
             "het stomst",
             "het stomste",
             "stom",
@@ -23450,7 +21649,6 @@
             "superlative": "eigenst"
           },
           "forms": [
-            "-",
             "eigen",
             "eigener",
             "eigeners",
@@ -23475,7 +21673,6 @@
             "superlative": "stilst"
           },
           "forms": [
-            "-",
             "het stilst",
             "het stilste",
             "stel",
@@ -23503,7 +21700,6 @@
             "superlative": "ingewikkeldst"
           },
           "forms": [
-            "-",
             "het ingewikkeldst",
             "het ingewikkeldste",
             "ingewikkeld",
@@ -23530,7 +21726,6 @@
             "superlative": "normaalst"
           },
           "forms": [
-            "-",
             "het normaalst",
             "het normaalste",
             "normaal",
@@ -23557,7 +21752,6 @@
             "superlative": "slimst"
           },
           "forms": [
-            "-",
             "het slimst",
             "het slimste",
             "slim",
@@ -23584,7 +21778,6 @@
             "superlative": "liefst"
           },
           "forms": [
-            "-",
             "het liefst",
             "het liefste",
             "lief",
@@ -23611,7 +21804,6 @@
             "superlative": "bijzonderst"
           },
           "forms": [
-            "-",
             "bijzonder",
             "bijzonderder",
             "bijzonderdere",
@@ -23638,7 +21830,6 @@
             "superlative": "stoutst"
           },
           "forms": [
-            "-",
             "het stoutst",
             "het stoutste",
             "stout",
@@ -23692,7 +21883,6 @@
             "superlative": "speciaalst"
           },
           "forms": [
-            "-",
             "het speciaalst",
             "het speciaalste",
             "speciaal",
@@ -23719,7 +21909,6 @@
             "superlative": "kapotst"
           },
           "forms": [
-            "-",
             "het kapotst",
             "het kapotste",
             "kapot",
@@ -23746,7 +21935,6 @@
             "superlative": "geweldigst"
           },
           "forms": [
-            "-",
             "geweldig",
             "geweldige",
             "geweldiger",
@@ -25873,7 +24061,6 @@
             "superlative": "fijnst"
           },
           "forms": [
-            "-",
             "fijn",
             "fijne",
             "fijner",
@@ -26050,7 +24237,6 @@
             "superlative": "vriendelijkst"
           },
           "forms": [
-            "-",
             "het vriendelijkst",
             "het vriendelijkste",
             "vriendelijk",
@@ -26105,17 +24291,24 @@
       "headwords": [
         {
           "word": "wensen",
-          "pos": "noun",
-          "lemma": "wens",
-          "noun": {
-            "article": "de",
-            "plural": "wensen",
-            "diminutive": "wensje"
+          "pos": "verb",
+          "lemma": "wensen",
+          "verb": {
+            "infinitive": "wensen",
+            "past_singular": "wenste",
+            "past_plural": "wensten",
+            "past_participle": "gewenst",
+            "auxiliary": "hebben"
           },
           "forms": [
+            "gewenst",
             "wens",
+            "wense",
             "wensen",
-            "wensje"
+            "wensend",
+            "wenst",
+            "wenste",
+            "wensten"
           ]
         }
       ]
@@ -26164,18 +24357,24 @@
       "headwords": [
         {
           "word": "kloppen",
-          "pos": "noun",
-          "lemma": "klop",
-          "noun": {
-            "article": "de",
-            "plural": "kloppen",
-            "diminutive": "klopje"
+          "pos": "verb",
+          "lemma": "kloppen",
+          "verb": {
+            "infinitive": "kloppen",
+            "past_singular": "klopte",
+            "past_plural": "klopten",
+            "past_participle": "geklopt",
+            "auxiliary": "hebben"
           },
           "forms": [
-            "clop",
+            "geklopt",
             "klop",
-            "klopje",
-            "kloppen"
+            "kloppe",
+            "kloppen",
+            "kloppend",
+            "klopt",
+            "klopte",
+            "klopten"
           ]
         }
       ]
@@ -26460,7 +24659,6 @@
             "superlative": "dichtstbij"
           },
           "forms": [
-            "-",
             "dichtbij",
             "dichtbije",
             "dichtbijs",
@@ -26570,7 +24768,6 @@
             "superlative": "gezondst"
           },
           "forms": [
-            "-",
             "gezond",
             "gezonde",
             "gezonder",
@@ -26617,7 +24814,6 @@
             "superlative": "ziekst"
           },
           "forms": [
-            "-",
             "het ziekst",
             "het ziekste",
             "ziek",
@@ -26858,7 +25054,6 @@
             "superlative": "meest allergisch"
           },
           "forms": [
-            "-",
             "allergisch",
             "allergische",
             "allergischer",
@@ -26885,7 +25080,6 @@
             "superlative": "ernstigst"
           },
           "forms": [
-            "-",
             "ernstig",
             "ernstige",
             "ernstiger",
@@ -27775,7 +25969,6 @@
           "lemma": "vorig",
           "adjective": {},
           "forms": [
-            "-",
             "vorig",
             "vorige",
             "vorigs"
@@ -28134,7 +26327,6 @@
             "superlative": "zuurst"
           },
           "forms": [
-            "-",
             "het zuurst",
             "het zuurste",
             "zure",
@@ -28161,7 +26353,6 @@
             "superlative": "bitterst"
           },
           "forms": [
-            "-",
             "bitter",
             "bitterder",
             "bitterdere",
@@ -28188,7 +26379,6 @@
             "superlative": "hartigst"
           },
           "forms": [
-            "-",
             "hartig",
             "hartige",
             "hartiger",
@@ -28261,7 +26451,6 @@
             "superlative": "pittigst"
           },
           "forms": [
-            "-",
             "het pittigst",
             "het pittigste",
             "pittig",
@@ -28369,7 +26558,6 @@
             "superlative": "rijpst"
           },
           "forms": [
-            "-",
             "het rijpst",
             "het rijpste",
             "rijp",
@@ -29134,17 +27322,29 @@
       "headwords": [
         {
           "word": "reizen",
-          "pos": "noun",
-          "lemma": "reis",
-          "noun": {
-            "article": "de",
-            "plural": "reizen",
-            "diminutive": "reisje"
+          "pos": "verb",
+          "lemma": "reizen",
+          "verb": {
+            "infinitive": "reizen",
+            "past_singular": "reisde",
+            "past_plural": "reisden",
+            "past_participle": "gereisd",
+            "auxiliary": "hebben"
           },
           "forms": [
+            "gereisd",
+            "gerezen",
+            "rees",
+            "reest",
             "reis",
-            "reisje",
-            "reizen"
+            "reisde",
+            "reisden",
+            "reist",
+            "reize",
+            "reizen",
+            "reizend",
+            "reze",
+            "rezen"
           ]
         }
       ]
@@ -29383,17 +27583,24 @@
       "headwords": [
         {
           "word": "bezoeken",
-          "pos": "noun",
-          "lemma": "bezoek",
-          "noun": {
-            "article": "het",
-            "plural": "bezoeken",
-            "diminutive": "bezoekje"
+          "pos": "verb",
+          "lemma": "bezoeken",
+          "verb": {
+            "infinitive": "bezoeken",
+            "past_singular": "bezocht",
+            "past_plural": "bezochten",
+            "past_participle": "bezocht",
+            "auxiliary": "hebben"
           },
           "forms": [
+            "bezocht",
+            "bezochte",
+            "bezochten",
             "bezoek",
+            "bezoeke",
             "bezoeken",
-            "bezoekje"
+            "bezoekend",
+            "bezoekt"
           ]
         }
       ]
@@ -29419,14 +27626,25 @@
       "headwords": [
         {
           "word": "vertrekken",
-          "pos": "noun",
-          "lemma": "vertrek",
-          "noun": {
-            "article": "het"
+          "pos": "verb",
+          "lemma": "vertrekken",
+          "verb": {
+            "infinitive": "vertrekken",
+            "past_singular": "vertrok",
+            "past_plural": "vertrokken",
+            "past_participle": "vertrokken",
+            "auxiliary": "hebben"
           },
           "forms": [
             "vertrek",
-            "vertrekken"
+            "vertrekke",
+            "vertrekken",
+            "vertrekkend",
+            "vertrekt",
+            "vertrok",
+            "vertrokke",
+            "vertrokken",
+            "vertrokt"
           ]
         }
       ]
@@ -29498,17 +27716,26 @@
       "headwords": [
         {
           "word": "vliegen",
-          "pos": "noun",
-          "lemma": "vlieg",
-          "noun": {
-            "article": "de",
-            "plural": "vliegen",
-            "diminutive": "vliegje"
+          "pos": "verb",
+          "lemma": "vliegen",
+          "verb": {
+            "infinitive": "vliegen",
+            "past_singular": "vloog",
+            "past_plural": "vlogen",
+            "past_participle": "gevlogen",
+            "auxiliary": "hebben"
           },
           "forms": [
+            "gevlogen",
             "vlieg",
+            "vliege",
             "vliegen",
-            "vliegje"
+            "vliegend",
+            "vliegt",
+            "vloge",
+            "vlogen",
+            "vloog",
+            "vloogt"
           ]
         }
       ]
@@ -29770,7 +27997,6 @@
             "superlative": "internationaalst"
           },
           "forms": [
-            "-",
             "het internationaalst",
             "het internationaalste",
             "internationaal",
@@ -29810,17 +28036,39 @@
       "headwords": [
         {
           "word": "aanvragen",
-          "pos": "noun",
-          "lemma": "aanvraag",
-          "noun": {
-            "article": "de",
-            "plural": "aanvragen",
-            "diminutive": "aanvraagje"
+          "pos": "verb",
+          "lemma": "aanvragen",
+          "verb": {
+            "infinitive": "aanvragen",
+            "past_singular": "vroeg aan",
+            "past_plural": "vroegen aan",
+            "past_participle": "aangevraagd",
+            "auxiliary": "hebben",
+            "particle": "aan"
           },
           "forms": [
+            "aangevraagd",
             "aanvraag",
-            "aanvraagje",
-            "aanvragen"
+            "aanvraagde",
+            "aanvraagden",
+            "aanvraagt",
+            "aanvrage",
+            "aanvragen",
+            "aanvragend",
+            "aanvroeg",
+            "aanvroege",
+            "aanvroegen",
+            "aanvroegt",
+            "vraag aan",
+            "vraagde aan",
+            "vraagden aan",
+            "vraagt aan",
+            "vrage aan",
+            "vragen aan",
+            "vroeg aan",
+            "vroege aan",
+            "vroegen aan",
+            "vroegt aan"
           ]
         }
       ]
@@ -31287,7 +29535,6 @@
             "superlative": "bejaardst"
           },
           "forms": [
-            "-",
             "bejaard",
             "bejaarde",
             "bejaarder",
@@ -31427,7 +29674,6 @@
             "superlative": "aardigst"
           },
           "forms": [
-            "-",
             "aardig",
             "aardige",
             "aardiger",
@@ -31641,17 +29887,24 @@
       "headwords": [
         {
           "word": "antwoorden",
-          "pos": "noun",
-          "lemma": "antwoord",
-          "noun": {
-            "article": "het",
-            "plural": "antwoorden",
-            "diminutive": "antwoordje"
+          "pos": "verb",
+          "lemma": "antwoorden",
+          "verb": {
+            "infinitive": "antwoorden",
+            "past_singular": "antwoordde",
+            "past_plural": "antwoordden",
+            "past_participle": "geantwoord",
+            "auxiliary": "hebben"
           },
           "forms": [
             "antwoord",
+            "antwoordde",
+            "antwoordden",
+            "antwoorde",
             "antwoorden",
-            "antwoordje"
+            "antwoordend",
+            "antwoordt",
+            "geantwoord"
           ]
         }
       ]
@@ -31780,17 +30033,24 @@
       "headwords": [
         {
           "word": "steunen",
-          "pos": "noun",
-          "lemma": "steun",
-          "noun": {
-            "article": "de",
-            "plural": "steunen",
-            "diminutive": "steuntje"
+          "pos": "verb",
+          "lemma": "steunen",
+          "verb": {
+            "infinitive": "steunen",
+            "past_singular": "steunde",
+            "past_plural": "steunden",
+            "past_participle": "gesteund",
+            "auxiliary": "hebben"
           },
           "forms": [
+            "gesteund",
             "steun",
+            "steunde",
+            "steunden",
+            "steune",
             "steunen",
-            "steuntje"
+            "steunend",
+            "steunt"
           ]
         }
       ]
@@ -32426,7 +30686,6 @@
             "superlative": "natst"
           },
           "forms": [
-            "-",
             "het natst",
             "het natste",
             "nat",
@@ -32568,17 +30827,31 @@
       "headwords": [
         {
           "word": "schoonmaken",
-          "pos": "noun",
-          "lemma": "schoonmaak",
-          "noun": {
-            "article": "de",
-            "plural": "schoonmaken",
-            "diminutive": "schoonmaakje"
+          "pos": "verb",
+          "lemma": "schoonmaken",
+          "verb": {
+            "infinitive": "schoonmaken",
+            "past_singular": "maakte schoon",
+            "past_plural": "maakten schoon",
+            "past_participle": "schoongemaakt",
+            "auxiliary": "hebben",
+            "particle": "schoon"
           },
           "forms": [
+            "maak schoon",
+            "maakt schoon",
+            "maakte schoon",
+            "maakten schoon",
+            "make schoon",
+            "maken schoon",
+            "schoongemaakt",
             "schoonmaak",
-            "schoonmaakje",
-            "schoonmaken"
+            "schoonmaakt",
+            "schoonmaakte",
+            "schoonmaakten",
+            "schoonmake",
+            "schoonmaken",
+            "schoonmakend"
           ]
         }
       ]
@@ -35558,11 +33831,9 @@
           "verb": {
             "infinitive": "zullen",
             "past_singular": "zou",
-            "past_plural": "zouden",
-            "past_participle": "-"
+            "past_plural": "zouden"
           },
           "forms": [
-            "-",
             "zal",
             "zou",
             "zoude",
@@ -36198,7 +34469,6 @@
             "superlative": "grootst"
           },
           "forms": [
-            "-",
             "groot",
             "groots",
             "grootst",
@@ -36225,7 +34495,6 @@
             "superlative": "kleinst"
           },
           "forms": [
-            "-",
             "het kleinst",
             "het kleinste",
             "kleen",
@@ -36253,7 +34522,6 @@
             "superlative": "langst"
           },
           "forms": [
-            "-",
             "het langst",
             "het langste",
             "lang",
@@ -36280,7 +34548,6 @@
             "superlative": "snelst"
           },
           "forms": [
-            "-",
             "het snelst",
             "het snelste",
             "snel",
@@ -36307,7 +34574,6 @@
             "superlative": "belangrijkst"
           },
           "forms": [
-            "-",
             "belangrijk",
             "belangrijke",
             "belangrijker",
@@ -36334,7 +34600,6 @@
             "superlative": "duurst"
           },
           "forms": [
-            "-",
             "dure",
             "duur",
             "duurder",
@@ -36361,7 +34626,6 @@
             "superlative": "sterkst"
           },
           "forms": [
-            "-",
             "het sterkst",
             "het sterkste",
             "sterk",
@@ -36388,7 +34652,6 @@
             "superlative": "zwakst"
           },
           "forms": [
-            "-",
             "het zwakst",
             "het zwakste",
             "zwak",
@@ -36415,7 +34678,6 @@
             "superlative": "jongst"
           },
           "forms": [
-            "-",
             "het jongst",
             "het jongste",
             "jong",
@@ -36442,7 +34704,6 @@
             "superlative": "oudst"
           },
           "forms": [
-            "-",
             "het oudst",
             "het oudste",
             "oud",
@@ -36483,7 +34744,6 @@
             "superlative": "lekkerst"
           },
           "forms": [
-            "-",
             "het lekkerst",
             "het lekkerste",
             "lekker",
@@ -36510,7 +34770,6 @@
             "superlative": "moeilijkst"
           },
           "forms": [
-            "-",
             "het moeilijkst",
             "het moeilijkste",
             "moeilijk",
@@ -36537,7 +34796,6 @@
             "superlative": "gelukkigst"
           },
           "forms": [
-            "-",
             "gelukkig",
             "gelukkige",
             "gelukkiger",
@@ -36564,7 +34822,6 @@
             "superlative": "warmst"
           },
           "forms": [
-            "-",
             "het warmst",
             "het warmste",
             "warm",
@@ -36591,7 +34848,6 @@
             "superlative": "grootst"
           },
           "forms": [
-            "-",
             "groot",
             "groots",
             "grootst",
@@ -36618,7 +34874,6 @@
             "superlative": "kleinst"
           },
           "forms": [
-            "-",
             "het kleinst",
             "het kleinste",
             "kleen",
@@ -36646,7 +34901,6 @@
             "superlative": "langst"
           },
           "forms": [
-            "-",
             "het langst",
             "het langste",
             "lang",
@@ -36673,7 +34927,6 @@
             "superlative": "snelst"
           },
           "forms": [
-            "-",
             "het snelst",
             "het snelste",
             "snel",
@@ -36700,7 +34953,6 @@
             "superlative": "belangrijkst"
           },
           "forms": [
-            "-",
             "belangrijk",
             "belangrijke",
             "belangrijker",
@@ -36727,7 +34979,6 @@
             "superlative": "sterkst"
           },
           "forms": [
-            "-",
             "het sterkst",
             "het sterkste",
             "sterk",
@@ -36754,7 +35005,6 @@
             "superlative": "jongst"
           },
           "forms": [
-            "-",
             "het jongst",
             "het jongste",
             "jong",
@@ -36808,7 +35058,6 @@
             "superlative": "oudst"
           },
           "forms": [
-            "-",
             "het oudst",
             "het oudste",
             "oud",
@@ -36836,7 +35085,6 @@
             "superlative": "duurst"
           },
           "forms": [
-            "-",
             "dure",
             "duur",
             "duurder",
@@ -36863,7 +35111,6 @@
             "superlative": "kortst"
           },
           "forms": [
-            "-",
             "het kortst",
             "het kortste",
             "kort",
@@ -36920,7 +35167,6 @@
             "superlative": "liefst"
           },
           "forms": [
-            "-",
             "het liefst",
             "het liefste",
             "lief",
@@ -37449,7 +35695,6 @@
             "superlative": "gaarst"
           },
           "forms": [
-            "-",
             "gaar",
             "gaarder",
             "gaardere",
@@ -37496,7 +35741,6 @@
             "superlative": "rauwst"
           },
           "forms": [
-            "-",
             "het rauwst",
             "het rauwste",
             "rauw",
@@ -39047,7 +37291,6 @@
             "superlative": "zonnigst"
           },
           "forms": [
-            "-",
             "het zonnigst",
             "het zonnigste",
             "zonnig",
@@ -39075,7 +37318,6 @@
             "superlative": "bewolktst"
           },
           "forms": [
-            "-",
             "bewolkt",
             "bewolkte",
             "bewolkter",
@@ -39102,7 +37344,6 @@
             "superlative": "vochtigst"
           },
           "forms": [
-            "-",
             "het vochtigst",
             "het vochtigste",
             "vochtig",
@@ -39129,7 +37370,6 @@
             "superlative": "heetst"
           },
           "forms": [
-            "-",
             "heet",
             "heets",
             "heetst",
@@ -39585,7 +37825,6 @@
             "superlative": "meest Duits"
           },
           "forms": [
-            "-",
             "Duits",
             "Duitsch",
             "Duitse",
@@ -39611,7 +37850,6 @@
           "lemma": "Frans",
           "adjective": {},
           "forms": [
-            "-",
             "Frans",
             "Fransch",
             "Franse",
@@ -39637,7 +37875,6 @@
             "superlative": "meest Portugees"
           },
           "forms": [
-            "-",
             "Portugees",
             "Portugeest",
             "Portugeeste",
@@ -39664,7 +37901,6 @@
             "superlative": "meest Spaans"
           },
           "forms": [
-            "-",
             "Spaans",
             "Spaansch",
             "Spaanse",
@@ -39694,7 +37930,6 @@
             "superlative": "meest Russisch"
           },
           "forms": [
-            "-",
             "Russisch",
             "Russische",
             "Russischer",
@@ -39807,7 +38042,6 @@
             "superlative": "meest Zweeds"
           },
           "forms": [
-            "-",
             "Zweeds",
             "Zweedse",
             "Zweedser",
@@ -39834,7 +38068,6 @@
             "superlative": "meest Pools"
           },
           "forms": [
-            "-",
             "Pools",
             "Poolse",
             "Poolser",
@@ -39861,7 +38094,6 @@
             "superlative": "meest Japans"
           },
           "forms": [
-            "-",
             "Japans",
             "Japansch",
             "Japanse",
@@ -39889,7 +38121,6 @@
             "superlative": "meest Italiaans"
           },
           "forms": [
-            "-",
             "Italiaans",
             "Italiaanse",
             "Italiaanser",
@@ -41176,7 +39407,6 @@
             "superlative": "zatst"
           },
           "forms": [
-            "-",
             "het zatst",
             "het zatste",
             "zat",
@@ -42483,7 +40713,6 @@
             "superlative": "meest Belgisch"
           },
           "forms": [
-            "-",
             "Belgisch",
             "Belgische",
             "Belgischer",
@@ -42510,7 +40739,6 @@
             "superlative": "meest fantastisch"
           },
           "forms": [
-            "-",
             "fantastisch",
             "fantastische",
             "fantastischer",
@@ -42537,7 +40765,6 @@
             "superlative": "beroemdst"
           },
           "forms": [
-            "-",
             "beroemd",
             "beroemde",
             "beroemder",
@@ -42580,7 +40807,6 @@
             "superlative": "onmogelijkst"
           },
           "forms": [
-            "-",
             "het onmogelijkst",
             "het onmogelijkste",
             "onmogelijk",
@@ -42607,7 +40833,6 @@
             "superlative": "algemeenst"
           },
           "forms": [
-            "-",
             "algemeen",
             "algemeens",
             "algemeenst",
@@ -42634,7 +40859,6 @@
             "superlative": "beschikbaarst"
           },
           "forms": [
-            "-",
             "beschikbaar",
             "beschikbaarder",
             "beschikbaardere",
@@ -42661,7 +40885,6 @@
             "superlative": "meest serieus"
           },
           "forms": [
-            "-",
             "het serieust",
             "het serieuste",
             "meest serieus",
@@ -42690,7 +40913,6 @@
             "superlative": "uitstekendst"
           },
           "forms": [
-            "-",
             "het uitstekendst",
             "het uitstekendste",
             "uitstekend",
@@ -42717,7 +40939,6 @@
             "superlative": "blootst"
           },
           "forms": [
-            "-",
             "bloot",
             "bloots",
             "blootst",
@@ -42744,7 +40965,6 @@
             "superlative": "recentst"
           },
           "forms": [
-            "-",
             "het recentst",
             "het recentste",
             "recent",
@@ -42771,7 +40991,6 @@
             "superlative": "doodst"
           },
           "forms": [
-            "-",
             "dode",
             "doder",
             "dodere",
@@ -42798,7 +41017,6 @@
             "superlative": "efficiëntst"
           },
           "forms": [
-            "-",
             "efficiënt",
             "efficiënte",
             "efficiënter",
@@ -42825,7 +41043,6 @@
             "superlative": "professioneelst"
           },
           "forms": [
-            "-",
             "het professioneelst",
             "het professioneelste",
             "professioneel",
@@ -42852,7 +41069,6 @@
             "superlative": "onafhankelijkst"
           },
           "forms": [
-            "-",
             "het onafhankelijkst",
             "het onafhankelijkste",
             "onafhankelijk",
@@ -42879,7 +41095,6 @@
             "superlative": "bekendst"
           },
           "forms": [
-            "-",
             "bekend",
             "bekende",
             "bekender",
@@ -42906,7 +41121,6 @@
             "superlative": "verantwoordelijkst"
           },
           "forms": [
-            "-",
             "het verantwoordelijkst",
             "het verantwoordelijkste",
             "verantwoordelijk",
@@ -42949,7 +41163,6 @@
             "superlative": "definitiefst"
           },
           "forms": [
-            "-",
             "definitief",
             "definitiefs",
             "definitiefst",
@@ -42991,7 +41204,6 @@
             "superlative": "populairst"
           },
           "forms": [
-            "-",
             "het populairst",
             "het populairste",
             "populair",
@@ -43018,7 +41230,6 @@
             "superlative": "officieelst"
           },
           "forms": [
-            "-",
             "het officieelst",
             "het officieelste",
             "officieel",
@@ -43061,7 +41272,6 @@
             "superlative": "tolerantst"
           },
           "forms": [
-            "-",
             "het tolerantst",
             "het tolerantste",
             "tolerant",
@@ -43529,7 +41739,6 @@
             "superlative": "hoogst"
           },
           "forms": [
-            "-",
             "het hoogst",
             "het hoogste",
             "hoge",
@@ -43598,7 +41807,6 @@
             "superlative": "laagst"
           },
           "forms": [
-            "-",
             "het laagst",
             "het laagste",
             "laag",
@@ -43773,7 +41981,6 @@
             "superlative": "rechtst"
           },
           "forms": [
-            "-",
             "het rechtst",
             "het rechtste",
             "recht",
@@ -43827,7 +42034,6 @@
             "superlative": "breedst"
           },
           "forms": [
-            "-",
             "brede",
             "breder",
             "bredere",
@@ -43854,7 +42060,6 @@
             "superlative": "smalst"
           },
           "forms": [
-            "-",
             "het smalst",
             "het smalste",
             "smal",
@@ -43881,7 +42086,6 @@
             "superlative": "platst"
           },
           "forms": [
-            "-",
             "het platst",
             "het platste",
             "plat",
@@ -43908,7 +42112,6 @@
             "superlative": "diepst"
           },
           "forms": [
-            "-",
             "diep",
             "diepe",
             "dieper",
@@ -43936,7 +42139,6 @@
             "superlative": "rondst"
           },
           "forms": [
-            "-",
             "het rondst",
             "het rondste",
             "rond",
@@ -44670,18 +42872,24 @@
       "headwords": [
         {
           "word": "typen",
-          "pos": "noun",
-          "lemma": "type",
-          "noun": {
-            "article": "het",
-            "plural": "types",
-            "diminutive": "typetje"
+          "pos": "verb",
+          "lemma": "typen",
+          "verb": {
+            "infinitive": "typen",
+            "past_singular": "typte",
+            "past_plural": "typten",
+            "past_participle": "getypt",
+            "auxiliary": "hebben"
           },
           "forms": [
+            "getypt",
+            "typ",
             "type",
             "typen",
-            "types",
-            "typetje"
+            "typend",
+            "typt",
+            "typte",
+            "typten"
           ]
         }
       ]
@@ -45240,7 +43448,6 @@
             "superlative": "meest buitenaards"
           },
           "forms": [
-            "-",
             "buitenaards",
             "buitenaardse",
             "buitenaardser",
@@ -45313,7 +43520,6 @@
             "superlative": "zuidelijkst"
           },
           "forms": [
-            "-",
             "het zuidelijkst",
             "het zuidelijkste",
             "zuidelijk",
@@ -45340,7 +43546,6 @@
             "superlative": "noordelijkst"
           },
           "forms": [
-            "-",
             "het noordelijkst",
             "het noordelijkste",
             "noordelijk",
@@ -45367,7 +43572,6 @@
             "superlative": "westelijkst"
           },
           "forms": [
-            "-",
             "het westelijkst",
             "het westelijkste",
             "westelijk",
@@ -45394,7 +43598,6 @@
             "superlative": "oostelijkst"
           },
           "forms": [
-            "-",
             "het oostelijkst",
             "het oostelijkste",
             "oostelijk",
@@ -45829,17 +44032,24 @@
       "headwords": [
         {
           "word": "stromen",
-          "pos": "noun",
-          "lemma": "stroom",
-          "noun": {
-            "article": "de",
-            "plural": "stromen",
-            "diminutive": "stroompje"
+          "pos": "verb",
+          "lemma": "stromen",
+          "verb": {
+            "infinitive": "stromen",
+            "past_singular": "stroomde",
+            "past_plural": "stroomden",
+            "past_participle": "gestroomd",
+            "auxiliary": "hebben"
           },
           "forms": [
+            "gestroomd",
+            "strome",
             "stromen",
+            "stromend",
             "stroom",
-            "stroompje"
+            "stroomde",
+            "stroomden",
+            "stroomt"
           ]
         }
       ]
@@ -45906,7 +44116,6 @@
             "superlative": "perfectst"
           },
           "forms": [
-            "-",
             "het perfectst",
             "het perfectste",
             "perfect",
@@ -46793,7 +45002,6 @@
             "superlative": "fascinerendst"
           },
           "forms": [
-            "-",
             "fascinerend",
             "fascinerende",
             "fascinerender",
@@ -46889,7 +45097,6 @@
             "superlative": "vanzelfsprekendst"
           },
           "forms": [
-            "-",
             "het vanzelfsprekendst",
             "het vanzelfsprekendste",
             "vanzelfsprekend",
@@ -47301,17 +45508,26 @@
       "headwords": [
         {
           "word": "ontwerpen",
-          "pos": "noun",
-          "lemma": "ontwerp",
-          "noun": {
-            "article": "het",
-            "plural": "ontwerpen",
-            "diminutive": "ontwerpje"
+          "pos": "verb",
+          "lemma": "ontwerpen",
+          "verb": {
+            "infinitive": "ontwerpen",
+            "past_singular": "ontwierp",
+            "past_plural": "ontwierpen",
+            "past_participle": "ontworpen",
+            "auxiliary": "hebben"
           },
           "forms": [
             "ontwerp",
+            "ontwerpe",
             "ontwerpen",
-            "ontwerpje"
+            "ontwerpend",
+            "ontwerpt",
+            "ontwierp",
+            "ontwierpe",
+            "ontwierpen",
+            "ontwierpt",
+            "ontworpen"
           ]
         }
       ]
@@ -47847,17 +46063,24 @@
       "headwords": [
         {
           "word": "schaatsen",
-          "pos": "noun",
-          "lemma": "schaats",
-          "noun": {
-            "article": "de",
-            "plural": "schaatsen",
-            "diminutive": "schaatsje"
+          "pos": "verb",
+          "lemma": "schaatsen",
+          "verb": {
+            "infinitive": "schaatsen",
+            "past_singular": "schaatste",
+            "past_plural": "schaatsten",
+            "past_participle": "geschaatst",
+            "auxiliary": "hebben"
           },
           "forms": [
+            "geschaatst",
             "schaats",
+            "schaatse",
             "schaatsen",
-            "schaatsje"
+            "schaatsend",
+            "schaatst",
+            "schaatste",
+            "schaatsten"
           ]
         }
       ]
@@ -48301,7 +46524,6 @@
             "superlative": "meest bewust"
           },
           "forms": [
-            "-",
             "bewust",
             "bewuste",
             "bewuster",
@@ -48680,7 +46902,6 @@
             "superlative": "eerlijkst"
           },
           "forms": [
-            "-",
             "eerlijk",
             "eerlijke",
             "eerlijker",
@@ -48774,7 +46995,6 @@
             "superlative": "onredelijkst"
           },
           "forms": [
-            "-",
             "het onredelijkst",
             "het onredelijkste",
             "onredelijk",
@@ -48864,7 +47084,6 @@
             "superlative": "meest kritisch"
           },
           "forms": [
-            "-",
             "het kritischt",
             "het kritischte",
             "kritisch",
@@ -49339,7 +47558,6 @@
             "superlative": "ongelooflijkst"
           },
           "forms": [
-            "-",
             "het ongelooflijkst",
             "het ongelooflijkste",
             "ongelofelijk",
@@ -49367,7 +47585,6 @@
             "superlative": "tijdelijkst"
           },
           "forms": [
-            "-",
             "het tijdelijkst",
             "het tijdelijkste",
             "tijdelijk",
@@ -49394,7 +47611,6 @@
             "superlative": "persoonlijkst"
           },
           "forms": [
-            "-",
             "het persoonlijkst",
             "het persoonlijkste",
             "persoonlijk",
@@ -49421,7 +47637,6 @@
             "superlative": "belachelijkst"
           },
           "forms": [
-            "-",
             "belachelijk",
             "belachelijke",
             "belachelijker",
@@ -49448,7 +47663,6 @@
             "superlative": "letterlijkst"
           },
           "forms": [
-            "-",
             "het letterlijkst",
             "het letterlijkste",
             "letterlijk",
@@ -49488,7 +47702,6 @@
             "superlative": "geduldigst"
           },
           "forms": [
-            "-",
             "geduldig",
             "geduldige",
             "geduldiger",
@@ -49515,7 +47728,6 @@
             "superlative": "verstandigst"
           },
           "forms": [
-            "-",
             "het verstandigst",
             "het verstandigste",
             "verstandig",
@@ -49542,7 +47754,6 @@
             "superlative": "jarigst"
           },
           "forms": [
-            "-",
             "het jarigst",
             "het jarigste",
             "jarig",
@@ -49569,7 +47780,6 @@
             "superlative": "eeuwigst"
           },
           "forms": [
-            "-",
             "eeuwig",
             "eeuwige",
             "eeuwiger",
@@ -49596,7 +47806,6 @@
             "superlative": "handigst"
           },
           "forms": [
-            "-",
             "handig",
             "handige",
             "handiger",
@@ -49623,7 +47832,6 @@
             "superlative": "grappigst"
           },
           "forms": [
-            "-",
             "grappig",
             "grappige",
             "grappiger",
@@ -49673,7 +47881,6 @@
             "superlative": "meest hopeloos"
           },
           "forms": [
-            "-",
             "het hopeloost",
             "het hopelooste",
             "hopeloos",
@@ -49700,7 +47907,6 @@
             "superlative": "meest waardeloos"
           },
           "forms": [
-            "-",
             "het waardeloost",
             "het waardelooste",
             "meest waardeloos",
@@ -49727,7 +47933,6 @@
             "superlative": "meest nutteloos"
           },
           "forms": [
-            "-",
             "het nutteloost",
             "het nuttelooste",
             "meest nutteloos",
@@ -49754,7 +47959,6 @@
             "superlative": "meest sprakeloos"
           },
           "forms": [
-            "-",
             "het sprakeloost",
             "het sprakelooste",
             "meest sprakeloos",
@@ -49781,7 +47985,6 @@
             "superlative": "meest eindeloos"
           },
           "forms": [
-            "-",
             "eindeloos",
             "eindeloost",
             "eindelooste",
@@ -50255,7 +48458,6 @@
             "superlative": "meest technisch"
           },
           "forms": [
-            "-",
             "het technischt",
             "het technischte",
             "meest technisch",
@@ -50352,7 +48554,6 @@
             "superlative": "blindst"
           },
           "forms": [
-            "-",
             "blind",
             "blinde",
             "blinder",
@@ -50448,17 +48649,26 @@
       "headwords": [
         {
           "word": "niezen",
-          "pos": "noun",
-          "lemma": "nies",
-          "noun": {
-            "article": "de",
-            "plural": "niezen",
-            "diminutive": "niesje"
+          "pos": "verb",
+          "lemma": "niezen",
+          "verb": {
+            "infinitive": "niezen",
+            "past_singular": "niesde",
+            "past_plural": "niesden",
+            "past_participle": "geniesd",
+            "auxiliary": "hebben"
           },
           "forms": [
+            "fniezen",
+            "geniesd",
             "nies",
-            "niesje",
-            "niezen"
+            "niesde",
+            "niesden",
+            "niesen",
+            "niest",
+            "nieze",
+            "niezen",
+            "niezend"
           ]
         }
       ]
@@ -50468,16 +48678,23 @@
       "headwords": [
         {
           "word": "hoesten",
-          "pos": "noun",
-          "lemma": "hoest",
-          "noun": {
-            "article": "de",
-            "diminutive": "hoestje"
+          "pos": "verb",
+          "lemma": "hoesten",
+          "verb": {
+            "infinitive": "hoesten",
+            "past_singular": "hoestte",
+            "past_plural": "hoestten",
+            "past_participle": "gehoest",
+            "auxiliary": "hebben"
           },
           "forms": [
+            "gehoest",
             "hoest",
+            "hoeste",
             "hoesten",
-            "hoestje"
+            "hoestend",
+            "hoestte",
+            "hoestten"
           ]
         }
       ]
@@ -50543,7 +48760,6 @@
             "superlative": "dodelijkst"
           },
           "forms": [
-            "-",
             "dodelijk",
             "dodelijke",
             "dodelijker",
@@ -50586,7 +48802,6 @@
             "superlative": "duizeligst"
           },
           "forms": [
-            "-",
             "duizelig",
             "duizelige",
             "duizeliger",
@@ -50613,7 +48828,6 @@
             "superlative": "giftigst"
           },
           "forms": [
-            "-",
             "giftig",
             "giftige",
             "giftiger",
@@ -50927,7 +49141,6 @@
             "superlative": "gespierdst"
           },
           "forms": [
-            "-",
             "gespierd",
             "gespierde",
             "gespierder",
@@ -50954,7 +49167,6 @@
             "superlative": "depressiefst"
           },
           "forms": [
-            "-",
             "depressief",
             "depressiefs",
             "depressiefst",
@@ -50981,7 +49193,6 @@
             "superlative": "magerst"
           },
           "forms": [
-            "-",
             "het magerst",
             "het magerste",
             "mager",
@@ -51075,7 +49286,6 @@
             "superlative": "dronkenst"
           },
           "forms": [
-            "-",
             "dronken",
             "dronkener",
             "dronkeners",
@@ -51100,7 +49310,6 @@
             "superlative": "dikst"
           },
           "forms": [
-            "-",
             "dik",
             "dikke",
             "dikker",
@@ -51207,7 +49416,6 @@
             "superlative": "kaalst"
           },
           "forms": [
-            "-",
             "het kaalst",
             "het kaalste",
             "kaal",
@@ -51234,7 +49442,6 @@
             "superlative": "blondst"
           },
           "forms": [
-            "-",
             "blond",
             "blonde",
             "blonder",
@@ -51341,7 +49548,6 @@
             "superlative": "knapst"
           },
           "forms": [
-            "-",
             "het knapst",
             "het knapste",
             "knap",
@@ -51368,7 +49574,6 @@
             "superlative": "prachtigst"
           },
           "forms": [
-            "-",
             "het prachtigst",
             "het prachtigste",
             "prachtig",
@@ -51948,7 +50153,6 @@
             "superlative": "wetenschappelijkst"
           },
           "forms": [
-            "-",
             "het wetenschappelijkst",
             "het wetenschappelijkste",
             "wetenschappelijk",
@@ -52688,7 +50892,6 @@
             "superlative": "traditioneelst"
           },
           "forms": [
-            "-",
             "het traditioneelst",
             "het traditioneelste",
             "traditioneel",
@@ -52715,7 +50918,6 @@
             "superlative": "modernst"
           },
           "forms": [
-            "-",
             "het modernst",
             "het modernste",
             "modern",
@@ -52742,7 +50944,6 @@
             "superlative": "sociaalst"
           },
           "forms": [
-            "-",
             "het sociaalst",
             "het sociaalste",
             "sociaal",
@@ -52769,7 +50970,6 @@
             "superlative": "openbaarst"
           },
           "forms": [
-            "-",
             "het openbaarst",
             "het openbaarste",
             "openbaar",
@@ -52812,7 +51012,6 @@
             "superlative": "lokaalst"
           },
           "forms": [
-            "-",
             "het lokaalst",
             "het lokaalste",
             "lokaal",
@@ -53445,7 +51644,6 @@
             "superlative": "faillietst"
           },
           "forms": [
-            "-",
             "failliet",
             "failliete",
             "faillieter",
@@ -53560,18 +51758,24 @@
       "headwords": [
         {
           "word": "kussen",
-          "pos": "noun",
-          "lemma": "kus",
-          "noun": {
-            "article": "de",
-            "plural": "kussen",
-            "diminutive": "kusje"
+          "pos": "verb",
+          "lemma": "kussen",
+          "verb": {
+            "infinitive": "kussen",
+            "past_singular": "kuste",
+            "past_plural": "kusten",
+            "past_participle": "gekust",
+            "auxiliary": "hebben"
           },
           "forms": [
-            "kos",
+            "gekust",
             "kus",
-            "kusje",
-            "kussen"
+            "kusse",
+            "kussen",
+            "kussend",
+            "kust",
+            "kuste",
+            "kusten"
           ]
         }
       ]
@@ -53588,7 +51792,6 @@
             "superlative": "meest romantisch"
           },
           "forms": [
-            "-",
             "het romantischt",
             "het romantischte",
             "meest romantisch",
@@ -53808,7 +52011,6 @@
             "superlative": "aantrekkelijkst"
           },
           "forms": [
-            "-",
             "aantrekkelijk",
             "aantrekkelijke",
             "aantrekkelijker",
@@ -54288,7 +52490,6 @@
             "superlative": "ongekooktst"
           },
           "forms": [
-            "-",
             "het ongekooktst",
             "het ongekooktste",
             "ongekookt",
@@ -54443,7 +52644,6 @@
             "superlative": "meest ongerust"
           },
           "forms": [
-            "-",
             "het ongerustst",
             "het ongerustste",
             "meest ongerust",
@@ -54498,7 +52698,6 @@
             "superlative": "kwetsbaarst"
           },
           "forms": [
-            "-",
             "het kwetsbaarst",
             "het kwetsbaarste",
             "kwetsbaar",
@@ -54525,7 +52724,6 @@
             "superlative": "zelfverzekerdst"
           },
           "forms": [
-            "-",
             "het zelfverzekerdst",
             "het zelfverzekerdste",
             "zelfverzekerd",
@@ -54552,7 +52750,6 @@
             "superlative": "eenzaamst"
           },
           "forms": [
-            "-",
             "eenzaam",
             "eenzaams",
             "eenzaamst",
@@ -54579,7 +52776,6 @@
             "superlative": "nieuwsgierigst"
           },
           "forms": [
-            "-",
             "het nieuwsgierigst",
             "het nieuwsgierigste",
             "nieuwsgierig",
@@ -54606,7 +52802,6 @@
             "superlative": "zenuwachtigst"
           },
           "forms": [
-            "-",
             "het zenuwachtigst",
             "het zenuwachtigste",
             "zenuwachtig",
@@ -54653,7 +52848,6 @@
             "superlative": "tevredenst"
           },
           "forms": [
-            "-",
             "het tevredenst",
             "het tevredenste",
             "tevreden",
@@ -54708,7 +52902,6 @@
             "superlative": "meest hulpeloos"
           },
           "forms": [
-            "-",
             "het hulpeloost",
             "het hulpelooste",
             "hulpeloos",
@@ -54797,7 +52990,6 @@
             "superlative": "wanhopigst"
           },
           "forms": [
-            "-",
             "het wanhopigst",
             "het wanhopigste",
             "wanhopig",
@@ -54924,7 +53116,6 @@
             "superlative": "gezelligst"
           },
           "forms": [
-            "-",
             "gezel",
             "gezellie",
             "gezellig",
@@ -55001,7 +53192,6 @@
             "superlative": "vrijst"
           },
           "forms": [
-            "-",
             "het vrijst",
             "het vrijste",
             "vrij",
@@ -55049,7 +53239,6 @@
             "superlative": "nationaalst"
           },
           "forms": [
-            "-",
             "het nationaalst",
             "het nationaalste",
             "nationaal",
@@ -55607,7 +53796,6 @@
             "superlative": "schuldigst"
           },
           "forms": [
-            "-",
             "het schuldigst",
             "het schuldigste",
             "schuldig",
@@ -56756,7 +54944,6 @@
             "superlative": "meest economisch"
           },
           "forms": [
-            "-",
             "economisch",
             "economische",
             "economischer",
@@ -57245,17 +55432,24 @@
       "headwords": [
         {
           "word": "stemmen",
-          "pos": "noun",
-          "lemma": "stem",
-          "noun": {
-            "article": "de",
-            "plural": "stemmen",
-            "diminutive": "stemmetje"
+          "pos": "verb",
+          "lemma": "stemmen",
+          "verb": {
+            "infinitive": "stemmen",
+            "past_singular": "stemde",
+            "past_plural": "stemden",
+            "past_participle": "gestemd",
+            "auxiliary": "hebben"
           },
           "forms": [
+            "gestemd",
             "stem",
+            "stemde",
+            "stemden",
+            "stemme",
             "stemmen",
-            "stemmetje"
+            "stemmend",
+            "stemt"
           ]
         }
       ]
@@ -57391,18 +55585,25 @@
       "headwords": [
         {
           "word": "eisen",
-          "pos": "noun",
-          "lemma": "eis",
-          "noun": {
-            "article": "de",
-            "plural": "eisen",
-            "diminutive": "eisje"
+          "pos": "verb",
+          "lemma": "eisen",
+          "verb": {
+            "infinitive": "eisen",
+            "past_singular": "eiste",
+            "past_plural": "eisten",
+            "past_participle": "geëist",
+            "auxiliary": "hebben"
           },
           "forms": [
             "eis",
-            "eisch",
+            "eischen",
+            "eise",
             "eisen",
-            "eisje"
+            "eisend",
+            "eist",
+            "eiste",
+            "eisten",
+            "geëist"
           ]
         }
       ]
@@ -58002,7 +56203,6 @@
             "superlative": "gelovigst"
           },
           "forms": [
-            "-",
             "gelovig",
             "gelovige",
             "geloviger",
@@ -58216,7 +56416,6 @@
             "superlative": "meest joods"
           },
           "forms": [
-            "-",
             "het joodst",
             "het joodste",
             "joods",
@@ -58390,7 +56589,6 @@
             "superlative": "heiligst"
           },
           "forms": [
-            "-",
             "heilig",
             "heilige",
             "heiliger",
@@ -58465,7 +56663,6 @@
             "superlative": "meest mysterieus"
           },
           "forms": [
-            "-",
             "het mysterieust",
             "het mysterieuste",
             "meest mysterieus",
@@ -58737,7 +56934,6 @@
             "superlative": "meest Romeins"
           },
           "forms": [
-            "-",
             "Romeins",
             "Romeinse",
             "Romeinser",
@@ -58814,17 +57010,35 @@
       "headwords": [
         {
           "word": "aanvallen",
-          "pos": "noun",
-          "lemma": "aanval",
-          "noun": {
-            "article": "de",
-            "plural": "aanvallen",
-            "diminutive": "aanvalletje"
+          "pos": "verb",
+          "lemma": "aanvallen",
+          "verb": {
+            "infinitive": "aanvallen",
+            "past_singular": "viel aan",
+            "past_plural": "vielen aan",
+            "past_participle": "aangevallen",
+            "auxiliary": "hebben",
+            "particle": "aan"
           },
           "forms": [
+            "aangevallen",
             "aanval",
+            "aanvalle",
             "aanvallen",
-            "aanvalletje"
+            "aanvallend",
+            "aanvalt",
+            "aanviel",
+            "aanviele",
+            "aanvielen",
+            "aanvielt",
+            "val aan",
+            "valle aan",
+            "vallen aan",
+            "valt aan",
+            "viel aan",
+            "viele aan",
+            "vielen aan",
+            "vielt aan"
           ]
         }
       ]

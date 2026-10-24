@@ -2,6 +2,7 @@ import pytest
 
 from duolingo_anki.lexicon import (
     Part,
+    all_forms,
     auxiliary,
     choose_entry,
     content_words,
@@ -29,6 +30,10 @@ def words_and_articles(dutch: str) -> list[tuple[str, str | None]]:
         ("het spijt me", [("het spijt me", None)]),
         ("hoe gaat het?", [("hoe gaat het", None)]),
         ("dat/die", [("dat", None), ("die", None)]),
+        ("lezen ze/jullie", [("lezen ze", None), ("lezen jullie", None)]),
+        ("heeft hij/ze", [("heeft hij", None), ("heeft ze", None)]),
+        ("een vraag stellen/doen", [("een vraag stellen", None), ("een vraag doen", None)]),
+        ("degene/datgene/diegene", [("degene", None), ("datgene", None), ("diegene", None)]),
         ("al + P.P.", []),
         ("hoe...hoe...", []),
     ],
@@ -119,3 +124,57 @@ def test_verb_phrase_uses_forms_of_its_last_word():
     phrase = verb_phrase(Part("in opstand komen", None, ("in opstand komen",)), entries)
     assert phrase.verb.particle == "in opstand"
     assert {"kwamen in opstand", "in opstand gekomen"} <= set(phrase.forms)
+
+
+def test_choose_entry_prefers_a_verb_for_a_to_gloss():
+    entries = {
+        "aanvragen": [
+            {"word": "aanvragen", "pos": "verb", "senses": [{"glosses": ["to request, to apply for, to order"]}]},
+            {"word": "aanvragen", "pos": "noun", "senses": [{"form_of": [{"word": "aanvraag"}], "glosses": ["plural of aanvraag"]}]},
+        ],
+        "aanvraag": [{"word": "aanvraag", "pos": "noun", "senses": [{"glosses": ["application, request (act of applying)"]}]}],
+    }
+    part = Part("aanvragen", None, ("aanvragen",))
+    entry, _ = choose_entry(part, content_words("to apply"), entries, verb_glossed=True)
+    assert entry["pos"] == "verb"
+
+
+def test_forms_without_letters_are_dropped():
+    hartig = {"word": "hartig", "forms": [
+        {"form": "hartiger", "tags": ["comparative"]},
+        {"form": "-", "tags": ["predicative", "partitive"]},
+        {"form": "hartigst", "tags": ["superlative"]},
+    ]}
+    assert all_forms("hartig", hartig) == ["hartig", "hartiger", "hartigst"]
+
+
+def personal_pronouns(word: str) -> dict:
+    rows = [
+        ("ik", "first-person singular stressed subjective"), ("'k", "first-person singular unstressed subjective"),
+        ("mij", "first-person singular stressed objective"), ("me", "first-person singular unstressed objective"),
+        ("jij", "second-person singular stressed subjective"), ("je", "second-person singular unstressed subjective"),
+        ("u", "formal second-person singular stressed subjective"),
+        ("-", "formal second-person singular unstressed subjective"),
+        ("zich", "formal second-person possessive predicative reflexive"),
+        ("u", "formal second-person possessive predicative reflexive"),
+        ("het", "neuter third-person singular stressed subjective"),
+        ("wij", "first-person plural stressed subjective"), ("we", "first-person plural unstressed subjective"),
+        ("ons", "first-person plural stressed objective"),
+        ("jullie", "second-person plural stressed subjective"), ("je", "second-person plural unstressed subjective"),
+    ]
+    forms = [{"form": form, "tags": ["personal", "pronoun", *tags.split()]} for form, tags in rows]
+    return {"word": word, "pos": "pron", "forms": [{"form": "l-self", "tags": ["inflection-template"]}, *forms]}
+
+
+@pytest.mark.parametrize(
+    ("word", "expected"),
+    [
+        ("wij", ["we", "wij"]),
+        ("mij", ["me", "mij"]),
+        ("u", ["u"]),
+        ("jullie", ["je", "jullie"]),
+        ("je", ["je", "jij", "jullie"]),
+    ],
+)
+def test_pronouns_keep_only_their_own_row_of_the_shared_table(word, expected):
+    assert all_forms(word, personal_pronouns(word)) == expected

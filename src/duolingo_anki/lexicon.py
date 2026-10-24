@@ -16,6 +16,8 @@ PATTERN_MARKERS = ("+", "...", "…")
 GENDER_ARTICLES = {"m": "de", "f": "de", "c": "de", "p": "de", "mf": "de", "mfbysense": "de", "n": "het"}
 META_FORM_TAGS = {"table-tags", "inflection-template", "class"}
 RARE_FORM_TAGS = {"archaic", "subjunctive", "imperative"}
+STRESS_TAGS = {"stressed", "unstressed"}
+LETTER = re.compile(r"[^\W\d_]")
 NOUN_POS = {"noun", "name"}
 HEBBEN_DEFAULT_TEMPLATES = {"nl-conj-wk", "nl-conj-wk-cht", "nl-conj-st"}
 
@@ -76,12 +78,15 @@ def split_headwords(dutch: str) -> list[Part]:
     shared = None
     if match := SHARED_ARTICLE.match(text):
         shared, text = "de/het", text[match.end():]
-    parts = []
+    parts, phrase = [], []
     for chunk in text.split("/"):
         article, word = take_article(chunk.strip())
         shared = shared or article
         word = word.strip(" ?!.,")
+        if " " not in word and len(phrase) > 1:
+            word = " ".join([*phrase[:-1], word])
         if word:
+            phrase = phrase or word.split()
             parts.append(Part(word.replace("|", ""), article or shared, lookup_keys(word)))
     return parts
 
@@ -122,7 +127,9 @@ def gloss_overlap(entry: dict, translation: set[str]) -> int:
     return shared_words(translation, " ".join(gloss for sense in entry.get("senses", []) for gloss in sense.get("glosses", [])))
 
 
-def choose_entry(part: Part, translation: set[str], entries: dict[str, list[dict]]) -> tuple[dict, dict] | None:
+def choose_entry(
+    part: Part, translation: set[str], entries: dict[str, list[dict]], verb_glossed: bool = False
+) -> tuple[dict, dict] | None:
     candidates = next((entries[key] for key in part.lookups if key in entries), [])
     if part.article:
         candidates = [entry for entry in candidates if entry["pos"] in NOUN_POS] or candidates
@@ -133,13 +140,17 @@ def choose_entry(part: Part, translation: set[str], entries: dict[str, list[dict
     pairs = [(entry, resolve_lemma(entry, entries)) for entry in candidates]
     if not pairs:
         return None
-    return max(pairs, key=lambda pair: (gloss_overlap(pair[1], translation), pair[0] is not pair[1]))
+    return max(pairs, key=lambda pair: (
+        gloss_overlap(pair[1], translation),
+        verb_glossed and pair[0]["pos"] == "verb",
+        pair[0] is not pair[1],
+    ))
 
 
 def first_form(entry: dict, required: set[str], excluded: set[str] = frozenset(), exact: bool = False) -> str | None:
     for form in entry.get("forms", []):
         tags = set(form.get("tags", []))
-        if (tags == required if exact else required <= tags) and not tags & (excluded | RARE_FORM_TAGS):
+        if (tags == required if exact else required <= tags) and not tags & (excluded | RARE_FORM_TAGS) and is_word(form["form"]):
             return form["form"]
     return None
 
@@ -181,10 +192,27 @@ def verb_parts(entry: dict) -> Verb:
     )
 
 
+def is_word(form: str) -> bool:
+    return LETTER.search(form) is not None
+
+
+def own_table_forms(words: set[str], table: list[tuple[str, frozenset[str]]]) -> list[str] | None:
+    identities = {tags - STRESS_TAGS for form, tags in table if form in words and tags & STRESS_TAGS}
+    if not identities:
+        return None
+    return [form for form, tags in table if tags - STRESS_TAGS in identities]
+
+
 def all_forms(word: str, lemma: dict) -> list[str]:
     forms = {word, lemma["word"]}
-    forms.update(form["form"] for form in lemma.get("forms", []) if not set(form.get("tags", [])) & META_FORM_TAGS)
-    return sorted(forms)
+    table = [
+        (form["form"], frozenset(form.get("tags", [])))
+        for form in lemma.get("forms", [])
+        if not set(form.get("tags", [])) & META_FORM_TAGS
+    ]
+    own = own_table_forms(forms, table)
+    forms.update(own if own is not None else (form for form, _ in table))
+    return sorted(form for form in forms if is_word(form))
 
 
 def describe(part: Part, entry: dict, lemma: dict) -> Headword:
@@ -254,7 +282,7 @@ def build_lexicon(words: list[Word], wiktionary: Path) -> Lexicon:
     for dutch, dutch_parts in parts.items():
         headwords = []
         for part in dutch_parts:
-            chosen = choose_entry(part, translations[dutch], entries)
+            chosen = choose_entry(part, translations[dutch], entries, dutch in verb_glossed)
             if chosen is None:
                 phrase = verb_phrase(part, entries) if dutch in verb_glossed else None
                 if phrase is None:

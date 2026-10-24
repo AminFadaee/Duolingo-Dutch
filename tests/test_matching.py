@@ -65,3 +65,9 @@ def test_dutch_is_not_mistaken_for_english():
     from duolingo_anki.english import looks_english
     assert not looks_english("Het geheim van Gouda.")
     assert looks_english("Just like Manneken Pis in Brussels.")
+
+
+def test_particle_before_te_is_not_a_split_verb():
+    headword = {"word": "afwijzen", "forms": ["afwijzen", "wijs af"], "verb": {"particle": "af"}}
+    assert matching_rules("af|wijzen", "Het was heel wijs van hem het smeergeld af te wijzen.", [headword]) == set()
+    assert matching_rules("af|wijzen", "Ik wijs dat voorstel af.", [headword]) == {"wijs af"}

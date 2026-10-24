@@ -59,6 +59,7 @@ def run_lexicon(args: argparse.Namespace) -> None:
 
 def run_sentences(args: argparse.Namespace) -> None:
     from duolingo_anki.cards import article_twins
+    from duolingo_anki.deck import entries as deck_entries
     from duolingo_anki.english import Meaning
     from duolingo_anki.opus import CORPORA, latest_url
     from duolingo_anki.sentences import find_examples
@@ -74,11 +75,13 @@ def run_sentences(args: argparse.Namespace) -> None:
     twins = article_twins(translations)
     lexicon = [entry for entry in json.loads(args.lexicon.read_text(encoding="utf-8"))["entries"] if entry["dutch"] not in twins]
     meanings = {dutch: Meaning.of(texts) for dutch, texts in translations.items()}
+    positions = {dutch: entry.position for dutch, entry in deck_entries([asdict(word) for word in read_words(args.words)]).items()}
     downloads = [download(url, args.cache_dir) for url in TATOEBA_URLS]
     corpora = {name: download(latest_url(name), args.cache_dir, f"opus-{name}-en-nl.zip") for name in CORPORA}
     examples = find_examples(
         lexicon,
         meanings,
+        positions,
         Tatoeba(Files(*(item.path for item in downloads))),
         {name: item.path for name, item in corpora.items()},
         Wikis(),
@@ -98,6 +101,15 @@ def run_sentences(args: argparse.Namespace) -> None:
     })
     report("Merged into their article form", [f"{bare} -> {dutch}" for bare, dutch in twins.items()])
     report("Dropped for lack of an example sentence", [entry["dutch"] for entry in lexicon if entry["dutch"] not in examples])
+    report("Translation does not carry the meaning", [
+        f"{dutch} ({'; '.join(translations[dutch])}): {example.translation}"
+        for dutch, example in examples.items()
+        if not meanings[dutch].carried_by(example.translation)
+    ])
+    sharing = defaultdict(list)
+    for dutch, example in examples.items():
+        sharing[example.text].append(dutch)
+    report("Sentence shared by several words", [f"{', '.join(words)}: {text}" for text, words in sharing.items() if len(words) > 1])
 
 
 def run_audio(args: argparse.Namespace) -> None:
