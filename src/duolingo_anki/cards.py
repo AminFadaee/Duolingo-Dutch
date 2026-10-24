@@ -10,6 +10,7 @@ PATTERN_MARKERS = ("...", "…", "+")
 WORD = re.compile(r"[\w'-]+")
 TAG_UNSAFE = re.compile(r"[^\w-]+")
 TAG_PREFIX = "DD"
+GLOSS_PREFIX = re.compile(r"^(?:to|the|a|an) ")
 PARTS_OF_SPEECH = {
     "noun": "Noun",
     "name": "Name",
@@ -63,6 +64,40 @@ def merged_translations(glosses: list[str], twin_glosses: list[str]) -> list[str
     known = {gloss.lower() for gloss in glosses}
     extra = [gloss for gloss in twin_glosses if f"the {gloss.lower()}" not in known]
     return list(dict.fromkeys(glosses + extra))
+
+
+def gloss_key(item: str) -> str:
+    return GLOSS_PREFIX.sub("", " ".join(NOTE.sub("", item).lower().split()))
+
+
+def repeats(item: str, earlier: str) -> bool:
+    if item == earlier:
+        return True
+    if " " in earlier or not earlier:
+        return False
+    return item in {f"{earlier}ing", f"{earlier.removesuffix('e')}ing", f"{earlier}{earlier[-1]}ing"}
+
+
+def distinct_glosses(glosses: list[str]) -> list[str]:
+    seen, result = [], []
+    for gloss in glosses:
+        items = [item.strip() for item in gloss.split(",")]
+        kept = [item for item in items if not any(repeats(gloss_key(item), key) for key in seen)] if result else items
+        seen += [gloss_key(item) for item in items]
+        if kept:
+            result.append(gloss if kept == items else ", ".join(kept))
+    return result
+
+
+def corrected(words: list[dict], overrides: dict[str, dict[str, str]]) -> list[dict]:
+    found = {(word["dutch"], word["translation"]) for word in words}
+    stale = [f"{dutch}: {wrong}" for dutch, fixes in overrides.items() for wrong in fixes if (dutch, wrong) not in found]
+    if stale:
+        raise ValueError(f"Gloss overrides no longer match the word list: {', '.join(stale)}")
+    return [
+        {**word, "translation": overrides.get(word["dutch"], {}).get(word["translation"], word["translation"])}
+        for word in words
+    ]
 
 
 def spoken_text(dutch: str) -> str | None:

@@ -10,13 +10,16 @@ import genanki
 
 from duolingo_anki.cards import (
     article_twins,
+    corrected,
     display_text,
+    distinct_glosses,
     forms_html,
     highlight,
     merged_translations,
     spoken_text,
     word_tags,
 )
+from duolingo_anki.hints import Note, note_hints
 
 DECK_NAME = "Duolingo Dutch"
 MODEL_ID = 1_759_241_381
@@ -33,6 +36,7 @@ FIELDS = (
     "SentenceAudio",
     "Source",
     "TypeAnswer",
+    "Hint",
 )
 SOURCE_NAMES = {
     "tatoeba": "Tatoeba",
@@ -51,6 +55,7 @@ SENTENCE_DETAILS = '<div class="translation">{{SentenceTranslation}}</div><div c
 SENTENCE = f"{SENTENCE_LINE}{SENTENCE_DETAILS}"
 DUTCH = '<div class="dutch">{{Dutch}}</div>'
 ENGLISH = '<div class="english">{{English}}</div>'
+HINT = '{{#Hint}}<div class="cue">{{Hint}}</div>{{/Hint}}'
 FORMS = '{{#Forms}}<div class="forms">{{Forms}}</div>{{/Forms}}'
 DIVIDER = '<hr id="answer">'
 TYPE_ANSWER = '{{#TypeAnswer}}<div class="typed">{{type:TypeAnswer}}</div>{{/TypeAnswer}}'
@@ -74,7 +79,7 @@ TEMPLATES = (
     ),
     Template(
         "English to Dutch",
-        f"{ENGLISH}{TYPE_ANSWER}",
+        f"{ENGLISH}{HINT}{TYPE_ANSWER}",
         f"{{{{FrontSide}}}}{DIVIDER}{DUTCH}{{{{WordAudio}}}}{FORMS}{SENTENCE}",
     ),
     Template(
@@ -96,6 +101,7 @@ CSS = """
 }
 .dutch { font-size: 32px; font-weight: 600; }
 .english { font-size: 26px; color: var(--accent); font-weight: 600; margin: 6px 0; }
+.cue { font-size: 16px; color: var(--muted); margin-top: 2px; }
 .forms { font-size: 16px; color: var(--soft); margin-top: 6px; }
 .prompt { font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
 hr#answer { border: none; border-top: 1px solid var(--line); width: min(60%, 360px); margin: 16px auto; }
@@ -203,13 +209,13 @@ def entries(words: list[dict]) -> dict[str, Entry]:
             glosses = merged_translations(glosses, translations[bare])
             tags = tags + skills[bare]
             first = min(first, positions[bare])
-        result[dutch] = Entry(dutch, glosses, list(dict.fromkeys(tags)), first)
+        result[dutch] = Entry(dutch, distinct_glosses(glosses), list(dict.fromkeys(tags)), first)
     return result
 
 
 def build_deck(data_dir: Path, build_dir: Path, output: Path) -> int:
     read = lambda name: json.loads((data_dir / name).read_text(encoding="utf-8"))
-    words = entries(read("words.json"))
+    words = entries(corrected(read("words.json"), read("gloss_overrides.json")))
     lexicon = {entry["dutch"]: entry.get("headwords", []) for entry in read("lexicon.json")["entries"]}
     audio = {entry["dutch"]: entry for entry in read("audio.json")["entries"]}
     media = MediaLibrary(data_dir / "audio", build_dir / "media")
@@ -223,6 +229,10 @@ def build_deck(data_dir: Path, build_dir: Path, output: Path) -> int:
     )
     deck = genanki.Deck(stable_id(DECK_NAME), DECK_NAME, description())
     examples = sorted(read("sentences.json")["entries"], key=lambda entry: words[entry["dutch"]].position)
+    hints = note_hints([
+        Note(item["dutch"], display_text(item["dutch"], lexicon[item["dutch"]]), "; ".join(words[item["dutch"]].translations), lexicon[item["dutch"]])
+        for item in examples
+    ])
     for item in examples:
         entry, example, headwords, clips = words[item["dutch"]], item["example"], lexicon[item["dutch"]], audio[item["dutch"]]
         values = {
@@ -236,6 +246,7 @@ def build_deck(data_dir: Path, build_dir: Path, output: Path) -> int:
             "SentenceAudio": media.button_source(clips["sentence"]),
             "Source": source_html(example),
             "TypeAnswer": html.escape(spoken_text(display_text(entry.dutch, headwords)) or ""),
+            "Hint": html.escape(hints[entry.dutch]),
         }
         tags = word_tags(entry.skills, headwords, bool(example.get("translated_by")))
         deck.add_note(genanki.Note(

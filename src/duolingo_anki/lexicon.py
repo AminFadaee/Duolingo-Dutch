@@ -19,6 +19,7 @@ RARE_FORM_TAGS = {"archaic", "subjunctive", "imperative"}
 STRESS_TAGS = {"stressed", "unstressed"}
 LETTER = re.compile(r"[^\W\d_]")
 NOUN_POS = {"noun", "name"}
+REGISTERS = {"formal": "formal", "informal": "informal", "colloquial": "informal"}
 HEBBEN_DEFAULT_TEMPLATES = {"nl-conj-wk", "nl-conj-wk-cht", "nl-conj-st"}
 
 
@@ -61,6 +62,9 @@ class Headword:
     verb: Verb | None = None
     adjective: Adjective | None = None
     forms: list[str] = field(default_factory=list)
+    inflection: list[str] = field(default_factory=list)
+    register: str | None = None
+    sense: str | None = None
 
 
 def take_article(text: str) -> tuple[str | None, str]:
@@ -215,6 +219,30 @@ def all_forms(word: str, lemma: dict) -> list[str]:
     return sorted(form for form in forms if is_word(form))
 
 
+def inflection_tags(entry: dict, lemma: dict) -> list[str]:
+    if entry is lemma:
+        return []
+    for sense in entry.get("senses", []):
+        if any(target["word"] == lemma["word"] for target in sense.get("form_of", [])):
+            return sorted(set(sense.get("tags", [])) - {"form-of"})
+    return []
+
+
+def own_senses(entry: dict) -> list[dict]:
+    return [sense for sense in entry.get("senses", []) if not sense.get("form_of") and sense.get("glosses")]
+
+
+def register(entry: dict) -> str | None:
+    senses = own_senses(entry)
+    tags = set(senses[0].get("tags", [])) if senses else set()
+    return next((label for tag, label in REGISTERS.items() if tag in tags), None)
+
+
+def first_sense(entry: dict) -> str | None:
+    senses = own_senses(entry)
+    return senses[0]["glosses"][0] if senses else None
+
+
 def describe(part: Part, entry: dict, lemma: dict) -> Headword:
     pos = entry["pos"]
     return Headword(
@@ -232,6 +260,9 @@ def describe(part: Part, entry: dict, lemma: dict) -> Headword:
             superlative=first_form(lemma, {"superlative"}, exact=True),
         ) if pos == "adj" else None,
         forms=all_forms(part.word, lemma),
+        inflection=inflection_tags(entry, lemma),
+        register=register(lemma),
+        sense=first_sense(lemma),
     )
 
 

@@ -17,11 +17,15 @@ Every word has three cards:
 | Card | Front | Back |
 |---|---|---|
 | Dutch to English | the Dutch word, read aloud, and the example sentence | the English meaning and the sentence's translation |
-| English to Dutch | the English meaning, and a box to type the Dutch | your spelling checked against the Dutch word, which is read aloud |
+| English to Dutch | the English meaning with a hint where needed, and a box to type the Dutch | your spelling checked against the Dutch word, which is read aloud |
 | Listening | the Dutch word read aloud, a box to type what you hear, and a button to hear the example sentence as a hint | your spelling checked, the Dutch word and its meaning |
 
 The typed answer is the word as spoken: *opstaan* for *op\|staan*, *de bon, het bonnetje* for *de bon / het
 bonnetje*. Grammar patterns and affixes such as *noch…noch* and *schoon-* have no typed answer and no listening card.
+
+The hint under the English meaning names the form of inflected words (*read* — past → *las*) and tells apart words
+that share a meaning: by form, formality, word type or article (*please* — informal → *alsjeblieft*, formal →
+*alstublieft*), and otherwise by their first letters (*again* — w… → *weer*, o… → *opnieuw*).
 
 Every back also shows the article and forms (*het huis · huizen · huisje*, *opstaan · stond op · opgestaan*) and the
 example sentence with its translation, the word highlighted, and a button that plays the sentence. The sentence never
@@ -36,7 +40,8 @@ instead:
 
 To study one skill, create a filtered deck (Tools → Create Filtered Deck) and search for
 `deck:"Duolingo Dutch" tag:DD::Food_1`. To skip cards, suspend them rather than deleting them: deleted cards come
-back when you import an update. Updates keep your progress.
+back when you import an update. Updates keep your progress. When an update adds a field to the cards, tick
+"Merge note types" in Anki's import dialog (Anki 23.10 or later) so your existing notes are updated in place.
 
 ## Pipeline
 
@@ -51,7 +56,9 @@ back when you import an update. Updates keep your progress.
 All data lives in `data/` and is committed, audio included, so building the deck only packages it. The built
 deck in `build/` is not committed.
 
-Duolingo only provides the word list, its English glosses and the skill tags. Grammar (article, plural, verb
+Duolingo only provides the word list, its English glosses and the skill tags. Repeated glosses of a word are merged,
+and the few misspelt ones are corrected in `gloss_overrides.json`, which the deck step applies; it fails when an
+override no longer matches the word list. Grammar (article, plural, verb
 forms) comes from Wiktionary, which an official word list check showed to be the more accurate of the two.
 
 ### Scrape
@@ -61,8 +68,9 @@ Reads the vocabulary listed under each skill's *Lesson* headings through the wik
 ### Lexicon
 
 Looks every word up in Wiktionary and records its base word and part of speech, plus the article, plural and
-diminutive of nouns; past forms, participle, auxiliary and separable particle of verbs; and the comparative and
-superlative of adjectives. Inflected entries such as *leest* point to their base word (*lezen*), and verb phrases
+diminutive of nouns; past forms, participle, auxiliary and separable particle of verbs; the comparative and
+superlative of adjectives; the grammatical form of inflected words; and the register and first meaning of the base
+word, which the hints use. Inflected entries such as *leest* point to their base word (*lezen*), and verb phrases
 such as *in opstand komen* are treated like separable verbs. When Wiktionary has several entries for a word, the
 one whose meaning matches the Duolingo gloss wins.
 
