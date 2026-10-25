@@ -64,3 +64,15 @@ def test_gloss_overrides_replace_and_fail_when_stale():
     assert corrected(words, {"de kalender": {"calender": "calendar"}})[0]["translation"] == "calendar"
     with pytest.raises(ValueError, match="calender"):
         corrected([{**words[0], "translation": "calendar"}], {"de kalender": {"calender": "calendar"}})
+
+
+def test_sound_alikes_are_found_by_spelling_rules():
+    from duolingo_anki.cards import sound_alikes
+    spoken = {"zij": "zij", "zei": "zei", "leiden": "leiden", "lijden": "lijden", "hond": "hond", "hont": "hont", "huis": "huis"}
+    assert sound_alikes(spoken) == {"zij", "zei", "leiden", "lijden", "hond", "hont"}
+
+
+def test_names_have_no_listening_card():
+    from duolingo_anki.cards import listenable
+    assert not listenable([{"word": "Gent", "pos": "name"}])
+    assert listenable([{"word": "gent", "pos": "noun"}])

@@ -1,5 +1,6 @@
 import html
 import re
+from collections import defaultdict
 
 LEADING_ARTICLE = re.compile(r"^(de|het) (?=\S+$)")
 ARTICLE = re.compile(r"^(?:de|het) ")
@@ -10,6 +11,7 @@ PATTERN_MARKERS = ("...", "…", "+")
 WORD = re.compile(r"[\w'-]+")
 TAG_UNSAFE = re.compile(r"[^\w-]+")
 TAG_PREFIX = "DD"
+FINAL_D = re.compile(r"d\b")
 GLOSS_PREFIX = re.compile(r"^(?:to|the|a|an) ")
 PARTS_OF_SPEECH = {
     "noun": "Noun",
@@ -100,11 +102,34 @@ def corrected(words: list[dict], overrides: dict[str, dict[str, str]]) -> list[d
     ]
 
 
-def spoken_text(dutch: str) -> str | None:
+def alternatives(dutch: str) -> list[str]:
     if any(marker in dutch for marker in PATTERN_MARKERS) or AFFIX.search(dutch):
-        return None
+        return []
     text = " ".join(NOTE.sub("", dutch).replace("|", "").split())
-    return ", ".join(part for part in ALTERNATIVES.split(text) if part) or None
+    return [part for part in ALTERNATIVES.split(text) if part]
+
+
+def spoken_text(dutch: str) -> str | None:
+    return ", ".join(alternatives(dutch)) or None
+
+
+def typed_text(dutch: str) -> str | None:
+    return next(iter(alternatives(dutch)), None)
+
+
+def sound_key(text: str) -> str:
+    return FINAL_D.sub("t", text.lower().replace("ei", "ij").replace("au", "ou"))
+
+
+def sound_alikes(spoken: dict[str, str]) -> set[str]:
+    groups = defaultdict(set)
+    for dutch, text in spoken.items():
+        groups[sound_key(text)].add(text.lower())
+    return {dutch for dutch, text in spoken.items() if len(groups[sound_key(text)]) > 1}
+
+
+def listenable(headwords: list[dict]) -> bool:
+    return not headwords or any(headword.get("pos") != "name" for headword in headwords)
 
 
 def forms(headword: dict) -> str:

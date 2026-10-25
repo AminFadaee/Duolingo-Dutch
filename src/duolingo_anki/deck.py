@@ -15,8 +15,11 @@ from duolingo_anki.cards import (
     distinct_glosses,
     forms_html,
     highlight,
+    listenable,
     merged_translations,
+    sound_alikes,
     spoken_text,
+    typed_text,
     word_tags,
 )
 from duolingo_anki.hints import Note, note_hints
@@ -39,6 +42,8 @@ FIELDS = (
     "TypeAnswer",
     "Hint",
     "OtherMeanings",
+    "Listen",
+    "ListenHint",
 )
 SOURCE_NAMES = {
     "tatoeba": "Tatoeba",
@@ -58,6 +63,7 @@ SENTENCE = f"{SENTENCE_LINE}{SENTENCE_DETAILS}"
 DUTCH = '<div class="dutch">{{Dutch}}</div>'
 ENGLISH = '<div class="english">{{English}}</div>'
 ALSO = '{{#OtherMeanings}}<div class="also">also: {{OtherMeanings}}</div>{{/OtherMeanings}}'
+LISTEN_HINT = '{{#ListenHint}}<div class="cue">{{ListenHint}}</div>{{/ListenHint}}'
 HINT = '{{#Hint}}<div class="cue">{{Hint}}</div>{{/Hint}}'
 FORMS = '{{#Forms}}<div class="forms">{{Forms}}</div>{{/Forms}}'
 DIVIDER = '<hr id="answer">'
@@ -87,8 +93,8 @@ TEMPLATES = (
     ),
     Template(
         "Listening",
-        f'{{{{#WordAudio}}}}<div class="prompt">Listen</div>{{{{WordAudio}}}}{TYPE_ANSWER}'
-        f'<div class="hint">{SENTENCE_PLAYER} sentence</div>{{{{/WordAudio}}}}',
+        f'{{{{#Listen}}}}<div class="prompt">Listen</div>{{{{WordAudio}}}}{LISTEN_HINT}{TYPE_ANSWER}'
+        f'<div class="hint">{SENTENCE_PLAYER} sentence</div>{{{{/Listen}}}}',
         f"{{{{FrontSide}}}}{DIVIDER}{DUTCH}{ENGLISH}{ALSO}{FORMS}{SENTENCE}",
     ),
 )
@@ -237,21 +243,27 @@ def build_deck(data_dir: Path, build_dir: Path, output: Path) -> int:
         Note(item["dutch"], display_text(item["dutch"], lexicon[item["dutch"]]), "; ".join(words[item["dutch"]].translations), lexicon[item["dutch"]])
         for item in examples
     ])
+    alike = sound_alikes({
+        item["dutch"]: text for item in examples if (text := spoken_text(display_text(item["dutch"], lexicon[item["dutch"]])))
+    })
     for item in examples:
         entry, example, headwords, clips = words[item["dutch"]], item["example"], lexicon[item["dutch"]], audio[item["dutch"]]
+        word_audio = media.sound(clips.get("word"))
         values = {
             "Id": entry.dutch,
             "Dutch": html.escape(display_text(entry.dutch, headwords)),
             "English": html.escape("; ".join(entry.translations)),
             "Forms": forms_html(headwords),
-            "WordAudio": media.sound(clips.get("word")),
+            "WordAudio": word_audio,
             "Sentence": highlight(example["text"], example["match"]),
             "SentenceTranslation": html.escape(example["translation"]),
             "SentenceAudio": media.button_source(clips["sentence"]),
             "Source": source_html(example),
-            "TypeAnswer": html.escape(spoken_text(display_text(entry.dutch, headwords)) or ""),
+            "TypeAnswer": html.escape(typed_text(display_text(entry.dutch, headwords)) or ""),
             "Hint": html.escape(hints[entry.dutch]),
             "OtherMeanings": html.escape("; ".join(other_meanings(headwords, entry.translations))),
+            "Listen": "1" if word_audio and listenable(headwords) else "",
+            "ListenHint": html.escape("; ".join(entry.translations)) if entry.dutch in alike else "",
         }
         tags = word_tags(entry.skills, headwords, bool(example.get("translated_by")))
         deck.add_note(genanki.Note(

@@ -20,8 +20,11 @@ Every word has three cards:
 | English to Dutch | the English meaning with a hint where needed, and a box to type the Dutch | your spelling checked against the Dutch word, which is read aloud |
 | Listening | the Dutch word read aloud, a box to type what you hear, and a button to hear the example sentence as a hint | your spelling checked, the Dutch word and its meaning |
 
-The typed answer is the word as spoken: *opstaan* for *op\|staan*, *de bon, het bonnetje* for *de bon / het
-bonnetje*. Grammar patterns and affixes such as *noch…noch* and *schoon-* have no typed answer and no listening card.
+The typed answer is the word as written without separators: *opstaan* for *op\|staan*, and the first alternative,
+*de bon*, for *de bon / het bonnetje*, which is read aloud in full. Grammar patterns and affixes such as
+*noch…noch* and *schoon-* have no typed answer and no listening card, and neither do names, which can't be spelled
+by ear. Words that sound like another word in the deck (*zij* and *zei*, *leiden* and *lijden*) show their meaning on
+the listening card.
 
 The hint under the English meaning names the form of inflected words (*read* — past → *las*) and tells apart words
 that share a meaning: by form, formality, word type or article (*please* — informal → *alsjeblieft*, formal →

@@ -31,3 +31,17 @@ def test_voice_depends_only_on_the_text():
 def test_file_name_depends_on_voice_and_text():
     assert file_name("de man", "F1") == file_name("de man", "F1")
     assert file_name("de man", "F1") != file_name("de man", "M1")
+
+
+@pytest.mark.parametrize(
+    ("dutch", "typed"),
+    [
+        ("de bon / het bonnetje", "de bon"),
+        ("heeft hij/ze", "heeft hij"),
+        ("aan|bieden", "aanbieden"),
+        ("noch...noch", None),
+    ],
+)
+def test_typed_text_is_the_first_alternative(dutch, typed):
+    from duolingo_anki.cards import typed_text
+    assert typed_text(dutch) == typed
