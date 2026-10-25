@@ -56,7 +56,7 @@ SOURCE_NAMES = {
 
 SENTENCE_PLAYER = (
     '<button class="play" onclick="var a = this.nextElementSibling; a.currentTime = 0; a.play()">▶</button>'
-    '<audio src="{{SentenceAudio}}" preload="none"></audio>'
+    "{{SentenceAudio}}"
 )
 SENTENCE_LINE = f'{{{{#Sentence}}}}<div class="sentence">{SENTENCE_PLAYER}<span>{{{{Sentence}}}}</span></div>{{{{/Sentence}}}}'
 SENTENCE_DETAILS = (
@@ -191,8 +191,9 @@ class MediaLibrary:
     def sound(self, clip: dict | None) -> str:
         return f"[sound:{name}]" if clip and (name := self.copy(clip["file"], f"{MEDIA_PREFIX}-{clip['file']}")) else ""
 
-    def button_source(self, clip: dict) -> str:
-        return self.copy(clip["file"], f"_{MEDIA_PREFIX}-{clip['file']}")
+    def player(self, clip: dict) -> str:
+        name = self.copy(clip["file"], f"_{MEDIA_PREFIX}-{clip['file']}")
+        return f'<audio src="{name}" preload="none"></audio>' if name else ""
 
 
 @dataclass(frozen=True)
@@ -274,7 +275,7 @@ def build_deck(data_dir: Path, build_dir: Path, output: Path) -> Built:
             "WordAudio": word_audio,
             "Sentence": highlight(example["text"], example["match"]) if example else "",
             "SentenceTranslation": html.escape(example["translation"]) if example else "",
-            "SentenceAudio": media.button_source(clips["sentence"]) if example else "",
+            "SentenceAudio": media.player(clips["sentence"]) if example else "",
             "Source": source_html(example) if example else "",
             "TypeAnswer": html.escape(typed_text(display_text(entry.dutch, headwords)) or ""),
             "Hint": html.escape(hints[entry.dutch]),

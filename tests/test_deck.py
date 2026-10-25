@@ -77,6 +77,7 @@ def test_field_values(built):
     assert man["Sentence"] == "Kleren maken de <b>man</b>."
     assert man["OtherMeanings"] == "husband"
     assert man["Listen"] == "1"
+    assert man["SentenceAudio"] == '<audio src="_dd-s0.mp3" preload="none"></audio>'
     assert built["kleine"][1]["Hint"] == "inflected"
     assert built["klein"][1]["Hint"] == ""
     assert built["Gent"][1]["Listen"] == ""
