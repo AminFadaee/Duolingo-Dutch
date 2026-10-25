@@ -113,10 +113,10 @@ def run_sentences(args: argparse.Namespace) -> None:
             "wikis": {"nl.wiktionary.org": "CC-BY-SA 4.0", "nl.wikipedia.org": "CC-BY-SA 4.0"},
             "translation": {"model": MODEL, "revision": REVISION, "license": "Apache-2.0"},
         },
-        "entries": [{"dutch": entry["dutch"], "example": examples[entry["dutch"]]} for entry in lexicon if entry["dutch"] in examples],
+        "entries": [{"dutch": entry["dutch"], "example": examples.get(entry["dutch"])} for entry in lexicon],
     })
     report("Merged into their article form", [f"{bare} -> {dutch}" for bare, dutch in twins.items()])
-    report("Dropped for lack of an example sentence", [entry["dutch"] for entry in lexicon if entry["dutch"] not in examples])
+    report("Without an example sentence", [entry["dutch"] for entry in lexicon if entry["dutch"] not in examples])
     report("Translation does not carry the meaning", [
         f"{dutch} ({'; '.join(translations[dutch])}): {example.translation}"
         for dutch, example in examples.items()
@@ -146,8 +146,9 @@ def run_audio(args: argparse.Namespace) -> None:
 def run_deck(args: argparse.Namespace) -> None:
     from duolingo_anki.deck import build_deck
 
-    notes = build_deck(args.data_dir, args.build_dir, args.output)
-    print(f"Wrote {notes} notes to {args.output}", file=sys.stderr)
+    built = build_deck(args.data_dir, args.build_dir, args.output)
+    report("Removed since the last build", built.removed)
+    print(f"Wrote {built.notes} notes to {args.output}", file=sys.stderr)
 
 
 def main() -> None:

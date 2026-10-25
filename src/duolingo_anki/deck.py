@@ -22,6 +22,7 @@ from duolingo_anki.cards import (
     typed_text,
     word_tags,
 )
+from duolingo_anki.guids import check_keys, note_guid
 from duolingo_anki.hints import Note, note_hints
 from duolingo_anki.senses import other_meanings
 
@@ -57,8 +58,10 @@ SENTENCE_PLAYER = (
     '<button class="play" onclick="var a = this.nextElementSibling; a.currentTime = 0; a.play()">▶</button>'
     '<audio src="{{SentenceAudio}}" preload="none"></audio>'
 )
-SENTENCE_LINE = f'<div class="sentence">{SENTENCE_PLAYER}<span>{{{{Sentence}}}}</span></div>'
-SENTENCE_DETAILS = '<div class="translation">{{SentenceTranslation}}</div><div class="source">{{Source}}</div>'
+SENTENCE_LINE = f'{{{{#Sentence}}}}<div class="sentence">{SENTENCE_PLAYER}<span>{{{{Sentence}}}}</span></div>{{{{/Sentence}}}}'
+SENTENCE_DETAILS = (
+    '{{#Sentence}}<div class="translation">{{SentenceTranslation}}</div><div class="source">{{Source}}</div>{{/Sentence}}'
+)
 SENTENCE = f"{SENTENCE_LINE}{SENTENCE_DETAILS}"
 DUTCH = '<div class="dutch">{{Dutch}}</div>'
 ENGLISH = '<div class="english">{{English}}</div>'
@@ -94,7 +97,7 @@ TEMPLATES = (
     Template(
         "Listening",
         f'{{{{#Listen}}}}<div class="prompt">Listen</div>{{{{WordAudio}}}}{LISTEN_HINT}{TYPE_ANSWER}'
-        f'<div class="hint">{SENTENCE_PLAYER} sentence</div>{{{{/Listen}}}}',
+        f'{{{{#Sentence}}}}<div class="hint">{SENTENCE_PLAYER} sentence</div>{{{{/Sentence}}}}{{{{/Listen}}}}',
         f"{{{{FrontSide}}}}{DIVIDER}{DUTCH}{ENGLISH}{ALSO}{FORMS}{SENTENCE}",
     ),
 )
@@ -143,7 +146,7 @@ def description() -> str:
     return f"""
 <p><b>{DECK_NAME}</b>: the vocabulary of Duolingo's Dutch course, each word with its forms, a real example sentence
 and Dutch audio.</p>
-<p>Three cards per word: Dutch to English, English to Dutch and listening. Notes are tagged with their Duolingo skill
+<p>Three cards per word: Dutch to English, English to Dutch and listening (none for names). Notes are tagged with their Duolingo skill
 (<code>DD::Basics_1</code>) and word type (<code>DD::Noun</code>); use a filtered deck to study one tag, and suspend
 cards rather than deleting them, because deleted cards come back when you import an update. Sentences tagged
 <code>DD::Machine_translated</code> have a machine translation.</p>
@@ -223,9 +226,23 @@ def entries(words: list[dict]) -> dict[str, Entry]:
     return result
 
 
-def build_deck(data_dir: Path, build_dir: Path, output: Path) -> int:
+NOTE_KEYS = "note_keys.json"
+GUID_ALIASES = "guid_aliases.json"
+
+
+@dataclass(frozen=True)
+class Built:
+    notes: int
+    removed: list[str]
+
+
+def build_deck(data_dir: Path, build_dir: Path, output: Path) -> Built:
     read = lambda name: json.loads((data_dir / name).read_text(encoding="utf-8"))
     words = entries(corrected(read("words.json"), read("gloss_overrides.json")))
+    items = read("sentences.json")["entries"]
+    keys = {item["dutch"]: words[item["dutch"]].skills for item in items}
+    aliases = read(GUID_ALIASES)
+    changes = check_keys(read(NOTE_KEYS) if (data_dir / NOTE_KEYS).exists() else keys, keys, aliases)
     lexicon = {entry["dutch"]: entry.get("headwords", []) for entry in read("lexicon.json")["entries"]}
     audio = {entry["dutch"]: entry for entry in read("audio.json")["entries"]}
     media = MediaLibrary(data_dir / "audio", build_dir / "media")
@@ -238,7 +255,7 @@ def build_deck(data_dir: Path, build_dir: Path, output: Path) -> int:
         sort_field_index=1,
     )
     deck = genanki.Deck(stable_id(DECK_NAME), DECK_NAME, description())
-    examples = sorted(read("sentences.json")["entries"], key=lambda entry: words[entry["dutch"]].position)
+    examples = sorted(items, key=lambda entry: words[entry["dutch"]].position)
     hints = note_hints([
         Note(item["dutch"], display_text(item["dutch"], lexicon[item["dutch"]]), "; ".join(words[item["dutch"]].translations), lexicon[item["dutch"]])
         for item in examples
@@ -247,7 +264,7 @@ def build_deck(data_dir: Path, build_dir: Path, output: Path) -> int:
         item["dutch"]: text for item in examples if (text := spoken_text(display_text(item["dutch"], lexicon[item["dutch"]])))
     })
     for item in examples:
-        entry, example, headwords, clips = words[item["dutch"]], item["example"], lexicon[item["dutch"]], audio[item["dutch"]]
+        entry, example, headwords, clips = words[item["dutch"]], item.get("example"), lexicon[item["dutch"]], audio[item["dutch"]]
         word_audio = media.sound(clips.get("word"))
         values = {
             "Id": entry.dutch,
@@ -255,26 +272,27 @@ def build_deck(data_dir: Path, build_dir: Path, output: Path) -> int:
             "English": html.escape("; ".join(entry.translations)),
             "Forms": forms_html(headwords),
             "WordAudio": word_audio,
-            "Sentence": highlight(example["text"], example["match"]),
-            "SentenceTranslation": html.escape(example["translation"]),
-            "SentenceAudio": media.button_source(clips["sentence"]),
-            "Source": source_html(example),
+            "Sentence": highlight(example["text"], example["match"]) if example else "",
+            "SentenceTranslation": html.escape(example["translation"]) if example else "",
+            "SentenceAudio": media.button_source(clips["sentence"]) if example else "",
+            "Source": source_html(example) if example else "",
             "TypeAnswer": html.escape(typed_text(display_text(entry.dutch, headwords)) or ""),
             "Hint": html.escape(hints[entry.dutch]),
             "OtherMeanings": html.escape("; ".join(other_meanings(headwords, entry.translations))),
             "Listen": "1" if word_audio and listenable(headwords) else "",
             "ListenHint": html.escape("; ".join(entry.translations)) if entry.dutch in alike else "",
         }
-        tags = word_tags(entry.skills, headwords, bool(example.get("translated_by")))
+        tags = word_tags(entry.skills, headwords, bool(example and example.get("translated_by")))
         deck.add_note(genanki.Note(
             model=model,
             fields=[values[field] for field in FIELDS],
             tags=tags,
-            guid=genanki.guid_for(entry.dutch),
+            guid=note_guid(entry.dutch, aliases),
             due=entry.position,
         ))
     if media.missing:
         raise MissingMediaError(f"{len(media.missing)} audio files are missing, e.g. {media.missing[0]}")
     output.parent.mkdir(parents=True, exist_ok=True)
     genanki.Package(deck, media_files=sorted(media.files)).write_to_file(str(output))
-    return len(deck.notes)
+    (data_dir / NOTE_KEYS).write_text(json.dumps(dict(sorted(keys.items())), ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    return Built(len(deck.notes), changes.removed)

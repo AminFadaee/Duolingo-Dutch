@@ -12416,6 +12416,14 @@
       }
     },
     {
+      "dutch": "de winterkleren",
+      "voice": "M1",
+      "word": {
+        "text": "de winterkleren",
+        "file": "nl-07f98569f7719efa.mp3"
+      }
+    },
+    {
       "dutch": "de vrouwenkleren",
       "voice": "F1",
       "word": {
@@ -26720,6 +26728,10 @@
       }
     },
     {
+      "dutch": "jemand ...s",
+      "voice": "M1"
+    },
+    {
       "dutch": "niets ...s",
       "voice": "M1",
       "sentence": {
@@ -32493,6 +32505,14 @@
       "sentence": {
         "text": "Tom kocht wat drop.",
         "file": "nl-2146f6ad81c85f01.mp3"
+      }
+    },
+    {
+      "dutch": "het bakje troost",
+      "voice": "M1",
+      "word": {
+        "text": "het bakje troost",
+        "file": "nl-cfaa12a7d14916c5.mp3"
       }
     },
     {

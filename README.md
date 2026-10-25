@@ -1,8 +1,8 @@
 # Duolingo Dutch
 
-An Anki deck of the vocabulary of Duolingo's Dutch (Netherlands) course, and the pipeline that builds it: 2,747
-words and phrases from all 117 skills, each with its grammatical forms, a real example sentence with an English
-translation, and Dutch audio for both.
+An Anki deck of the vocabulary of Duolingo's Dutch (Netherlands) course, and the pipeline that builds it: 2,750
+words and phrases from all 117 skills, each with its grammatical forms and Dutch audio, and all but three with a real
+example sentence, its English translation and audio.
 
 **Get the deck:** [on AnkiWeb](https://ankiweb.net/shared/info/400760191), or download `duolingo_dutch.apkg` from the
 [latest release](https://github.com/AminFadaee/Duolingo-Dutch/releases/latest).
@@ -12,7 +12,7 @@ same data; running it later picks up upstream edits. Not affiliated with Duoling
 
 ## The deck
 
-Every word has three cards:
+Every word has three cards, or two for names:
 
 | Card | Front | Back |
 |---|---|---|
@@ -60,6 +60,11 @@ back when you import an update. Updates keep your progress. When an update adds 
 All data lives in `data/` and is committed, audio included, so building the deck only packages it. The built
 deck in `build/` is not committed.
 
+A note's identity in Anki, and with it the learner's progress, comes from its Dutch text. The deck step records
+the notes it built in `note_keys.json`. When a word disappears and a similar one appears in the same skill, as
+when the Duolingo wiki fixes a typo, the step stops and prints the line to add to `guid_aliases.json`, which maps
+the old text to the new so the note keeps its identity. Words that disappear without a successor are listed.
+
 Duolingo only provides the word list, its English glosses and the skill tags. Repeated glosses of a word are merged,
 and the few misspelt ones are corrected in `gloss_overrides.json`, which the deck step applies; it fails when an
 override no longer matches the word list. Grammar (article, plural, verb
@@ -101,7 +106,7 @@ translation that carries the word's meaning, then a sentence that fits the word 
 verbs, no infinitive used as a noun for verbs), then the form being taught, then a short single sentence made of
 words taught up to that point in the course. When no Tatoeba sentence carries the meaning, the later sources are
 tried for a short one that does. Each word gets a sentence of its own unless all its best options are taken by
-words that match them better. Words without any example sentence are dropped. The step lists the words whose
+words that match them better. Words without any example sentence keep their cards without one. The step lists the words whose
 translation still misses the meaning and the sentences shared by several words.
 
 ### Audio
@@ -140,6 +145,7 @@ uv run duolingo-anki scrape
 uv run duolingo-anki lexicon
 uv run duolingo-anki sentences
 uv run duolingo-anki audio
+uv run duolingo-anki deck
 git add data
 git commit -m "Update data"
 git push

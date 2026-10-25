@@ -68,11 +68,12 @@ def build_audio(entries: list[dict], displayed: dict[str, str], directory: Path,
     for entry in entries:
         voice = voice_for(entry["dutch"])
         word = spoken_text(displayed[entry["dutch"]])
+        example = entry.get("example")
         manifest.append({
             "dutch": entry["dutch"],
             "voice": voice,
             "word": speaker.speak(word, voice, directory) if word else None,
-            "sentence": speaker.speak(entry["example"]["text"], voice, directory),
+            "sentence": speaker.speak(example["text"], voice, directory) if example else None,
         })
     used = {clip.file for item in manifest for clip in (item["word"], item["sentence"]) if clip}
     for path in directory.glob("*.mp3"):

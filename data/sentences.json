@@ -15453,6 +15453,9 @@
       }
     },
     {
+      "dutch": "de winterkleren"
+    },
+    {
       "dutch": "de vrouwenkleren",
       "example": {
         "text": "Toen hij vermoedde dat ze christen waren liet hij ze voor straf in vrouwenkleren gehuld door de straten van de stad slepen.",
@@ -33164,6 +33167,9 @@
       }
     },
     {
+      "dutch": "jemand ...s"
+    },
+    {
       "dutch": "niets ...s",
       "example": {
         "text": "Het is niets ernstigs.",
@@ -40095,6 +40101,9 @@
           "Hybrid"
         ]
       }
+    },
+    {
+      "dutch": "het bakje troost"
     },
     {
       "dutch": "de kroket",
