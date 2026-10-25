@@ -21,11 +21,15 @@ def trim(gloss: str) -> str:
     return text
 
 
+def synonym_only(sense: dict) -> bool:
+    return any("synonym-of" in synonym.get("tags", []) for synonym in sense.get("synonyms", []))
+
+
 def common_senses(entry: dict) -> list[str]:
     senses = [
         trim(sense["glosses"][-1])
         for sense in entry.get("senses", [])
-        if sense.get("glosses") and not sense.get("form_of") and not sense.get("alt_of")
+        if sense.get("glosses") and not sense.get("form_of") and not sense.get("alt_of") and not synonym_only(sense)
         and not set(sense.get("tags", [])) & UNCOMMON_TAGS
     ]
     return list(dict.fromkeys(sense for sense in senses if sense))
@@ -70,7 +74,10 @@ def other_meanings(headwords: list[dict], glosses: list[str]) -> list[str]:
     meaning = Meaning.of(glosses)
     others = []
     for headword in headwords:
+        spellings = {headword["word"].lower(), (headword.get("lemma") or "").lower()}
         for sense in headword.get("senses", []):
+            if sense.lower() in spellings:
+                continue
             untaught = [part.strip() for part in sense.split(",") if part.strip() and not (meaning.words and meaning.carried_by(part))]
             if untaught and (other := ", ".join(untaught)) not in others:
                 others.append(other)

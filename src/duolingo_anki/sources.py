@@ -1,11 +1,13 @@
 import json
 import sys
+import time
 from dataclasses import dataclass
 from pathlib import Path
 
 import httpx
 
 USER_AGENT = "duolingo-anki (+https://github.com/AminFadaee/Duolingo-Dutch)"
+ATTEMPTS = 5
 
 
 @dataclass(frozen=True)
@@ -16,6 +18,17 @@ class Download:
 
 
 def download(url: str, cache_dir: Path, name: str | None = None) -> Download:
+    for attempt in range(ATTEMPTS):
+        try:
+            return fetch(url, cache_dir, name)
+        except httpx.TransportError as error:
+            if attempt == ATTEMPTS - 1:
+                raise
+            print(f"Retrying {url} after {error}", file=sys.stderr)
+            time.sleep(2 ** attempt)
+
+
+def fetch(url: str, cache_dir: Path, name: str | None) -> Download:
     cache_dir.mkdir(parents=True, exist_ok=True)
     path = cache_dir / (name or url.rsplit("/", 1)[1])
     meta_path = path.with_name(f"{path.name}.meta.json")

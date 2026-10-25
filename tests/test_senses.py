@@ -3,7 +3,7 @@ from duolingo_anki.senses import by_usage, common_senses, other_meanings, split_
 
 
 def test_common_senses_skip_uncommon_and_form_of_senses():
-    entry = {"senses": [
+    entry = {"word": "eng", "senses": [
         {"glosses": ["scary, creepy"]},
         {"glosses": ["narrow"]},
         {"glosses": ["small"], "tags": ["archaic"]},
@@ -11,6 +11,13 @@ def test_common_senses_skip_uncommon_and_form_of_senses():
         {"glosses": ["free; not imprisoned or enslaved."]},
     ]}
     assert common_senses(entry) == ["scary, creepy", "narrow", "free"]
+
+
+def test_synonym_only_senses_are_skipped():
+    intussen = {"word": "intussen", "senses": [
+        {"glosses": ["synonym of ondertussen"], "synonyms": [{"word": "ondertussen", "tags": ["synonym", "synonym-of"]}]},
+    ]}
+    assert common_senses(intussen) == []
 
 
 def test_trim_drops_long_notes():
@@ -24,10 +31,14 @@ def test_usage_reorders_senses_but_keeps_the_taught_one():
     assert by_usage(senses, translations, Meaning.of(["bank"])) == ["couch, sofa", "bench", "place where seashells are found", "a bank"]
 
 
+def test_other_meanings_leave_out_the_word_itself():
+    assert other_meanings([{"word": "kroket", "lemma": "kroket", "senses": ["kroket", "croquette"]}], ["snack"]) == ["croquette"]
+
+
 def test_other_meanings_leave_out_what_duolingo_teaches():
-    headwords = [{"senses": ["to find (after searching)", "to find, to think, to feel"]}]
+    headwords = [{"word": "vinden", "senses": ["to find (after searching)", "to find, to think, to feel"]}]
     assert other_meanings(headwords, ["to find"]) == ["to think, to feel"]
-    assert other_meanings([{"senses": ["to hit, to slap", "to beat", "to strike"]}], ["to turn"]) == ["to hit, to slap", "to beat"]
+    assert other_meanings([{"word": "slaan", "senses": ["to hit, to slap", "to beat", "to strike"]}], ["to turn"]) == ["to hit, to slap", "to beat"]
 
 
 def test_split_candidates_need_glosses_matching_unrelated_senses():
