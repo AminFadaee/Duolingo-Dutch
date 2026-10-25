@@ -45,7 +45,7 @@ def write_data(directory):
         "lexicon.json": {"entries": [{"dutch": dutch, "headwords": headwords} for dutch, headwords in LEXICON.items()]},
         "sentences.json": {"entries": [{"dutch": dutch, **({"example": EXAMPLES[dutch]} if dutch in EXAMPLES else {})} for dutch in LEXICON]},
         "audio.json": {"entries": audio},
-        "gloss_overrides.json": {"glosses": {}, "articles": {}},
+        "word_overrides.json": {"glosses": {}, "articles": {}, "removed": []},
         "guid_aliases.json": {},
     }
     for name, content in files.items():

@@ -26335,8 +26335,8 @@
         "file": "nl-c976e9477234e3f6.mp3"
       },
       "sentence": {
-        "text": "Dit slaat nergens op.",
-        "file": "nl-994cb465f5567f2d.mp3"
+        "text": "Tom slaat de meerderheid van zijn data op in de cloud.",
+        "file": "nl-dd57122cbc66953c.mp3"
       }
     },
     {
@@ -26730,10 +26730,6 @@
         "text": "Is het iets ernstigs?",
         "file": "nl-9453018541694db5.mp3"
       }
-    },
-    {
-      "dutch": "jemand ...s",
-      "voice": "M1"
     },
     {
       "dutch": "niets ...s",

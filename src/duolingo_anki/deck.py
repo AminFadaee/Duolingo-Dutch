@@ -243,8 +243,8 @@ class Built:
 
 def build_deck(data_dir: Path, build_dir: Path, output: Path) -> Built:
     read = lambda name: json.loads((data_dir / name).read_text(encoding="utf-8"))
-    overrides = read("gloss_overrides.json")
-    words = entries(corrected(read("words.json"), overrides["glosses"]))
+    overrides = read("word_overrides.json")
+    words = entries(corrected(read("words.json"), overrides))
     items = read("sentences.json")["entries"]
     keys = {item["dutch"]: words[item["dutch"]].skills for item in items}
     aliases = read(GUID_ALIASES)

@@ -57,13 +57,16 @@ def test_distinct_glosses_drop_repeats_from_later_glosses():
     assert distinct_glosses(["books", "to book"]) == ["books", "to book"]
 
 
-def test_gloss_overrides_replace_and_fail_when_stale():
+def test_word_overrides_replace_glosses_remove_words_and_fail_when_stale():
     import pytest
     from duolingo_anki.cards import corrected
-    words = [{"dutch": "de kalender", "translation": "calender", "tag": "Calender"}]
-    assert corrected(words, {"de kalender": {"calender": "calendar"}})[0]["translation"] == "calendar"
+    words = [{"dutch": "de kalender", "translation": "calender", "tag": "Calender"}, {"dutch": "jemand ...s", "translation": "something ...", "tag": "Suffixes"}]
+    overrides = {"glosses": {"de kalender": {"calender": "calendar"}}, "removed": ["jemand ...s"]}
+    assert corrected(words, overrides) == [{"dutch": "de kalender", "translation": "calendar", "tag": "Calender"}]
     with pytest.raises(ValueError, match="calender"):
-        corrected([{**words[0], "translation": "calendar"}], {"de kalender": {"calender": "calendar"}})
+        corrected([{**words[0], "translation": "calendar"}, words[1]], overrides)
+    with pytest.raises(ValueError, match="jemand"):
+        corrected(words[:1], overrides)
 
 
 def test_sound_alikes_are_found_by_spelling_rules():

@@ -1,8 +1,8 @@
 # Duolingo Dutch
 
-An Anki deck of the vocabulary of Duolingo's Dutch (Netherlands) course, and the pipeline that builds it: 2,750
-words and phrases from all 117 skills, each with its grammatical forms and Dutch audio, and all but one with an
-example sentence, its English translation and audio. Almost all sentences are real ones from public sources.
+An Anki deck of the vocabulary of Duolingo's Dutch (Netherlands) course, and the pipeline that builds it: 2,749
+words and phrases from all 117 skills, each with its grammatical forms, Dutch audio, and an example sentence with
+its English translation and audio. Almost all sentences are real ones from public sources.
 
 **Get the deck:** [on AnkiWeb](https://ankiweb.net/shared/info/400760191), or download `duolingo_dutch.apkg` from the
 [latest release](https://github.com/AminFadaee/Duolingo-Dutch/releases/latest).
@@ -66,8 +66,9 @@ when the Duolingo wiki fixes a typo, the step stops and prints the line to add t
 the old text to the new so the note keeps its identity. Words that disappear without a successor are listed.
 
 Duolingo only provides the word list, its English glosses and the skill tags. Repeated glosses of a word are merged,
-and the few wrong ones are corrected in `gloss_overrides.json` (*calender*, and *slaan* glossed "to turn", which is
-*afslaan*), which every step applies. Grammar (article, plural, verb forms) comes from Wiktionary, which an official
+and the few wrong ones are corrected in `word_overrides.json` (*calender*; *slaan* glossed "to turn", which is
+*afslaan*; *opslaan* taught only as "to make sense" instead of "to save"), which every step applies. It also removes
+words that aren't Dutch (*jemand ...s*). Grammar (article, plural, verb forms) comes from Wiktionary, which an official
 word list check showed to be the more accurate of the two; the same file pins an article by hand where needed
 (*de school*). Every override fails the build when it no longer matches.
 

@@ -91,14 +91,17 @@ def distinct_glosses(glosses: list[str]) -> list[str]:
     return result
 
 
-def corrected(words: list[dict], overrides: dict[str, dict[str, str]]) -> list[dict]:
+def corrected(words: list[dict], overrides: dict) -> list[dict]:
+    glosses, removed = overrides["glosses"], set(overrides["removed"])
     found = {(word["dutch"], word["translation"]) for word in words}
-    stale = [f"{dutch}: {wrong}" for dutch, fixes in overrides.items() for wrong in fixes if (dutch, wrong) not in found]
+    stale = [f"{dutch}: {wrong}" for dutch, fixes in glosses.items() for wrong in fixes if (dutch, wrong) not in found]
+    stale += [dutch for dutch in sorted(removed) if dutch not in {word["dutch"] for word in words}]
     if stale:
-        raise ValueError(f"Gloss overrides no longer match the word list: {', '.join(stale)}")
+        raise ValueError(f"Word overrides no longer match the word list: {', '.join(stale)}")
     return [
-        {**word, "translation": overrides.get(word["dutch"], {}).get(word["translation"], word["translation"])}
+        {**word, "translation": glosses.get(word["dutch"], {}).get(word["translation"], word["translation"])}
         for word in words
+        if word["dutch"] not in removed
     ]
 
 

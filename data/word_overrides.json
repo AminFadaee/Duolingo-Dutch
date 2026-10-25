@@ -2,10 +2,14 @@
   "glosses": {
     "de handboek": {"the hand book": "the handbook"},
     "de kalender": {"calender": "calendar"},
+    "op|slaan": {"to make sense": "to save, to store (a file)"},
     "slaan": {"to turn": "to hit"},
     "zetten": {"to stand up": "to put, to place"}
   },
   "articles": {
     "de school": "de"
-  }
+  },
+  "removed": [
+    "jemand ...s"
+  ]
 }

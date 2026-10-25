@@ -32670,15 +32670,15 @@
     {
       "dutch": "op|slaan",
       "example": {
-        "text": "Dit slaat nergens op.",
-        "translation": "This doesn't make sense.",
+        "text": "Tom slaat de meerderheid van zijn data op in de cloud.",
+        "translation": "Tom stores most of his data in the cloud.",
         "match": "slaat op",
         "source": "tatoeba",
-        "url": "https://tatoeba.org/en/sentences/show/392986",
-        "translation_url": "https://tatoeba.org/en/sentences/show/1898118",
+        "url": "https://tatoeba.org/en/sentences/show/9693496",
+        "translation_url": "https://tatoeba.org/en/sentences/show/5428663",
         "authors": [
-          "Dorenda",
-          "CK"
+          "Nylez",
+          "patgfisher"
         ]
       }
     },
@@ -33168,9 +33168,6 @@
           "CK"
         ]
       }
-    },
-    {
-      "dutch": "jemand ...s"
     },
     {
       "dutch": "niets ...s",

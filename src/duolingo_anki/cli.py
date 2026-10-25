@@ -8,7 +8,7 @@ from pathlib import Path
 DATA = Path("data")
 CACHE = Path(".cache")
 BUILD = Path("build")
-GLOSS_OVERRIDES = "gloss_overrides.json"
+WORD_OVERRIDES = "word_overrides.json"
 
 
 def compact(value: object) -> object:
@@ -30,9 +30,9 @@ def read_words(path: Path) -> list:
     from duolingo_anki.scraper import Word
 
     words = json.loads(path.read_text(encoding="utf-8"))
-    overrides = path.with_name(GLOSS_OVERRIDES)
+    overrides = path.with_name(WORD_OVERRIDES)
     if overrides.exists():
-        words = corrected(words, json.loads(overrides.read_text(encoding="utf-8"))["glosses"])
+        words = corrected(words, json.loads(overrides.read_text(encoding="utf-8")))
     return [Word(**word) for word in words]
 
 
