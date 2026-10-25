@@ -9,7 +9,7 @@ from duolingo_anki.english import Meaning
 
 from duolingo_anki.matching import ARTICLE_BEFORE_PHRASE, FormMatch, Rule, build_rules, tokens
 from duolingo_anki.opus import clean_sentence, find_pairs
-from duolingo_anki.tatoeba import Tatoeba
+from duolingo_anki.tatoeba import Sentence, Tatoeba
 from duolingo_anki.translation import Translator
 from duolingo_anki.wikis import DutchSentence, Wikis
 
@@ -133,7 +133,7 @@ def choose(
     return next((candidate for candidate in tier if candidate.example.text not in used), tier[0] if tier else None)
 
 
-def distinct(tiers: dict[str, list[Candidate]], targets: dict[str, Target]) -> dict[str, Candidate]:
+def distinct(tiers: dict[str, list[Candidate]], targets: dict[str, Target], fixed: set[str] = frozenset()) -> dict[str, Candidate]:
     choice = {text: 0 for text, tier in tiers.items() if tier}
     settled = set()
     moved = True
@@ -146,6 +146,7 @@ def distinct(tiers: dict[str, list[Candidate]], targets: dict[str, Target]) -> d
             if len(claimants) < 2:
                 continue
             winner = min(claimants, key=lambda text: (
+                text not in fixed,
                 tiers[text][choice[text]].rule.form, len(tiers[text]), targets[text].position,
             ))
             for text in claimants:
@@ -170,14 +171,45 @@ def closest_to_machine(options: list, machine: str, meaning: Meaning):
     return min(options, key=lambda option: (not meaning.carried_by(option.text), -similarity(option.text, machine), option.id))
 
 
+class SentenceOverrideError(ValueError):
+    pass
+
+
+def tatoeba_example(dutch: Sentence, translation: Sentence, rule: Rule) -> Example:
+    return Example(
+        text=dutch.text,
+        translation=translation.text,
+        match=rule.label,
+        source="tatoeba",
+        url=dutch.url,
+        translation_url=translation.url,
+        authors=list(dict.fromkeys(author for author in (dutch.author, translation.author) if author)),
+    )
+
+
+def chosen_sentence(tatoeba: Tatoeba, text: str, rules: list[Rule], choice: dict) -> Candidate:
+    id_ = choice["tatoeba"]
+    if id_ not in tatoeba.index.sentences:
+        raise SentenceOverrideError(f"{text}: Tatoeba sentence {id_} no longer exists")
+    rule = min((rule for rule in rules if rule.matches(tatoeba.index.tokens[id_])), key=lambda rule: rule.form, default=None)
+    if rule is None:
+        raise SentenceOverrideError(f"{text}: Tatoeba sentence {id_} does not contain the word")
+    tatoeba.add_indirect_translations({id_})
+    translation = next((option for option in tatoeba.english({id_}).get(id_, []) if option.id == choice["translation"]), None)
+    if translation is None:
+        raise SentenceOverrideError(f"{text}: {choice['translation']} is not a translation of Tatoeba sentence {id_}")
+    return Candidate(tatoeba_example(tatoeba.index.sentences[id_], translation, rule), rule, (id_,))
+
+
 def from_tatoeba(
     tatoeba: Tatoeba,
     rules: dict[str, list[Rule]],
     targets: dict[str, Target],
     vocabulary: Vocabulary,
     translator: Translator,
+    overrides: dict[str, dict],
 ) -> dict[str, Example]:
-    matches = {text: tatoeba.matches(text_rules) for text, text_rules in rules.items()}
+    matches = {text: tatoeba.matches(text_rules) for text, text_rules in rules.items() if text not in overrides}
     tatoeba.add_indirect_translations({
         id_
         for found in matches.values()
@@ -191,23 +223,15 @@ def from_tatoeba(
         for id_, rule in found.items():
             if id_ not in english:
                 continue
-            dutch = tatoeba.index.sentences[id_]
             translation = next((option for option in english[id_] if meaning.carried_by(option.text)), english[id_][0])
-            example = Example(
-                text=dutch.text,
-                translation=translation.text,
-                match=rule.label,
-                source="tatoeba",
-                url=dutch.url,
-                translation_url=translation.url,
-                authors=list(dict.fromkeys(author for author in (dutch.author, translation.author) if author)),
-            )
-            candidates.append(Candidate(example, rule, (id_,)))
+            candidates.append(Candidate(tatoeba_example(tatoeba.index.sentences[id_], translation, rule), rule, (id_,)))
         tiers[text] = best_tier(candidates, targets[text], vocabulary)
-    chosen = distinct(tiers, targets)
+    for text, choice in overrides.items():
+        tiers[text] = [chosen_sentence(tatoeba, text, rules[text], choice)]
+    chosen = distinct(tiers, targets, set(overrides))
     examples = {text: candidate.example for text, candidate in chosen.items()}
     chosen_ids = {text: candidate.order[0] for text, candidate in chosen.items()}
-    ambiguous = [text for text, id_ in chosen_ids.items() if len(english[id_]) > 1]
+    ambiguous = [text for text, id_ in chosen_ids.items() if text not in overrides and len(english[id_]) > 1]
     machine = translator.translate([examples[text].text for text in ambiguous])
     for text, machine_translation in zip(ambiguous, machine):
         best = closest_to_machine(english[chosen_ids[text]], machine_translation, targets[text].meaning)
@@ -340,16 +364,21 @@ def find_examples(
     corpora: dict[str, Path],
     wikis: Wikis,
     translator: Translator,
+    overrides: dict[str, dict | None],
 ) -> dict[str, Example]:
     rules = {entry["dutch"]: build_rules(entry["dutch"], entry.get("headwords", [])) for entry in lexicon}
+    if stale := sorted(overrides.keys() - rules.keys()):
+        raise SentenceOverrideError(f"Sentence overrides for words no longer in the list: {', '.join(stale)}")
+    chosen = {text: choice for text, choice in overrides.items() if choice}
+    searched = {text: text_rules for text, text_rules in rules.items() if text not in overrides}
     headwords = {entry["dutch"]: entry.get("headwords", []) for entry in lexicon}
     targets = {
         entry["dutch"]: Target.of(entry, meanings.get(entry["dutch"], Meaning()), positions[entry["dutch"]])
         for entry in lexicon
     }
     vocabulary = Vocabulary(lexicon, positions)
-    examples = from_tatoeba(tatoeba, rules, targets, vocabulary, translator)
-    from_opus(corpora, rules, targets, vocabulary, examples)
+    examples = from_tatoeba(tatoeba, {**searched, **{text: rules[text] for text in chosen}}, targets, vocabulary, translator, chosen)
+    from_opus(corpora, searched, targets, vocabulary, examples)
     for relaxed in (False, True):
-        from_dutch_sources(tatoeba, wikis, translator, rules, headwords, targets, vocabulary, examples, relaxed)
+        from_dutch_sources(tatoeba, wikis, translator, searched, headwords, targets, vocabulary, examples, relaxed)
     return examples

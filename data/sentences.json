@@ -7477,15 +7477,14 @@
     {
       "dutch": "zetten",
       "example": {
-        "text": "Wanneer zetten jullie jullie kerstboom op?",
-        "translation": "When do you put up your Christmas tree?",
+        "text": "Ze brachten de borden en zetten ze op tafel.",
+        "translation": "They brought the plates and put them on the table.",
         "match": "zetten",
         "source": "tatoeba",
-        "url": "https://tatoeba.org/en/sentences/show/9526008",
-        "translation_url": "https://tatoeba.org/en/sentences/show/5705365",
+        "url": "https://tatoeba.org/en/sentences/show/11847802",
+        "translation_url": "https://tatoeba.org/en/sentences/show/11847795",
         "authors": [
-          "Micsmithel",
-          "CK"
+          "carlosalberto"
         ]
       }
     },
@@ -10965,12 +10964,12 @@
     {
       "dutch": "halen",
       "example": {
-        "text": "We halen je wel in.",
-        "translation": "We'll catch up.",
+        "text": "Wanneer kan ik de auto komen halen?",
+        "translation": "When can I pick up the car?",
         "match": "halen",
         "source": "tatoeba",
-        "url": "https://tatoeba.org/en/sentences/show/12384862",
-        "translation_url": "https://tatoeba.org/en/sentences/show/2241559",
+        "url": "https://tatoeba.org/en/sentences/show/10784065",
+        "translation_url": "https://tatoeba.org/en/sentences/show/10622630",
         "authors": [
           "megamanenm",
           "CK"
@@ -15792,14 +15791,14 @@
     {
       "dutch": "zing",
       "example": {
-        "text": "Zing met ons mee.",
-        "translation": "Sing with us.",
+        "text": "Ik zing graag.",
+        "translation": "I like to sing.",
         "match": "zing",
         "source": "tatoeba",
-        "url": "https://tatoeba.org/en/sentences/show/9072090",
-        "translation_url": "https://tatoeba.org/en/sentences/show/2249965",
+        "url": "https://tatoeba.org/en/sentences/show/1806536",
+        "translation_url": "https://tatoeba.org/en/sentences/show/256531",
         "authors": [
-          "MarijnKp",
+          "martinod",
           "CK"
         ]
       }
@@ -16622,15 +16621,15 @@
     {
       "dutch": "slaan",
       "example": {
-        "text": "Waar sla ik af?",
-        "translation": "Where do I turn?",
-        "match": "sla",
+        "text": "Ik moet echt iemand slaan.",
+        "translation": "I really need to hit somebody.",
+        "match": "slaan",
         "source": "tatoeba",
-        "url": "https://tatoeba.org/en/sentences/show/4215936",
-        "translation_url": "https://tatoeba.org/en/sentences/show/687606",
+        "url": "https://tatoeba.org/en/sentences/show/7460253",
+        "translation_url": "https://tatoeba.org/en/sentences/show/1680",
         "authors": [
-          "megamanenm",
-          "lukaszpp"
+          "Micsmithel",
+          "CM"
         ]
       }
     },
@@ -19779,14 +19778,14 @@
     {
       "dutch": "aanvragen",
       "example": {
-        "text": "Vraag het aan hen.",
-        "translation": "Ask them.",
-        "match": "vraag aan",
+        "text": "Ik heb asiel aangevraagd.",
+        "translation": "I've requested asylum.",
+        "match": "aangevraagd",
         "source": "tatoeba",
-        "url": "https://tatoeba.org/en/sentences/show/7900892",
-        "translation_url": "https://tatoeba.org/en/sentences/show/3820042",
+        "url": "https://tatoeba.org/en/sentences/show/9290264",
+        "translation_url": "https://tatoeba.org/en/sentences/show/6783903",
         "authors": [
-          "MarijnKp",
+          "PaulP",
           "CK"
         ]
       }
@@ -20152,15 +20151,15 @@
     {
       "dutch": "zich wassen",
       "example": {
-        "text": "Hij wast je auto.",
-        "translation": "He's washing your car.",
+        "text": "Hij wast zich.",
+        "translation": "He washes himself.",
         "match": "wast",
         "source": "tatoeba",
-        "url": "https://tatoeba.org/en/sentences/show/1593569",
-        "translation_url": "https://tatoeba.org/en/sentences/show/2318133",
+        "url": "https://tatoeba.org/en/sentences/show/3242812",
+        "translation_url": "https://tatoeba.org/en/sentences/show/435024",
         "authors": [
-          "Citrine",
-          "Gulliver"
+          "PaulP",
+          "lukaszpp"
         ]
       }
     },
@@ -26775,15 +26774,15 @@
     {
       "dutch": "ging",
       "example": {
-        "text": "De hond ging weg.",
-        "translation": "The dog went away.",
+        "text": "Ik ging naar bed.",
+        "translation": "I went to bed.",
         "match": "ging",
         "source": "tatoeba",
-        "url": "https://tatoeba.org/en/sentences/show/847906",
-        "translation_url": "https://tatoeba.org/en/sentences/show/48214",
+        "url": "https://tatoeba.org/en/sentences/show/3268976",
+        "translation_url": "https://tatoeba.org/en/sentences/show/7549207",
         "authors": [
-          "Vulgaris",
-          "CK"
+          "PaulP",
+          "Sifaks"
         ]
       }
     },
@@ -36069,15 +36068,7 @@
       }
     },
     {
-      "dutch": "ongekookt",
-      "example": {
-        "text": "De gekaakte haring wordt ongekookt of voorbewerkt ingelegd in een mengsel van azijn, water, witte uienringen, kruiden (zoals dille, jeneverbessen, peperkorrels, mosterdzaad, laurierbladeren), suiker en zout.",
-        "translation": "The chopped herring is inlaid in a mixture of vinegar, water, white onion rings, herbs (such as dill, juniper berries, peppercorns, mustard seed, bay leaves), sugar and salt.",
-        "match": "ongekookt",
-        "source": "nl.wikipedia",
-        "url": "https://nl.wikipedia.org/wiki/Zure_haring",
-        "translated_by": "Helsinki-NLP/opus-mt-nl-en@48af999f2c59"
-      }
+      "dutch": "ongekookt"
     },
     {
       "dutch": "opgewonden",

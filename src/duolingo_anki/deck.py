@@ -16,6 +16,7 @@ from duolingo_anki.cards import (
     forms_html,
     highlight,
     listenable,
+    pinned,
     merged_translations,
     sound_alikes,
     spoken_text,
@@ -239,12 +240,13 @@ class Built:
 
 def build_deck(data_dir: Path, build_dir: Path, output: Path) -> Built:
     read = lambda name: json.loads((data_dir / name).read_text(encoding="utf-8"))
-    words = entries(corrected(read("words.json"), read("gloss_overrides.json")))
+    overrides = read("gloss_overrides.json")
+    words = entries(corrected(read("words.json"), overrides["glosses"]))
     items = read("sentences.json")["entries"]
     keys = {item["dutch"]: words[item["dutch"]].skills for item in items}
     aliases = read(GUID_ALIASES)
     changes = check_keys(read(NOTE_KEYS) if (data_dir / NOTE_KEYS).exists() else keys, keys, aliases)
-    lexicon = {entry["dutch"]: entry.get("headwords", []) for entry in read("lexicon.json")["entries"]}
+    lexicon = pinned({entry["dutch"]: entry.get("headwords", []) for entry in read("lexicon.json")["entries"]}, overrides["articles"])
     audio = {entry["dutch"]: entry for entry in read("audio.json")["entries"]}
     media = MediaLibrary(data_dir / "audio", build_dir / "media")
     model = genanki.Model(

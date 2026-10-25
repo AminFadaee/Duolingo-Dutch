@@ -109,6 +109,23 @@ def alternatives(dutch: str) -> list[str]:
     return [part for part in ALTERNATIVES.split(text) if part]
 
 
+def pinned(lexicon: dict[str, list[dict]], articles: dict[str, str]) -> dict[str, list[dict]]:
+    stale = [
+        dutch for dutch, article in articles.items()
+        if not (nouns := [headword for headword in lexicon.get(dutch, []) if headword.get("noun")])
+        or all(headword["noun"].get("article") == article for headword in nouns)
+    ]
+    if stale:
+        raise ValueError(f"Article overrides no longer needed or matching the word list: {', '.join(stale)}")
+    return {
+        dutch: [
+            {**headword, "noun": {**headword["noun"], "article": articles[dutch]}} if dutch in articles and headword.get("noun") else headword
+            for headword in headwords
+        ]
+        for dutch, headwords in lexicon.items()
+    }
+
+
 def spoken_text(dutch: str) -> str | None:
     return ", ".join(alternatives(dutch)) or None
 

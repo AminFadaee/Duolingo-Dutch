@@ -66,9 +66,10 @@ when the Duolingo wiki fixes a typo, the step stops and prints the line to add t
 the old text to the new so the note keeps its identity. Words that disappear without a successor are listed.
 
 Duolingo only provides the word list, its English glosses and the skill tags. Repeated glosses of a word are merged,
-and the few misspelt ones are corrected in `gloss_overrides.json`, which the deck step applies; it fails when an
-override no longer matches the word list. Grammar (article, plural, verb
-forms) comes from Wiktionary, which an official word list check showed to be the more accurate of the two.
+and the few wrong ones are corrected in `gloss_overrides.json` (*calender*, and *slaan* glossed "to turn", which is
+*afslaan*), which every step applies. Grammar (article, plural, verb forms) comes from Wiktionary, which an official
+word list check showed to be the more accurate of the two; the same file pins an article by hand where needed
+(*de school*). Every override fails the build when it no longer matches.
 
 ### Scrape
 
@@ -106,8 +107,13 @@ translation that carries the word's meaning, then a sentence that fits the word 
 verbs, no infinitive used as a noun for verbs), then the form being taught, then a short single sentence made of
 words taught up to that point in the course. When no Tatoeba sentence carries the meaning, the later sources are
 tried for a short one that does. Each word gets a sentence of its own unless all its best options are taken by
-words that match them better. Words without any example sentence keep their cards without one. The step lists the words whose
-translation still misses the meaning and the sentences shared by several words.
+words that match them better. Words without any example sentence keep their cards without one.
+
+`sentence_overrides.json` picks the Tatoeba sentence and translation by hand for the few words whose matched sentence
+uses a different word (*vraag het aan* for *aanvragen*, *haal je in* for *halen*), or gives a word no sentence when no
+source has a fitting one. The step fails when a chosen sentence no longer contains the word or loses that
+translation. The step lists the words whose translation still misses the meaning and the sentences shared by
+several words.
 
 ### Audio
 

@@ -8,6 +8,7 @@ from pathlib import Path
 DATA = Path("data")
 CACHE = Path(".cache")
 BUILD = Path("build")
+GLOSS_OVERRIDES = "gloss_overrides.json"
 
 
 def compact(value: object) -> object:
@@ -25,9 +26,14 @@ def write_json(path: Path, data: object) -> None:
 
 
 def read_words(path: Path) -> list:
+    from duolingo_anki.cards import corrected
     from duolingo_anki.scraper import Word
 
-    return [Word(**word) for word in json.loads(path.read_text(encoding="utf-8"))]
+    words = json.loads(path.read_text(encoding="utf-8"))
+    overrides = path.with_name(GLOSS_OVERRIDES)
+    if overrides.exists():
+        words = corrected(words, json.loads(overrides.read_text(encoding="utf-8"))["glosses"])
+    return [Word(**word) for word in words]
 
 
 def report(title: str, items: list) -> None:
@@ -102,6 +108,7 @@ def run_sentences(args: argparse.Namespace) -> None:
         {name: item.path for name, item in corpora.items()},
         Wikis(),
         Translator(),
+        json.loads(args.overrides.read_text(encoding="utf-8")),
     )
     write_json(args.output, {
         "sources": {
@@ -169,6 +176,7 @@ def main() -> None:
     sentences_parser.add_argument("--words", type=Path, default=DATA / "words.json")
     sentences_parser.add_argument("--lexicon", type=Path, default=DATA / "lexicon.json")
     sentences_parser.add_argument("--output", type=Path, default=DATA / "sentences.json")
+    sentences_parser.add_argument("--overrides", type=Path, default=DATA / "sentence_overrides.json")
     sentences_parser.add_argument("--cache-dir", type=Path, default=CACHE)
     sentences_parser.set_defaults(run=run_sentences)
 

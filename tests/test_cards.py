@@ -76,3 +76,14 @@ def test_names_have_no_listening_card():
     from duolingo_anki.cards import listenable
     assert not listenable([{"word": "Gent", "pos": "name"}])
     assert listenable([{"word": "gent", "pos": "noun"}])
+
+
+def test_article_pins_apply_and_fail_when_no_longer_needed():
+    import pytest
+    from duolingo_anki.cards import pinned
+    school = {"de school": [{"word": "school", "noun": {"article": "de/het", "plural": "scholen"}}]}
+    assert pinned(school, {"de school": "de"})["de school"][0]["noun"] == {"article": "de", "plural": "scholen"}
+    with pytest.raises(ValueError, match="de school"):
+        pinned(pinned(school, {"de school": "de"}), {"de school": "de"})
+    with pytest.raises(ValueError, match="het huis"):
+        pinned(school, {"het huis": "het"})

@@ -134,3 +134,46 @@ def test_a_meaning_only_replaces_a_short_sentence_with_a_short_one():
 
 def test_hyphens_do_not_split_words():
     assert Meaning.of(["co-operation"]).carried_by("Thank you for your cooperation.")
+
+
+class FakeTatoeba:
+    def __init__(self, dutch: dict[int, str], links: dict[int, list[tuple[int, str]]]):
+        from duolingo_anki.matching import tokens
+        from duolingo_anki.tatoeba import Sentence
+
+        self.index = type("Index", (), {})()
+        self.index.sentences = {id_: Sentence(id_, text, "author") for id_, text in dutch.items()}
+        self.index.tokens = {id_: tokens(text) for id_, text in dutch.items()}
+        self.links = {id_: [Sentence(target, text, "translator") for target, text in targets] for id_, targets in links.items()}
+
+    def add_indirect_translations(self, ids):
+        pass
+
+    def english(self, ids):
+        return {id_: self.links[id_] for id_ in ids if id_ in self.links}
+
+
+def test_a_chosen_sentence_is_used_as_given():
+    from duolingo_anki.sentences import chosen_sentence
+    tatoeba = FakeTatoeba({1: "Hij wast zich."}, {1: [(2, "He washes himself.")]})
+    rules = build_rules("zich wassen", [{"word": "zich wassen", "forms": ["wassen", "wast"]}])
+    candidate = chosen_sentence(tatoeba, "zich wassen", rules, {"tatoeba": 1, "translation": 2})
+    assert (candidate.example.text, candidate.example.translation, candidate.example.match) == ("Hij wast zich.", "He washes himself.", "wast")
+
+
+def test_a_chosen_sentence_must_contain_the_word_and_its_translation():
+    import pytest
+    from duolingo_anki.sentences import SentenceOverrideError, chosen_sentence
+    tatoeba = FakeTatoeba({1: "Ik ging naar bed."}, {1: [(2, "I went to bed.")]})
+    rules = build_rules("ging", [{"word": "ging", "forms": ["ging"]}])
+    with pytest.raises(SentenceOverrideError, match="not a translation"):
+        chosen_sentence(tatoeba, "ging", rules, {"tatoeba": 1, "translation": 3})
+    with pytest.raises(SentenceOverrideError, match="does not contain"):
+        chosen_sentence(tatoeba, "zing", build_rules("zing", [{"word": "zing", "forms": ["zing"]}]), {"tatoeba": 1, "translation": 2})
+
+
+def test_chosen_sentences_win_their_sentence():
+    shared = candidate("Hij wast zich.", "", word="wast")
+    tiers = {"zich wassen": [shared], "wassen": [shared, candidate("Ik was de auto.", "", order=1, word="was")]}
+    chosen = distinct(tiers, {"zich wassen": Target(position=9), "wassen": Target(position=1)}, {"zich wassen"})
+    assert (chosen["zich wassen"].example.text, chosen["wassen"].example.text) == ("Hij wast zich.", "Ik was de auto.")

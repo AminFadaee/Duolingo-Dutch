@@ -1,4 +1,11 @@
 {
-  "de handboek": {"the hand book": "the handbook"},
-  "de kalender": {"calender": "calendar"}
+  "glosses": {
+    "de handboek": {"the hand book": "the handbook"},
+    "de kalender": {"calender": "calendar"},
+    "slaan": {"to turn": "to hit"},
+    "zetten": {"to stand up": "to put, to place"}
+  },
+  "articles": {
+    "de school": "de"
+  }
 }
