@@ -27,5 +27,5 @@ jobs:
         run: |
           gh release create "$GITHUB_REF_NAME" build/duolingo_dutch.apkg \
             --title "Duolingo Dutch ${GITHUB_REF_NAME#v}" \
-            --notes "Anki deck built from the data in this commit: duolingo_dutch.apkg. Importing a newer version keeps your progress." \
+            --notes "Anki deck built from the data in this commit: duolingo_dutch.apkg. Importing a newer version keeps your progress; when an update adds card fields, tick Merge note types in the import dialog (Anki 23.10 or later)." \
             --verify-tag
