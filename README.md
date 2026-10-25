@@ -1,8 +1,8 @@
 # Duolingo Dutch
 
 An Anki deck of the vocabulary of Duolingo's Dutch (Netherlands) course, and the pipeline that builds it: 2,750
-words and phrases from all 117 skills, each with its grammatical forms and Dutch audio, and all but three with a real
-example sentence, its English translation and audio.
+words and phrases from all 117 skills, each with its grammatical forms and Dutch audio, and all but one with an
+example sentence, its English translation and audio. Almost all sentences are real ones from public sources.
 
 **Get the deck:** [on AnkiWeb](https://ankiweb.net/shared/info/400760191), or download `duolingo_dutch.apkg` from the
 [latest release](https://github.com/AminFadaee/Duolingo-Dutch/releases/latest).
@@ -40,7 +40,7 @@ instead:
 
 - Duolingo skill: `DD::Basics_1`, `DD::Food_2`, …
 - word type: `DD::Noun`, `DD::Verb`, `DD::Adjective`, `DD::Separable_verb`, …
-- `DD::Machine_translated` for the 2% of sentences whose translation is machine-made
+- `DD::Machine_translated` for the 1.4% of sentences whose translation is machine-made
 
 To study one skill, create a filtered deck (Tools → Create Filtered Deck) and search for
 `deck:"Duolingo Dutch" tag:DD::Food_1`. To skip cards, suspend them rather than deleting them: deleted cards come
@@ -109,10 +109,12 @@ words taught up to that point in the course. When no Tatoeba sentence carries th
 tried for a short one that does. Each word gets a sentence of its own unless all its best options are taken by
 words that match them better. Words without any example sentence keep their cards without one.
 
-`sentence_overrides.json` picks the Tatoeba sentence and translation by hand for the few words whose matched sentence
-uses a different word (*vraag het aan* for *aanvragen*, *haal je in* for *halen*), or gives a word no sentence when no
-source has a fitting one. The step fails when a chosen sentence no longer contains the word or loses that
-translation. The step lists the words whose translation still misses the meaning and the sentences shared by
+`sentence_overrides.json` sets the sentence by hand for a few dozen words: a Tatoeba sentence and translation where
+the matched sentence used a different word (*vraag het aan* for *aanvragen*, *haal je in* for *halen*); a corrected
+translation of a human-written Dutch sentence whose machine translation was wrong; or a sentence written for this
+deck where no source had a fitting one (*hagelslag*, *ongekookt*). Cards say "translation written for this deck" or
+"Written for this deck" in their source line. The step fails when a chosen sentence no longer contains the word or
+loses that translation. The step lists the words whose translation still misses the meaning and the sentences shared by
 several words.
 
 ### Audio

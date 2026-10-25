@@ -177,3 +177,22 @@ def test_chosen_sentences_win_their_sentence():
     tiers = {"zich wassen": [shared], "wassen": [shared, candidate("Ik was de auto.", "", order=1, word="was")]}
     chosen = distinct(tiers, {"zich wassen": Target(position=9), "wassen": Target(position=1)}, {"zich wassen"})
     assert (chosen["zich wassen"].example.text, chosen["wassen"].example.text) == ("Hij wast zich.", "Ik was de auto.")
+
+
+def test_a_written_sentence_is_marked_and_must_contain_the_word():
+    import pytest
+    from duolingo_anki.sentences import SentenceOverrideError, chosen_sentence
+    rules = build_rules("ongekookt", [{"word": "ongekookt", "forms": ["ongekookt", "ongekookte"]}])
+    candidate = chosen_sentence(None, "ongekookt", rules, {"text": "Deze rijst is nog ongekookt.", "translation": "This rice is still uncooked."})
+    assert (candidate.example.source, candidate.example.written, candidate.example.match) == ("deck", "sentence", "ongekookt")
+    with pytest.raises(SentenceOverrideError, match="does not contain"):
+        chosen_sentence(None, "ongekookt", rules, {"text": "Deze rijst is gekookt.", "translation": "This rice is cooked."})
+
+
+def test_a_retranslated_sentence_keeps_its_source():
+    from duolingo_anki.sentences import chosen_sentence
+    rules = build_rules("Hasselt", [{"word": "Hasselt", "forms": ["Hasselt"]}])
+    choice = {"text": "Er wordt nog steeds jenever gestookt in Hasselt.", "translation": "Jenever is still distilled in Hasselt.",
+              "source": "tatoeba", "url": "https://tatoeba.org/en/sentences/show/1", "authors": ["someone"]}
+    example = chosen_sentence(None, "Hasselt", rules, choice).example
+    assert (example.source, example.written, example.authors, example.translated_by) == ("tatoeba", "translation", ["someone"], None)

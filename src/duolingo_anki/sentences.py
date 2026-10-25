@@ -17,6 +17,7 @@ SENTENCE_END = re.compile(r"[.!?]+(?=\s|$)")
 PREFERRED_LENGTH = range(4, 13)
 MAX_LENGTH = 20
 TRANSLATED_PER_ENTRY = 3
+WRITTEN_SOURCE = "deck"
 REFLEXIVE = "zich "
 REFLEXIVE_PRONOUNS = {"me", "mij", "je", "jou", "zich", "ons", "u", "mezelf", "jezelf", "zichzelf", "onszelf", "uzelf"}
 SUBJECT_PRONOUNS = {"ik", "jij", "je", "hij", "zij", "ze", "het", "wij", "we", "jullie", "u", "men", "er"}
@@ -32,6 +33,7 @@ class Example:
     translation_url: str | None = None
     authors: list[str] = field(default_factory=list)
     translated_by: str | None = None
+    written: str | None = None
 
 
 @dataclass(frozen=True)
@@ -187,13 +189,34 @@ def tatoeba_example(dutch: Sentence, translation: Sentence, rule: Rule) -> Examp
     )
 
 
+def matching_rule(text: str, rules: list[Rule], sentence_tokens: list[str], sentence: str) -> Rule:
+    rule = min((rule for rule in rules if rule.matches(sentence_tokens)), key=lambda rule: rule.form, default=None)
+    if rule is None:
+        raise SentenceOverrideError(f"{text}: {sentence} does not contain the word")
+    return rule
+
+
+def written_sentence(text: str, rules: list[Rule], choice: dict) -> Candidate:
+    rule = matching_rule(text, rules, tokens(choice["text"]), repr(choice["text"]))
+    example = Example(
+        text=choice["text"],
+        translation=choice["translation"],
+        match=rule.label,
+        source=choice.get("source", WRITTEN_SOURCE),
+        url=choice.get("url"),
+        authors=choice.get("authors", []),
+        written="translation" if "source" in choice else "sentence",
+    )
+    return Candidate(example, rule, (0,))
+
+
 def chosen_sentence(tatoeba: Tatoeba, text: str, rules: list[Rule], choice: dict) -> Candidate:
+    if "text" in choice:
+        return written_sentence(text, rules, choice)
     id_ = choice["tatoeba"]
     if id_ not in tatoeba.index.sentences:
         raise SentenceOverrideError(f"{text}: Tatoeba sentence {id_} no longer exists")
-    rule = min((rule for rule in rules if rule.matches(tatoeba.index.tokens[id_])), key=lambda rule: rule.form, default=None)
-    if rule is None:
-        raise SentenceOverrideError(f"{text}: Tatoeba sentence {id_} does not contain the word")
+    rule = matching_rule(text, rules, tatoeba.index.tokens[id_], f"Tatoeba sentence {id_}")
     tatoeba.add_indirect_translations({id_})
     translation = next((option for option in tatoeba.english({id_}).get(id_, []) if option.id == choice["translation"]), None)
     if translation is None:

@@ -15451,7 +15451,14 @@
       }
     },
     {
-      "dutch": "de winterkleren"
+      "dutch": "de winterkleren",
+      "example": {
+        "text": "In november haal ik mijn winterkleren uit de kast.",
+        "translation": "In November I get my winter clothes out of the wardrobe.",
+        "match": "winterkleren",
+        "source": "deck",
+        "written": "sentence"
+      }
     },
     {
       "dutch": "de vrouwenkleren",
@@ -15468,11 +15475,11 @@
       "dutch": "de zomerkleren",
       "example": {
         "text": "Zomerkleren zijn vaak kleurig en dun en zijn ongeschikt voor de Nederlandse winters.",
-        "translation": "Summer leathers are often colourful and thin and are unsuitable for the Dutch winters.",
+        "translation": "Summer clothes are often colourful and thin and unsuitable for Dutch winters.",
         "match": "zomerkleren",
         "source": "nl.wiktionary",
         "url": "https://nl.wiktionary.org/wiki/zomerkleren",
-        "translated_by": "Helsinki-NLP/opus-mt-nl-en@48af999f2c59"
+        "written": "translation"
       }
     },
     {
@@ -17067,12 +17074,11 @@
     {
       "dutch": "hoogachtend",
       "example": {
-        "text": "Hoogachtend Co-op 2 (volgt handtekening van P.",
-        "translation": "Sincerely Co-op 2 (follows signature of P.",
+        "text": "Ik sluit mijn sollicitatiebrief af met \"Hoogachtend\".",
+        "translation": "I end my job application letter with \"Yours sincerely\".",
         "match": "hoogachtend",
-        "source": "nl.wikipedia",
-        "url": "https://nl.wikipedia.org/wiki/Co-op_2",
-        "translated_by": "Helsinki-NLP/opus-mt-nl-en@48af999f2c59"
+        "source": "deck",
+        "written": "sentence"
       }
     },
     {
@@ -24334,12 +24340,11 @@
     {
       "dutch": "allerliefst",
       "example": {
-        "text": "Haar beste vriendin kon niet komen, maar schreef een allerliefst kaartje.",
-        "translation": "Her best friend couldn't make it, but wrote a favorite card.",
+        "text": "Ik wil allerliefst een hond.",
+        "translation": "More than anything, I want a dog.",
         "match": "allerliefst",
-        "source": "nl.wiktionary",
-        "url": "https://nl.wiktionary.org/wiki/allerliefst",
-        "translated_by": "Helsinki-NLP/opus-mt-nl-en@48af999f2c59"
+        "source": "deck",
+        "written": "sentence"
       }
     },
     {
@@ -26596,14 +26601,14 @@
       "dutch": "-talig",
       "example": {
         "text": "Ik spreek vier talen; ik ben dus viertalig.",
-        "translation": "I speak four languages, so I am four languages.",
+        "translation": "I speak four languages, so I am quadrilingual.",
         "match": "-talig",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/5953788",
         "authors": [
           "PaulP"
         ],
-        "translated_by": "Helsinki-NLP/opus-mt-nl-en@48af999f2c59"
+        "written": "translation"
       }
     },
     {
@@ -35891,11 +35896,11 @@
       "dutch": "het liefdesverdriet",
       "example": {
         "text": "In een heel enkel geval komt iemand tot zelfmoord vanwege liefdesverdriet.",
-        "translation": "In a very rare case, a person comes to suicide because of heartbreak.",
+        "translation": "In very rare cases, someone takes their own life because of heartbreak.",
         "match": "liefdesverdriet",
         "source": "nl.wikipedia",
         "url": "https://nl.wikipedia.org/wiki/Liefdesverdriet",
-        "translated_by": "Helsinki-NLP/opus-mt-nl-en@48af999f2c59"
+        "written": "translation"
       }
     },
     {
@@ -36068,7 +36073,14 @@
       }
     },
     {
-      "dutch": "ongekookt"
+      "dutch": "ongekookt",
+      "example": {
+        "text": "Deze rijst is nog ongekookt.",
+        "translation": "This rice is still uncooked.",
+        "match": "ongekookt",
+        "source": "deck",
+        "written": "sentence"
+      }
     },
     {
       "dutch": "opgewonden",
@@ -36296,14 +36308,14 @@
       "dutch": "ademloos",
       "example": {
         "text": "Je wacht ademloos tot de dobbelstenen worden gegooid.",
-        "translation": "You wait breathless until the dice are thrown.",
+        "translation": "You wait breathlessly until the dice are thrown.",
         "match": "ademloos",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/3552082",
         "authors": [
           "vvv123"
         ],
-        "translated_by": "Helsinki-NLP/opus-mt-nl-en@48af999f2c59"
+        "written": "translation"
       }
     },
     {
@@ -39186,12 +39198,11 @@
     {
       "dutch": "de Tachtigjarige Oorlog",
       "example": {
-        "text": "De Staats-Spaanse Linies was een stelsel van verbindingslinies in Staats-Vlaanderen aangelegd tijdens de Tachtigjarige Oorlog.",
-        "translation": "The State-Spanish Linies were a system of connecting lines in the State-Flanders during the Eighty Years' War.",
+        "text": "De Tachtigjarige Oorlog begon in 1568.",
+        "translation": "The Eighty Years' War began in 1568.",
         "match": "de Tachtigjarige Oorlog",
-        "source": "nl.wikipedia",
-        "url": "https://nl.wikipedia.org/wiki/Staatsen",
-        "translated_by": "Helsinki-NLP/opus-mt-nl-en@48af999f2c59"
+        "source": "deck",
+        "written": "sentence"
       }
     },
     {
@@ -39477,11 +39488,11 @@
       "dutch": "de Nationale Dodenherdenking",
       "example": {
         "text": "De Nationale Dodenherdenking is oorspronkelijk de herdenking van tijdens de Tweede Wereldoorlog omgekomen Nederlandse militairen en verzetsstrijders.",
-        "translation": "The National Remembrance of Death was originally the commemoration of Dutch soldiers and resistance fighters who died during the Second World War.",
+        "translation": "Remembrance Day was originally the commemoration of Dutch soldiers and resistance fighters who died in the Second World War.",
         "match": "de Nationale Dodenherdenking",
         "source": "nl.wikipedia",
         "url": "https://nl.wikipedia.org/wiki/Nationale_Dodenherdenking",
-        "translated_by": "Helsinki-NLP/opus-mt-nl-en@48af999f2c59"
+        "written": "translation"
       }
     },
     {
@@ -39546,12 +39557,11 @@
     {
       "dutch": "Pakjesavond",
       "example": {
-        "text": "Deze tante blijkt niets met pakjesavond of Sinterklaas te hebben.",
-        "translation": "This aunt doesn't seem to have anything to do with package night or Saint Nicholas.",
+        "text": "Op pakjesavond krijgen de kinderen cadeautjes.",
+        "translation": "On St. Nicholas Eve the children get presents.",
         "match": "Pakjesavond",
-        "source": "nl.wikipedia",
-        "url": "https://nl.wikipedia.org/wiki/Slot_Marsepeinstein",
-        "translated_by": "Helsinki-NLP/opus-mt-nl-en@48af999f2c59"
+        "source": "deck",
+        "written": "sentence"
       }
     },
     {
@@ -39602,22 +39612,21 @@
       "dutch": "Koningsdag",
       "example": {
         "text": "Een jaar eerder werd Koningsdag vanwege de coronacrisis, zonder publiek, in Eindhoven gevierd.",
-        "translation": "A year earlier King's Day was celebrated in Eindhoven because of the corona crisis, without an audience.",
+        "translation": "A year earlier, King's Day was celebrated in Eindhoven without an audience because of the coronavirus crisis.",
         "match": "Koningsdag",
         "source": "nl.wikipedia",
         "url": "https://nl.wikipedia.org/wiki/Koningsdag_%28Nederland%29",
-        "translated_by": "Helsinki-NLP/opus-mt-nl-en@48af999f2c59"
+        "written": "translation"
       }
     },
     {
       "dutch": "Prinsjesdag",
       "example": {
-        "text": "Om die reden wordt Prinsjesdag ook wel de Derde Dinsdag genoemd.",
-        "translation": "For that reason Princess Day is also called the Third Tuesday.",
+        "text": "Op Prinsjesdag maakt de regering haar plannen bekend.",
+        "translation": "On Prince's Day the government announces its plans.",
         "match": "Prinsjesdag",
-        "source": "nl.wikipedia",
-        "url": "https://nl.wikipedia.org/wiki/Prinsjesdag",
-        "translated_by": "Helsinki-NLP/opus-mt-nl-en@48af999f2c59"
+        "source": "deck",
+        "written": "sentence"
       }
     },
     {
@@ -39909,14 +39918,14 @@
       "dutch": "de wadden",
       "example": {
         "text": "Wadden zijn buitendijkse gronden die alleen bij hoogwater overstromen.",
-        "translation": "Wadden are outskirts that flood only at high tide.",
+        "translation": "The wadden are tidal flats outside the dikes that only flood at high tide.",
         "match": "wadden",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/8228555",
         "authors": [
           "meshbags"
         ],
-        "translated_by": "Helsinki-NLP/opus-mt-nl-en@48af999f2c59"
+        "written": "translation"
       }
     },
     {
@@ -40012,33 +40021,32 @@
       "dutch": "de vla",
       "example": {
         "text": "Als je zo je vla nog wilt, moet je wel je bord leegeten!",
-        "translation": "If you still want your custard, you have to eat your plate!",
+        "translation": "If you want your custard in a minute, you have to finish your plate!",
         "match": "vla",
         "source": "nl.wiktionary",
         "url": "https://nl.wiktionary.org/wiki/vla",
-        "translated_by": "Helsinki-NLP/opus-mt-nl-en@48af999f2c59"
+        "written": "translation"
       }
     },
     {
       "dutch": "de hagelslag",
       "example": {
-        "text": "De hagelslag aan onze auto was enorm.",
-        "translation": "The sprinkles on our car were huge.",
+        "text": "Ik eet graag brood met hagelslag.",
+        "translation": "I like to eat bread with chocolate sprinkles.",
         "match": "hagelslag",
-        "source": "nl.wiktionary",
-        "url": "https://nl.wiktionary.org/wiki/hagelslag",
-        "translated_by": "Helsinki-NLP/opus-mt-nl-en@48af999f2c59"
+        "source": "deck",
+        "written": "sentence"
       }
     },
     {
       "dutch": "de appelflap",
       "example": {
         "text": "Een appelflap kan eventueel worden aangevuld met amandelspijs, krenten en/of rozijnen.",
-        "translation": "An apple flap can possibly be supplemented with almond food, dried grapes and/or raisins.",
+        "translation": "An apple turnover can also be filled with almond paste, currants and/or raisins.",
         "match": "appelflap",
         "source": "nl.wiktionary",
         "url": "https://nl.wiktionary.org/wiki/appelflap",
-        "translated_by": "Helsinki-NLP/opus-mt-nl-en@48af999f2c59"
+        "written": "translation"
       }
     },
     {
@@ -40070,11 +40078,11 @@
       "dutch": "de stroopwafel",
       "example": {
         "text": "Het ontwerp is geïnspireerd op het uiterlijk van de Goudse stroopwafel.",
-        "translation": "The design is inspired by the look of the Gouda syrup waffle.",
+        "translation": "The design is inspired by the look of the Gouda caramel waffle.",
         "match": "stroopwafel",
         "source": "nl.wikipedia",
         "url": "https://nl.wikipedia.org/wiki/Huis_van_de_Stad_%28Gouda%29",
-        "translated_by": "Helsinki-NLP/opus-mt-nl-en@48af999f2c59"
+        "written": "translation"
       }
     },
     {
@@ -40093,7 +40101,14 @@
       }
     },
     {
-      "dutch": "het bakje troost"
+      "dutch": "het bakje troost",
+      "example": {
+        "text": "Zal ik een bakje troost voor je zetten?",
+        "translation": "Shall I make you a cup of coffee?",
+        "match": "bakje troost",
+        "source": "deck",
+        "written": "sentence"
+      }
     },
     {
       "dutch": "de kroket",
@@ -40165,23 +40180,22 @@
     {
       "dutch": "de stamppot",
       "example": {
-        "text": "Bijvoorbeeld als broodbeleg of door een stamppot.",
-        "translation": "For example, as bread or by a stew.",
+        "text": "In de winter eten we vaak stamppot.",
+        "translation": "In winter we often eat mashed vegetables.",
         "match": "stamppot",
-        "source": "nl.wikipedia",
-        "url": "https://nl.wikipedia.org/wiki/Kaantjes",
-        "translated_by": "Helsinki-NLP/opus-mt-nl-en@48af999f2c59"
+        "source": "deck",
+        "written": "sentence"
       }
     },
     {
       "dutch": "de rookworst",
       "example": {
         "text": "Op het menu staat stamppot van aardappelen met boerenkool, rookworst en uitgebakken spek.",
-        "translation": "On the menu you will find potato stew with kale, smoke sausage and bacon.",
+        "translation": "On the menu is mashed potatoes with kale, smoked sausage and fried bacon.",
         "match": "rookworst",
         "source": "nl.wiktionary",
         "url": "https://nl.wiktionary.org/wiki/rookworst",
-        "translated_by": "Helsinki-NLP/opus-mt-nl-en@48af999f2c59"
+        "written": "translation"
       }
     },
     {
@@ -40329,11 +40343,11 @@
       "dutch": "het Atomium",
       "example": {
         "text": "Toeristisch betekent het Atomium voor Brussel wat de Eiffeltoren is voor Parijs.",
-        "translation": "Tourist means the Atomium for Brussels which is the Eiffel Tower for Paris.",
+        "translation": "For tourists, the Atomium is to Brussels what the Eiffel Tower is to Paris.",
         "match": "Atomium",
         "source": "nl.wikipedia",
         "url": "https://nl.wikipedia.org/wiki/Expo_58",
-        "translated_by": "Helsinki-NLP/opus-mt-nl-en@48af999f2c59"
+        "written": "translation"
       }
     },
     {
@@ -40355,47 +40369,45 @@
       "dutch": "de cuberdon",
       "example": {
         "text": "De productie van de cuberdon (Gentse neuzekes) is er de voornaamste activiteit.",
-        "translation": "The production of the cuberton (Gentse nosekes) is the main activity.",
+        "translation": "Making cuberdons (Ghent noses) is the main activity there.",
         "match": "cuberdon",
         "source": "nl.wikipedia",
         "url": "https://nl.wikipedia.org/wiki/Confiserie_Geldhof",
-        "translated_by": "Helsinki-NLP/opus-mt-nl-en@48af999f2c59"
+        "written": "translation"
       }
     },
     {
       "dutch": "de kletskop",
       "example": {
-        "text": "Kletskop met ijs.",
-        "translation": "Bollocks on the rocks.",
+        "text": "Bij de koffie krijg je een kletskop.",
+        "translation": "You get a lace cookie with your coffee.",
         "match": "kletskop",
-        "source": "nl.wiktionary",
-        "url": "https://nl.wiktionary.org/wiki/kletskop",
-        "translated_by": "Helsinki-NLP/opus-mt-nl-en@48af999f2c59"
+        "source": "deck",
+        "written": "sentence"
       }
     },
     {
       "dutch": "het Gravensteen",
       "example": {
-        "text": "Waarschijnlijk bierclub in het Gravensteen.",
-        "translation": "Probably beer club at the Gravensteen.",
+        "text": "Het Gravensteen is een middeleeuwse burcht in Gent.",
+        "translation": "The Gravensteen is a medieval castle in Ghent.",
         "match": "Gravensteen",
-        "source": "nl.wikipedia",
-        "url": "https://nl.wikipedia.org/wiki/Gravensteen_%28Gent%29",
-        "translated_by": "Helsinki-NLP/opus-mt-nl-en@48af999f2c59"
+        "source": "deck",
+        "written": "sentence"
       }
     },
     {
       "dutch": "Hasselt",
       "example": {
         "text": "Er wordt nog steeds jenever gestookt in Hasselt.",
-        "translation": "Genever is still fired in Hasselt.",
+        "translation": "Jenever is still distilled in Hasselt.",
         "match": "Hasselt",
         "source": "tatoeba",
         "url": "https://tatoeba.org/en/sentences/show/13605501",
         "authors": [
           "PaulP"
         ],
-        "translated_by": "Helsinki-NLP/opus-mt-nl-en@48af999f2c59"
+        "written": "translation"
       }
     },
     {
@@ -40498,12 +40510,11 @@
     {
       "dutch": "het stoofvlees",
       "example": {
-        "text": "Net zoals alle eten in België is stoofvlees klaargemaakt in bier.",
-        "translation": "Like all food in Belgium, stew is prepared in beer.",
+        "text": "In België eet men stoofvlees vaak met friet.",
+        "translation": "In Belgium, beef stew is often eaten with fries.",
         "match": "stoofvlees",
-        "source": "nl.wiktionary",
-        "url": "https://nl.wiktionary.org/wiki/stoofvlees",
-        "translated_by": "Helsinki-NLP/opus-mt-nl-en@48af999f2c59"
+        "source": "deck",
+        "written": "sentence"
       }
     },
     {

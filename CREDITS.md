@@ -19,6 +19,10 @@ sentence or page, the `translation_url` and the `authors`.
 | [Dutch Wiktionary](https://nl.wiktionary.org/) | Dutch example sentences | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) |
 | [Dutch Wikipedia](https://nl.wikipedia.org/) | Dutch example sentences | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) |
 
+A few sentences and translations, listed in `sentence_overrides.json` and marked "written for this deck" on the
+cards, were written for this deck with the help of Claude, an AI model, where no source had a fitting sentence or a
+correct translation. They are released under the same CC BY-SA 4.0 license.
+
 OPUS asks users of its corpora to cite J. Tiedemann, 2012, *Parallel Data, Tools and Interfaces in OPUS*, LREC
 2012.
 

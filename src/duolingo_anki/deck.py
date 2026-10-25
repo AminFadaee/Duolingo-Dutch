@@ -53,6 +53,7 @@ SOURCE_NAMES = {
     "opus/GlobalVoices": "Global Voices (OPUS)",
     "nl.wiktionary": "Wiktionary",
     "nl.wikipedia": "Wikipedia",
+    "deck": "Written for this deck",
 }
 
 SENTENCE_PLAYER = (
@@ -163,6 +164,8 @@ def source_html(example: dict) -> str:
     label = f'<a href="{html.escape(example["url"])}">{name}</a>' if example.get("url") else name
     if example.get("translated_by"):
         label += " · machine translation"
+    if example.get("written") == "translation":
+        label += " · translation written for this deck"
     return label
 
 

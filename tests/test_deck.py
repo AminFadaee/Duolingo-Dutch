@@ -104,3 +104,9 @@ def test_a_renamed_word_needs_an_alias(tmp_path):
     (data / "guid_aliases.json").write_text(json.dumps({"de man": "man"}), encoding="utf-8")
     build_deck(data, tmp_path / "build", tmp_path / "deck.apkg")
     assert notes(tmp_path / "deck.apkg")["man"][0] == genanki.guid_for("de man")
+
+
+def test_source_line_names_written_sentences_and_translations():
+    from duolingo_anki.deck import source_html
+    assert source_html({"source": "deck", "written": "sentence"}) == "Written for this deck"
+    assert source_html({"source": "tatoeba", "url": "https://t/1", "written": "translation"}) == '<a href="https://t/1">Tatoeba</a> · translation written for this deck'
