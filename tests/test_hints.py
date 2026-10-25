@@ -44,7 +44,7 @@ def test_reflexive_is_only_a_hint_when_it_tells_notes_apart():
 
 def test_a_sense_that_repeats_the_gloss_is_left_out():
     hints = note_hints([
-        note("de knop", "button", "de knop", pos="noun", sense="a knob, button"),
-        note("de knoop", "button", "de knoop", pos="noun", sense="button (fastener)"),
+        note("de knop", "button", "de knop", pos="noun", senses=["a knob, button"]),
+        note("de knoop", "button", "de knoop", pos="noun", senses=["button (fastener)"]),
     ])
     assert hints == {"de knop": "a knob", "de knoop": ""}

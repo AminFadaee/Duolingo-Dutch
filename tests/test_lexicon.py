@@ -178,3 +178,20 @@ def personal_pronouns(word: str) -> dict:
 )
 def test_pronouns_keep_only_their_own_row_of_the_shared_table(word, expected):
     assert all_forms(word, personal_pronouns(word)) == expected
+
+
+def test_choose_entry_ignores_notes_and_breaks_ties_on_the_first_gloss():
+    entries = {
+        "monster": [
+            {"word": "monster", "pos": "noun", "senses": [{"glosses": ["a monster, terrifying creature"]}]},
+            {"word": "monster", "pos": "noun", "senses": [{"glosses": ["sample; small representative quantity"]}]},
+        ],
+        "je": [
+            {"word": "je", "pos": "pron", "senses": [{"glosses": ["one, people, you"]}]},
+            {"word": "je", "pos": "det", "senses": [{"glosses": ["your"]}]},
+        ],
+    }
+    entry, _ = choose_entry(Part("monster", "het", ("monster",)), content_words("sample"), entries)
+    assert entry["senses"][0]["glosses"] == ["sample; small representative quantity"]
+    entry, _ = choose_entry(Part("je", None, ("je",)), content_words("you your"), entries, first_gloss=content_words("you"))
+    assert entry["pos"] == "pron"

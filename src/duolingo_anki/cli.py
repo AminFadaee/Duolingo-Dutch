@@ -44,17 +44,33 @@ def run_scrape(args: argparse.Namespace) -> None:
 
 def run_lexicon(args: argparse.Namespace) -> None:
     from duolingo_anki.lexicon import WIKTIONARY_URL, build_lexicon
+    from duolingo_anki.senses import order_senses, split_candidates, taught_sense_report
     from duolingo_anki.sources import download
+    from duolingo_anki.tatoeba import URLS as TATOEBA_URLS
+    from duolingo_anki.tatoeba import Files, Tatoeba
 
     source = download(WIKTIONARY_URL, args.cache_dir)
-    lexicon = build_lexicon(read_words(args.words), source.path)
+    words = read_words(args.words)
+    lexicon = build_lexicon(words, source.path)
+    glosses = defaultdict(list)
+    for word in words:
+        glosses[word.dutch].append(word.translation)
+    tatoeba = [download(url, args.cache_dir) for url in TATOEBA_URLS]
+    entries = order_senses(lexicon.entries, Tatoeba(Files(*(item.path for item in tatoeba))), glosses)
     write_json(args.output, {
-        "sources": {"wiktionary": {"url": source.url, "last_modified": source.last_modified}},
-        "entries": lexicon.entries,
+        "sources": {
+            "wiktionary": {"url": source.url, "last_modified": source.last_modified},
+            "tatoeba": [{"url": item.url, "last_modified": item.last_modified} for item in tatoeba],
+        },
+        "entries": entries,
     })
+    unmatched, secondary = taught_sense_report(entries, glosses)
     report("Not in Wiktionary", lexicon.missing)
     report("Chosen entry shares no meaning with the translation", lexicon.unmatched_meaning)
     report("Article differs from Wiktionary", [f"{dutch} (Wiktionary: {article})" for dutch, article in lexicon.article_conflicts])
+    report("Duolingo's meaning is none of the common senses", unmatched)
+    report("Duolingo teaches a less common sense", secondary)
+    report("Senses unrelated enough to split into separate notes", split_candidates(entries, glosses))
 
 
 def run_sentences(args: argparse.Namespace) -> None:

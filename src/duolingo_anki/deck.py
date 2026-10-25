@@ -20,6 +20,7 @@ from duolingo_anki.cards import (
     word_tags,
 )
 from duolingo_anki.hints import Note, note_hints
+from duolingo_anki.senses import other_meanings
 
 DECK_NAME = "Duolingo Dutch"
 MODEL_ID = 1_759_241_381
@@ -37,6 +38,7 @@ FIELDS = (
     "Source",
     "TypeAnswer",
     "Hint",
+    "OtherMeanings",
 )
 SOURCE_NAMES = {
     "tatoeba": "Tatoeba",
@@ -55,6 +57,7 @@ SENTENCE_DETAILS = '<div class="translation">{{SentenceTranslation}}</div><div c
 SENTENCE = f"{SENTENCE_LINE}{SENTENCE_DETAILS}"
 DUTCH = '<div class="dutch">{{Dutch}}</div>'
 ENGLISH = '<div class="english">{{English}}</div>'
+ALSO = '{{#OtherMeanings}}<div class="also">also: {{OtherMeanings}}</div>{{/OtherMeanings}}'
 HINT = '{{#Hint}}<div class="cue">{{Hint}}</div>{{/Hint}}'
 FORMS = '{{#Forms}}<div class="forms">{{Forms}}</div>{{/Forms}}'
 DIVIDER = '<hr id="answer">'
@@ -75,18 +78,18 @@ TEMPLATES = (
     Template(
         "Dutch to English",
         f"{DUTCH}{{{{WordAudio}}}}{SENTENCE_LINE}",
-        f"{{{{FrontSide}}}}{DIVIDER}{ENGLISH}{FORMS}{SENTENCE_DETAILS}",
+        f"{{{{FrontSide}}}}{DIVIDER}{ENGLISH}{ALSO}{FORMS}{SENTENCE_DETAILS}",
     ),
     Template(
         "English to Dutch",
         f"{ENGLISH}{HINT}{TYPE_ANSWER}",
-        f"{{{{FrontSide}}}}{DIVIDER}{DUTCH}{{{{WordAudio}}}}{FORMS}{SENTENCE}",
+        f"{{{{FrontSide}}}}{DIVIDER}{DUTCH}{{{{WordAudio}}}}{ALSO}{FORMS}{SENTENCE}",
     ),
     Template(
         "Listening",
         f'{{{{#WordAudio}}}}<div class="prompt">Listen</div>{{{{WordAudio}}}}{TYPE_ANSWER}'
         f'<div class="hint">{SENTENCE_PLAYER} sentence</div>{{{{/WordAudio}}}}',
-        f"{{{{FrontSide}}}}{DIVIDER}{DUTCH}{ENGLISH}{FORMS}{SENTENCE}",
+        f"{{{{FrontSide}}}}{DIVIDER}{DUTCH}{ENGLISH}{ALSO}{FORMS}{SENTENCE}",
     ),
 )
 
@@ -101,6 +104,7 @@ CSS = """
 }
 .dutch { font-size: 32px; font-weight: 600; }
 .english { font-size: 26px; color: var(--accent); font-weight: 600; margin: 6px 0; }
+.also { font-size: 15px; color: var(--soft); margin: 2px auto 0; max-width: 32em; }
 .cue { font-size: 16px; color: var(--muted); margin-top: 2px; }
 .forms { font-size: 16px; color: var(--soft); margin-top: 6px; }
 .prompt { font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
@@ -247,6 +251,7 @@ def build_deck(data_dir: Path, build_dir: Path, output: Path) -> int:
             "Source": source_html(example),
             "TypeAnswer": html.escape(spoken_text(display_text(entry.dutch, headwords)) or ""),
             "Hint": html.escape(hints[entry.dutch]),
+            "OtherMeanings": html.escape("; ".join(other_meanings(headwords, entry.translations))),
         }
         tags = word_tags(entry.skills, headwords, bool(example.get("translated_by")))
         deck.add_note(genanki.Note(

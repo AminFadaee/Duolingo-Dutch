@@ -27,7 +27,8 @@ The hint under the English meaning names the form of inflected words (*read* —
 that share a meaning: by form, formality, word type or article (*please* — informal → *alsjeblieft*, formal →
 *alstublieft*), and otherwise by their first letters (*again* — w… → *weer*, o… → *opnieuw*).
 
-Every back also shows the article and forms (*het huis · huizen · huisje*, *opstaan · stond op · opgestaan*) and the
+Every back also shows the word's other common meanings when Duolingo teaches only one (*slaan* "to turn" — also:
+to hit, to slap), the article and forms (*het huis · huizen · huisje*, *opstaan · stond op · opgestaan*) and the
 example sentence with its translation, the word highlighted, and a button that plays the sentence. The sentence never
 plays on its own.
 
@@ -48,7 +49,7 @@ back when you import an update. Updates keep your progress. When an update adds 
 | Step | Command | Reads | Writes | Source |
 |---|---|---|---|---|
 | Scrape | `scrape` | | `words.json` | [Duolingo wiki](https://duolingo.fandom.com/wiki/Dutch_(Netherlands)) skill pages |
-| Lexicon | `lexicon` | `words.json` | `lexicon.json` | English Wiktionary via [kaikki.org](https://kaikki.org/dictionary/Dutch/) |
+| Lexicon | `lexicon` | `words.json` | `lexicon.json` | English Wiktionary via [kaikki.org](https://kaikki.org/dictionary/Dutch/), Tatoeba |
 | Sentences | `sentences` | `words.json`, `lexicon.json` | `sentences.json` | Tatoeba, OPUS, Dutch Wiktionary and Wikipedia |
 | Audio | `audio` | `sentences.json`, `lexicon.json` | `audio.json`, `audio/` | [Supertonic 3](https://huggingface.co/Supertone/supertonic-3) |
 | Deck | `deck` | all of the above | `build/duolingo_dutch.apkg` | |
@@ -69,10 +70,16 @@ Reads the vocabulary listed under each skill's *Lesson* headings through the wik
 
 Looks every word up in Wiktionary and records its base word and part of speech, plus the article, plural and
 diminutive of nouns; past forms, participle, auxiliary and separable particle of verbs; the comparative and
-superlative of adjectives; the grammatical form of inflected words; and the register and first meaning of the base
-word, which the hints use. Inflected entries such as *leest* point to their base word (*lezen*), and verb phrases
-such as *in opstand komen* are treated like separable verbs. When Wiktionary has several entries for a word, the
-one whose meaning matches the Duolingo gloss wins.
+superlative of adjectives; the grammatical form of inflected words; and the register and common meanings of the base
+word. Inflected entries such as *leest* point to their base word (*lezen*), and verb phrases such as *in opstand
+komen* are treated like separable verbs. When Wiktionary has several entries for a word, the one whose meaning
+matches the Duolingo gloss wins, preferring a verb for glosses starting with "to" and then the first gloss.
+
+Meanings marked archaic, dated, regional, slang, rare and the like are left out. The rest are ordered by how often
+their words appear in the English translations of the word's Tatoeba sentences, weighted towards Wiktionary's own
+order, and the first three are kept, plus any that Duolingo teaches. The step reports words whose Duolingo meaning is
+none of these, words taught in a less common meaning, and words whose Duolingo glosses name unrelated meanings that
+could be split into separate notes.
 
 ### Sentences
 
@@ -118,7 +125,7 @@ Each step reads the previous step's file, so any step can be rerun on its own. E
 
 Downloads are cached in `.cache/` (about 550 MB) and fetched again only when the upstream file changes. The models
 go to the usual Hugging Face and Supertonic caches (about 700 MB together). On a 6-core laptop CPU the lexicon
-takes seconds, the sentences about 5 minutes, the audio a little over an hour and the deck under a minute. No GPU
+takes about a minute, the sentences about 5 minutes, the audio a little over an hour and the deck under a minute. No GPU
 is needed.
 
 ## Releasing

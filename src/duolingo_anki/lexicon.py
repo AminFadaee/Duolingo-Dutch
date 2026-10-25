@@ -6,6 +6,7 @@ from pathlib import Path
 
 from duolingo_anki.english import content_words, shared_words
 from duolingo_anki.scraper import Word
+from duolingo_anki.senses import common_senses
 
 WIKTIONARY_URL = "https://kaikki.org/dictionary/Dutch/kaikki.org-dictionary-Dutch.jsonl"
 SHARED_ARTICLE = re.compile(r"^(de|het)/(de|het)\s+", re.IGNORECASE)
@@ -64,7 +65,7 @@ class Headword:
     forms: list[str] = field(default_factory=list)
     inflection: list[str] = field(default_factory=list)
     register: str | None = None
-    sense: str | None = None
+    senses: list[str] = field(default_factory=list)
 
 
 def take_article(text: str) -> tuple[str | None, str]:
@@ -132,7 +133,11 @@ def gloss_overlap(entry: dict, translation: set[str]) -> int:
 
 
 def choose_entry(
-    part: Part, translation: set[str], entries: dict[str, list[dict]], verb_glossed: bool = False
+    part: Part,
+    translation: set[str],
+    entries: dict[str, list[dict]],
+    verb_glossed: bool = False,
+    first_gloss: set[str] = frozenset(),
 ) -> tuple[dict, dict] | None:
     candidates = next((entries[key] for key in part.lookups if key in entries), [])
     if part.article:
@@ -146,6 +151,7 @@ def choose_entry(
         return None
     return max(pairs, key=lambda pair: (
         gloss_overlap(pair[1], translation),
+        gloss_overlap(pair[1], first_gloss),
         verb_glossed and pair[0]["pos"] == "verb",
         pair[0] is not pair[1],
     ))
@@ -238,11 +244,6 @@ def register(entry: dict) -> str | None:
     return next((label for tag, label in REGISTERS.items() if tag in tags), None)
 
 
-def first_sense(entry: dict) -> str | None:
-    senses = own_senses(entry)
-    return senses[0]["glosses"][0] if senses else None
-
-
 def describe(part: Part, entry: dict, lemma: dict) -> Headword:
     pos = entry["pos"]
     return Headword(
@@ -262,7 +263,7 @@ def describe(part: Part, entry: dict, lemma: dict) -> Headword:
         forms=all_forms(part.word, lemma),
         inflection=inflection_tags(entry, lemma),
         register=register(lemma),
-        sense=first_sense(lemma),
+        senses=common_senses(lemma),
     )
 
 
@@ -296,10 +297,11 @@ class Lexicon:
 
 
 def build_lexicon(words: list[Word], wiktionary: Path) -> Lexicon:
-    translations = defaultdict(set)
+    translations, first_glosses = defaultdict(set), {}
     verb_glossed = set()
     for word in words:
-        translations[word.dutch] |= content_words(word.translation)
+        translations[word.dutch] |= content_words(NOTE.sub(" ", word.translation))
+        first_glosses.setdefault(word.dutch, content_words(NOTE.sub(" ", word.translation)))
         if word.translation.lower().startswith("to "):
             verb_glossed.add(word.dutch)
     parts = {dutch: split_headwords(dutch) for dutch in translations}
@@ -313,7 +315,7 @@ def build_lexicon(words: list[Word], wiktionary: Path) -> Lexicon:
     for dutch, dutch_parts in parts.items():
         headwords = []
         for part in dutch_parts:
-            chosen = choose_entry(part, translations[dutch], entries, dutch in verb_glossed)
+            chosen = choose_entry(part, translations[dutch], entries, dutch in verb_glossed, first_glosses[dutch])
             if chosen is None:
                 phrase = verb_phrase(part, entries) if dutch in verb_glossed else None
                 if phrase is None:

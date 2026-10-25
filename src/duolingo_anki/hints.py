@@ -58,7 +58,7 @@ def article(note: Note) -> str | None:
 
 
 def sense(note: Note) -> str | None:
-    found = next((headword["sense"] for headword in note.headwords if headword.get("sense")), None)
+    found = next((headword["senses"][0] for headword in note.headwords if headword.get("senses")), None)
     return SENSE_END.split(found)[0].strip() if found else None
 
 

@@ -15805,15 +15805,15 @@
     {
       "dutch": "dans",
       "example": {
-        "text": "Ik dans de hele tijd in mijn woonkamer.",
-        "translation": "I dance in my living room all the time.",
+        "text": "Ik heb hem niet ten dans gevraagd, maar hij mij.",
+        "translation": "I didn't ask him to dance. He asked me.",
         "match": "dans",
         "source": "tatoeba",
-        "url": "https://tatoeba.org/en/sentences/show/7684758",
-        "translation_url": "https://tatoeba.org/en/sentences/show/1152722",
+        "url": "https://tatoeba.org/en/sentences/show/8333174",
+        "translation_url": "https://tatoeba.org/en/sentences/show/5485221",
         "authors": [
-          "MarijnKp",
-          "CM"
+          "Elsofie",
+          "Hybrid"
         ]
       }
     },
@@ -20807,14 +20807,15 @@
     {
       "dutch": "de Belg",
       "example": {
-        "text": "Belgische frieten zijn de lekkerste in de hele wereld!",
-        "translation": "Belgian fries are the best in the whole world!",
+        "text": "Wat vind je lekkerder, Zwitserse chocolade of Belgische chocolade?",
+        "translation": "Which do you prefer, Swiss chocolate or Belgian chocolate?",
         "match": "Belgische",
         "source": "tatoeba",
-        "url": "https://tatoeba.org/en/sentences/show/391624",
-        "translation_url": "https://tatoeba.org/en/sentences/show/391625",
+        "url": "https://tatoeba.org/en/sentences/show/13729094",
+        "translation_url": "https://tatoeba.org/en/sentences/show/13729089",
         "authors": [
-          "Dorenda"
+          "PaulP",
+          "mervert1"
         ]
       }
     },
@@ -31338,15 +31339,15 @@
     {
       "dutch": "de dans",
       "example": {
-        "text": "Ik heb hem niet ten dans gevraagd, maar hij mij.",
-        "translation": "I didn't ask him to dance. He asked me.",
+        "text": "Ik dans de hele tijd in mijn woonkamer.",
+        "translation": "I dance in my living room all the time.",
         "match": "dans",
         "source": "tatoeba",
-        "url": "https://tatoeba.org/en/sentences/show/8333174",
-        "translation_url": "https://tatoeba.org/en/sentences/show/5485221",
+        "url": "https://tatoeba.org/en/sentences/show/7684758",
+        "translation_url": "https://tatoeba.org/en/sentences/show/1152722",
         "authors": [
-          "Elsofie",
-          "Hybrid"
+          "MarijnKp",
+          "CM"
         ]
       }
     },
@@ -36065,11 +36066,11 @@
     {
       "dutch": "ongekookt",
       "example": {
-        "text": "De gekaakte haring wordt ongekookt of voorbewerkt ingelegd in een mengsel van azijn, water, witte uienringen, kruiden (zoals dille, jeneverbessen, peperkorrels, mosterdzaad, laurierbladeren), suiker en zout.",
-        "translation": "The chopped herring is inlaid in a mixture of vinegar, water, white onion rings, herbs (such as dill, juniper berries, peppercorns, mustard seed, bay leaves), sugar and salt.",
+        "text": "Ook het eten van grote hoeveelheden onbewerkt, ongekookt of rauw voedsel wordt als pica gezien, bijvoorbeeld rauwe eieren, rauwe aardappelen, ijs, ongekookte rijst, meel, zout, suiker enz.",
+        "translation": "Also eating large amounts of raw, uncooked or raw food is seen as pica, for example raw eggs, raw potatoes, ice cream, uncooked rice, flour, salt, sugar etc.",
         "match": "ongekookt",
         "source": "nl.wikipedia",
-        "url": "https://nl.wikipedia.org/wiki/Zure_haring",
+        "url": "https://nl.wikipedia.org/wiki/Pica_%28gedrag%29",
         "translated_by": "Helsinki-NLP/opus-mt-nl-en@48af999f2c59"
       }
     },

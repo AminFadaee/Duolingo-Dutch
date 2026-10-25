@@ -132,7 +132,7 @@ def build_rules(dutch: str, headwords: list[dict]) -> list[Rule]:
     rules = {}
     for headword in headwords:
         word = headword["word"]
-        particle = tuple(tokens(headword.get("verb", {}).get("particle", "")))
+        particle = tuple(tokens((headword.get("verb") or {}).get("particle") or ""))
         forms = [word, *headword.get("forms", []), ARTICLE_BEFORE_PHRASE.sub("", word)]
         for form in dict.fromkeys(forms):
             form_tokens = tuple(tokens(form))
