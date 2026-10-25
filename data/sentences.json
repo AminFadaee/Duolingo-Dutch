@@ -3,19 +3,19 @@
     "tatoeba": [
       {
         "url": "https://downloads.tatoeba.org/exports/per_language/nld/nld_sentences_detailed.tsv.bz2",
-        "last_modified": "Sat, 26 Sep 2026 06:29:50 GMT"
+        "last_modified": "Sat, 24 Oct 2026 06:41:06 GMT"
       },
       {
         "url": "https://downloads.tatoeba.org/exports/per_language/eng/eng_sentences_detailed.tsv.bz2",
-        "last_modified": "Sat, 26 Sep 2026 06:29:50 GMT"
+        "last_modified": "Sat, 24 Oct 2026 06:41:06 GMT"
       },
       {
         "url": "https://downloads.tatoeba.org/exports/per_language/nld/nld-eng_links.tsv.bz2",
-        "last_modified": "Sat, 26 Sep 2026 06:41:25 GMT"
+        "last_modified": "Sat, 24 Oct 2026 06:55:00 GMT"
       },
       {
         "url": "https://downloads.tatoeba.org/exports/links.tar.bz2",
-        "last_modified": "Sat, 26 Sep 2026 06:15:33 GMT"
+        "last_modified": "Sat, 24 Oct 2026 06:21:11 GMT"
       }
     ],
     "opus": [
@@ -11964,15 +11964,14 @@
     {
       "dutch": "december",
       "example": {
-        "text": "December is de laatste maand van het jaar.",
-        "translation": "December is the last month of the year.",
+        "text": "De maand december begint.",
+        "translation": "The month of December begins.",
         "match": "december",
         "source": "tatoeba",
-        "url": "https://tatoeba.org/en/sentences/show/402469",
-        "translation_url": "https://tatoeba.org/en/sentences/show/266506",
+        "url": "https://tatoeba.org/en/sentences/show/14078190",
+        "translation_url": "https://tatoeba.org/en/sentences/show/14078192",
         "authors": [
-          "Dorenda",
-          "CM"
+          "Tom9358"
         ]
       }
     },
@@ -16420,15 +16419,15 @@
     {
       "dutch": "het oosten",
       "example": {
-        "text": "We gaan naar het oosten.",
-        "translation": "We're going east.",
+        "text": "Waar ligt het oosten?",
+        "translation": "Where's east?",
         "match": "oosten",
         "source": "tatoeba",
-        "url": "https://tatoeba.org/en/sentences/show/8584712",
-        "translation_url": "https://tatoeba.org/en/sentences/show/2240775",
+        "url": "https://tatoeba.org/en/sentences/show/12287303",
+        "translation_url": "https://tatoeba.org/en/sentences/show/14079191",
         "authors": [
-          "Elsofie",
-          "CK"
+          "Adelpa",
+          "rul"
         ]
       }
     },
@@ -36072,11 +36071,11 @@
     {
       "dutch": "ongekookt",
       "example": {
-        "text": "Ook het eten van grote hoeveelheden onbewerkt, ongekookt of rauw voedsel wordt als pica gezien, bijvoorbeeld rauwe eieren, rauwe aardappelen, ijs, ongekookte rijst, meel, zout, suiker enz.",
-        "translation": "Also eating large amounts of raw, uncooked or raw food is seen as pica, for example raw eggs, raw potatoes, ice cream, uncooked rice, flour, salt, sugar etc.",
+        "text": "De gekaakte haring wordt ongekookt of voorbewerkt ingelegd in een mengsel van azijn, water, witte uienringen, kruiden (zoals dille, jeneverbessen, peperkorrels, mosterdzaad, laurierbladeren), suiker en zout.",
+        "translation": "The chopped herring is inlaid in a mixture of vinegar, water, white onion rings, herbs (such as dill, juniper berries, peppercorns, mustard seed, bay leaves), sugar and salt.",
         "match": "ongekookt",
         "source": "nl.wikipedia",
-        "url": "https://nl.wikipedia.org/wiki/Pica_%28gedrag%29",
+        "url": "https://nl.wikipedia.org/wiki/Zure_haring",
         "translated_by": "Helsinki-NLP/opus-mt-nl-en@48af999f2c59"
       }
     },

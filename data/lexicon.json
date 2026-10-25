@@ -2,24 +2,24 @@
   "sources": {
     "wiktionary": {
       "url": "https://kaikki.org/dictionary/Dutch/kaikki.org-dictionary-Dutch.jsonl",
-      "last_modified": "Mon, 28 Sep 2026 17:41:07 GMT"
+      "last_modified": "Wed, 21 Oct 2026 13:47:40 GMT"
     },
     "tatoeba": [
       {
         "url": "https://downloads.tatoeba.org/exports/per_language/nld/nld_sentences_detailed.tsv.bz2",
-        "last_modified": "Sat, 26 Sep 2026 06:29:50 GMT"
+        "last_modified": "Sat, 24 Oct 2026 06:41:06 GMT"
       },
       {
         "url": "https://downloads.tatoeba.org/exports/per_language/eng/eng_sentences_detailed.tsv.bz2",
-        "last_modified": "Sat, 26 Sep 2026 06:29:50 GMT"
+        "last_modified": "Sat, 24 Oct 2026 06:41:06 GMT"
       },
       {
         "url": "https://downloads.tatoeba.org/exports/per_language/nld/nld-eng_links.tsv.bz2",
-        "last_modified": "Sat, 26 Sep 2026 06:41:25 GMT"
+        "last_modified": "Sat, 24 Oct 2026 06:55:00 GMT"
       },
       {
         "url": "https://downloads.tatoeba.org/exports/links.tar.bz2",
-        "last_modified": "Sat, 26 Sep 2026 06:15:33 GMT"
+        "last_modified": "Sat, 24 Oct 2026 06:21:11 GMT"
       }
     ]
   },
@@ -5934,8 +5934,7 @@
           ],
           "senses": [
             "to come",
-            "to happen",
-            "synonym of klaarkomen (“to orgasm"
+            "to happen"
           ]
         }
       ]
@@ -5976,8 +5975,7 @@
           ],
           "senses": [
             "to come",
-            "to happen",
-            "synonym of klaarkomen (“to orgasm"
+            "to happen"
           ]
         }
       ]
@@ -6011,8 +6009,7 @@
           ],
           "senses": [
             "to come",
-            "to happen",
-            "synonym of klaarkomen (“to orgasm"
+            "to happen"
           ]
         }
       ]
@@ -16377,9 +16374,7 @@
             "burgermeester"
           ],
           "senses": [
-            "mayor, burgomaster",
-            "synonym of kleine burgemeester (“Larus glaucoides”)",
-            "synonym of grote burgemeester (“Larus hyperboreus”)"
+            "mayor, burgomaster"
           ]
         }
       ]
@@ -30779,8 +30774,7 @@
           ],
           "senses": [
             "to come",
-            "to happen",
-            "synonym of klaarkomen (“to orgasm"
+            "to happen"
           ]
         }
       ]
@@ -43833,7 +43827,7 @@
           "pos": "noun",
           "lemma": "school",
           "noun": {
-            "article": "de",
+            "article": "de/het",
             "plural": "scholen",
             "diminutive": "schooltje"
           },
@@ -46928,8 +46922,7 @@
           ],
           "senses": [
             "to come",
-            "to happen",
-            "synonym of klaarkomen (“to orgasm"
+            "to happen"
           ]
         }
       ]
@@ -50132,7 +50125,8 @@
           },
           "forms": [
             "moeite",
-            "moeiten"
+            "moeiten",
+            "moeites"
           ],
           "senses": [
             "effort",
@@ -52120,8 +52114,7 @@
           ],
           "senses": [
             "atmosphere",
-            "one Earth atmosphere (atm)",
-            "synonym of sfeer"
+            "one Earth atmosphere (atm)"
           ]
         }
       ]
@@ -53281,9 +53274,6 @@
           "forms": [
             "intusschen",
             "intussen"
-          ],
-          "senses": [
-            "meanwhile, in the meantime"
           ]
         }
       ]
@@ -69181,7 +69171,7 @@
             "dijkje"
           ],
           "senses": [
-            "dike, levee"
+            "levee"
           ]
         }
       ]
@@ -69482,8 +69472,7 @@
             "waddeneilandje"
           ],
           "senses": [
-            "island in a tidal mudflat",
-            "synonym of Waddeneiland"
+            "island in a tidal mudflat"
           ]
         }
       ]
@@ -69767,7 +69756,7 @@
             "kroketten"
           ],
           "senses": [
-            "a croquette filled with ragout"
+            "kroket"
           ]
         }
       ]
@@ -69839,7 +69828,7 @@
             "frikandelletje"
           ],
           "senses": [
-            "a deep-fried snack mainly containing ground meat and bread crumbs"
+            "frikandel"
           ]
         }
       ]
@@ -70243,7 +70232,7 @@
             "saxophoon"
           ],
           "senses": [
-            "a saxophone"
+            "saxophone"
           ]
         }
       ]
